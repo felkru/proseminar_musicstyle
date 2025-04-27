@@ -29,7 +29,8 @@
 \usepackage[pdftex,pdfpagelabels]{hyperref}                 % Hyperlinks im PDF
 \usepackage{natbib,doi}                                     % Literaturverzeichnis, DOIs
 \usepackage[section,boxed]{algorithm}                       % Floating-Umgebung für Algorithmen
-\usepackage{algpseudocode}                                  % Pseudocode für Algorithmen
+\usepackage{algpseudocode}
+\usepackage{outlines}
 %\usepackage{commenting}
 
 \captionsetup{farskip=10pt,topadjust=0pt,captionskip=10pt,nearskip=0pt,margin=10pt}
@@ -121,8 +122,6 @@ The following section \ref{discussion} and section \ref{summary} present and dis
 
 Backgrounds here \\
 
-
-
 For each background info, please provide only the most important details:
 \begin{itemize}
     \item For which tasks can the method be applied?
@@ -131,7 +130,50 @@ For each background info, please provide only the most important details:
     \item Which pros and cons does it have?
 \end{itemize}
 
+\subsection{List of technical terms}
 
+\begin{outline}
+    \1 Textual / parametric conditioning
+    \1 Textual inversion
+    \1 Pseudowords
+    \1 Embedding space
+    \1 Audio feature extractor
+    \1 Inference time
+    \1 Double classifier free guidance
+    \1 MIDI
+    \1 Music stems
+    \1 Frozen model
+    \1 Backpropagation
+    \1 MusicGen (explain features)
+    \1 Cross-entropy loss
+    \1 Gradient computation
+    \1 Style conditioning
+    \1 Bottleneck
+    \1 Encodec (explain features)
+    \1 MERT (explain features)
+    \1 MusicFM (explain features)
+    \1 Transformer encoder / decoder
+    \1 Residual vector Quanzizer
+    \1 Temporal downsampling
+    \1 CLAP
+    \1 (non-)Autoregressive model
+    \1 Latent space
+    \1 Contrastive (text-music) model
+    \1 (mel-)Spectogram
+    \1 token / tokenizer
+    \1 Transfomer decoder neural network
+    \1 Gradient descend step
+    \1 Latent representation
+    \1 Downsampling
+    \1 Codebook
+    \1 Dropout (context: conditioning)
+    \1 Logits
+    \1 Hyperparameters
+    \1 Cosine similarity
+    \1 \{all the metrics used in the Experimental section\}
+    \1 Vanilla Adam optimizer
+    \1 Continuation method
+\end{outline}\\
 
 Method here.\\
 
