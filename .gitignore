@@ -12,3 +12,8 @@ Literature/
 *.out
 *.synctex.gz
 *.toc
+*.blg
+*/template.pdf
+
+digest.txt
+
