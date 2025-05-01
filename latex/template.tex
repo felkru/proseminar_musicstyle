@@ -129,12 +129,15 @@ For each background info, please provide only the most important details:
 \begin{outline}
     \1 Textual / parametric conditioning
     \1 Textual inversion
+        \2 Is a technique used to teach a pretrained model, which expects a textual input, to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space.
     \1 Pseudowords
     \1 Embedding space
     \1 Audio feature extractor
     \1 Inference time
         \2 Inference is the Phase after training a Language model, in which it is actively used to perform its intended task on new data, in this case creating music based on input text and audio.
     \1 Double classifier free guidance
+        \2 Double classifier free guidance is applying classifier free guidance twice in order to balance the influence of textual- and style-Information when the two are conflicting. Without this, the textual description would be ignored by the model.
+        \2 Classifier free guidance can be used to amplify the importance of the conditions given to the model for creating their output, making their outputs less generic.
     \1 MIDI
     \1 Music stems
     \1 Frozen model
@@ -145,7 +148,9 @@ For each background info, please provide only the most important details:
     \1 Style conditioning
         \2 Style conditioning describes the method of using an audio excerpt as an input to the language model, allowing it to adapt the output to the musical characteristics of the input.
     \1 Bottleneck
+        \2 Bottlenecks are used in the paper to limit the amount of information the model receives from the input sample, in order to prevent it from simply copying the input audio and extracting its most essential features.
     \1 Encodec (explain features)
+        \2 Is used in the audio tokenizer as a transformer encoder. Generally, it is a deep-learning audio codec made for high levels of compression with little to no loss in quality\cite{defossezHighFidelityNeural2022}.
     \1 MERT (explain features)
     \1 MusicFM (explain features)
     \1 Transformer encoder / decoder
@@ -163,7 +168,8 @@ For each background info, please provide only the most important details:
     \1 Gradient descend step
     \1 Latent representation
     \1 Downsampling
-    \1 Codebook
+    \1 Codebook (not sure about if this is precise enough or even correct)
+        \2 A codebook contains a set of embeddings used in RVQ as a comparison point to the input. The length of the codebook can be used to tune the bottleneck as having fewer codebooks leads to more information loss.
     \1 Dropout (context: conditioning)
     \1 Logits
     \1 Hyperparameters
@@ -181,6 +187,7 @@ For each background info, please provide only the most important details:
         \2 is a human metric used in the experimental section, is used to assess the likelyhood of input and output being taken from the same song. A lower score indicates it is less likely that the samples are taken from the same song (preferrable result), while a high score indicates it is more likely. It was found that the VAR score correlates well with the KNN\textsubscript{overfit}-metric.
     \1 Vanilla Adam optimizer
     \1 Continuation method
+        \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison.
     \l Masked model
 \end{outline}
 
