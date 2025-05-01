@@ -156,6 +156,7 @@ For each background info, please provide only the most important details:
     \1 Contrastive (text-music) model
     \1 (mel-)Spectogram
     \1 token / tokenizer
+        \2 A token is a discrete unit of data taken from the input data, which can then be interpreted by the transformer language model. A tokenizer converts the original audio and text input to tokens.
     \1 Transfomer decoder neural network
     \1 Gradient descend step
     \1 Latent representation
@@ -169,7 +170,6 @@ For each background info, please provide only the most important details:
     \1 Vanilla Adam optimizer
     \1 Continuation method
     \l Masked model
-\end{outline}
 \end{outline}
 
 Method here.\\
@@ -241,7 +241,7 @@ Pfeifen
 \subsection{Safety}
 We believe AI development should follow a human centric approach and should be developed with rigorous . The authors did not perform safety
 
-\href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}
+\href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}{Model Card}
 
 \subsection{Testing}
 
@@ -251,7 +251,7 @@ In: 30s highlife
 The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.4bn parameters. Is far from SOTA in terms of trainable parameters in transformer architectures. Most of the issue's present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented here {Citation?}.
 
 \subsection{User reactions}
-See inout_pairs > generation > fiddle_1u2.txt
+$See inout_pairs > generation > fiddle_1u2.txt$
 
 \section{Summary}\label{summary}
 
