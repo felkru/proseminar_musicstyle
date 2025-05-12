@@ -13,7 +13,7 @@
 \setlength{\headheight}{15pt}
 
 \usepackage[utf8]{inputenc}
-
+\usepackage{amsmath}
 \usepackage[T1]{fontenc}                                    % Unterstützung für Umlaute mit Fonts
 \usepackage[pdftex]{graphicx,color}                         % Einbetten von Grafiken, Farbe
 \usepackage[format=plain,small,bf,indention=7.5mm]{caption} % verbesserte Beschriftung von Abbildungen
@@ -190,6 +190,34 @@ For each background info, please provide only the most important details:
         \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison.
     \l Masked model
 \end{outline}
+
+\subsection*{formulas}
+\[
+D_{\text{KL}}(P \parallel Q) = \sum_{x \in \mathcal{X}} P(x) \log \frac{P(x)}{Q(x)} \\
+\]
+\[
+\mathcal{L} = 0.5 \cdot (\ell_{\text{text}}(C) + \ell_{\text{audio}}(C)) \\
+\]
+\[
+\ell_k = \frac{1}{N} \sum_{i=0}^{N} \log \text{diag}(\text{softmax}(C)) \\
+\]
+\[
+C = \tau \cdot (E_t \cdot E_a^{\top}) \\
+\]
+
+\[
+l_{\text{double CFG}} = l_{\emptyset} + \alpha[l_{\text{style}} + \beta(l_{\text{text,style}} - l_{\text{style}}) - l_{\emptyset}]
+\]
+\[
+l_{\emptyset} := \text{next logit without any conditioning}
+\]
+\[
+l_{\text{style}} := \text{next logit with only style conditioning}
+\]
+\[
+l_{\text{text,style}} := \text{next logit with both style and text conditioning}
+\]
+
 
 Method here.\\
 

@@ -32,6 +32,24 @@
   file = {C\:\\Users\\maxki\\Zotero\\storage\\ZS4XBIBD\\Défossez et al. - 2022 - High Fidelity Neural Audio Compression.pdf;C\:\\Users\\maxki\\Zotero\\storage\\V386BKSJ\\2210.html}
 }
 
+@misc{elizaldeCLAPLearningAudio2022,
+  title = {{{CLAP}}: {{Learning Audio Concepts From Natural Language Supervision}}},
+  shorttitle = {{{CLAP}}},
+  author = {Elizalde, Benjamin and Deshmukh, Soham and Ismail, Mahmoud Al and Wang, Huaming},
+  year = {2022},
+  month = jun,
+  number = {arXiv:2206.04769},
+  eprint = {2206.04769},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2206.04769},
+  urldate = {2025-05-03},
+  abstract = {Mainstream Audio Analytics models are trained to learn under the paradigm of one class label to many recordings focusing on one task. Learning under such restricted supervision limits the flexibility of models because they require labeled audio for training and can only predict the predefined categories. Instead, we propose to learn audio concepts from natural language supervision. We call our approach Contrastive Language-Audio Pretraining (CLAP), which learns to connect language and audio by using two encoders and a contrastive learning to bring audio and text descriptions into a joint multimodal space. We trained CLAP with 128k audio and text pairs and evaluated it on 16 downstream tasks across 8 domains, such as Sound Event Classification, Music tasks, and Speech-related tasks. Although CLAP was trained with significantly less pairs than similar computer vision models, it establishes SoTA for Zero-Shot performance. Additionally, we evaluated CLAP in a supervised learning setup and achieve SoTA in 5 tasks. Hence, CLAP's Zero-Shot capability removes the need of training with class labels, enables flexible class prediction at inference time, and generalizes to multiple downstream tasks.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {C\:\\Users\\maxki\\Zotero\\storage\\9LSQ7DNF\\Elizalde et al. - 2022 - CLAP Learning Audio Concepts From Natural Language Supervision.pdf;C\:\\Users\\maxki\\Zotero\\storage\\923H85SA\\2206.html}
+}
+
 @inproceedings{galImageWorthOne2022,
   title = {An {{Image}} Is {{Worth One Word}}: {{Personalizing Text-to-Image Generation}} Using {{Textual Inversion}}},
   shorttitle = {An {{Image}} Is {{Worth One Word}}},
@@ -84,6 +102,24 @@
   file = {C\:\\Users\\maxki\\Zotero\\storage\\DPHC48TL\\Ho and Salimans - 2022 - Classifier-Free Diffusion Guidance.pdf;C\:\\Users\\maxki\\Zotero\\storage\\PWELHJ47\\2207.html}
 }
 
+@misc{huangNoise2MusicTextconditionedMusic2023,
+  title = {{{Noise2Music}}: {{Text-conditioned Music Generation}} with {{Diffusion Models}}},
+  shorttitle = {{{Noise2Music}}},
+  author = {Huang, Qingqing and Park, Daniel S. and Wang, Tao and Denk, Timo I. and Ly, Andy and Chen, Nanxin and Zhang, Zhengdong and Zhang, Zhishuai and Yu, Jiahui and Frank, Christian and Engel, Jesse and Le, Quoc V. and Chan, William and Chen, Zhifeng and Han, Wei},
+  year = {2023},
+  month = mar,
+  number = {arXiv:2302.03917},
+  eprint = {2302.03917},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2302.03917},
+  urldate = {2025-05-03},
+  abstract = {We introduce Noise2Music, where a series of diffusion models is trained to generate high-quality 30-second music clips from text prompts. Two types of diffusion models, a generator model, which generates an intermediate representation conditioned on text, and a cascader model, which generates high-fidelity audio conditioned on the intermediate representation and possibly the text, are trained and utilized in succession to generate high-fidelity music. We explore two options for the intermediate representation, one using a spectrogram and the other using audio with lower fidelity. We find that the generated audio is not only able to faithfully reflect key elements of the text prompt such as genre, tempo, instruments, mood, and era, but goes beyond to ground fine-grained semantics of the prompt. Pretrained large language models play a key role in this story -- they are used to generate paired text for the audio of the training set and to extract embeddings of the text prompts ingested by the diffusion models. Generated examples: https://google-research.github.io/noise2music},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Machine Learning,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {C\:\\Users\\maxki\\Zotero\\storage\\AXKKTED4\\Huang et al. - 2023 - Noise2Music Text-conditioned Music Generation with Diffusion Models.pdf;C\:\\Users\\maxki\\Zotero\\storage\\QDUP29KQ\\2302.html}
+}
+
 @misc{kilgourFrechetAudioDistance2019,
   title = {Fr{\'e}chet {{Audio Distance}}: {{A Metric}} for {{Evaluating Music Enhancement Algorithms}}},
   shorttitle = {Fr{\'e}chet {{Audio Distance}}},
@@ -100,6 +136,77 @@
   archiveprefix = {arXiv},
   keywords = {Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
   file = {C\:\\Users\\maxki\\Zotero\\storage\\F7KMP7TZ\\Kilgour et al. - 2019 - Fréchet Audio Distance A Metric for Evaluating Music Enhancement Algorithms.pdf;C\:\\Users\\maxki\\Zotero\\storage\\B3JJE376\\1812.html}
+}
+
+@misc{kreukAudioGenTextuallyGuided2023,
+  title = {{{AudioGen}}: {{Textually Guided Audio Generation}}},
+  shorttitle = {{{AudioGen}}},
+  author = {Kreuk, Felix and Synnaeve, Gabriel and Polyak, Adam and Singer, Uriel and D{\'e}fossez, Alexandre and Copet, Jade and Parikh, Devi and Taigman, Yaniv and Adi, Yossi},
+  year = {2023},
+  month = mar,
+  number = {arXiv:2209.15352},
+  eprint = {2209.15352},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2209.15352},
+  urldate = {2025-05-05},
+  abstract = {We tackle the problem of generating audio samples conditioned on descriptive text captions. In this work, we propose AaudioGen, an auto-regressive generative model that generates audio samples conditioned on text inputs. AudioGen operates on a learnt discrete audio representation. The task of text-to-audio generation poses multiple challenges. Due to the way audio travels through a medium, differentiating ``objects'' can be a difficult task (e.g., separating multiple people simultaneously speaking). This is further complicated by real-world recording conditions (e.g., background noise, reverberation, etc.). Scarce text annotations impose another constraint, limiting the ability to scale models. Finally, modeling high-fidelity audio requires encoding audio at high sampling rate, leading to extremely long sequences. To alleviate the aforementioned challenges we propose an augmentation technique that mixes different audio samples, driving the model to internally learn to separate multiple sources. We curated 10 datasets containing different types of audio and text annotations to handle the scarcity of text-audio data points. For faster inference, we explore the use of multi-stream modeling, allowing the use of shorter sequences while maintaining a similar bitrate and perceptual quality. We apply classifier-free guidance to improve adherence to text. Comparing to the evaluated baselines, AudioGen outperforms over both objective and subjective metrics. Finally, we explore the ability of the proposed method to generate audio continuation conditionally and unconditionally. Samples: https://felixkreuk.github.io/audiogen},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {C\:\\Users\\maxki\\Zotero\\storage\\MTVPNQP4\\Kreuk et al. - 2023 - AudioGen Textually Guided Audio Generation.pdf;C\:\\Users\\maxki\\Zotero\\storage\\5ZPE36RI\\2209.html}
+}
+
+@article{mathurNavigatingSocialWorld2016,
+  title = {Navigating a Social World with Robot Partners: {{A}} Quantitative Cartography of the {{Uncanny Valley}}},
+  shorttitle = {Navigating a Social World with Robot Partners},
+  author = {Mathur, Maya B. and Reichling, David B.},
+  year = {2016},
+  month = jan,
+  journal = {Cognition},
+  volume = {146},
+  pages = {22--32},
+  issn = {0010-0277},
+  doi = {10.1016/j.cognition.2015.09.008},
+  urldate = {2025-05-03},
+  abstract = {Android robots are entering human social life. However, human--robot interactions may be complicated by a hypothetical Uncanny Valley (UV) in which imperfect human-likeness provokes dislike. Previous investigations using unnaturally blended images reported inconsistent UV effects. We demonstrate an UV in subjects' explicit ratings of likability for a large, objectively chosen sample of 80 real-world robot faces and a complementary controlled set of edited faces. An ``investment game'' showed that the UV penetrated even more deeply to influence subjects' implicit decisions concerning robots' social trustworthiness, and that these fundamental social decisions depend on subtle cues of facial expression that are also used to judge humans. Preliminary evidence suggests category confusion may occur in the UV but does not mediate the likability effect. These findings suggest that while classic elements of human social psychology govern human--robot social interaction, robust UV effects pose a formidable android-specific problem.},
+  keywords = {Facial appearance,Game theory,Human-robot interaction,Social decision-making,Social interaction,Trust},
+  file = {C\:\\Users\\maxki\\Zotero\\storage\\D7ML4ZQL\\Mathur and Reichling - 2016 - Navigating a social world with robot partners A quantitative cartography of the Uncanny Valley.pdf;C\:\\Users\\maxki\\Zotero\\storage\\UAMSFXLF\\S0010027715300640.html}
+}
+
+@misc{mengTransMLAMultiHeadLatent2025,
+  title = {{{TransMLA}}: {{Multi-Head Latent Attention Is All You Need}}},
+  shorttitle = {{{TransMLA}}},
+  author = {Meng, Fanxu and Yao, Zengwei and Zhang, Muhan},
+  year = {2025},
+  month = feb,
+  number = {arXiv:2502.07864},
+  eprint = {2502.07864},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2502.07864},
+  urldate = {2025-05-03},
+  abstract = {Modern large language models (LLMs) often encounter communication bottlenecks on current hardware, rather than purely computational constraints. Multi-head Latent Attention (MLA) tackles this challenge by using low-rank matrices in the key-value (KV) layers, thereby allowing compressed latent KV states to be cached. This approach significantly reduces the KV cache size relative to traditional multi-head attention, leading to faster inference. Moreover, MLA employs an up-projection matrix to increase expressiveness, trading additional computation for reduced communication overhead. Although MLA has demonstrated efficiency and effectiveness in Deepseek V2/V3/R1, many major model providers still rely on Group Query Attention (GQA) and have not announced any plans to adopt MLA. In this paper, we show that GQA can always be represented by MLA while maintaining the same KV cache overhead, but the converse does not hold. To encourage broader use of MLA, we introduce TransMLA, a post-training method that converts widely used GQA-based pre-trained models (e.g., LLaMA, Qwen, Mixtral) into MLA-based models. After conversion, the model can undergo additional training to boost expressiveness without increasing the KV cache size. Furthermore, we plan to develop MLA-specific inference acceleration techniques to preserve low latency in transformed models, thus enabling more efficient distillation of Deepseek R1.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {C\:\\Users\\maxki\\Zotero\\storage\\9ZE8SX6V\\Meng et al. - 2025 - TransMLA Multi-Head Latent Attention Is All You Need.pdf;C\:\\Users\\maxki\\Zotero\\storage\\7ENPFVVD\\2502.html}
+}
+
+@misc{mengTransMLAMultiHeadLatent2025a,
+  title = {{{TransMLA}}: {{Multi-Head Latent Attention Is All You Need}}},
+  shorttitle = {{{TransMLA}}},
+  author = {Meng, Fanxu and Yao, Zengwei and Zhang, Muhan},
+  year = {2025},
+  month = feb,
+  number = {arXiv:2502.07864},
+  eprint = {2502.07864},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2502.07864},
+  urldate = {2025-05-03},
+  abstract = {Modern large language models (LLMs) often encounter communication bottlenecks on current hardware, rather than purely computational constraints. Multi-head Latent Attention (MLA) tackles this challenge by using low-rank matrices in the key-value (KV) layers, thereby allowing compressed latent KV states to be cached. This approach significantly reduces the KV cache size relative to traditional multi-head attention, leading to faster inference. Moreover, MLA employs an up-projection matrix to increase expressiveness, trading additional computation for reduced communication overhead. Although MLA has demonstrated efficiency and effectiveness in Deepseek V2/V3/R1, many major model providers still rely on Group Query Attention (GQA) and have not announced any plans to adopt MLA. In this paper, we show that GQA can always be represented by MLA while maintaining the same KV cache overhead, but the converse does not hold. To encourage broader use of MLA, we introduce TransMLA, a post-training method that converts widely used GQA-based pre-trained models (e.g., LLaMA, Qwen, Mixtral) into MLA-based models. After conversion, the model can undergo additional training to boost expressiveness without increasing the KV cache size. Furthermore, we plan to develop MLA-specific inference acceleration techniques to preserve low latency in transformed models, thus enabling more efficient distillation of Deepseek R1.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {C\:\\Users\\maxki\\Zotero\\storage\\KYZEWBLC\\Meng et al. - 2025 - TransMLA Multi-Head Latent Attention Is All You Need.pdf;C\:\\Users\\maxki\\Zotero\\storage\\NPKGQT9N\\2502.html}
 }
 
 @inproceedings{rouardAudioConditioningMusic2024,
@@ -134,6 +241,24 @@
   file = {C\:\\Users\\maxki\\Zotero\\storage\\XKSSLCWU\\Song and Wang - 2025 - MusFlow Multimodal Music Generation via Conditional Flow Matching.pdf;C\:\\Users\\maxki\\Zotero\\storage\\VSMLRTJ9\\2504.html}
 }
 
+@misc{suRoFormerEnhancedTransformer2023,
+  title = {{{RoFormer}}: {{Enhanced Transformer}} with {{Rotary Position Embedding}}},
+  shorttitle = {{{RoFormer}}},
+  author = {Su, Jianlin and Lu, Yu and Pan, Shengfeng and Murtadha, Ahmed and Wen, Bo and Liu, Yunfeng},
+  year = {2023},
+  month = nov,
+  number = {arXiv:2104.09864},
+  eprint = {2104.09864},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2104.09864},
+  urldate = {2025-05-03},
+  abstract = {Position encoding recently has shown effective in the transformer architecture. It enables valuable supervision for dependency modeling between elements at different positions of the sequence. In this paper, we first investigate various methods to integrate positional information into the learning process of transformer-based language models. Then, we propose a novel method named Rotary Position Embedding(RoPE) to effectively leverage the positional information. Specifically, the proposed RoPE encodes the absolute position with a rotation matrix and meanwhile incorporates the explicit relative position dependency in self-attention formulation. Notably, RoPE enables valuable properties, including the flexibility of sequence length, decaying inter-token dependency with increasing relative distances, and the capability of equipping the linear self-attention with relative position encoding. Finally, we evaluate the enhanced transformer with rotary position embedding, also called RoFormer, on various long text classification benchmark datasets. Our experiments show that it consistently overcomes its alternatives. Furthermore, we provide a theoretical analysis to explain some experimental results. RoFormer is already integrated into Huggingface: {\textbackslash}url\{https://huggingface.co/docs/transformers/model\_doc/roformer\}.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\maxki\\Zotero\\storage\\3HHQCGXB\\Su et al. - 2023 - RoFormer Enhanced Transformer with Rotary Position Embedding.pdf;C\:\\Users\\maxki\\Zotero\\storage\\RAGW8HKD\\2104.html}
+}
+
 @misc{talJointAudioSymbolic2024,
   title = {Joint {{Audio}} and {{Symbolic Conditioning}} for {{Temporally Controlled Text-to-Music Generation}}},
   author = {Tal, Or and Ziv, Alon and Gat, Itai and Kreuk, Felix and Adi, Yossi},
@@ -149,4 +274,22 @@
   archiveprefix = {arXiv},
   keywords = {Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
   file = {C\:\\Users\\maxki\\Zotero\\storage\\CU2YMGG4\\Tal et al. - 2024 - Joint Audio and Symbolic Conditioning for Temporally Controlled Text-to-Music Generation.pdf;C\:\\Users\\maxki\\Zotero\\storage\\28SS4W4N\\2406.html}
+}
+
+@misc{yangDiffsoundDiscreteDiffusion2023,
+  title = {Diffsound: {{Discrete Diffusion Model}} for {{Text-to-sound Generation}}},
+  shorttitle = {Diffsound},
+  author = {Yang, Dongchao and Yu, Jianwei and Wang, Helin and Wang, Wen and Weng, Chao and Zou, Yuexian and Yu, Dong},
+  year = {2023},
+  month = apr,
+  number = {arXiv:2207.09983},
+  eprint = {2207.09983},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2207.09983},
+  urldate = {2025-05-05},
+  abstract = {Generating sound effects that humans want is an important topic. However, there are few studies in this area for sound generation. In this study, we investigate generating sound conditioned on a text prompt and propose a novel text-to-sound generation framework that consists of a text encoder, a Vector Quantized Variational Autoencoder (VQ-VAE), a decoder, and a vocoder. The framework first uses the decoder to transfer the text features extracted from the text encoder to a mel-spectrogram with the help of VQ-VAE, and then the vocoder is used to transform the generated mel-spectrogram into a waveform. We found that the decoder significantly influences the generation performance. Thus, we focus on designing a good decoder in this study. We begin with the traditional autoregressive decoder, which has been proved as a state-of-the-art method in previous sound generation works. However, the AR decoder always predicts the mel-spectrogram tokens one by one in order, which introduces the unidirectional bias and accumulation of errors problems. Moreover, with the AR decoder, the sound generation time increases linearly with the sound duration. To overcome the shortcomings introduced by AR decoders, we propose a non-autoregressive decoder based on the discrete diffusion model, named Diffsound. Specifically, the Diffsound predicts all of the mel-spectrogram tokens in one step and then refines the predicted tokens in the next step, so the best-predicted results can be obtained after several steps. Our experiments show that our proposed Diffsound not only produces better text-to-sound generation results when compared with the AR decoder but also has a faster generation speed, e.g., MOS: 3.56 {\textbackslash}textit\{v.s\} 2.786, and the generation speed is five times faster than the AR decoder.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {C\:\\Users\\maxki\\Zotero\\storage\\SESPZPJD\\Yang et al. - 2023 - Diffsound Discrete Diffusion Model for Text-to-sound Generation.pdf;C\:\\Users\\maxki\\Zotero\\storage\\TCYGAJ4H\\2207.html}
 }
