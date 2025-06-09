@@ -1,0 +1,31 @@
+    \documentclass[12pt]{standalone}
+    \usepackage{varwidth}
+
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{amsmath, amssymb, graphics, setspace, xcolor}
+    \usepackage{mathtools}
+
+    \newcommand{\mathsym}[1]{{}}
+    \newcommand{\unicode}[1]{{}}
+    \newcounter{mathematicapage}
+
+    \begin{document}
+    \definecolor{tcol}{rgb}{0,0,0}
+    % \definecolor{tcol}{rgb}{0.9529,0.9412,0.8745}
+    \newtagform{col}[\textcolor{tcol}]{\color{tcol}}{}
+    \usetagform{col}
+    \begin{varwidth}{4.5 in}
+        \begin{align*}
+            %  \color{tcol}{D_{\text{KL}}(P \parallel Q) = \sum_{x \in \mathcal{X}} P(x) \log \frac{P(x)}{Q(x)}} \tag{(2)} \\
+            %  \color{tcol}{\mathcal{L} = 0.5 \cdot \frac{1}{N} \sum_{i=0}^{N} \log \text{diag}(\text{softmax}(C_\text{text})) + } \color{tcol}\frac{1}{N} \sum_{i=0}^{N} \log \text{diag}(\text{softmax}(C_\text{audio})) \tag{(3.1)}    \\           
+            %  \color{tcol}{C = \tau \cdot (E_t \cdot E_a^{\top}) \tag{(3.2)}} \\
+            % \MoveEqLeft \color{tcol}{l_{\text{double CFG}} = l_{\emptyset} + \alpha[l_{\text{style}} + \beta(l_{\text{text,style}} - l_{\text{style}}) - l_{\emptyset}]\tag{(4)}} \\
+            \MoveEqLeft \color{tcol}{l_{\emptyset} := \text{next logit without any conditioning} \tag{5}} \\
+            \MoveEqLeft \color{tcol}{l_{\text{style}} := \text{next logit with only style conditioning} \tag{6}} \\
+            \MoveEqLeft \color{tcol}{l_{\text{text,style}} := \text{next logit with both style and text conditioning} \tag{7}} \\
+            % \MoveEqLeft {\mathcal{L}_{CE}(\theta, y_{1:T}, c) = - \sum_{t=1}^{T} \log p_{\theta}(y_t | y_{v<t}, c) + \text{regularization}} \tag{1} \\
+            % \MoveEqLeft \color{tcol}{L_{\text{CE}} = - \sum_{t=1, t \notin c_{style}}^{T} \log p(y_t \mid y_{<t}, c_{\text{text}}, c_{\text{style}})} \tag{8}
+        \end{align*}
+    \end{varwidth}
+\end{document}
