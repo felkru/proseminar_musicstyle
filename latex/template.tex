@@ -196,15 +196,15 @@ For each background info, please provide only the most important details:
 \begin{outline}
     \1 Textual / parametric conditioning
     \1 Textual inversion
-    \2 Is a technique used to teach a pretrained model, which expects a textual input, to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space.
+        \2 Is a technique used to teach a pretrained model which expects a textual input to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space.
     \1 Pseudowords
     \1 Embedding space
     \1 Audio feature extractor
     \1 Inference time
-    \2 Inference is the Phase after training a Language model, in which it is actively used to perform its intended task on new data, in this case creating music based on input text and audio.
+        \2 Inference is the Phase after training a Language model, in which it is actively used to perform its intended task on new data, in this case creating music based on input text and audio.
     \1 Double classifier free guidance
-    \2 Double classifier free guidance is applying classifier free guidance twice in order to balance the influence of textual- and style-Information when the two are conflicting. Without this, the textual description would be ignored by the model.
-    \2 Classifier free guidance can be used to amplify the importance of the conditions given to the model for creating their output, making their outputs less generic.
+        \2 Double classifier free guidance is applying classifier free guidance twice in order to balance the influence of textual- and style-Information when the two are conflicting. Without this, the textual description would be ignored by the model.
+        \2 Classifier free guidance can be used to amplify the importance of the conditions given to the model for creating their output. \cite{hoClassifierFreeDiffusionGuidance2022} %\comment{Is this the correct source?}
     \1 MIDI
     \1 Music stems
     \1 Frozen model
@@ -213,15 +213,15 @@ For each background info, please provide only the most important details:
     \1 Cross-entropy loss
     \1 Gradient computation
     \1 Style conditioning
-    \2 Style conditioning describes the method of using an audio excerpt as an input to the language model, allowing it to adapt the output to the musical characteristics of the input.
+        \2 Style conditioning describes the method of using an audio excerpt as an input to the language model, allowing it to adapt the output to the musical characteristics of the input.
     \1 Bottleneck
-    \2 Bottlenecks are used in the paper to limit the amount of information the model receives from the input sample, in order to prevent it from simply copying the input audio and extracting its most essential features.
+        \2 Bottlenecks are used in the paper to limit the amount of information the model receives from the input sample, in order to prevent it from simply copying the input audio and extracting its most essential features.
     \1 Encodec (explain features)
-    \2 Is used in the audio tokenizer as a transformer encoder. Generally, it is a deep-learning audio codec made for high levels of compression with little to no loss in quality\cite{defossezHighFidelityNeural2022}.
+        \2 Is used in the audio tokenizer as a transformer encoder. Generally, it is a deep-learning audio codec made for high levels of compression with little to no loss in quality\cite{defossezHighFidelityNeural2022}.
     \1 MERT (explain features)
     \1 MusicFM (explain features)
     \1 Transformer encoder / decoder
-    \2 A transformer encoder compresses input data into a latent representation, which is enriched with context from the entire input. During this process, the transfomer can weigh the importance of different parts of the input (self-attention). A transformer decoder generates an output from the latent-representation of data created by the encoder. This is done in multiple steps, in which the decoder assesses the propability of each next token occuring in the output sequence and using this information to construct the output step by step.
+        \2 A transformer encoder compresses input data into a latent representation, which is enriched with context from the entire input. During this process, the transfomer can weigh the importance of different parts of the input (self-attention). A transformer decoder generates an output from the latent-representation of data created by the encoder. This is done in multiple steps, in which the decoder assesses the propability of each next token occuring in the output sequence and using this information to construct the output step by step.
     \1 Residual vector Quanzizer
     \1 Temporal downsampling
     \1 CLAP
@@ -230,31 +230,31 @@ For each background info, please provide only the most important details:
     \1 Contrastive (text-music) model
     \1 (mel-)Spectogram
     \1 token / tokenizer
-    \2 A token is a discrete unit of information, which can be interpreted and output by an transformer language model. A tokenizer converts the original audio and text input to tokens.
+        \2 A token is a discrete unit of information, which can be interpreted and output by an transformer language model. A tokenizer converts the original audio and text input to tokens.
     \1 Transfomer decoder neural network
     \1 Gradient descend step
     \1 Latent representation
     \1 Downsampling
     \1 Codebook (not sure about if this is precise enough or even correct)
-    \2 A codebook contains a set of embeddings used in RVQ as a comparison point to the input. The length of the codebook can be used to tune the bottleneck as having fewer codebooks leads to more information loss.
+        \2 A codebook contains a set of embeddings used in RVQ as a comparison point to the input. The length of the codebook can be used to tune the bottleneck as having fewer codebooks leads to more information loss.
     \1 Dropout (context: conditioning)
     \1 Logits
     \1 Hyperparameters
     \1 Cosine similarity
     \1 \{all the metrics used in the Experimental section\}
     \1 KNN\textsubscript{overfit}
-    \2 Is a newly introduced method by the authors to assess how similar the input and output audio of the model are. If the output audio has the least distance to the input audio when added to the embedding space, KNN\textsubscript{overfit} will have a value of 1, implying that the output audio is too close in sound to the input audio. Is used in praxis as an counterargument to KNN\textsubscript{common}.
+        \2 Is a newly introduced method by the authors to assess how similar the input and output audio of the model are. If the output audio has the least distance to the input audio when added to the embedding space, KNN\textsubscript{overfit} will have a value of 1, implying that the output audio is too close in sound to the input audio. Is used in praxis as an counterargument to KNN\textsubscript{common}.
     \1 FAD (Frechét Audio Distance)
-    \2 Is an objective metric introduced in \cite{kilgourFrechetAudioDistance2019}, used to evaluate the quality of the generated audio. A low score suggests good quality, while a high score suggests bad quality.
+        \2 Is an objective metric introduced in \cite{kilgourFrechetAudioDistance2019}, used to evaluate the quality of the generated audio. A low score suggests good quality, while a high score suggests bad quality.
     \1 OVL (Overall?)
-    \2 Is a human metric used in the experimental section, is used to assess the overall (sound) quality of the audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. It was found that the OVL score correlates with the objective FAD-metric.
+        \2 Is a human metric used in the experimental section, is used to assess the overall (sound) quality of the audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. It was found that the OVL score correlates with the objective FAD-metric.
     \1 SIM (Similarity?)
-    \2 Is a human metric used in the experimental section, is used to assess the overall similarity in style between the input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. It was found that the SIM score correlates well with the KNN\textsubscript{common}-metric.
+        \2 Is a human metric used in the experimental section, is used to assess the overall similarity in style between the input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. It was found that the SIM score correlates well with the KNN\textsubscript{common}-metric.
     \1 VAR
-    \2 is a human metric used in the experimental section, is used to assess the likelyhood of input and output being taken from the same song. A lower score indicates it is less likely that the samples are taken from the same song (preferrable result), while a high score indicates it is more likely. It was found that the VAR score correlates well with the KNN\textsubscript{overfit}-metric.
+        \2 is a human metric used in the experimental section, is used to assess the likelyhood of input and output being taken from the same song. A lower score indicates it is less likely that the samples are taken from the same song (preferrable result), while a high score indicates it is more likely. It was found that the VAR score correlates well with the KNN\textsubscript{overfit}-metric.
     \1 Vanilla Adam optimizer
     \1 Continuation method
-    \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison.
+        \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison.
     \l Masked model
 \end{outline}
 
