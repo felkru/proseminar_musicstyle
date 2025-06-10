@@ -161,8 +161,16 @@
 Literature reviews and critically thinking about past work are integral parts of a healthy scientific community.
 Thus this work aims to reflect on the scientific value and methodological quality of work on audio conditioning in music generation by Rouard et. al.'s work \cite{rouardAudioConditioningMusic2024}.\\
 
-The authors present to novel contributions aiming to allow high quality music generation based on a context containing both audio and text inputs. They specifically present an adaptation of an existing method creating "pseudowords", based on existing work in the computer vision domain \cite{galImageWorthOne2022}
-and a novel method enabling fast inference for new audio samples, through lossy encoding of style features and an attention mechanism. \\ % \comment{Is attention the correct framing here? I'd guess this might create confusion.}
+The authors present two novel contributions aiming to allow high quality music generation based on a context containing both audio and text inputs. They specifically present an adaptation of an existing method creating "pseudowords", based on existing work in the computer vision domain \cite{galImageWorthOne2022}
+and a novel method enabling fast inference for new audio samples, through lossy encoding of style features and an attention mechanism. \\% \comment{Is attention the correct framing here? I'd guess this might create confusion.}
+
+
+Additionally, the authors propose a method to balance the importance of informationally rich audio data and less dense text data at inference time, as well as three automated metrics for assessing the quality of the style conditioning \cite{rouardAudioConditioningMusic2024}.  \\
+
+Because ``music is hard to describe textually'' \cite{rouardAudioConditioningMusic2024}, there is an interest in using an audio waveform in addition to text as an input to a music generation model when attempting to create music in the style of an existing musical excerpt. This also allows users to create a more specific output without needing to find a correct textual descripton of their expected result.\cite{rouardAudioConditioningMusic2024}. \\
+
+However, as will be shown in \ref{discussion} the models described in the paper still are still lacking in their ability to accurately capture the stylistic details of the musical input, as well as their ability to merge multiple styles in the output. %\comment{No quotation needed here, because our own findings?}
+Assuming a perfect result, future models could be used to transcribe existing music in a variety of different styles and genres while keeping its original artistic integrity. \\ % \comment{We probably need to cite this statement}
 
 Section \ref{backgrounds} starts by describing backgrounds relevant for the experiments in section \ref{experiments}.
 The following section \ref{discussion} and section \ref{summary} present and discuss the paper's main results.
