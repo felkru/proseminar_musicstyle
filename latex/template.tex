@@ -196,14 +196,14 @@ For each background info, please provide only the most important details:
 \begin{outline}
     \1 Textual / parametric conditioning
     \1 Textual inversion
-        \2 Is a technique used to teach a pretrained model which expects a textual input to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space.
+        \2 Is a technique used to teach a pretrained model which expects a textual input to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space. \cite{rouardAudioConditioningMusic2024} It was previously used in the computer vision domain. \cite{galImageWorthOne2022}
     \1 Pseudowords
     \1 Embedding space
     \1 Audio feature extractor
     \1 Inference time
         \2 Inference is the Phase after training a Language model, in which it is actively used to perform its intended task on new data, in this case creating music based on input text and audio.
     \1 Double classifier free guidance
-        \2 Double classifier free guidance is applying classifier free guidance twice in order to balance the influence of textual- and style-Information when the two are conflicting. Without this, the textual description would be ignored by the model.
+        \2 Double classifier free guidance is applying classifier free guidance twice in order to balance the influence of textual- and style-Information when the two are conflicting. Without this, the textual description would be ignored by the model. \cite{rouardAudioConditioningMusic2024}
         \2 Classifier free guidance can be used to amplify the importance of the conditions given to the model for creating their output. \cite{hoClassifierFreeDiffusionGuidance2022} %\comment{Is this the correct source?}
     \1 MIDI
     \1 Music stems
@@ -225,7 +225,7 @@ For each background info, please provide only the most important details:
     \1 Residual vector Quanzizer
     \1 Temporal downsampling
     \1 CLAP
-    \1 (non-)Autoregressive model
+    \1 (non-)Autoregressive model %\comment{will be needed in paper}
     \1 Latent space
     \1 Contrastive (text-music) model
     \1 (mel-)Spectogram
@@ -303,7 +303,15 @@ Method here.\\
     \label{Figure 1}
 \end{figure}
 
-lorem ipsum
+The first method proposed in the Paper is based on a textual inversion approach, first representing the input audio tokens as pseudowords to make them available as input to the MusicGen model. \cite{rouardAudioConditioningMusic2024} \\
+
+The model is trained autoregressively, predicting the probabilistic distribution over the next token $y_t$ in regards of its preceding tokens $y_{<t}$ and the textual embedding $c$. Based on this, the probability of observing the tokens $y_1$ through $y_T$ is denoted as \\
+\begin{equation}
+    p_\theta(y_{1:T}|c) = \prod_{t=1}^{T} p_\theta(y_t|y_{<t},c),
+    \label{eq:probdist}
+\end{equation}
+
+which can be understood as the product of the probability distribution of each token $y_1$ through $y_T$.
 
 \section{Method 2}\label{method_2}
 
@@ -360,7 +368,13 @@ This served to show the feasibility before running larger, more expensive, exper
 
 
 \subsection{Style encoding}
-Why only 2-5s of subsample for style conditioning?
+Why only 2-5s of subsample for style conditioning? \\
+
+The authors state that they ``need to extract enough features to have a meaningful conditioning, but not too much, to prevent the generative model to copy and loop the conditioning audio'' \cite{rouardAudioConditioningMusic2024}. \\
+
+Yet limiting the extraction of features by shortening the input sample length can worsen the quality of the style conditioning in situations where a non-representative segment of the input audio's style is chosen. The shorter the input sample, the more specific is the conditioned style to the input segment. \\
+
+Additionally, musical segments are often much longer than five seconds, limiting the stylistic information that can be extracted to high level information. \cite{rouardAudioConditioningMusic2024}
 
 \subsection{Music generation speed}
 The model generates roughly realtime (~0.8x) audio snippets and can even generate 3 audio snippets at a similar speed in parallel. Test have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference.
