@@ -222,7 +222,7 @@ For each background info, please provide only the most important details:
     \1 MusicFM (explain features)
     \1 Transformer encoder / decoder
         \2 A transformer encoder compresses input data into a latent representation, which is enriched with context from the entire input. During this process, the transfomer can weigh the importance of different parts of the input (self-attention). A transformer decoder generates an output from the latent-representation of data created by the encoder. This is done in multiple steps, in which the decoder assesses the propability of each next token occuring in the output sequence and using this information to construct the output step by step. \cite{mengTransMLAMultiHeadLatent2025}
-    \1 Residual vector Quanzizer
+    \1 Residual vector Quanzizer %\comment{introduce RVQ abbreviation, will also be needed}
     \1 Temporal downsampling
     \1 CLAP
     \1 (non-)Autoregressive model %\comment{will be needed in paper}
@@ -303,15 +303,15 @@ Method here.\\
     \label{Figure 1}
 \end{figure}
 
-The first method proposed in the Paper is based on a textual inversion approach, first representing the input audio tokens as pseudowords to make them available as input to the MusicGen model. \cite{rouardAudioConditioningMusic2024} \\
+The first method proposed in the paper is based on a textual inversion approach, first representing the input audio tokens as pseudowords to make them available as input to the MusicGen model. \cite{rouardAudioConditioningMusic2024} \\
 
-The model is trained autoregressively, predicting the probabilistic distribution over the next token $y_t$ in regards of its preceding tokens $y_{<t}$ and the textual embedding $c$. Based on this, the probability of observing the tokens $y_1$ through $y_T$ is denoted as \\
+The model is trained autoregressively, predicting the likelyhood of observing the next token $y_t$ in regards of its preceding tokens $y_{<t}$ and the textual embedding $c$. Based on this, the probability of observing the tokens $y_1$ through $y_T$ is denoted as \\
 \begin{equation}
     p_\theta(y_{1:T}|c) = \prod_{t=1}^{T} p_\theta(y_t|y_{<t},c),
     \label{eq:probdist}
 \end{equation}
 
-which can be understood as the product of the probability distribution of each token $y_1$ through $y_T$.
+which can be understood as the product of the chance of observing each token $y_1$ through $y_T$ individually.
 
 \section{Method 2}\label{method_2}
 
@@ -323,7 +323,15 @@ which can be understood as the product of the probability distribution of each t
 \end{figure}
 
 
-lorem ipsum
+The second method proposed in the paper is based on a style conditioning aproach, where a style conditioner randomly chooses an excerpt from the input audio to extract stylistic features from. \cite{rouardAudioConditioningMusic2024}\\
+The style conditioner consists of a frozen audio feature extractor, a transformer encoder, a RVQ and a linear conversion layer. In the RVQ and downsampling layers, bottlenecks are implemented to prevent the model from copying its input.\cite{rouardAudioConditioningMusic2024} \\
+
+Firstly, in the frozen audio feature extractor \cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023, wonFoundationModelMusic2023}, the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transfomer encoder. \cite{rouardAudioConditioningMusic2024} \\
+
+The embeddings in this embedding space are then quantized, compressing the included information into a discrete set of data described in up to 6 codebooks. The width of the bottleneck can be controlled by the number of codebooks supplied. \cite{rouardAudioConditioningMusic2024} %\comment{too complicated? We may want to skip on explaining codebooks}
+In this same step, the data is also temporally downsampled, only allowing conditioning with a 5Hz framerate. \cite{rouardAudioConditioningMusic2024} %\comment{Is this understandable? More context needed on frame rate?} \\
+
+Lastly, the high-dimensional data is projected onto a linear layer, allowing it to be used as an input to MusicGen. \cite{rouardAudioConditioningMusic2024} \\
 
 \section{Experiments}\label{experiments}
 
