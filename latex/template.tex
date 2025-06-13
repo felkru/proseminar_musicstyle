@@ -329,9 +329,13 @@ The style conditioner consists of a frozen audio feature extractor, a transforme
 Firstly, in the frozen audio feature extractor \cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023, wonFoundationModelMusic2023}, the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transfomer encoder. \cite{rouardAudioConditioningMusic2024} \\
 
 The embeddings in this embedding space are then quantized, compressing the included information into a discrete set of data described in up to 6 codebooks. The width of the bottleneck can be controlled by the number of codebooks supplied. \cite{rouardAudioConditioningMusic2024} %\comment{too complicated? We may want to skip on explaining codebooks}
-In this same step, the data is also temporally downsampled, only allowing conditioning with a 5Hz framerate. \cite{rouardAudioConditioningMusic2024} %\comment{Is this understandable? More context needed on frame rate?} \\
+In this same step, the data is also temporally downsampled, only allowing conditioning with a 5Hz framerate. \cite{rouardAudioConditioningMusic2024} \\ %\comment{Is this understandable? More context needed on frame rate?}
 
 Lastly, the high-dimensional data is projected onto a linear layer, allowing it to be used as an input to MusicGen. \cite{rouardAudioConditioningMusic2024} \\
+
+\subsection{Double Classifier Free Guidance}
+
+Due to a difference in information density, it was observed that the style conditioning model did not factor in the textual description for generating new audio when it contradicted the style conditioning data. \cite{rouardAudioConditioningMusic2024} \\
 
 \section{Experiments}\label{experiments}
 
