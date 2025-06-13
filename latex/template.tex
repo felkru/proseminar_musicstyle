@@ -238,7 +238,7 @@ For each background info, please provide only the most important details:
     \1 Codebook (not sure about if this is precise enough or even correct)
         \2 A codebook contains a set of embeddings used in RVQ as a comparison point to the input. The length of the codebook can be used to tune the bottleneck as having fewer codebooks leads to more information loss. %\comment{can likely be removed}
     \1 Dropout (context: conditioning)
-    \1 Logits
+    \1 Logits %\comment{will be mentioned later}
     \1 Hyperparameters
     \1 Cosine similarity
     \1 \{all the metrics used in the Experimental section\}
@@ -337,6 +337,15 @@ Lastly, the high-dimensional data is projected onto a linear layer, allowing it 
 
 Due to a difference in information density, it was observed that the style conditioning model did not factor in the textual description for generating new audio when it contradicted the style conditioning data. \cite{rouardAudioConditioningMusic2024} \\
 
+The new Logits after applying DCFG can be calculated using the following formula:
+
+\begin{equation}
+    l_{double \; CFG} = l_\emptyset + \alpha[l_{style}+\beta(l_{text,style}-l_{style})-l_{\emptyset}]
+    \label{eq:doublecfg}
+\end{equation},
+
+where $l_{\emptyset}$ denotes a logit without any conditioning, $l_{style}$ denotes a logit with only style conditioning applied and $l_{text,style}$ denotes a logit with bouth style and text conditioning. The coefficients $\alpha$ and $\beta$ are used to determine the importance of the overall conditioning and the text conditioning respectively. It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG. \cite{rouardAudioConditioningMusic2024}
+
 \section{Experiments}\label{experiments}
 
 Experiments here
@@ -369,7 +378,7 @@ Experiments here
 \section{Discussion}\label{discussion}
 
 \begin{outline}
-    \1 Why audio and style encoding instead of just style encoding?
+    \1 Why audio and style encoding instead of just style encoding? %\comment{audio / style? maybe meant text / style?}
     \1 Why style conditioning of 1.5-4.5s instead of longer?
     \1 Why 5hz downsampling after codebook instead of before?
 \end{outline}
@@ -380,13 +389,31 @@ This served to show the feasibility before running larger, more expensive, exper
 
 
 \subsection{Style encoding}
-Why only 2-5s of subsample for style conditioning? \\
+Why only 1.5-4.5s of subsample for style conditioning? \\
 
-The authors state that they ``need to extract enough features to have a meaningful conditioning, but not too much, to prevent the generative model to copy and loop the conditioning audio'' \cite{rouardAudioConditioningMusic2024}. \\
+The authors state that it is necessary  `to extract enough features to have a meaningful conditioning, but not too much, to prevent the generative model to copy and loop the conditioning audio'' \cite{rouardAudioConditioningMusic2024}. \\
 
 Yet limiting the extraction of features by shortening the input sample length can worsen the quality of the style conditioning in situations where a non-representative segment of the input audio's style is chosen. The shorter the input sample, the more specific is the conditioned style to the input segment. \\
 
 Additionally, musical segments are often much longer than five seconds, limiting the stylistic information that can be extracted to high level information. \cite{rouardAudioConditioningMusic2024}
+
+
+Why 5hz downsampling after codebook instead of before? \\
+
+The authors give no explicit reasoning in their paper. \\ %\comment{infer reasoning}
+
+\subsection{Dataset quality}
+The Authors disclose two public Datasets used for the training of their models, the Shutterstock and Pond5 libraries of stock music.
+
+Since all of the Music contained in the Datasets is instrumental, the models generation quality decreases when the conditioning audio or output audio contains lyris. \cite{rouardAudioConditioningMusic2024} \\
+
+
+Additionally, the Public Dataset's quality-control is lacking, containing not only professionally produced music, but allowing any person to upload audio to the Shutterstock dataset after an initial review \href{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}{Shutterstock website}. \\
+
+Due to the nature of the public Datasets, many of the contained songs are not intended for casual enjoyment but for commercial use (cf. \href{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}{Shutterstock website}), impacting the audio quality of the models outputs. \\
+
+Lastly, there are an additional 10000 songs in an undisclosed internal dataset, with no additional information on their nature given \cite{rouardAudioConditioningMusic2024}.
+
 
 \subsection{Music generation speed}
 The model generates roughly realtime (~0.8x) audio snippets and can even generate 3 audio snippets at a similar speed in parallel. Test have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference.
