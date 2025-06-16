@@ -11,11 +11,11 @@ General note:
 - [x] **Review and Edit This To-Do List (15 min):** Discuss and agree on this work plan and task delegation.
 -   [x] **Clean & Prune `literature.bib` (1 hour per person = 2 hours total):**
     -   [x] **Action:** Verify if `hanInstructMEInstructionGuided2023` and `talJointAudioSymbolic2024` (currently preprints) have **peer-reviewed versions**. If so, update their bib entries. If not, note them as arXiv, but prioritize finding peer-reviewed alternatives for your minimum of 8.
-    -   [ ] **Action:** Ensure you have at least 8 _relevant, peer-reviewed_ references for the paper. Add more if necessary to meet this count with high-quality, relevant sources.
--   [ ] LLM generate Backgrounds for later revision
+    -   [x] **Action:** Ensure you have at least 8 _relevant, peer-reviewed_ references for the paper. Add more if necessary to meet this count with high-quality, relevant sources.
+-   [x] LLM generate Backgrounds for later revision
 -   [ ] **Collaborative Outline of Background Subsections (30 min):** Based on the Rouard et al. paper and your presentation's structure (e.g., "Related Work," "Textual Inversion," "Style Conditioner"), collaboratively decide on the granular subsections within the "Backgrounds" section of your paper. This will guide writing and ensure logical flow.
 -   [ ] ask llm to adapt backgrounds to new structure
--   [ ] **Define & Document Consistent Formatting (15 min):** Agree on and document (e.g., in a comment at the top of the `.tex` file) formatting conventions for:
+-   [x] **Define & Document Consistent Formatting (15 min):** Agree on and document (e.g., in a comment at the top of the `.tex` file) formatting conventions for:
     -   Important terms (e.g., **bold**).
     -   Dataset names (e.g., _AudioSet_).
     -   Model names (e.g., MusicGen, Encodec).
