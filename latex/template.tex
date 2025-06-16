@@ -367,7 +367,6 @@ A masked model is trained using a masking strategy where certain portions of the
 \begin{outline}
     \1 Textual / parametric conditioning
     \1 Textual inversion
-    \2 Is a technique used to teach a pretrained model which expects a textual input to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space \cite{rouardAudioConditioningMusic2024}. It was previously used in the computer vision domain \cite{galImageWorthOne2022}.
     \1 Pseudowords
     \1 Embedding space
     \1 Audio feature extractor
@@ -429,11 +428,17 @@ A masked model is trained using a masking strategy where certain portions of the
     \1 Masked model
 \end{outline}
 
-\section{Method 1}\label{sec:method_1}
+\section{Textual Inversion}\label{sec:method_1}
 
+
+The authors first propose a quick proof of concept experiment, which uses textual inversion to provide evidence for the feasibility of the experimental approach. Textual inversion is well-suited for such a proof-of concept experiment since it leverages existing models embedding spaces for faster concept learning, enabling fast iteration times and low experiment cost.
+
+These models are commonly expects a textual input to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space \cite{rouardAudioConditioningMusic2024}. It was previously used in the computer vision domain \cite{galImageWorthOne2022}.
+
+% TODO: Change arrows and some text to black
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{textuaIInversion.png}
+    \includegraphics[width=0.9\textwidth]{textual_inversion.png}
     \caption{Papers Figure 1}
     \label{fig:Figure 1}
 \end{figure}
