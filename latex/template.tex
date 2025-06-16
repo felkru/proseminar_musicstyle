@@ -197,7 +197,7 @@ For each background info, please provide only the most important details:
 \begin{outline}
     \1 Textual / parametric conditioning
     \1 Textual inversion
-        \2 Is a technique used to teach a pretrained model which expects a textual input to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space. \cite{rouardAudioConditioningMusic2024} It was previously used in the computer vision domain. \cite{galImageWorthOne2022}
+        \2 Is a technique used to teach a pretrained model which expects a textual input to work with other types of data by representing the chosen data by text in a way that it can be fit into the models text embedding space \cite{rouardAudioConditioningMusic2024}. It was previously used in the computer vision domain \cite{galImageWorthOne2022}.
     \1 Pseudowords
     \1 Embedding space
     \1 Audio feature extractor
@@ -205,7 +205,7 @@ For each background info, please provide only the most important details:
         \2 Inference is the Phase after training a Language model, in which it is actively used to perform its intended task on new data, in this case creating music based on input text and audio.
     \1 Double classifier free guidance
         \2 Double classifier free guidance is applying classifier free guidance twice in order to balance the influence of textual- and style-Information when the two are conflicting. Without this, the textual description would be ignored by the model. \cite{rouardAudioConditioningMusic2024}
-        \2 Classifier free guidance can be used to amplify the importance of the conditions given to the model for creating their output. \cite{hoClassifierFreeDiffusionGuidance2022} %\comment{Is this the correct source?}
+        \2 Classifier free guidance can be used to amplify the importance of the conditions given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}. %\comment{Is this the correct source?}
     \1 MIDI
     \1 Music stems
     \1 Frozen model
@@ -214,15 +214,15 @@ For each background info, please provide only the most important details:
     \1 Cross-entropy loss
     \1 Gradient computation
     \1 Style conditioning
-        \2 Style conditioning describes the method of letting the music generation model adapt its output to the stylistic features of an input audio segment. \cite{rouardAudioConditioningMusic2024}
+        \2 Style conditioning describes the method of letting the music generation model adapt its output to the stylistic features of an input audio segment \cite{rouardAudioConditioningMusic2024}.
     \1 Bottleneck
-        \2 Bottlenecks are used in the paper to limit the amount of information the model receives from the input sample, in order to prevent it from simply copying the input audio and extracting its most essential features. \cite{rouardAudioConditioningMusic2024}
+        \2 Bottlenecks are used in the paper to limit the amount of information the model receives from the input sample, in order to prevent it from simply copying the input audio and extracting its most essential features \cite{rouardAudioConditioningMusic2024}.
     \1 Encodec (explain features)
-        \2 Is used in the audio tokenizer as a transformer encoder. Generally, it is a deep-learning audio codec made for high levels of compression with little to no loss in quality\cite{defossezHighFidelityNeural2022}.
+        \2 Is used in the audio tokenizer as a transformer encoder. Generally, it is a deep-learning audio codec made for high levels of compression with little to no loss in quality \cite{defossezHighFidelityNeural2022}.
     \1 MERT (explain features)
     \1 MusicFM (explain features)
     \1 Transformer encoder / decoder
-        \2 A transformer encoder compresses input data into a latent representation, which is enriched with context from the entire input. During this process, the transfomer can weigh the importance of different parts of the input (self-attention). A transformer decoder generates an output from the latent-representation of data created by the encoder. This is done in multiple steps, in which the decoder assesses the propability of each next token occuring in the output sequence and using this information to construct the output step by step. \cite{mengTransMLAMultiHeadLatent2025}
+        \2 A transformer encoder compresses input data into a latent representation, which is enriched with context from the entire input. During this process, the transfomer can weigh the importance of different parts of the input (self-attention). A transformer decoder generates an output from the latent-representation of data created by the encoder. This is done in multiple steps, in which the decoder assesses the propability of each next token occuring in the output sequence and using this information to construct the output step by step \cite{mengTransMLAMultiHeadLatent2025}.
     \1 Residual vector Quanzizer %\comment{introduce RVQ abbreviation, will also be needed}
     \1 Temporal downsampling
     \1 CLAP
@@ -248,14 +248,14 @@ For each background info, please provide only the most important details:
     \1 FAD (Frechét Audio Distance)
         \2 Is an objective metric introduced in \cite{kilgourFrechetAudioDistance2019}, used to evaluate the quality of the generated audio. A low score suggests good quality, while a high score suggests bad quality.
     \1 OVL (Overall?)
-        \2 Is a human metric used in the experimental section, is used to assess the overall (sound) quality of the audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. It was found that the OVL score correlates with the objective FAD-metric. \cite{rouardAudioConditioningMusic2024}
+        \2 Is a human metric used in the experimental section, is used to assess the overall (sound) quality of the audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. It was found that the OVL score correlates with the objective FAD-metric \cite{rouardAudioConditioningMusic2024}.
     \1 SIM (Similarity?)
-        \2 Is a human metric used in the experimental section, is used to assess the overall similarity in style between the input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. It was found that the SIM score correlates well with the KNN\textsubscript{common}-metric. \cite{rouardAudioConditioningMusic2024}
+        \2 Is a human metric used in the experimental section, is used to assess the overall similarity in style between the input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. It was found that the SIM score correlates well with the KNN\textsubscript{common}-metric \cite{rouardAudioConditioningMusic2024}.
     \1 VAR
-        \2 is a human metric used in the experimental section, is used to assess the likelyhood of input and output being taken from the same song. A lower score indicates it is less likely that the samples are taken from the same song (preferrable result), while a high score indicates it is more likely. It was found that the VAR score correlates well with the KNN\textsubscript{overfit}-metric.\cite{rouardAudioConditioningMusic2024}
+        \2 is a human metric used in the experimental section, is used to assess the likelyhood of input and output being taken from the same song. A lower score indicates it is less likely that the samples are taken from the same song (preferrable result), while a high score indicates it is more likely. It was found that the VAR score correlates well with the KNN\textsubscript{overfit}-metric\cite{rouardAudioConditioningMusic2024}.
     \1 Vanilla Adam optimizer
     \1 Continuation method
-        \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison. \cite{rouardAudioConditioningMusic2024}
+        \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison \cite{rouardAudioConditioningMusic2024}.
     \l Masked model
 \end{outline}
 
@@ -304,7 +304,7 @@ Method here.\\
     \label{Figure 1}
 \end{figure}
 
-The first method proposed in the paper is based on a textual inversion approach, first representing the input audio tokens as pseudowords to make them available as input to the MusicGen model. \cite{rouardAudioConditioningMusic2024} \\
+The first method proposed in the paper is based on a textual inversion approach, first representing the input audio tokens as pseudowords to make them available as input to the MusicGen model \cite{rouardAudioConditioningMusic2024}. \\
 
 The model is trained autoregressively, predicting the likelyhood of observing the next token $y_t$ in regards of its preceding tokens $y_{<t}$ and the textual embedding $c$. Based on this, the probability of observing the tokens $y_1$ through $y_T$ is denoted as \\
 \begin{equation}
@@ -324,19 +324,19 @@ which can be understood as the product of the chance of observing each token $y_
 \end{figure}
 
 
-The second method proposed in the paper is based on a style conditioning aproach, where a style conditioner randomly chooses an excerpt from the input audio to extract stylistic features from. \cite{rouardAudioConditioningMusic2024}\\
-The style conditioner consists of a frozen audio feature extractor, a transformer encoder, a RVQ and a linear conversion layer. In the RVQ and downsampling layers, bottlenecks are implemented to prevent the model from copying its input.\cite{rouardAudioConditioningMusic2024} \\
+The second method proposed in the paper is based on a style conditioning aproach, where a style conditioner randomly chooses an excerpt from the input audio to extract stylistic features from \cite{rouardAudioConditioningMusic2024}. \\
+The style conditioner consists of a frozen audio feature extractor, a transformer encoder, a RVQ and a linear conversion layer. In the RVQ and downsampling layers, bottlenecks are implemented to prevent the model from copying its input \cite{rouardAudioConditioningMusic2024}. \\
 
-Firstly, in the frozen audio feature extractor \cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023, wonFoundationModelMusic2023}, the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transfomer encoder. \cite{rouardAudioConditioningMusic2024} \\
+Firstly, in the frozen audio feature extractor \cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023, wonFoundationModelMusic2023}, the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transfomer encoder \cite{rouardAudioConditioningMusic2024}. \\
 
-The embeddings in this embedding space are then quantized, compressing the included information into a discrete set of data described in up to 6 codebooks. The width of the bottleneck can be controlled by the number of codebooks supplied. \cite{rouardAudioConditioningMusic2024} %\comment{too complicated? We may want to skip on explaining codebooks}
-In this same step, the data is also temporally downsampled, only allowing conditioning with a 5Hz framerate. \cite{rouardAudioConditioningMusic2024} \\ %\comment{Is this understandable? More context needed on frame rate?}
+The embeddings in this embedding space are then quantized, compressing the included information into a discrete set of data described in up to 6 codebooks. The width of the bottleneck can be controlled by the number of codebooks supplied \cite{rouardAudioConditioningMusic2024}. %\comment{too complicated? We may want to skip on explaining codebooks}
+In this same step, the data is also temporally downsampled, only allowing conditioning with a 5Hz framerate \cite{rouardAudioConditioningMusic2024}. \\ %\comment{Is this understandable? More context needed on frame rate?}
 
-Lastly, the high-dimensional data is projected onto a linear layer, allowing it to be used as an input to MusicGen. \cite{rouardAudioConditioningMusic2024} \\
+Lastly, the high-dimensional data is projected onto a linear layer, allowing it to be used as an input to MusicGen \cite{rouardAudioConditioningMusic2024}. \\
 
 \subsection{Double Classifier Free Guidance}
 
-Due to a difference in information density, it was observed that the style conditioning model did not factor in the textual description for generating new audio when it contradicted the style conditioning data. \cite{rouardAudioConditioningMusic2024} \\
+Due to a difference in information density, it was observed that the style conditioning model did not factor in the textual description for generating new audio when it contradicted the style conditioning data \cite{rouardAudioConditioningMusic2024}. \\
 
 The new Logits after applying DCFG can be calculated using the following formula:
 
@@ -345,7 +345,7 @@ The new Logits after applying DCFG can be calculated using the following formula
     \label{eq:doublecfg}
 \end{equation},
 
-where $l_{\emptyset}$ denotes a logit without any conditioning, $l_{style}$ denotes a logit with only style conditioning applied and $l_{text,style}$ denotes a logit with bouth style and text conditioning. The coefficients $\alpha$ and $\beta$ are used to determine the importance of the overall conditioning and the text conditioning respectively. It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG. \cite{rouardAudioConditioningMusic2024}
+where $l_{\emptyset}$ denotes a logit without any conditioning, $l_{style}$ denotes a logit with only style conditioning applied and $l_{text,style}$ denotes a logit with bouth style and text conditioning. The coefficients $\alpha$ and $\beta$ are used to determine the importance of the overall conditioning and the text conditioning respectively. It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG \cite{rouardAudioConditioningMusic2024}.
 
 \section{Experiments}\label{experiments}
 
@@ -396,17 +396,17 @@ The authors state that it is necessary  ``to extract enough features to have a m
 
 Yet limiting the extraction of features by shortening the input sample length can worsen the quality of the style conditioning in situations where a non-representative segment of the input audio's style is chosen. The shorter the input sample, the more specific is the conditioned style to the input segment. \\
 
-Additionally, musical segments are often much longer than five seconds, limiting the stylistic information that can be extracted to high level information. \cite{rouardAudioConditioningMusic2024}
+Additionally, musical segments are often much longer than five seconds, limiting the stylistic information that can be extracted to high level information \cite{rouardAudioConditioningMusic2024}.
 
 
 Why 5hz downsampling after codebook instead of before? \\
 
-The authors give no explicit reasoning in their paper. It can be assumed that the authors aim to prioritize the quality of the style conditioning over its temporal resolution. If the temporal downsampling happened before the quantization, the information available to be compressed would be reduced while the entire uncompressed data would be available for the temporal downsampling. \cite{tishbyInformationBottleneckMethod2000} \\
+The authors give no explicit reasoning in their paper. It can be assumed that the authors aim to prioritize the quality of the style conditioning over its temporal resolution. If the temporal downsampling happened before the quantization, the information available to be compressed would be reduced while the entire uncompressed data would be available for the temporal downsampling \cite{tishbyInformationBottleneckMethod2000}. \\
 
 \subsection{Dataset quality}
 The Authors disclose two public Datasets used for the training of their models, the Shutterstock and Pond5 libraries of stock music.
 
-Since all of the Music contained in the Datasets is instrumental, the models generation quality decreases when the conditioning audio or output audio contains lyris. \cite{rouardAudioConditioningMusic2024} \\
+Since all of the Music contained in the Datasets is instrumental, the models generation quality decreases when the conditioning audio or output audio contains lyris \cite{rouardAudioConditioningMusic2024}. \\
 
 
 Additionally, the Public Dataset's quality-control is lacking, containing not only professionally produced music, but allowing any person to upload audio to the Shutterstock dataset after an initial review \href{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}{Shutterstock website}. \\
