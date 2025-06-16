@@ -1,12 +1,13 @@
-@misc{copetSimpleControllableMusic2024,
+@article{copetSimpleControllableMusic2024,
   title = {Simple and {{Controllable Music Generation}}},
   author = {Copet, Jade and Kreuk, Felix and Gat, Itai and Remez, Tal and Kant, David and Synnaeve, Gabriel and Adi, Yossi and D{\'e}fossez, Alexandre},
   year = {2024},
   month = jan,
-  number = {arXiv:2306.05284},
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {36},
   eprint = {2306.05284},
   primaryclass = {cs},
-  publisher = {arXiv},
+  pages = {47704--47720},
   doi = {10.48550/arXiv.2306.05284},
   urldate = {2025-04-23},
   abstract = {We tackle the task of conditional music generation. We introduce MusicGen, a single Language Model (LM) that operates over several streams of compressed discrete music representation, i.e., tokens. Unlike prior work, MusicGen is comprised of a single-stage transformer LM together with efficient token interleaving patterns, which eliminates the need for cascading several models, e.g., hierarchically or upsampling. Following this approach, we demonstrate how MusicGen can generate high-quality samples, both mono and stereo, while being conditioned on textual description or melodic features, allowing better controls over the generated output. We conduct extensive empirical evaluation, considering both automatic and human studies, showing the proposed approach is superior to the evaluated baselines on a standard text-to-music benchmark. Through ablation studies, we shed light over the importance of each of the components comprising MusicGen. Music samples, code, and models are available at https://github.com/facebookresearch/audiocraft},
@@ -84,15 +85,15 @@
   langid = {english}
 }
 
-@misc{hoClassifierFreeDiffusionGuidance2022,
+@inproceedings{hoClassifierFreeDiffusionGuidance2022,
   title = {Classifier-{{Free Diffusion Guidance}}},
+  booktitle = {Workshop: {{Deep Generative Models}} and {{Downstream Applications}}},
   author = {Ho, Jonathan and Salimans, Tim},
   year = {2022},
   month = jul,
-  number = {arXiv:2207.12598},
   eprint = {2207.12598},
   primaryclass = {cs},
-  publisher = {arXiv},
+  publisher = {NeurIPS},
   doi = {10.48550/arXiv.2207.12598},
   urldate = {2025-04-23},
   abstract = {Classifier guidance is a recently introduced method to trade off mode coverage and sample fidelity in conditional diffusion models post training, in the same spirit as low temperature sampling or truncation in other types of generative models. Classifier guidance combines the score estimate of a diffusion model with the gradient of an image classifier and thereby requires training an image classifier separate from the diffusion model. It also raises the question of whether guidance can be performed without a classifier. We show that guidance can be indeed performed by a pure generative model without such a classifier: in what we call classifier-free guidance, we jointly train a conditional and an unconditional diffusion model, and we combine the resulting conditional and unconditional score estimates to attain a trade-off between sample quality and diversity similar to that obtained using classifier guidance.},
@@ -194,26 +195,8 @@
   urldate = {2025-05-03},
   abstract = {Modern large language models (LLMs) often encounter communication bottlenecks on current hardware, rather than purely computational constraints. Multi-head Latent Attention (MLA) tackles this challenge by using low-rank matrices in the key-value (KV) layers, thereby allowing compressed latent KV states to be cached. This approach significantly reduces the KV cache size relative to traditional multi-head attention, leading to faster inference. Moreover, MLA employs an up-projection matrix to increase expressiveness, trading additional computation for reduced communication overhead. Although MLA has demonstrated efficiency and effectiveness in Deepseek V2/V3/R1, many major model providers still rely on Group Query Attention (GQA) and have not announced any plans to adopt MLA. In this paper, we show that GQA can always be represented by MLA while maintaining the same KV cache overhead, but the converse does not hold. To encourage broader use of MLA, we introduce TransMLA, a post-training method that converts widely used GQA-based pre-trained models (e.g., LLaMA, Qwen, Mixtral) into MLA-based models. After conversion, the model can undergo additional training to boost expressiveness without increasing the KV cache size. Furthermore, we plan to develop MLA-specific inference acceleration techniques to preserve low latency in transformed models, thus enabling more efficient distillation of Deepseek R1.},
   archiveprefix = {arXiv},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,only preprint},
   file = {C\:\\Users\\maxki\\Zotero\\storage\\9ZE8SX6V\\Meng et al. - 2025 - TransMLA Multi-Head Latent Attention Is All You Need.pdf;C\:\\Users\\maxki\\Zotero\\storage\\7ENPFVVD\\2502.html}
-}
-
-@misc{mengTransMLAMultiHeadLatent2025a,
-  title = {{{TransMLA}}: {{Multi-Head Latent Attention Is All You Need}}},
-  shorttitle = {{{TransMLA}}},
-  author = {Meng, Fanxu and Yao, Zengwei and Zhang, Muhan},
-  year = {2025},
-  month = feb,
-  number = {arXiv:2502.07864},
-  eprint = {2502.07864},
-  primaryclass = {cs},
-  publisher = {arXiv},
-  doi = {10.48550/arXiv.2502.07864},
-  urldate = {2025-05-03},
-  abstract = {Modern large language models (LLMs) often encounter communication bottlenecks on current hardware, rather than purely computational constraints. Multi-head Latent Attention (MLA) tackles this challenge by using low-rank matrices in the key-value (KV) layers, thereby allowing compressed latent KV states to be cached. This approach significantly reduces the KV cache size relative to traditional multi-head attention, leading to faster inference. Moreover, MLA employs an up-projection matrix to increase expressiveness, trading additional computation for reduced communication overhead. Although MLA has demonstrated efficiency and effectiveness in Deepseek V2/V3/R1, many major model providers still rely on Group Query Attention (GQA) and have not announced any plans to adopt MLA. In this paper, we show that GQA can always be represented by MLA while maintaining the same KV cache overhead, but the converse does not hold. To encourage broader use of MLA, we introduce TransMLA, a post-training method that converts widely used GQA-based pre-trained models (e.g., LLaMA, Qwen, Mixtral) into MLA-based models. After conversion, the model can undergo additional training to boost expressiveness without increasing the KV cache size. Furthermore, we plan to develop MLA-specific inference acceleration techniques to preserve low latency in transformed models, thus enabling more efficient distillation of Deepseek R1.},
-  archiveprefix = {arXiv},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
-  file = {C\:\\Users\\maxki\\Zotero\\storage\\KYZEWBLC\\Meng et al. - 2025 - TransMLA Multi-Head Latent Attention Is All You Need.pdf;C\:\\Users\\maxki\\Zotero\\storage\\NPKGQT9N\\2502.html}
 }
 
 @article{raffelExploringLimitsTransfer2019,
@@ -258,7 +241,7 @@
   urldate = {2025-04-27},
   abstract = {Music generation aims to create music segments that align with human aesthetics based on diverse conditional information. Despite advancements in generating music from specific textual descriptions (e.g., style, genre, instruments), the practical application is still hindered by ordinary users' limited expertise or time to write accurate prompts. To bridge this application gap, this paper introduces MusFlow, a novel multimodal music generation model using Conditional Flow Matching. We employ multiple Multi-Layer Perceptrons (MLPs) to align multimodal conditional information into the audio's CLAP embedding space. Conditional flow matching is trained to reconstruct the compressed Mel-spectrogram in the pretrained VAE latent space guided by aligned feature embedding. MusFlow can generate music from images, story texts, and music captions. To collect data for model training, inspired by multi-agent collaboration, we construct an intelligent data annotation workflow centered around a fine-tuned Qwen2-VL model. Using this workflow, we build a new multimodal music dataset, MMusSet, with each sample containing a quadruple of image, story text, music caption, and music piece. We conduct four sets of experiments: image-to-music, story-to-music, caption-to-music, and multimodal music generation. Experimental results demonstrate that MusFlow can generate high-quality music pieces whether the input conditions are unimodal or multimodal. We hope this work can advance the application of music generation in multimedia field, making music creation more accessible. Our generated samples, code and dataset are available at musflow.github.io.},
   archiveprefix = {arXiv},
-  keywords = {Computer Science - Multimedia,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  keywords = {Computer Science - Multimedia,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,only preprint},
   file = {C\:\\Users\\maxki\\Zotero\\storage\\XKSSLCWU\\Song and Wang - 2025 - MusFlow Multimodal Music Generation via Conditional Flow Matching.pdf;C\:\\Users\\maxki\\Zotero\\storage\\VSMLRTJ9\\2504.html}
 }
 
@@ -291,7 +274,7 @@
   urldate = {2025-04-23},
   abstract = {We present JASCO, a temporally controlled text-to-music generation model utilizing both symbolic and audio-based conditions. JASCO can generate high-quality music samples conditioned on global text descriptions along with fine-grained local controls. JASCO is based on the Flow Matching modeling paradigm together with a novel conditioning method. This allows music generation controlled both locally (e.g., chords) and globally (text description). Specifically, we apply information bottleneck layers in conjunction with temporal blurring to extract relevant information with respect to specific controls. This allows the incorporation of both symbolic and audio-based conditions in the same text-to-music model. We experiment with various symbolic control signals (e.g., chords, melody), as well as with audio representations (e.g., separated drum tracks, full-mix). We evaluate JASCO considering both generation quality and condition adherence, using both objective metrics and human studies. Results suggest that JASCO is comparable to the evaluated baselines considering generation quality while allowing significantly better and more versatile controls over the generated music. Samples are available on our demo page https://pages.cs.huji.ac.il/adiyoss-lab/JASCO.},
   archiveprefix = {arXiv},
-  keywords = {Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  keywords = {Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing,only preprint},
   file = {C\:\\Users\\maxki\\Zotero\\storage\\CU2YMGG4\\Tal et al. - 2024 - Joint Audio and Symbolic Conditioning for Temporally Controlled Text-to-Music Generation.pdf;C\:\\Users\\maxki\\Zotero\\storage\\28SS4W4N\\2406.html}
 }
 
@@ -307,41 +290,37 @@
   urldate = {2025-06-16},
   abstract = {We define the relevant information in a signal \$x{\textbackslash}in X\$ as being the information that this signal provides about another signal \$y{\textbackslash}in {\textbackslash}Y\$. Examples include the information that face images provide about the names of the people portrayed, or the information that speech sounds provide about the words spoken. Understanding the signal \$x\$ requires more than just predicting \$y\$, it also requires specifying which features of \${\textbackslash}X\$ play a role in the prediction. We formalize this problem as that of finding a short code for \${\textbackslash}X\$ that preserves the maximum information about \${\textbackslash}Y\$. That is, we squeeze the information that \${\textbackslash}X\$ provides about \${\textbackslash}Y\$ through a `bottleneck' formed by a limited set of codewords \${\textbackslash}tX\$. This constrained optimization problem can be seen as a generalization of rate distortion theory in which the distortion measure \$d(x,{\textbackslash}x)\$ emerges from the joint statistics of \${\textbackslash}X\$ and \${\textbackslash}Y\$. This approach yields an exact set of self consistent equations for the coding rules \$X {\textbackslash}to {\textbackslash}tX\$ and \${\textbackslash}tX {\textbackslash}to {\textbackslash}Y\$. Solutions to these equations can be found by a convergent re-estimation method that generalizes the Blahut-Arimoto algorithm. Our variational principle provides a surprisingly rich framework for discussing a variety of problems in signal processing and learning, as will be described in detail elsewhere.},
   archiveprefix = {arXiv},
-  keywords = {Computer Science - Machine Learning,Condensed Matter - Disordered Systems and Neural Networks,Nonlinear Sciences - Adaptation and Self-Organizing Systems,Physics - Data Analysis Statistics and Probability},
+  keywords = {Computer Science - Machine Learning,Condensed Matter - Disordered Systems and Neural Networks,Nonlinear Sciences - Adaptation and Self-Organizing Systems,only preprint,Physics - Data Analysis Statistics and Probability},
   file = {C\:\\Users\\maxki\\Zotero\\storage\\W3GNYUVJ\\Tishby et al. - 2000 - The information bottleneck method.pdf;C\:\\Users\\maxki\\Zotero\\storage\\I7I32V5Z\\0004057.html}
 }
 
-@misc{wonFoundationModelMusic2023,
+@inproceedings{wonFoundationModelMusic2024,
   title = {A {{Foundation Model}} for {{Music Informatics}}},
+  booktitle = {{{ICASSP}} 2024 - 2024 {{IEEE International Conference}} on {{Acoustics}}, {{Speech}} and {{Signal Processing}} ({{ICASSP}})},
   author = {Won, Minz and Hung, Yun-Ning and Le, Duc},
-  year = {2023},
-  month = nov,
-  number = {arXiv:2311.03318},
-  eprint = {2311.03318},
-  primaryclass = {cs},
-  publisher = {arXiv},
-  doi = {10.48550/arXiv.2311.03318},
-  urldate = {2025-06-12},
-  abstract = {This paper investigates foundation models tailored for music informatics, a domain currently challenged by the scarcity of labeled data and generalization issues. To this end, we conduct an in-depth comparative study among various foundation model variants, examining key determinants such as model architectures, tokenization methods, temporal resolution, data, and model scalability. This research aims to bridge the existing knowledge gap by elucidating how these individual factors contribute to the success of foundation models in music informatics. Employing a careful evaluation framework, we assess the performance of these models across diverse downstream tasks in music information retrieval, with a particular focus on token-level and sequence-level classification. Our results reveal that our model demonstrates robust performance, surpassing existing models in specific key metrics. These findings contribute to the understanding of self-supervised learning in music informatics and pave the way for developing more effective and versatile foundation models in the field. A pretrained version of our model is publicly available to foster reproducibility and future research.},
-  archiveprefix = {arXiv},
-  keywords = {Computer Science - Information Retrieval,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
-  file = {C\:\\Users\\maxki\\Zotero\\storage\\X5DP8MEA\\Won et al. - 2023 - A Foundation Model for Music Informatics.pdf;C\:\\Users\\maxki\\Zotero\\storage\\8UANA38H\\2311.html}
+  year = {2024},
+  month = apr,
+  pages = {1226--1230},
+  publisher = {IEEE},
+  address = {Seoul, Korea, Republic of},
+  doi = {10.1109/ICASSP48485.2024.10448314},
+  urldate = {2025-06-16},
+  copyright = {https://doi.org/10.15223/policy-029},
+  isbn = {979-8-3503-4485-1},
+  file = {C:\Users\maxki\Zotero\storage\22FDU3JJ\Won et al. - 2024 - A Foundation Model for Music Informatics.pdf}
 }
 
-@misc{yangDiffsoundDiscreteDiffusion2023,
-  title = {Diffsound: {{Discrete Diffusion Model}} for {{Text-to-sound Generation}}},
+@article{yangDiffsoundDiscreteDiffusion2023,
+  title = {Diffsound: {{Discrete Diffusion Model}} for {{Text-to-Sound Generation}}},
   shorttitle = {Diffsound},
   author = {Yang, Dongchao and Yu, Jianwei and Wang, Helin and Wang, Wen and Weng, Chao and Zou, Yuexian and Yu, Dong},
   year = {2023},
-  month = apr,
-  number = {arXiv:2207.09983},
-  eprint = {2207.09983},
-  primaryclass = {cs},
-  publisher = {arXiv},
-  doi = {10.48550/arXiv.2207.09983},
-  urldate = {2025-05-05},
-  abstract = {Generating sound effects that humans want is an important topic. However, there are few studies in this area for sound generation. In this study, we investigate generating sound conditioned on a text prompt and propose a novel text-to-sound generation framework that consists of a text encoder, a Vector Quantized Variational Autoencoder (VQ-VAE), a decoder, and a vocoder. The framework first uses the decoder to transfer the text features extracted from the text encoder to a mel-spectrogram with the help of VQ-VAE, and then the vocoder is used to transform the generated mel-spectrogram into a waveform. We found that the decoder significantly influences the generation performance. Thus, we focus on designing a good decoder in this study. We begin with the traditional autoregressive decoder, which has been proved as a state-of-the-art method in previous sound generation works. However, the AR decoder always predicts the mel-spectrogram tokens one by one in order, which introduces the unidirectional bias and accumulation of errors problems. Moreover, with the AR decoder, the sound generation time increases linearly with the sound duration. To overcome the shortcomings introduced by AR decoders, we propose a non-autoregressive decoder based on the discrete diffusion model, named Diffsound. Specifically, the Diffsound predicts all of the mel-spectrogram tokens in one step and then refines the predicted tokens in the next step, so the best-predicted results can be obtained after several steps. Our experiments show that our proposed Diffsound not only produces better text-to-sound generation results when compared with the AR decoder but also has a faster generation speed, e.g., MOS: 3.56 {\textbackslash}textit\{v.s\} 2.786, and the generation speed is five times faster than the AR decoder.},
-  archiveprefix = {arXiv},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
-  file = {C\:\\Users\\maxki\\Zotero\\storage\\SESPZPJD\\Yang et al. - 2023 - Diffsound Discrete Diffusion Model for Text-to-sound Generation.pdf;C\:\\Users\\maxki\\Zotero\\storage\\TCYGAJ4H\\2207.html}
+  journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  volume = {31},
+  pages = {1720--1733},
+  issn = {2329-9290, 2329-9304},
+  doi = {10.1109/TASLP.2023.3268730},
+  urldate = {2025-06-16},
+  copyright = {https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html},
+  file = {C:\Users\maxki\Zotero\storage\ZK84W4P8\Yang et al. - 2023 - Diffsound Discrete Diffusion Model for Text-to-Sound Generation.pdf}
 }

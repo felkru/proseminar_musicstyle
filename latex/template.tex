@@ -204,7 +204,7 @@ For each background info, please provide only the most important details:
     \1 Inference time
         \2 Inference is the Phase after training a Language model, in which it is actively used to perform its intended task on new data, in this case creating music based on input text and audio.
     \1 Double classifier free guidance
-        \2 Double classifier free guidance is applying classifier free guidance twice in order to balance the influence of textual- and style-Information when the two are conflicting. Without this, the textual description would be ignored by the model. \cite{rouardAudioConditioningMusic2024}
+        \2 Double classifier free guidance is applying classifier free guidance twice in order to balance the influence of textual- and style-information when the two are conflicting. Without this, the textual description would be ignored by the model. \cite{rouardAudioConditioningMusic2024}
         \2 Classifier free guidance can be used to amplify the importance of the conditions given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}. %\comment{Is this the correct source?}
     \1 MIDI
     \1 Music stems
@@ -236,7 +236,7 @@ For each background info, please provide only the most important details:
     \1 Gradient descend step
     \1 Latent representation
     \1 Downsampling
-    \1 Codebook (not sure about if this is precise enough or even correct)
+    \1 Codebook (not sure if this is precise enough or even correct)
         \2 A codebook contains a set of embeddings used in RVQ as a comparison point to the input. The length of the codebook can be used to tune the bottleneck as having fewer codebooks leads to more information loss. %\comment{can likely be removed}
     \1 Dropout (context: conditioning)
     \1 Logits %\comment{will be mentioned later}
@@ -254,7 +254,7 @@ For each background info, please provide only the most important details:
     \1 VAR
         \2 is a human metric used in the experimental section, is used to assess the likelyhood of input and output being taken from the same song. A lower score indicates it is less likely that the samples are taken from the same song (preferrable result), while a high score indicates it is more likely. It was found that the VAR score correlates well with the KNN\textsubscript{overfit}-metric\cite{rouardAudioConditioningMusic2024}.
     \1 Vanilla Adam optimizer
-    \1 Continuation method
+    \1 Continuation method (can likely be removed)
         \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison \cite{rouardAudioConditioningMusic2024}.
     \l Masked model
 \end{outline}
@@ -421,12 +421,12 @@ It can be assumed that the authors aim to prioritize the quality of the style co
 \subsection{Dataset quality}
 The Authors disclose two public Datasets used for the training of their models, the Shutterstock and Pond5 libraries of stock music.
 
-Since all of the Music contained in the Datasets is instrumental, the models generation quality decreases when the conditioning audio or output audio contains lyris \cite{rouardAudioConditioningMusic2024}. \\
+Since all of the Music contained in the Datasets is instrumental, the models generation quality decreases when the conditioning audio or output audio contains lyrics \cite{rouardAudioConditioningMusic2024}. \\
 
 
-Additionally, the Public Dataset's quality-control is lacking, containing not only professionally produced music, but allowing any person to upload audio to the Shutterstock dataset after an initial review \href{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}{Shutterstock website}. \\
+Additionally, the Public Dataset's quality-control is lacking, containing not only professionally produced music, but allowing any person to upload audio to  datasets after an initial review for the Shutterstock dataset \href{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}{Shutterstock website}, and without any review for the Pond5 dataset \href{https://contributor.pond5.com/getting-started/become-a-pond5-artist/}{Pond5 website}. While this improves the size of the datasets, it might negatively impact their quality. \\
 
-Due to the nature of the public Datasets, many of the contained songs are not intended for casual enjoyment but for commercial use (cf. \href{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}{Shutterstock website}), impacting the audio quality of the models outputs. \\
+Due to the nature of the public Datasets, many of the contained songs are not intended for casual enjoyment but for commercial use (cf. \href{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}{Shutterstock website}, \href{https://contributor.pond5.com/getting-started/about-pond5/}{Pond5 website}), negatively impacting the audio quality of the models outputs for creating pop music. \\ %\comment{pop music not a good term?}
 
 Lastly, there are an additional 10000 songs in an undisclosed internal dataset, with no additional information on their nature given \cite{rouardAudioConditioningMusic2024}.
 
@@ -447,7 +447,7 @@ We believe AI development should follow a human centric approach and should be d
 
 In: 30s highlife
 
-\subsection{Train compute, dataset size+quality + model scaling}
+\subsection{Train compute + model scaling}
 The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.4bn parameters. Is far from SOTA in terms of trainable parameters in transformer architectures. Most of the issue's present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented here {Citation?}.
 
 \subsection{User reactions}
