@@ -28,11 +28,11 @@ General note:
 
 **Max's Tasks (Estimated Total Time: ~5.5-6.5 hours)**
 
--   [ ] **Fast Re-Reading of Rouard et al. Paper (2 hours):** (Individual review) Perform a focused re-read to catch anything missed and ensure a deep understanding before synthesizing.
--   [ ] **Insert all figures** from this folder, decide which ones to include from the original paper, musicgens paper, our demos etc.
+-   [x] **Fast Re-Reading of Rouard et al. Paper (2 hours):** (Individual review) Perform a focused re-read to catch anything missed and ensure a deep understanding before synthesizing.
+-   [x] **Insert all figures** from this folder, decide which ones to include from the original paper, musicgens paper, our demos etc.
 -   [ ] **add additional subsections to the outline based on the the figures**
--   [ ] **Draft Introduction - Purpose & Scope (1 hour):** Expand on the seminar work's purpose (critical review of Rouard et al.). Introduce the paper's core contributions (textual inversion, pseudowords, fast inference, double classifier free guidance) and provide a clear roadmap for _your_ paper, referencing the upcoming sections. (Leverage intro slides from presentation).
--   [ ] **Draft Backgrounds - Core AI/ML Concepts (3-4 hours):**
+-   [x] **Draft Introduction - Purpose & Scope (1 hour):** Expand on the seminar work's purpose (critical review of Rouard et al.). Introduce the paper's core contributions (textual inversion, pseudowords, fast inference, double classifier free guidance) and provide a clear roadmap for _your_ paper, referencing the upcoming sections. (Leverage intro slides from presentation).
+-   [x] **Draft Backgrounds - Core AI/ML Concepts (3-4 hours):**
     -   Write concise explanations for the terms assigned in the explanation priorisation spreadsheet
     -   Integrate Figure \ref{Figure 1} discussion into the relevant section, explaining its purpose and content.
     -   **Action:** Investigate and resolve the inclusion of Equation \ref{eq:hypervolume}. If it's not directly from the Rouard et al. paper and central to their method, **remove it**. If it is, ensure its context is fully explained.
