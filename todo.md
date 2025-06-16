@@ -32,18 +32,19 @@ General note:
 -   [x] **Insert all figures** from this folder, decide which ones to include from the original paper, musicgens paper, our demos etc.
 -   [ ] **add additional subsections to the outline based on the the figures**
 -   [x] **Draft Introduction - Purpose & Scope (1 hour):** Expand on the seminar work's purpose (critical review of Rouard et al.). Introduce the paper's core contributions (textual inversion, pseudowords, fast inference, double classifier free guidance) and provide a clear roadmap for _your_ paper, referencing the upcoming sections. (Leverage intro slides from presentation).
--   [ ] **Draft Backgrounds - Core AI/ML Concepts (3-4 hours):**
+-   [x] **Draft Backgrounds - Core AI/ML Concepts (3-4 hours):**
     -   Write concise explanations for the terms assigned in the explanation priorisation spreadsheet
     -   Integrate Figure \ref{Figure 1} discussion into the relevant section, explaining its purpose and content.
     -   **Action:** Investigate and resolve the inclusion of Equation \ref{eq:hypervolume}. If it's not directly from the Rouard et al. paper and central to their method, **remove it**. If it is, ensure its context is fully explained.
--   [ ] **Draft Discussion - Technical & Methodological Aspects (1.5-2 hours):**
+-   [x] **Draft Discussion - Technical & Methodological Aspects (1.5-2 hours):**
     -   **Convert Outline to Prose:** Transform the existing outline points into detailed prose, citing evidence from the paper.
     -   Discuss: "Why audio and style encoding instead of just style encoding?" (based on authors' intent and your analysis).
     -   Discuss: "Why style conditioning of 1.5-4.5s instead of longer?" (authors' reasons vs. implications).
     -   Discuss: "Why 5hz downsampling after codebook instead of before?" (authors' reasons vs. implications).
     -   Elaborate on "Music generation speed" and its practical implications (referencing presentation notes).
     -   Elaborate on "Train compute, dataset size + quality + model scaling" (referencing presentation notes about 1.4bn params vs. SOTA). **Action:** If you're citing a general "proof of concept" for scaling, ensure you have a specific, peer-reviewed citation.
-
+-   [ ] **Add labels for the Backgrounds section**
+-   [ ] **Fix possibly renamed citations**
 **Felix's Tasks (Estimated Total Time: ~5.5-6.5 hours)**
 
 -   [ ] **Fast Re-Reading of Rouard et al. Paper (2 hours):** (Individual review) Perform a focused re-read to catch anything missed and ensure a deep understanding before synthesizing.
