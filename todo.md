@@ -11,11 +11,11 @@ General note:
 - [x] **Review and Edit This To-Do List (15 min):** Discuss and agree on this work plan and task delegation.
 -   [x] **Clean & Prune `literature.bib` (1 hour per person = 2 hours total):**
     -   [x] **Action:** Verify if `hanInstructMEInstructionGuided2023` and `talJointAudioSymbolic2024` (currently preprints) have **peer-reviewed versions**. If so, update their bib entries. If not, note them as arXiv, but prioritize finding peer-reviewed alternatives for your minimum of 8.
-    -   [x] **Action:** Ensure you have at least 8 _relevant, peer-reviewed_ references for the paper. Add more if necessary to meet this count with high-quality, relevant sources.
--   [x] LLM generate Backgrounds for later revision
+    -   [ ] **Action:** Ensure you have at least 8 _relevant, peer-reviewed_ references for the paper. Add more if necessary to meet this count with high-quality, relevant sources.
+-   [ ] LLM generate Backgrounds for later revision
 -   [ ] **Collaborative Outline of Background Subsections (30 min):** Based on the Rouard et al. paper and your presentation's structure (e.g., "Related Work," "Textual Inversion," "Style Conditioner"), collaboratively decide on the granular subsections within the "Backgrounds" section of your paper. This will guide writing and ensure logical flow.
 -   [ ] ask llm to adapt backgrounds to new structure
--   [x] **Define & Document Consistent Formatting (15 min):** Agree on and document (e.g., in a comment at the top of the `.tex` file) formatting conventions for:
+-   [ ] **Define & Document Consistent Formatting (15 min):** Agree on and document (e.g., in a comment at the top of the `.tex` file) formatting conventions for:
     -   Important terms (e.g., **bold**).
     -   Dataset names (e.g., _AudioSet_).
     -   Model names (e.g., MusicGen, Encodec).
@@ -32,7 +32,7 @@ General note:
 -   [x] **Insert all figures** from this folder, decide which ones to include from the original paper, musicgens paper, our demos etc.
 -   [ ] **add additional subsections to the outline based on the the figures**
 -   [x] **Draft Introduction - Purpose & Scope (1 hour):** Expand on the seminar work's purpose (critical review of Rouard et al.). Introduce the paper's core contributions (textual inversion, pseudowords, fast inference, double classifier free guidance) and provide a clear roadmap for _your_ paper, referencing the upcoming sections. (Leverage intro slides from presentation).
--   [x] **Draft Backgrounds - Core AI/ML Concepts (3-4 hours):**
+-   [ ] **Draft Backgrounds - Core AI/ML Concepts (3-4 hours):**
     -   Write concise explanations for the terms assigned in the explanation priorisation spreadsheet
     -   Integrate Figure \ref{Figure 1} discussion into the relevant section, explaining its purpose and content.
     -   **Action:** Investigate and resolve the inclusion of Equation \ref{eq:hypervolume}. If it's not directly from the Rouard et al. paper and central to their method, **remove it**. If it is, ensure its context is fully explained.
