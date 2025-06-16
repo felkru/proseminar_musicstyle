@@ -15,15 +15,15 @@
   file = {C\:\\Users\\maxki\\Zotero\\storage\\2EI7CXXS\\Copet et al. - 2024 - Simple and Controllable Music Generation.pdf;C\:\\Users\\maxki\\Zotero\\storage\\WAFLVM4P\\2306.html}
 }
 
-@misc{defossezHighFidelityNeural2022,
+@article{defossezHighFidelityNeural2022,
   title = {High {{Fidelity Neural Audio Compression}}},
   author = {D{\'e}fossez, Alexandre and Copet, Jade and Synnaeve, Gabriel and Adi, Yossi},
   year = {2022},
   month = oct,
-  number = {arXiv:2210.13438},
+  journal = {Transactions on machine learning research},
   eprint = {2210.13438},
   primaryclass = {eess},
-  publisher = {arXiv},
+  issn = {2835-8856},
   doi = {10.48550/arXiv.2210.13438},
   urldate = {2025-05-01},
   abstract = {We introduce a state-of-the-art real-time, high-fidelity, audio codec leveraging neural networks. It consists in a streaming encoder-decoder architecture with quantized latent space trained in an end-to-end fashion. We simplify and speed-up the training by using a single multiscale spectrogram adversary that efficiently reduces artifacts and produce high-quality samples. We introduce a novel loss balancer mechanism to stabilize training: the weight of a loss now defines the fraction of the overall gradient it should represent, thus decoupling the choice of this hyper-parameter from the typical scale of the loss. Finally, we study how lightweight Transformer models can be used to further compress the obtained representation by up to 40\%, while staying faster than real time. We provide a detailed description of the key design choices of the proposed model including: training objective, architectural changes and a study of various perceptual loss functions. We present an extensive subjective evaluation (MUSHRA tests) together with an ablation study for a range of bandwidths and audio domains, including speech, noisy-reverberant speech, and music. Our approach is superior to the baselines methods across all evaluated settings, considering both 24 kHz monophonic and 48 kHz stereophonic audio. Code and models are available at github.com/facebookresearch/encodec.},
@@ -150,18 +150,17 @@
   file = {C\:\\Users\\maxki\\Zotero\\storage\\MTVPNQP4\\Kreuk et al. - 2023 - AudioGen Textually Guided Audio Generation.pdf;C\:\\Users\\maxki\\Zotero\\storage\\5ZPE36RI\\2209.html}
 }
 
-@misc{liMERTAcousticMusic2023,
+@inproceedings{liMERTAcousticMusic2023,
   title = {{{MERT}}: {{Acoustic Music Understanding Model}} with {{Large-Scale Self-supervised Training}}},
   shorttitle = {{{MERT}}},
   author = {Li, Yizhi and Yuan, Ruibin and Zhang, Ge and Ma, Yinghao and Chen, Xingran and Yin, Hanzhi and Xiao, Chenghao and Lin, Chenghua and Ragni, Anton and Benetos, Emmanouil and Gyenge, Norbert and Dannenberg, Roger and Liu, Ruibo and Chen, Wenhu and Xia, Gus and Shi, Yemin and Huang, Wenhao and Wang, Zili and Guo, Yike and Fu, Jie},
   year = {2023},
-  month = may,
-  journal = {arXiv.org},
-  urldate = {2025-06-12},
+  publisher = {Journal of Machine Learning Research},
+  doi = {10.48550/ARXIV.2306.00107},
+  urldate = {2025-06-16},
   abstract = {Self-supervised learning (SSL) has recently emerged as a promising paradigm for training generalisable models on large-scale data in the fields of vision, text, and speech. Although SSL has been proven effective in speech and audio, its application to music audio has yet to be thoroughly explored. This is partially due to the distinctive challenges associated with modelling musical knowledge, particularly tonal and pitched characteristics of music. To address this research gap, we propose an acoustic Music undERstanding model with large-scale self-supervised Training (MERT), which incorporates teacher models to provide pseudo labels in the masked language modelling (MLM) style acoustic pre-training. In our exploration, we identified an effective combination of teacher models, which outperforms conventional speech and audio approaches in terms of performance. This combination includes an acoustic teacher based on Residual Vector Quantisation - Variational AutoEncoder (RVQ-VAE) and a musical teacher based on the Constant-Q Transform (CQT). Furthermore, we explore a wide range of settings to overcome the instability in acoustic language model pre-training, which allows our designed paradigm to scale from 95M to 330M parameters. Experimental results indicate that our model can generalise and perform well on 14 music understanding tasks and attain state-of-the-art (SOTA) overall scores.},
-  howpublished = {https://arxiv.org/abs/2306.00107v5},
-  langid = {english},
-  file = {C:\Users\maxki\Zotero\storage\DP3FKNBE\Li et al. - 2023 - MERT Acoustic Music Understanding Model with Large-Scale Self-supervised Training.pdf}
+  copyright = {Creative Commons Attribution Share Alike 4.0 International},
+  keywords = {Artificial Intelligence (cs.AI),Audio and Speech Processing (eess.AS),Computation and Language (cs.CL),FOS: Computer and information sciences,FOS: Electrical engineering electronic engineering information engineering,Machine Learning (cs.LG),Sound (cs.SD)}
 }
 
 @article{mathurNavigatingSocialWorld2016,
@@ -217,15 +216,16 @@
   file = {C\:\\Users\\maxki\\Zotero\\storage\\KYZEWBLC\\Meng et al. - 2025 - TransMLA Multi-Head Latent Attention Is All You Need.pdf;C\:\\Users\\maxki\\Zotero\\storage\\NPKGQT9N\\2502.html}
 }
 
-@misc{raffelExploringLimitsTransfer2019,
+@article{raffelExploringLimitsTransfer2019,
   title = {Exploring the {{Limits}} of {{Transfer Learning}} with a {{Unified Text-to-Text Transformer}}},
   author = {Raffel, Colin and Shazeer, Noam and Roberts, Adam and Lee, Katherine and Narang, Sharan and Matena, Michael and Zhou, Yanqi and Li, Wei and Liu, Peter J.},
   year = {2019},
   month = oct,
-  journal = {arXiv.org},
+  journal = {Journal of Machine Learning Research},
+  volume = {21},
+  doi = {10.48550/arXiv.1910.10683},
   urldate = {2025-06-11},
   abstract = {Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a downstream task, has emerged as a powerful technique in natural language processing (NLP). The effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and practice. In this paper, we explore the landscape of transfer learning techniques for NLP by introducing a unified framework that converts all text-based language problems into a text-to-text format. Our systematic study compares pre-training objectives, architectures, unlabeled data sets, transfer approaches, and other factors on dozens of language understanding tasks. By combining the insights from our exploration with scale and our new ``Colossal Clean Crawled Corpus'', we achieve state-of-the-art results on many benchmarks covering summarization, question answering, text classification, and more. To facilitate future work on transfer learning for NLP, we release our data set, pre-trained models, and code.},
-  howpublished = {https://arxiv.org/abs/1910.10683v4},
   langid = {english},
   file = {C:\Users\maxki\Zotero\storage\C337SV7B\Raffel et al. - 2019 - Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.pdf}
 }

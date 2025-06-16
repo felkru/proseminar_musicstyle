@@ -378,8 +378,8 @@ Experiments here
 
 \section{Discussion}\label{discussion}
 
-\begin{outline}
-    \1 Why audio and style encoding instead of just style encoding? 
+\begin{outline} %\comment{we should probably rename these, is outline necessary with subsubsections?}
+    \1 Why audio and style encoding instead of just style encoding while training? 
     \1 Why style conditioning of 1.5-4.5s instead of longer?
     \1 Why 5hz downsampling after codebook instead of before?
 \end{outline}
@@ -390,18 +390,33 @@ This served to show the feasibility before running larger, more expensive, exper
 
 
 \subsection{Style encoding}
-Why only 1.5-4.5s of subsample for style conditioning? \\
+
+\subsubsection{Why audio and style encoding instead of just style encoding while training?}
+
+During inference, the style conditioning model only uses style and text conditioning as input, while during training time, a 30s excerpt of audio is added as input \cite{rouardAudioConditioningMusic2024}. \\
+
+This allows the model to be trained on the available data, using the tokens resulting from the encoding of the original excerpt as reference for the newly generated tokens. Based on the difference between the original input and output, the models parameters are tweaked to make the output as similar to the input as possible \cite{rouardAudioConditioningMusic2024}.
+
+\subsubsection{Why only 1.5-4.5s of subsample for style conditioning?}
+
+Of the up to 30 seconds of audio that can be input to the model, only a random excerpt of 1.5 to 4.5 seconds in length is chosen for the style conditioning \cite{rouardAudioConditioningMusic2024}.
 
 The authors state that it is necessary  ``to extract enough features to have a meaningful conditioning, but not too much, to prevent the generative model to copy and loop the conditioning audio'' \cite{rouardAudioConditioningMusic2024}. \\
 
 Yet limiting the extraction of features by shortening the input sample length can worsen the quality of the style conditioning in situations where a non-representative segment of the input audio's style is chosen. The shorter the input sample, the more specific is the conditioned style to the input segment. \\
 
-Additionally, musical segments are often much longer than five seconds, limiting the stylistic information that can be extracted to high level information \cite{rouardAudioConditioningMusic2024}.
+Additionally, musical segments are often much longer than five seconds, limiting the stylistic information that can be extracted to high level information \cite{rouardAudioConditioningMusic2024}. \\
+
+Lastly, it can be assumed that shortening the excerpt used for style conditioning reduces the computational cost of the style extraction, potentially making it cheaper or quicker. \\ %\comment{wording?}
 
 
-Why 5hz downsampling after codebook instead of before? \\
+\subsubsection{Why 5hz downsampling after codebook instead of before?}
 
-The authors give no explicit reasoning in their paper. It can be assumed that the authors aim to prioritize the quality of the style conditioning over its temporal resolution. If the temporal downsampling happened before the quantization, the information available to be compressed would be reduced while the entire uncompressed data would be available for the temporal downsampling \cite{tishbyInformationBottleneckMethod2000}. \\
+The authors give no explicit reasoning in their paper. \\
+
+It can be assumed that the authors aim to prioritize the quality of the style conditioning over its temporal resolution. If the temporal downsampling happened before the quantization, the information available to be compressed would be reduced while the entire uncompressed data would be available for the temporal downsampling. \cite{tishbyInformationBottleneckMethod2000}. \\
+
+
 
 \subsection{Dataset quality}
 The Authors disclose two public Datasets used for the training of their models, the Shutterstock and Pond5 libraries of stock music.
