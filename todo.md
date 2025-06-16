@@ -33,7 +33,7 @@ General note:
 -   [ ] **add additional subsections to the outline based on the the figures**
 -   [ ] **Draft Introduction - Purpose & Scope (1 hour):** Expand on the seminar work's purpose (critical review of Rouard et al.). Introduce the paper's core contributions (textual inversion, pseudowords, fast inference, double classifier free guidance) and provide a clear roadmap for _your_ paper, referencing the upcoming sections. (Leverage intro slides from presentation).
 -   [ ] **Draft Backgrounds - Core AI/ML Concepts (3-4 hours):**
-    -   Write concise explanations for: Textual inversion, Embedding space, Audio feature extractor, Inference time, Frozen model, Backpropagation, Cross-entropy loss ($\mathcal{L}_{CE}$ - define variables), Gradient computation, Bottleneck, Transformer encoder/decoder, Residual Vector Quantizer, Temporal downsampling, (non-)Autoregressive model, Latent space, token/tokenizer, Transformer decoder neural network, Gradient descent step, Latent representation, Downsampling, Codebook (refine its current definition), Dropout (context: conditioning), Logits, Hyperparameters, Cosine similarity. Provide detailed explanations for all quantitative metrics (FAD - referencing \cite{kilgourFrechetAudioDistance2019}.
+    -   Write concise explanations for the terms assigned in the explanation priorisation spreadsheet
     -   Integrate Figure \ref{Figure 1} discussion into the relevant section, explaining its purpose and content.
     -   **Action:** Investigate and resolve the inclusion of Equation \ref{eq:hypervolume}. If it's not directly from the Rouard et al. paper and central to their method, **remove it**. If it is, ensure its context is fully explained.
 -   [ ] **Draft Discussion - Technical & Methodological Aspects (1.5-2 hours):**
@@ -51,7 +51,7 @@ General note:
 -   [ ] llm generate and mark backgrounds for later revision
 -   [ ] **Draft Introduction - Context & Outline (1 hour):** Write the paragraphs that provide context for the research (e.g., current state of music generation, problem statement) and clearly outline the structure of _this seminar work_, mentioning what each subsequent section will cover. (Leverage intro slides from presentation).
 -   [ ] **Draft Backgrounds - Music-Specific AI Models (2 hours):**
-    -   Write concise explanations for: MusicGen (features), Encodec (features, compression - referencing \cite{defossezHighFidelityNeural2022}), MERT (features), MusicFM (features), CLAP, (mel-)Spectrogram. (Leverage "MusicGen" and "Related Work" slides from presentation for key details).
+    -   Write concise explanations for the terms assigned in the explanation priorisation spreadsheet
 -   [ ] **Develop Experiments Section (4-5 hours):**
     -   Describe Rouard et al.'s experimental setup (datasets, training procedures, evaluation protocols).
     -   Present and interpret the _actual results_ from the Rouard et al. paper. This involves carefully extracting data from their tables and figures, and explaining them. **Action:** Replace or verify Table \ref{tab1} with real data from the paper and discuss it thoroughly. (Leverage "Experimental Results" slide from presentation).
