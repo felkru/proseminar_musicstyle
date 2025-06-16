@@ -178,7 +178,7 @@ Assuming a perfect result, future models could be used to transcribe existing mu
 Section \ref{backgrounds} starts by describing backgrounds relevant for the experiments in section \ref{experiments}.
 The following section \ref{discussion} and section \ref{summary} present and discuss the paper's main results.
 
-\section{Backgrounds}\label{backgrounds}
+\section{Backgrounds}\label{sec:backgrounds}
 
 
 
@@ -439,13 +439,13 @@ A masked model is trained using a masking strategy where certain portions of the
     \1 Masked model
 \end{outline}
 
-\section{Method 1}\label{method_1}
+\section{Method 1}\label{sec:method_1}
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.9\textwidth]{textuaIInversion.png}
     \caption{Papers Figure 1}
-    \label{Figure 1}
+    \label{fig:Figure 1}
 \end{figure}
 
 The first method proposed in the paper is based on a textual inversion approach, first representing the input audio tokens as pseudowords to make them available as input to the MusicGen model \cite{rouardAudioConditioningMusic2024}. \\
@@ -458,13 +458,13 @@ The model is trained autoregressively, predicting the likelyhood of observing th
 
 which can be understood as the product of the chance of observing each token $y_1$ through $y_T$ individually.
 
-\section{Method 2}\label{method_2}
+\section{Method 2}\label{sec:method_2}
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.9\textwidth]{1.png}
     \caption{Papers Figure 2}
-    \label{Figure 1}
+    \label{fig:Figure 1}
 \end{figure}
 
 
@@ -491,7 +491,7 @@ The new Logits after applying DCFG can be calculated using the following formula
 
 where $l_{\emptyset}$ denotes a logit without any conditioning, $l_{style}$ denotes a logit with only style conditioning applied and $l_{text,style}$ denotes a logit with bouth style and text conditioning. The coefficients $\alpha$ and $\beta$ are used to determine the importance of the overall conditioning and the text conditioning respectively. It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG \cite{rouardAudioConditioningMusic2024}.
 
-\section{Experiments}\label{experiments}
+\section{Experiments}\label{sec:experiments}
 
 Experiments here
 
@@ -502,7 +502,7 @@ Experiments here
     \caption{Comparison of methods}
 
 
-    \label{tab1}
+    \label{tab:tab1}
 
 
     \centering
@@ -520,7 +520,7 @@ Experiments here
     \end{tabular}
 \end{table}
 
-\section{Discussion}\label{discussion}
+\section{Discussion}\label{sec:discussion}
 
 \begin{outline} %\comment{we should probably rename these, is outline necessary with subsubsections?}
     \1 Why audio and style encoding instead of just style encoding while training?
@@ -597,7 +597,7 @@ The paper seems to be well executed, but it's obvious that this is not a commerc
 \subsection{User reactions}
 $See inout_pairs > generation > fiddle_1u2.txt$
 
-\section{Summary}\label{summary}
+\section{Summary}\label{sec:summary}
 
 Summary.
 

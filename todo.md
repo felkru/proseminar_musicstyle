@@ -47,10 +47,9 @@ General note:
 **Felix's Tasks (Estimated Total Time: ~5.5-6.5 hours)**
 
 -   [ ] **Fast Re-Reading of Rouard et al. Paper (2 hours):** (Individual review) Perform a focused re-read to catch anything missed and ensure a deep understanding before synthesizing.
--   [ ] comment environment setup felix,
--   [ ] llm generate and mark backgrounds for later revision
+-   [x] llm generate and mark backgrounds for later revision
 -   [ ] **Draft Introduction - Context & Outline (1 hour):** Write the paragraphs that provide context for the research (e.g., current state of music generation, problem statement) and clearly outline the structure of _this seminar work_, mentioning what each subsequent section will cover. (Leverage intro slides from presentation).
--   [ ] **Draft Backgrounds - Music-Specific AI Models (2 hours):**
+-   [x] **Draft Backgrounds - Music-Specific AI Models (2 hours):**
     -   Write concise explanations for the terms assigned in the explanation priorisation spreadsheet
 -   [ ] **Develop Experiments Section (4-5 hours):**
     -   Describe Rouard et al.'s experimental setup (datasets, training procedures, evaluation protocols).
