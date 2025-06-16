@@ -8,9 +8,9 @@ General note:
 
 **Phase 1: Foundation & Structure (Joint)**
 
--   [ ] **Review and Edit This To-Do List (15 min):** Discuss and agree on this work plan and task delegation.
--   [ ] **Clean & Prune `literature.bib` (1 hour per person = 2 hours total):**
-    -   [ ] **Action:** Verify if `hanInstructMEInstructionGuided2023` and `talJointAudioSymbolic2024` (currently preprints) have **peer-reviewed versions**. If so, update their bib entries. If not, note them as arXiv, but prioritize finding peer-reviewed alternatives for your minimum of 8.
+- [x] **Review and Edit This To-Do List (15 min):** Discuss and agree on this work plan and task delegation.
+-   [x] **Clean & Prune `literature.bib` (1 hour per person = 2 hours total):**
+    -   [x] **Action:** Verify if `hanInstructMEInstructionGuided2023` and `talJointAudioSymbolic2024` (currently preprints) have **peer-reviewed versions**. If so, update their bib entries. If not, note them as arXiv, but prioritize finding peer-reviewed alternatives for your minimum of 8.
     -   [ ] **Action:** Ensure you have at least 8 _relevant, peer-reviewed_ references for the paper. Add more if necessary to meet this count with high-quality, relevant sources.
 -   [ ] LLM generate Backgrounds for later revision
 -   [ ] **Collaborative Outline of Background Subsections (30 min):** Based on the Rouard et al. paper and your presentation's structure (e.g., "Related Work," "Textual Inversion," "Style Conditioner"), collaboratively decide on the granular subsections within the "Backgrounds" section of your paper. This will guide writing and ensure logical flow.
