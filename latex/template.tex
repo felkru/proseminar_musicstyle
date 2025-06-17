@@ -182,15 +182,12 @@ The following section \ref{sec:discussion} and section \ref{sec:summary} present
 
 
 
-\begin{aigen}
-This background section provides detailed explanations of the technical terms essential for understanding audio conditioning in music generation, particularly as presented in the work by Rouard et al. on audio conditioning for music generation.
-\end{aigen}
+In this background section the technical terms necessary for understanding the following work are explained, as well as necessary context on underlying methods are given.
+
 \subsection{Conditioning Mechanisms}
 
-\subsubsection{Textual Inversion}
-\begin{aigen}
-Textual inversion is a technique used to teach a pretrained model which expects textual input to work with other types of data by representing the chosen data through text in a way that it can be fit into the model's text embedding space \cite{rouardAudioConditioningMusic2024}. Originally developed in the computer vision domain \cite{galImageWorthOne2022}, this method has been adapted for music generation applications. The technique learns to represent user-provided concepts using only a few example samples, encoding these concepts as new "words" or tokens in the model's embedding space that can then be composed into natural language sentences for intuitive control over the generation process.
-\end{aigen}
+\subsubsection{Textual Inversion}\label{sec:textualInversion}
+
 \subsubsection{Pseudowords}\label{sec:pseudowords}
 \begin{aigen}
 Pseudowords are artificial tokens created through textual inversion that represent specific concepts, styles, or characteristics not explicitly present in the original training vocabulary. In the context of music generation, pseudowords can encode particular musical styles, instruments, or compositional techniques that may not have been adequately represented in the original training data. These pseudowords function as learned representations that can be seamlessly integrated into text prompts to achieve more precise control over the generated music.
@@ -209,7 +206,7 @@ Double classifier-free guidance is a technique that applies classifier-free guid
 \begin{aigen}
 An audio feature extractor is a component that processes raw audio waveforms to extract meaningful representations that can be used by machine learning models. In music generation systems, these extractors typically convert audio signals into features that capture important musical characteristics such as pitch, rhythm, timbre, and harmonic content. The extracted features serve as the foundation for understanding and manipulating musical content in the generation process.
 \end{aigen}
-\subsubsection{EnCodec}
+\subsubsection{EnCodec}\label{sec:encodec}
 
 EnCodec is a deep-learning based audio codec designed for high levels of compression with minimal quality loss \cite{defossezHighFidelityNeural2022}. In the context of this paper, EnCodec is used in the audio tokenizer as a transformer encoder \cite{rouardAudioConditioningMusic2024}. 
 
@@ -217,7 +214,7 @@ EnCodec is a deep-learning based audio codec designed for high levels of compres
 \begin{aigen}
 Residual Vector Quantization (RVQ) is a technique used to create efficient discrete representations of audio signals. RVQ employs a codebook containing a set of embeddings that serve as reference points for quantizing input features. The quantization process involves finding the closest codebook entries to the input features and representing the audio using indices into these codebooks. The residual nature of the quantization allows for hierarchical representation, where coarse features are captured in early quantization stages and fine details are preserved in subsequent stages.
 \end{aigen}
-\subsubsection{Codebook}
+\subsubsection{Codebook}\label{sec:codebook}
 
 A codebook contains a set of embeddings used in RVQ as reference points for quantizing the input features. The length of the codebook can be used to control the information bottleneck, with fewer codebooks leading to higher loss of information.
 
