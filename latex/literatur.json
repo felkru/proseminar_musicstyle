@@ -1,0 +1,4066 @@
+{
+  "config": {
+    "id": "36a3b0b5-bad0-4a04-b79b-441c7cef77db",
+    "label": "BetterBibTeX JSON",
+    "preferences": {
+      "ascii": "",
+      "asciiBibLaTeX": false,
+      "asciiBibTeX": true,
+      "autoAbbrev": false,
+      "autoExport": "immediate",
+      "autoExportDelay": 5,
+      "autoExportIdleWait": 10,
+      "autoExportPathReplaceDiacritics": false,
+      "autoExportPathReplaceDirSep": "-",
+      "autoExportPathReplaceSpace": " ",
+      "automaticTags": true,
+      "autoPinDelay": 0,
+      "auxImport": false,
+      "baseAttachmentPath": "",
+      "biblatexExtendedDateFormat": true,
+      "biblatexExtendedNameFormat": true,
+      "biblatexExtractEprint": true,
+      "bibtexEditionOrdinal": false,
+      "bibtexParticleNoOp": false,
+      "bibtexURL": "off",
+      "cache": true,
+      "cacheDelete": false,
+      "cacheRetain": false,
+      "charmap": "",
+      "chinese": false,
+      "chineseSplitName": true,
+      "citeCommand": "cite",
+      "citekeyCaseInsensitive": true,
+      "citekeyFold": true,
+      "citekeyFormat": "auth.lower + shorttitle(3, 3) + year",
+      "citekeySearch": true,
+      "citekeyUnsafeChars": "\\\"#%'(),={}~",
+      "csquotes": "",
+      "DOIandURL": "both",
+      "exportBibTeXStrings": "off",
+      "exportBraceProtection": true,
+      "exportSort": "citekey",
+      "exportTitleCase": true,
+      "extraMergeCitekeys": false,
+      "extraMergeCSL": false,
+      "extraMergeTeX": false,
+      "git": "config",
+      "import": true,
+      "importBibTeXStrings": true,
+      "importCaseProtection": "as-needed",
+      "importCitationKey": true,
+      "importDetectURLs": true,
+      "importExtra": true,
+      "importJabRefAbbreviations": true,
+      "importJabRefStrings": true,
+      "importNoteToExtra": "",
+      "importSentenceCase": "on+guess",
+      "importSentenceCaseQuoted": true,
+      "importUnknownTexCommand": "ignore",
+      "itemObserverDelay": 5,
+      "jabrefFormat": 0,
+      "japanese": false,
+      "keyConflictPolicy": "keep",
+      "keyScope": "library",
+      "language": "langid",
+      "mapMath": "",
+      "mapText": "",
+      "packages": "",
+      "parseParticles": true,
+      "patchDates": "dateadded=dateAdded, date-added=dateAdded, datemodified=dateModified, date-modified=dateModified",
+      "postscript": "",
+      "postscriptOverride": "",
+      "preferencesOverride": "",
+      "qualityReport": false,
+      "quickCopyEta": "",
+      "quickCopyMode": "latex",
+      "quickCopyOrgMode": "zotero",
+      "quickCopyPandocBrackets": false,
+      "quickCopySelectLink": "zotero",
+      "rawImports": false,
+      "rawLaTag": "#LaTeX",
+      "relativeFilePaths": false,
+      "separatorList": "and",
+      "separatorNames": "and",
+      "skipFields": "",
+      "skipWords": "a,ab,aboard,about,above,across,after,against,al,along,amid,among,an,and,anti,around,as,at,before,behind,below,beneath,beside,besides,between,beyond,but,by,d,da,das,de,del,dell,dello,dei,degli,della,dell,delle,dem,den,der,des,despite,die,do,down,du,during,ein,eine,einem,einen,einer,eines,el,en,et,except,for,from,gli,i,il,in,inside,into,is,l,la,las,le,les,like,lo,los,near,nor,of,off,on,onto,or,over,past,per,plus,round,save,since,so,some,sur,than,the,through,to,toward,towards,un,una,unas,under,underneath,une,unlike,uno,unos,until,up,upon,versus,via,von,while,with,within,without,yet,zu,zum",
+      "startupProgress": "popup",
+      "strings": "",
+      "stringsOverride": "",
+      "verbatimFields": "url,doi,file,pdf,ids,eprint,/^verb[a-z]$/,groups,/^citeulike-linkout-[0-9]+$/, /^bdsk-url-[0-9]+$/, keywords",
+      "warnBulkModify": 10,
+      "warnTitleCased": false
+    },
+    "options": {
+      "Items": true,
+      "Normalize": false,
+      "Preferences": true,
+      "biblatexAPA": false,
+      "biblatexChicago": false,
+      "exportDir": "/Users/felix-krueckel/Documents/rwth/cs/Proseminar Music Data Analysis/latex",
+      "exportFileData": false,
+      "exportNotes": true,
+      "exportPath": "/Users/felix-krueckel/Documents/rwth/cs/Proseminar Music Data Analysis/latex/literatur.json",
+      "keepUpdated": false,
+      "worker": true
+    }
+  },
+  "version": {
+    "zotero": "7.0.15",
+    "bbt": "7.0.34"
+  },
+  "collections": {
+    "WMTX9XE9": {
+      "key": "WMTX9XE9",
+      "parent": "",
+      "name": "Generalized Sequence Alignment",
+      "collections": [
+        "WJLFT4RL",
+        "BFFE6B5E",
+        "CVV82TPV",
+        "IRHPGDA8"
+      ],
+      "items": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        14,
+        18,
+        20,
+        22,
+        24,
+        26,
+        29,
+        32,
+        34,
+        36,
+        64
+      ]
+    },
+    "WJLFT4RL": {
+      "key": "WJLFT4RL",
+      "parent": "WMTX9XE9",
+      "name": "bioinformatics",
+      "collections": [],
+      "items": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        64,
+        66
+      ]
+    },
+    "BFFE6B5E": {
+      "key": "BFFE6B5E",
+      "parent": "WMTX9XE9",
+      "name": "pm alignments",
+      "collections": [],
+      "items": [
+        14,
+        22,
+        29,
+        30,
+        32,
+        64
+      ]
+    },
+    "CVV82TPV": {
+      "key": "CVV82TPV",
+      "parent": "WMTX9XE9",
+      "name": "pm clustering",
+      "collections": [],
+      "items": [
+        34,
+        36
+      ]
+    },
+    "IRHPGDA8": {
+      "key": "IRHPGDA8",
+      "parent": "WMTX9XE9",
+      "name": "process mining general",
+      "collections": [],
+      "items": [
+        18,
+        20,
+        24,
+        26
+      ]
+    },
+    "45QWKMVR": {
+      "key": "45QWKMVR",
+      "parent": "",
+      "name": "ML reading list",
+      "collections": [],
+      "items": [
+        72,
+        74,
+        78,
+        81,
+        89
+      ]
+    },
+    "MDC5AL2C": {
+      "key": "MDC5AL2C",
+      "parent": "",
+      "name": "Proseminar Music Data Analysis",
+      "collections": [],
+      "items": [
+        113,
+        116,
+        121,
+        125,
+        128,
+        149
+      ]
+    },
+    "6XF2TQYD": {
+      "key": "6XF2TQYD",
+      "parent": "",
+      "name": "stress",
+      "collections": [],
+      "items": [
+        41,
+        44,
+        47,
+        49,
+        52,
+        55,
+        57,
+        59,
+        61
+      ]
+    }
+  },
+  "items": [
+    {
+      "key": "6DZRLQPQ",
+      "version": 106,
+      "itemType": "journalArticle",
+      "title": "Basic local alignment search tool",
+      "date": "1990",
+      "extra": "Publisher: Elsevier",
+      "volume": "215",
+      "pages": "403–410",
+      "publicationTitle": "Journal of molecular biology",
+      "issue": "3",
+      "creators": [
+        {
+          "firstName": "Stephen F",
+          "lastName": "Altschul",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Warren",
+          "lastName": "Gish",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Webb",
+          "lastName": "Miller",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Eugene W",
+          "lastName": "Myers",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David J",
+          "lastName": "Lipman",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-21T14:51:24Z",
+      "dateModified": "2024-07-21T14:51:24Z",
+      "uri": "http://zotero.org/users/14685114/items/6DZRLQPQ",
+      "itemID": 4,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "altschulBasicLocalAlignment1990",
+      "itemKey": "6DZRLQPQ",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/6DZRLQPQ"
+    },
+    {
+      "key": "S6SD67CA",
+      "version": 378,
+      "itemType": "webpage",
+      "title": "Best Computer Science Scientists in University of Oxford - H-Index Ranking",
+      "abstractNote": "Discover the latest 2024 Computer Science university ranking for University of Oxford",
+      "language": "en",
+      "url": "https://research.com/university/computer-science/university-of-oxford",
+      "accessDate": "2024-09-10T07:30:25Z",
+      "websiteTitle": "Research.com",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-09-10T07:30:25Z",
+      "dateModified": "2024-09-10T07:30:25Z",
+      "uri": "http://zotero.org/users/14685114/items/S6SD67CA",
+      "itemID": 84,
+      "attachments": [
+        {
+          "key": "46IV6VBR",
+          "version": 379,
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://research.com/university/computer-science/university-of-oxford",
+          "accessDate": "2024-09-10T07:30:26Z",
+          "parentItem": "S6SD67CA",
+          "linkMode": "imported_url",
+          "contentType": "",
+          "charset": "",
+          "filename": "",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-09-10T07:30:26Z",
+          "dateModified": "2024-09-10T07:30:26Z",
+          "uri": "http://zotero.org/users/14685114/items/46IV6VBR",
+          "localPath": false
+        }
+      ],
+      "notes": [],
+      "citationKey": "BestComputerScience",
+      "itemKey": "S6SD67CA",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/S6SD67CA"
+    },
+    {
+      "key": "UCJ55BJY",
+      "version": 376,
+      "itemType": "webpage",
+      "title": "Best Computer Science Scientists in ETH Zurich - H-Index Ranking",
+      "abstractNote": "Discover the latest 2024 Computer Science university ranking for ETH Zurich",
+      "language": "en",
+      "url": "https://research.com/university/computer-science/eth-zurich",
+      "accessDate": "2024-09-10T07:30:17Z",
+      "websiteTitle": "Research.com",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-09-10T07:30:17Z",
+      "dateModified": "2024-09-10T07:30:17Z",
+      "uri": "http://zotero.org/users/14685114/items/UCJ55BJY",
+      "itemID": 85,
+      "attachments": [
+        {
+          "key": "6VN3MPMJ",
+          "version": 377,
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://research.com/university/computer-science/eth-zurich",
+          "accessDate": "2024-09-10T07:30:18Z",
+          "parentItem": "UCJ55BJY",
+          "linkMode": "imported_url",
+          "contentType": "",
+          "charset": "",
+          "filename": "",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-09-10T07:30:18Z",
+          "dateModified": "2024-09-10T07:30:18Z",
+          "uri": "http://zotero.org/users/14685114/items/6VN3MPMJ",
+          "localPath": false
+        }
+      ],
+      "notes": [],
+      "citationKey": "BestComputerSciencea",
+      "itemKey": "UCJ55BJY",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/UCJ55BJY"
+    },
+    {
+      "key": "FY9UCDTK",
+      "version": 374,
+      "itemType": "webpage",
+      "title": "Best Computer Science Scientists in MIT - H-Index Ranking",
+      "abstractNote": "Discover the latest 2024 Computer Science university ranking for MIT",
+      "language": "en",
+      "url": "https://research.com/university/computer-science/mit",
+      "accessDate": "2024-09-10T07:30:09Z",
+      "websiteTitle": "Research.com",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-09-10T07:30:10Z",
+      "dateModified": "2024-09-10T07:30:10Z",
+      "uri": "http://zotero.org/users/14685114/items/FY9UCDTK",
+      "itemID": 86,
+      "attachments": [
+        {
+          "key": "QQS7DTRX",
+          "version": 375,
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://research.com/university/computer-science/mit",
+          "accessDate": "2024-09-10T07:30:11Z",
+          "parentItem": "FY9UCDTK",
+          "linkMode": "imported_url",
+          "contentType": "",
+          "charset": "",
+          "filename": "",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-09-10T07:30:11Z",
+          "dateModified": "2024-09-10T07:30:11Z",
+          "uri": "http://zotero.org/users/14685114/items/QQS7DTRX",
+          "localPath": false
+        }
+      ],
+      "notes": [],
+      "citationKey": "BestComputerScienceb",
+      "itemKey": "FY9UCDTK",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/FY9UCDTK"
+    },
+    {
+      "key": "KUZX54RP",
+      "version": 372,
+      "itemType": "webpage",
+      "title": "Best Computer Science Universities in the World Ranking 2024",
+      "abstractNote": "Compare the best Computer Science universities in the world for 2024. Discover Research.com annual Computer Science ranking of universities worldwide.",
+      "language": "en",
+      "url": "https://research.com/university-rankings/computer-science",
+      "accessDate": "2024-09-10T07:29:57Z",
+      "websiteTitle": "Research.com",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-09-10T07:29:58Z",
+      "dateModified": "2024-09-10T07:29:58Z",
+      "uri": "http://zotero.org/users/14685114/items/KUZX54RP",
+      "itemID": 87,
+      "attachments": [
+        {
+          "key": "UE7XZB5M",
+          "version": 373,
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://research.com/university-rankings/computer-science",
+          "accessDate": "2024-09-10T07:29:58Z",
+          "parentItem": "KUZX54RP",
+          "linkMode": "imported_url",
+          "contentType": "",
+          "charset": "",
+          "filename": "",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-09-10T07:29:58Z",
+          "dateModified": "2024-09-10T07:29:58Z",
+          "uri": "http://zotero.org/users/14685114/items/UE7XZB5M",
+          "localPath": false
+        }
+      ],
+      "notes": [],
+      "citationKey": "BestComputerSciencec",
+      "itemKey": "KUZX54RP",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KUZX54RP"
+    },
+    {
+      "key": "JM8AS5YG",
+      "version": 370,
+      "itemType": "webpage",
+      "title": "Best Computer Science Scientists in RWTH Aachen University - H-Index Ranking",
+      "abstractNote": "Discover the latest 2024 Computer Science university ranking for RWTH Aachen University",
+      "language": "en",
+      "url": "https://research.com/university/computer-science/rwth-aachen-university",
+      "accessDate": "2024-09-10T07:29:23Z",
+      "websiteTitle": "Research.com",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-09-10T07:29:44Z",
+      "dateModified": "2024-09-10T07:29:44Z",
+      "uri": "http://zotero.org/users/14685114/items/JM8AS5YG",
+      "itemID": 88,
+      "attachments": [
+        {
+          "key": "KI2WRSNC",
+          "version": 371,
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://research.com/university/computer-science/rwth-aachen-university",
+          "accessDate": "2024-09-10T07:29:46Z",
+          "parentItem": "JM8AS5YG",
+          "linkMode": "imported_url",
+          "contentType": "",
+          "charset": "",
+          "filename": "",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-09-10T07:29:46Z",
+          "dateModified": "2024-09-10T07:29:46Z",
+          "uri": "http://zotero.org/users/14685114/items/KI2WRSNC",
+          "localPath": false
+        }
+      ],
+      "notes": [],
+      "citationKey": "BestComputerScienced",
+      "itemKey": "JM8AS5YG",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/JM8AS5YG"
+    },
+    {
+      "key": "28GPIAB7",
+      "version": 190,
+      "itemType": "journalArticle",
+      "title": "Stress and the gastrointestinal tract",
+      "abstractNote": "Stress, defined as an acute threat to homeostasis, evokes an adaptive or allostatic response and can have both a short- and long-term influence on the function of the gastrointestinal tract. The enteric nervous system is connected bidirectionally to the brain by parasympathetic and sympathetic pathways forming the brain–gut axis. The neural network of the brain, which generates the stress response, is called the central stress circuitry and includes the paraventricular nucleus of the hypothalamus, amygdala and periaqueductal gray. It receives input from the somatic and visceral afferent pathways and also from the visceral motor cortex including the medial prefrontal, anterior cingulate and insular cortex. The output of this central stress circuit is called the emotional motor system and includes automatic efferents, the hypothalamus–pituitary–adrenal axis and pain modulatory systems. Severe or long-term stress can induce long-term alteration in the stress response (plasticity). Corticotropin releasing factor (CRF) is a key mediator of the central stress response. Two CRF receptor subtypes, R1 and R2, have been described. They mediate increased colonic motor activity and slowed gastric emptying, respectively, in response to stress. Specific CRF receptor antagonists injected into the 0 block these visceral manifestations of stress. Circulating glucocorticoids exert an inhibitory effect on the stress response by receptors located in the medial prefrontal cortex and hippocampus. Many other neurotransmitters and neuroimmunomodulators are being evaluated. Stress increases the intestinal permeability to large antigenic molecules. It can lead to mast cell activation, degranulation and colonic mucin depletion. A reversal of small bowel water and electrolyte absorption occurs in response to stress and is mediated cholinergically. Stress also leads to increased susceptibility to colonic inflammation, which can be adaptively transferred among rats by sensitized CD4+ lymphocytes. The association between stress and various gastrointestinal diseases, including functional bowel disorders, inflammatory bowel disease, peptic ulcer disease and gastroesophageal reflux disease, is being actively investigated. Attention to the close relation between the brain and gut has opened many therapeutic avenues for the future.",
+      "date": "2005",
+      "language": "en",
+      "libraryCatalog": "Wiley Online Library",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1440-1746.2004.03508.x",
+      "accessDate": "2024-07-26T14:06:29Z",
+      "extra": "_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1440-1746.2004.03508.x",
+      "volume": "20",
+      "pages": "332-339",
+      "publicationTitle": "Journal of Gastroenterology and Hepatology",
+      "DOI": "10.1111/j.1440-1746.2004.03508.x",
+      "issue": "3",
+      "ISSN": "1440-1746",
+      "creators": [
+        {
+          "firstName": "Vikram",
+          "lastName": "Bhatia",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Rakesh K",
+          "lastName": "Tandon",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "corticotropin-releasing factor",
+          "type": 1
+        },
+        {
+          "tag": "emotional motor system",
+          "type": 1
+        },
+        {
+          "tag": "glucocorticoids",
+          "type": 1
+        },
+        {
+          "tag": "mast cells",
+          "type": 1
+        },
+        {
+          "tag": "stress",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-26T14:06:29Z",
+      "dateModified": "2024-07-26T14:06:29Z",
+      "uri": "http://zotero.org/users/14685114/items/28GPIAB7",
+      "itemID": 44,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T14:06:32Z",
+          "dateModified": "2024-07-26T14:06:32Z",
+          "uri": "http://zotero.org/users/14685114/items/DZ7M7AKQ",
+          "path": "/Users/felix-krueckel/Zotero/storage/DZ7M7AKQ/Bhatia and Tandon - 2005 - Stress and the gastrointestinal tract.pdf",
+          "select": "zotero://select/library/items/DZ7M7AKQ"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T14:06:37Z",
+          "dateModified": "2024-07-26T14:06:37Z",
+          "uri": "http://zotero.org/users/14685114/items/RKU6ZRM8",
+          "path": "/Users/felix-krueckel/Zotero/storage/RKU6ZRM8/j.1440-1746.2004.03508.html",
+          "select": "zotero://select/library/items/RKU6ZRM8"
+        }
+      ],
+      "notes": [],
+      "citationKey": "bhatiaStressGastrointestinalTract2005",
+      "itemKey": "28GPIAB7",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/28GPIAB7"
+    },
+    {
+      "key": "YZNAM3AT",
+      "version": 118,
+      "itemType": "conferencePaper",
+      "title": "Alignment-Based Trace Clustering",
+      "abstractNote": "A novel method to cluster event log traces is presented in this paper. In contrast to the approaches in the literature, the clustering approach of this paper assumes an additional input: a process model that describes the current process. The core idea of the algorithm is to use model traces as centroids of the clusters detected, computed from a generalization of the notion of alignment. This way, model explanations of observed behavior are the driving force to compute the clusters, instead of current model agnostic approaches, e.g., which group log traces merely on their vector-space similarity. We believe alignment-based trace clustering provides results more useful for stakeholders. Moreover, in case of log incompleteness, noisy logs or concept drift, they can be more robust for dealing with highly deviating traces. The technique of this paper can be combined with any clustering technique to provide model explanations to the clusters computed. The proposed technique relies on encoding the individual alignment problems into the (pseudo-)Boolean domain, and has been implemented in our tool DarkSider that uses an open-source solver.",
+      "date": "2017",
+      "language": "en",
+      "libraryCatalog": "Springer Link",
+      "place": "Cham",
+      "publisher": "Springer International Publishing",
+      "ISBN": "978-3-319-69904-2",
+      "pages": "295-308",
+      "proceedingsTitle": "Conceptual Modeling",
+      "DOI": "10.1007/978-3-319-69904-2_24",
+      "creators": [
+        {
+          "firstName": "Thomas",
+          "lastName": "Chatain",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Josep",
+          "lastName": "Carmona",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Boudewijn",
+          "lastName": "van Dongen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Heinrich C.",
+          "lastName": "Mayr",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Giancarlo",
+          "lastName": "Guizzardi",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Hui",
+          "lastName": "Ma",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Oscar",
+          "lastName": "Pastor",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-23T11:07:28Z",
+      "dateModified": "2024-07-23T11:07:28Z",
+      "uri": "http://zotero.org/users/14685114/items/YZNAM3AT",
+      "itemID": 34,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-23T11:07:30Z",
+          "dateModified": "2024-07-23T11:07:30Z",
+          "uri": "http://zotero.org/users/14685114/items/D52UXDSA",
+          "path": "/Users/felix-krueckel/Zotero/storage/D52UXDSA/Chatain et al. - 2017 - Alignment-Based Trace Clustering.pdf",
+          "select": "zotero://select/library/items/D52UXDSA"
+        }
+      ],
+      "notes": [],
+      "citationKey": "chatainAlignmentBasedTraceClustering2017",
+      "itemKey": "YZNAM3AT",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/YZNAM3AT"
+    },
+    {
+      "key": "F4GV4EJM",
+      "version": 380,
+      "itemType": "conferencePaper",
+      "title": "Alignment-Based Trace Clustering",
+      "abstractNote": "A novel method to cluster event log traces is presented in this paper. In contrast to the approaches in the literature, the clustering approach of this paper assumes an additional input: a process model that describes the current process. The core idea of the algorithm is to use model traces as centroids of the clusters detected, computed from a generalization of the notion of alignment. This way, model explanations of observed behavior are the driving force to compute the clusters, instead of current model agnostic approaches, e.g., which group log traces merely on their vector-space similarity. We believe alignment-based trace clustering provides results more useful for stakeholders. Moreover, in case of log incompleteness, noisy logs or concept drift, they can be more robust for dealing with highly deviating traces. The technique of this paper can be combined with any clustering technique to provide model explanations to the clusters computed. The proposed technique relies on encoding the individual alignment problems into the (pseudo-)Boolean domain, and has been implemented in our tool DarkSider that uses an open-source solver.",
+      "date": "2017",
+      "language": "en",
+      "libraryCatalog": "Springer Link",
+      "place": "Cham",
+      "publisher": "Springer International Publishing",
+      "ISBN": "978-3-319-69904-2",
+      "pages": "295-308",
+      "proceedingsTitle": "Conceptual Modeling",
+      "DOI": "10.1007/978-3-319-69904-2_24",
+      "creators": [
+        {
+          "firstName": "Thomas",
+          "lastName": "Chatain",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Josep",
+          "lastName": "Carmona",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Boudewijn",
+          "lastName": "van Dongen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Heinrich C.",
+          "lastName": "Mayr",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Giancarlo",
+          "lastName": "Guizzardi",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Hui",
+          "lastName": "Ma",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Oscar",
+          "lastName": "Pastor",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-04-22T10:26:08Z",
+      "dateModified": "2025-04-22T10:26:08Z",
+      "uri": "http://zotero.org/users/14685114/items/F4GV4EJM",
+      "itemID": 89,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-04-22T10:26:09Z",
+          "dateModified": "2025-04-22T10:26:09Z",
+          "uri": "http://zotero.org/users/14685114/items/9AGCHJUC",
+          "path": "/Users/felix-krueckel/Zotero/storage/9AGCHJUC/Chatain et al. - 2017 - Alignment-Based Trace Clustering.pdf",
+          "select": "zotero://select/library/items/9AGCHJUC"
+        }
+      ],
+      "notes": [],
+      "citationKey": "chatainAlignmentBasedTraceClustering2017a",
+      "itemKey": "F4GV4EJM",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/F4GV4EJM"
+    },
+    {
+      "key": "6P3D8WVH",
+      "version": 499,
+      "itemType": "preprint",
+      "title": "Simple and Controllable Music Generation",
+      "abstractNote": "We tackle the task of conditional music generation. We introduce MusicGen, a single Language Model (LM) that operates over several streams of compressed discrete music representation, i.e., tokens. Unlike prior work, MusicGen is comprised of a single-stage transformer LM together with efficient token interleaving patterns, which eliminates the need for cascading several models, e.g., hierarchically or upsampling. Following this approach, we demonstrate how MusicGen can generate high-quality samples, both mono and stereo, while being conditioned on textual description or melodic features, allowing better controls over the generated output. We conduct extensive empirical evaluation, considering both automatic and human studies, showing the proposed approach is superior to the evaluated baselines on a standard text-to-music benchmark. Through ablation studies, we shed light over the importance of each of the components comprising MusicGen. Music samples, code, and models are available at https://github.com/facebookresearch/audiocraft",
+      "date": "2024-01-30",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2306.05284",
+      "accessDate": "2025-04-23T18:44:48Z",
+      "extra": "arXiv:2306.05284 [cs]",
+      "DOI": "10.48550/arXiv.2306.05284",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2306.05284",
+      "creators": [
+        {
+          "firstName": "Jade",
+          "lastName": "Copet",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Felix",
+          "lastName": "Kreuk",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Itai",
+          "lastName": "Gat",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tal",
+          "lastName": "Remez",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David",
+          "lastName": "Kant",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gabriel",
+          "lastName": "Synnaeve",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yossi",
+          "lastName": "Adi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alexandre",
+          "lastName": "Défossez",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Sound",
+          "type": 1
+        },
+        {
+          "tag": "Electrical Engineering and Systems Science - Audio and Speech Processing",
+          "type": 1
+        }
+      ],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/5964733/items/FELKTV4D"
+        ]
+      },
+      "dateAdded": "2025-04-23T18:44:48Z",
+      "dateModified": "2025-04-23T18:44:48Z",
+      "uri": "http://zotero.org/users/14685114/items/6P3D8WVH",
+      "itemID": 149,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/2EI7CXXS"
+            ]
+          },
+          "dateAdded": "2025-04-23T18:44:48Z",
+          "dateModified": "2025-04-23T18:44:48Z",
+          "uri": "http://zotero.org/users/14685114/items/JIVL75GC",
+          "path": "/Users/felix-krueckel/Zotero/storage/JIVL75GC/Copet et al. - 2024 - Simple and Controllable Music Generation.pdf",
+          "select": "zotero://select/library/items/JIVL75GC"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/WAFLVM4P"
+            ]
+          },
+          "dateAdded": "2025-04-23T18:44:52Z",
+          "dateModified": "2025-04-23T18:44:52Z",
+          "uri": "http://zotero.org/users/14685114/items/BVSBS933",
+          "path": "/Users/felix-krueckel/Zotero/storage/BVSBS933/2306.html",
+          "select": "zotero://select/library/items/BVSBS933"
+        }
+      ],
+      "notes": [
+        {
+          "key": "4R7RRMUR",
+          "version": 500,
+          "itemType": "note",
+          "parentItem": "6P3D8WVH",
+          "note": "Comment: Published at Neurips 2023",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/F72969VN"
+            ]
+          },
+          "dateAdded": "2025-04-23T18:44:48Z",
+          "dateModified": "2025-04-23T18:44:48Z",
+          "uri": "http://zotero.org/users/14685114/items/4R7RRMUR"
+        }
+      ],
+      "citationKey": "copetSimpleControllableMusic2024",
+      "itemKey": "6P3D8WVH",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/6P3D8WVH"
+    },
+    {
+      "key": "WAD724B3",
+      "version": 109,
+      "itemType": "book",
+      "title": "Mapping and Sequencing the Human Genome",
+      "abstractNote": "There is growing enthusiasm in the scientific community about the prospect of mapping and sequencing the human genome, a monumental project that will have far-reaching consequences for medicine, biology, technology, and other fields. But how will such an effort be organized and funded? How will we develop the new technologies that are needed? What new legal, social, and ethical questions will be raised?\\nMapping and Sequencing the Human Genome is a blueprint for this proposed project. The authors offer a highly readable explanation of the technical aspects of genetic mapping and sequencing, and they recommend specific interim and long-range research goals, organizational strategies, and funding levels. They also outline some of the legal and social questions that might arise and urge their early consideration by policymakers.",
+      "date": "1988",
+      "place": "Washington, DC",
+      "publisher": "The National Academies Press",
+      "ISBN": "978-0-309-07462-9",
+      "creators": [
+        {
+          "firstName": "National Research",
+          "lastName": "Council",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-21T14:51:24Z",
+      "dateModified": "2024-07-21T14:51:24Z",
+      "uri": "http://zotero.org/users/14685114/items/WAD724B3",
+      "itemID": 7,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "councilMappingSequencingHuman1988",
+      "itemKey": "WAD724B3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/WAD724B3"
+    },
+    {
+      "key": "R9XXGCKH",
+      "version": 364,
+      "itemType": "preprint",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "abstractNote": "Transformers are slow and memory-hungry on long sequences, since the time and memory complexity of self-attention are quadratic in sequence length. Approximate attention methods have attempted to address this problem by trading off model quality to reduce the compute complexity, but often do not achieve wall-clock speedup. We argue that a missing principle is making attention algorithms IO-aware -- accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3$\\times$ speedup on GPT-2 (seq. length 1K), and 2.4$\\times$ speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Transformers, yielding higher quality models (0.7 better perplexity on GPT-2 and 6.4 points of lift on long-document classification) and entirely new capabilities: the first Transformers to achieve better-than-chance performance on the Path-X challenge (seq. length 16K, 61.4% accuracy) and Path-256 (seq. length 64K, 63.1% accuracy).",
+      "date": "2022-06-23",
+      "shortTitle": "FlashAttention",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2205.14135",
+      "accessDate": "2024-08-18T15:40:49Z",
+      "extra": "arXiv:2205.14135 [cs]",
+      "DOI": "10.48550/arXiv.2205.14135",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2205.14135",
+      "creators": [
+        {
+          "firstName": "Tri",
+          "lastName": "Dao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daniel Y.",
+          "lastName": "Fu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Stefano",
+          "lastName": "Ermon",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Atri",
+          "lastName": "Rudra",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Ré",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-08-18T15:40:49Z",
+      "dateModified": "2024-08-18T15:40:49Z",
+      "uri": "http://zotero.org/users/14685114/items/R9XXGCKH",
+      "itemID": 81,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-18T15:40:55Z",
+          "dateModified": "2024-08-18T15:40:55Z",
+          "uri": "http://zotero.org/users/14685114/items/TRULBSQ2",
+          "path": "/Users/felix-krueckel/Zotero/storage/TRULBSQ2/Dao et al. - 2022 - FlashAttention Fast and Memory-Efficient Exact At.pdf",
+          "select": "zotero://select/library/items/TRULBSQ2"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-18T15:41:03Z",
+          "dateModified": "2024-08-18T15:41:03Z",
+          "uri": "http://zotero.org/users/14685114/items/YYVH2ZYA",
+          "path": "/Users/felix-krueckel/Zotero/storage/YYVH2ZYA/2205.html",
+          "select": "zotero://select/library/items/YYVH2ZYA"
+        }
+      ],
+      "notes": [],
+      "citationKey": "daoFlashAttentionFastMemoryEfficient2022",
+      "itemKey": "R9XXGCKH",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/R9XXGCKH"
+    },
+    {
+      "key": "D97JAS74",
+      "version": 117,
+      "itemType": "bookSection",
+      "title": "Aligning Event Logs and Process Models for Multi-perspective Conformance Checking: An Approach Based on Integer Linear Programming",
+      "abstractNote": "Modern organizations have invested in collections of descriptive and/or normative process models, but these rarely describe the actual processes adequately. Therefore, a variety of techniques for conformance checking have been proposed to pinpoint discrepancies between modeled and observed behavior. However, these techniques typically focus on the control-ﬂow and abstract from data, resources and time. This paper describes an approach that aligns event log and model while taking all perspectives into account (i.e., also data, time and resources). This way it is possible to quantify conformance and analyze differences between model and reality. The approach was implemented using ProM and has been evaluated using both synthetic event logs and a real-life case study.",
+      "date": "2013",
+      "language": "en",
+      "shortTitle": "Aligning Event Logs and Process Models for Multi-perspective Conformance Checking",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "http://link.springer.com/10.1007/978-3-642-40176-3_10",
+      "accessDate": "2024-07-23T10:33:35Z",
+      "extra": "Series Title: Lecture Notes in Computer Science\nDOI: 10.1007/978-3-642-40176-3_10",
+      "volume": "8094",
+      "place": "Berlin, Heidelberg",
+      "publisher": "Springer Berlin Heidelberg",
+      "ISBN": "978-3-642-40175-6 978-3-642-40176-3",
+      "pages": "113-129",
+      "bookTitle": "Business Process Management",
+      "creators": [
+        {
+          "firstName": "Florian",
+          "lastName": "Daniel",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Jianmin",
+          "lastName": "Wang",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Barbara",
+          "lastName": "Weber",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Massimiliano",
+          "lastName": "De Leoni",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wil M. P.",
+          "lastName": "Van Der Aalst",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-23T10:33:35Z",
+      "dateModified": "2024-07-23T10:33:36Z",
+      "uri": "http://zotero.org/users/14685114/items/D97JAS74",
+      "itemID": 29,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "De Leoni and Van Der Aalst - 2013 - Aligning Event Logs and Process Models for Multi-p.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-23T10:33:30Z",
+          "dateModified": "2024-07-23T10:33:37Z",
+          "uri": "http://zotero.org/users/14685114/items/S9SSGKI9",
+          "path": "/Users/felix-krueckel/Zotero/storage/S9SSGKI9/De Leoni and Van Der Aalst - 2013 - Aligning Event Logs and Process Models for Multi-p.pdf",
+          "select": "zotero://select/library/items/S9SSGKI9"
+        }
+      ],
+      "notes": [],
+      "citationKey": "deleoniAligningEventLogs2013",
+      "itemKey": "D97JAS74",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/D97JAS74"
+    },
+    {
+      "key": "KP7X7W2I",
+      "version": 280,
+      "itemType": "conferencePaper",
+      "title": "Aligning Event Logs and Process Models for Multi-perspective Conformance Checking: An Approach Based on Integer Linear Programming",
+      "abstractNote": "Modern organizations have invested in collections of descriptive and/or normative process models, but these rarely describe the actual processes adequately. Therefore, a variety of techniques for conformance checking have been proposed to pinpoint discrepancies between modeled and observed behavior. However, these techniques typically focus on the control-flow and abstract from data, resources and time. This paper describes an approach that aligns event log and model while taking all perspectives into account (i.e., also data, time and resources). This way it is possible to quantify conformance and analyze differences between model and reality. The approach was implemented using ProM and has been evaluated using both synthetic event logs and a real-life case study.",
+      "date": "2013",
+      "language": "en",
+      "shortTitle": "Aligning Event Logs and Process Models for Multi-perspective Conformance Checking",
+      "libraryCatalog": "Springer Link",
+      "place": "Berlin, Heidelberg",
+      "publisher": "Springer",
+      "ISBN": "978-3-642-40176-3",
+      "pages": "113-129",
+      "proceedingsTitle": "Business Process Management",
+      "DOI": "10.1007/978-3-642-40176-3_10",
+      "creators": [
+        {
+          "firstName": "Massimiliano",
+          "lastName": "de Leoni",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wil M. P.",
+          "lastName": "van der Aalst",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Florian",
+          "lastName": "Daniel",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Jianmin",
+          "lastName": "Wang",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Barbara",
+          "lastName": "Weber",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-23T10:33:39Z",
+      "dateModified": "2024-07-23T10:33:39Z",
+      "uri": "http://zotero.org/users/14685114/items/KP7X7W2I",
+      "itemID": 30,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-23T10:33:42Z",
+          "dateModified": "2024-07-23T10:33:42Z",
+          "uri": "http://zotero.org/users/14685114/items/P2NFCGNY",
+          "path": "/Users/felix-krueckel/Zotero/storage/P2NFCGNY/de Leoni and van der Aalst - 2013 - Aligning Event Logs and Process Models for Multi-p.pdf",
+          "select": "zotero://select/library/items/P2NFCGNY"
+        }
+      ],
+      "notes": [],
+      "citationKey": "deleoniAligningEventLogs2013a",
+      "itemKey": "KP7X7W2I",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KP7X7W2I"
+    },
+    {
+      "key": "BMLMMF2Y",
+      "version": 359,
+      "itemType": "preprint",
+      "title": "Learning Factored Representations in a Deep Mixture of Experts",
+      "abstractNote": "Mixtures of Experts combine the outputs of several \"expert\" networks, each of which specializes in a different part of the input space. This is achieved by training a \"gating\" network that maps each input to a distribution over the experts. Such models show promise for building larger networks that are still cheap to compute at test time, and more parallelizable at training time. In this this work, we extend the Mixture of Experts to a stacked model, the Deep Mixture of Experts, with multiple sets of gating and experts. This exponentially increases the number of effective experts by associating each input with a combination of experts at each layer, yet maintains a modest model size. On a randomly translated version of the MNIST dataset, we find that the Deep Mixture of Experts automatically learns to develop location-dependent (\"where\") experts at the first layer, and class-specific (\"what\") experts at the second layer. In addition, we see that the different combinations are in use when the model is applied to a dataset of speech monophones. These demonstrate effective use of all expert combinations.",
+      "date": "2014-03-09",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1312.4314",
+      "accessDate": "2024-08-18T14:30:01Z",
+      "extra": "arXiv:1312.4314 [cs]",
+      "DOI": "10.48550/arXiv.1312.4314",
+      "repository": "arXiv",
+      "archiveID": "arXiv:1312.4314",
+      "creators": [
+        {
+          "firstName": "David",
+          "lastName": "Eigen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marc'Aurelio",
+          "lastName": "Ranzato",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ilya",
+          "lastName": "Sutskever",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-08-18T14:30:01Z",
+      "dateModified": "2024-08-18T14:30:01Z",
+      "uri": "http://zotero.org/users/14685114/items/BMLMMF2Y",
+      "itemID": 78,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-18T14:30:05Z",
+          "dateModified": "2024-08-18T14:30:05Z",
+          "uri": "http://zotero.org/users/14685114/items/LVRW8SAK",
+          "path": "/Users/felix-krueckel/Zotero/storage/LVRW8SAK/Eigen et al. - 2014 - Learning Factored Representations in a Deep Mixtur.pdf",
+          "select": "zotero://select/library/items/LVRW8SAK"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-18T14:30:12Z",
+          "dateModified": "2024-08-18T14:30:12Z",
+          "uri": "http://zotero.org/users/14685114/items/WB8WCUJ8",
+          "path": "/Users/felix-krueckel/Zotero/storage/WB8WCUJ8/1312.html",
+          "select": "zotero://select/library/items/WB8WCUJ8"
+        }
+      ],
+      "notes": [],
+      "citationKey": "eigenLearningFactoredRepresentations2014",
+      "itemKey": "BMLMMF2Y",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/BMLMMF2Y"
+    },
+    {
+      "key": "VMW42NY3",
+      "version": 118,
+      "itemType": "conferencePaper",
+      "title": "Clustering Traces Using Sequence Alignment",
+      "abstractNote": "Process mining discovers process models from event logs. Logs containing heterogeneous sets of traces can lead to complex process models that try to account for very different behaviour in a single model. Trace clustering identifies homogeneous sets of traces within a heterogeneous log and allows for the discovery of multiple, simpler process models. In this paper, we present a trace clustering method based on local alignment of sequences, subsequent multidimensional scaling, and k-means clustering. We describe its implementation and show that its performance compares favourably to state-of-the-art clustering approaches on two evaluation problems.",
+      "date": "2016",
+      "language": "en",
+      "libraryCatalog": "Springer Link",
+      "place": "Cham",
+      "publisher": "Springer International Publishing",
+      "ISBN": "978-3-319-42887-1",
+      "pages": "179-190",
+      "proceedingsTitle": "Business Process Management Workshops",
+      "DOI": "10.1007/978-3-319-42887-1_15",
+      "creators": [
+        {
+          "firstName": "Joerg",
+          "lastName": "Evermann",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tom",
+          "lastName": "Thaler",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Peter",
+          "lastName": "Fettke",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Manfred",
+          "lastName": "Reichert",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Hajo A.",
+          "lastName": "Reijers",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Process mining",
+          "type": 1
+        },
+        {
+          "tag": "Process discovery",
+          "type": 1
+        },
+        {
+          "tag": "Sequence alignment",
+          "type": 1
+        },
+        {
+          "tag": "Trace clustering",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-23T11:07:47Z",
+      "dateModified": "2024-07-23T11:07:47Z",
+      "uri": "http://zotero.org/users/14685114/items/VMW42NY3",
+      "itemID": 36,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-23T11:07:49Z",
+          "dateModified": "2024-07-23T11:07:49Z",
+          "uri": "http://zotero.org/users/14685114/items/9EV4M85H",
+          "path": "/Users/felix-krueckel/Zotero/storage/9EV4M85H/Evermann et al. - 2016 - Clustering Traces Using Sequence Alignment.pdf",
+          "select": "zotero://select/library/items/9EV4M85H"
+        }
+      ],
+      "notes": [],
+      "citationKey": "evermannClusteringTracesUsing2016",
+      "itemKey": "VMW42NY3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/VMW42NY3"
+    },
+    {
+      "key": "SCN7ZBLH",
+      "version": 8,
+      "itemType": "conferencePaper",
+      "title": "Approaching Process Mining with Sequence Clustering: Experiments and Findings",
+      "abstractNote": "Sequence clustering is a technique of bioinformatics that is used to discover the properties of sequences by grouping them into clusters and assigning each sequence to one of those clusters. In business process mining, the goal is also to extract sequence behaviour from an event log but the problem is often simplified by assuming that each event is already known to belong to a given process and process instance. In this paper, we describe two experiments where this information is not available. One is based on a real-world case study of observing a software development team for three weeks. The other is based on simulation and shows that it is possible to recover the original behaviour in a fully automated way. In both experiments, sequence clustering plays a central role.",
+      "date": "2007",
+      "language": "en",
+      "shortTitle": "Approaching Process Mining with Sequence Clustering",
+      "libraryCatalog": "Springer Link",
+      "place": "Berlin, Heidelberg",
+      "publisher": "Springer",
+      "ISBN": "978-3-540-75183-0",
+      "pages": "360-374",
+      "proceedingsTitle": "Business Process Management",
+      "DOI": "10.1007/978-3-540-75183-0_26",
+      "creators": [
+        {
+          "firstName": "Diogo",
+          "lastName": "Ferreira",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marielba",
+          "lastName": "Zacarias",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Miguel",
+          "lastName": "Malheiros",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pedro",
+          "lastName": "Ferreira",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gustavo",
+          "lastName": "Alonso",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Peter",
+          "lastName": "Dadam",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Rosemann",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Process Discovery",
+          "type": 1
+        },
+        {
+          "tag": "Process Mining",
+          "type": 1
+        },
+        {
+          "tag": "Sequence Clustering",
+          "type": 1
+        },
+        {
+          "tag": "Task Identification",
+          "type": 1
+        },
+        {
+          "tag": "Workflow Logs",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-21T15:41:49Z",
+      "dateModified": "2024-07-21T15:41:49Z",
+      "uri": "http://zotero.org/users/14685114/items/SCN7ZBLH",
+      "itemID": 9,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-21T15:41:52Z",
+          "dateModified": "2024-07-21T15:41:52Z",
+          "uri": "http://zotero.org/users/14685114/items/XQN7JPUN",
+          "path": "/Users/felix-krueckel/Zotero/storage/XQN7JPUN/Ferreira et al. - 2007 - Approaching Process Mining with Sequence Clusterin.pdf",
+          "select": "zotero://select/library/items/XQN7JPUN"
+        }
+      ],
+      "notes": [],
+      "citationKey": "ferreiraApproachingProcessMining2007",
+      "itemKey": "SCN7ZBLH",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/SCN7ZBLH"
+    },
+    {
+      "key": "9WN93EZH",
+      "version": 498,
+      "itemType": "conferencePaper",
+      "title": "An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion",
+      "abstractNote": "Text-to-image models offer unprecedented freedom to guide creation through natural language. Yet, it is unclear how such freedom can be exercised to generate images of specific unique concepts, modify their appearance, or compose them in new roles and novel scenes. In other words, we ask: how can we use language-guided models to turn our cat into a painting, or imagine a new product based on our favorite toy? Here we present a simple approach that allows such creative freedom. Using only 3-5 images of a user-provided concept, like an object or a style, we learn to represent it through new \"words\" in the embedding space of a frozen text-to-image model. These \"words\" can be composed into natural language sentences, guiding personalized creation in an intuitive way. Notably, we find evidence that a single word embedding is sufficient for capturing unique and varied concepts. We compare our approach to a wide range of baselines, and demonstrate that it can more faithfully portray the concepts across a range of applications and tasks. Our code, data and new words will be available at: https://textual-inversion.github.io",
+      "date": "2022-08-02",
+      "shortTitle": "An Image is Worth One Word",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2208.01618",
+      "accessDate": "2025-04-22T14:31:11Z",
+      "extra": "arXiv:2208.01618 [cs]",
+      "conferenceName": "International Conference on Learning Representations, 2023",
+      "DOI": "10.48550/arXiv.2208.01618",
+      "creators": [
+        {
+          "firstName": "Rinon",
+          "lastName": "Gal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuval",
+          "lastName": "Alaluf",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuval",
+          "lastName": "Atzmon",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Or",
+          "lastName": "Patashnik",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Amit H.",
+          "lastName": "Bermano",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gal",
+          "lastName": "Chechik",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daniel",
+          "lastName": "Cohen-Or",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computer Vision and Pattern Recognition",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Graphics",
+          "type": 1
+        }
+      ],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/5964733/items/ZW5LH6CW"
+        ]
+      },
+      "dateAdded": "2025-04-22T14:31:11Z",
+      "dateModified": "2025-04-22T14:47:14Z",
+      "uri": "http://zotero.org/users/14685114/items/9WN93EZH",
+      "itemID": 116,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/PRSSPNKG"
+            ]
+          },
+          "dateAdded": "2025-04-22T14:31:24Z",
+          "dateModified": "2025-04-22T14:31:24Z",
+          "uri": "http://zotero.org/users/14685114/items/VT5G6Q7X",
+          "path": "/Users/felix-krueckel/Zotero/storage/VT5G6Q7X/Gal et al. - 2022 - An Image is Worth One Word Personalizing Text-to-Image Generation using Textual Inversion.pdf",
+          "select": "zotero://select/library/items/VT5G6Q7X"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/GBUE7DNE"
+            ]
+          },
+          "dateAdded": "2025-04-22T14:31:24Z",
+          "dateModified": "2025-04-22T14:31:24Z",
+          "uri": "http://zotero.org/users/14685114/items/5S75R9PQ",
+          "path": "/Users/felix-krueckel/Zotero/storage/5S75R9PQ/Gal et al. - 2022 - An Image is Worth One Word Personalizing Text-to-Image Generation using Textual Inversion.pdf",
+          "select": "zotero://select/library/items/5S75R9PQ"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/JYS5Q5P3"
+            ]
+          },
+          "dateAdded": "2025-04-22T14:31:28Z",
+          "dateModified": "2025-04-22T14:31:28Z",
+          "uri": "http://zotero.org/users/14685114/items/M7TJ77XU",
+          "path": "/Users/felix-krueckel/Zotero/storage/M7TJ77XU/2208.html",
+          "select": "zotero://select/library/items/M7TJ77XU"
+        }
+      ],
+      "notes": [
+        {
+          "key": "KIASGYV7",
+          "version": 498,
+          "itemType": "note",
+          "parentItem": "9WN93EZH",
+          "note": "Comment: Project page: https://textual-inversion.github.io",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/C83PCM6I"
+            ]
+          },
+          "dateAdded": "2025-04-22T14:31:11Z",
+          "dateModified": "2025-04-22T14:31:11Z",
+          "uri": "http://zotero.org/users/14685114/items/KIASGYV7"
+        }
+      ],
+      "citationKey": "galImageWorthOne2022",
+      "itemKey": "9WN93EZH",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/9WN93EZH"
+    },
+    {
+      "key": "W243UFDV",
+      "version": 205,
+      "itemType": "journalArticle",
+      "title": "Obesity, Chronic Stress, and Stress Reduction",
+      "date": "2023-6",
+      "libraryCatalog": "PubMed Central",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10746495/",
+      "accessDate": "2024-07-26T14:59:12Z",
+      "extra": "PMID: 37197878\nPMCID: PMC10746495",
+      "volume": "52",
+      "pages": "347-362",
+      "publicationTitle": "Gastroenterology clinics of North America",
+      "DOI": "10.1016/j.gtc.2023.03.009",
+      "issue": "2",
+      "journalAbbreviation": "Gastroenterol Clin North Am",
+      "ISSN": "0889-8553",
+      "creators": [
+        {
+          "firstName": "Donald",
+          "lastName": "Goens",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nicole E.",
+          "lastName": "Virzi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sarah E.",
+          "lastName": "Jung",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Thomas R.",
+          "lastName": "Rutledge",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Amir",
+          "lastName": "Zarrinpar",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-26T14:59:12Z",
+      "dateModified": "2024-07-26T14:59:12Z",
+      "uri": "http://zotero.org/users/14685114/items/W243UFDV",
+      "itemID": 52,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PubMed Central Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T14:59:14Z",
+          "dateModified": "2024-07-26T14:59:14Z",
+          "uri": "http://zotero.org/users/14685114/items/58F99U7H",
+          "path": "/Users/felix-krueckel/Zotero/storage/58F99U7H/Goens et al. - 2023 - Obesity, Chronic Stress, and Stress Reduction.pdf",
+          "select": "zotero://select/library/items/58F99U7H"
+        },
+        {
+          "key": "SHR9JHRE",
+          "version": 205,
+          "itemType": "attachment",
+          "title": "PubMed Central Link",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10746495/",
+          "accessDate": "2024-07-26T14:59:12Z",
+          "parentItem": "W243UFDV",
+          "linkMode": "linked_url",
+          "contentType": "text/html",
+          "charset": "",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T14:59:12Z",
+          "dateModified": "2024-07-26T14:59:12Z",
+          "uri": "http://zotero.org/users/14685114/items/SHR9JHRE"
+        }
+      ],
+      "notes": [],
+      "citationKey": "goensObesityChronicStress2023",
+      "itemKey": "W243UFDV",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/W243UFDV"
+    },
+    {
+      "key": "M5JNG323",
+      "version": 120,
+      "itemType": "conferencePaper",
+      "title": "Verifying Guideline Compliance in Clinical Treatment Using Multi-perspective Conformance Checking: A Case Study",
+      "abstractNote": "Clinical guidelines support physicians in the evidence-based treatment of patients. The technical verification of guideline compliance is not trivial, since guideline knowledge is usually represented textually and none of the approaches to computer-interpretable guideline representation has yet been able to establish itself. Due to the procedural nature of treatment sequences, this case study examines the applicability of a guideline process model to real hospital data for verification of guideline compliance. For this purpose, the limitations and challenges in the transformation of clinical data into an event log and in the application of conformance checking to align the data with the guideline reference model are investigated. As a data set, we use treatment data of skin tumor patients from a cancer registry enriched by hospital information system data. The results show the difficulty of applying process mining to medically complex and heterogeneous data and the need for complex preprocessing. The variability of clinical processes makes the application of global conformance checking algorithms challenging. In addition, the work shows the semantic weakness of the alignments and the need for new semantically sensitive approaches.",
+      "date": "2022",
+      "language": "en",
+      "shortTitle": "Verifying Guideline Compliance in Clinical Treatment Using Multi-perspective Conformance Checking",
+      "libraryCatalog": "Springer Link",
+      "place": "Cham",
+      "publisher": "Springer International Publishing",
+      "ISBN": "978-3-030-98581-3",
+      "pages": "301-313",
+      "proceedingsTitle": "Process Mining Workshops",
+      "DOI": "10.1007/978-3-030-98581-3_22",
+      "creators": [
+        {
+          "firstName": "Joscha",
+          "lastName": "Grüger",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tobias",
+          "lastName": "Geyer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Martin",
+          "lastName": "Kuhn",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "StephanA.",
+          "lastName": "Braun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ralph",
+          "lastName": "Bergmann",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jorge",
+          "lastName": "Munoz-Gama",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Xixi",
+          "lastName": "Lu",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Clinical guidelines",
+          "type": 1
+        },
+        {
+          "tag": "Guideline compliance",
+          "type": 1
+        },
+        {
+          "tag": "Multi-perspective Conformance checking",
+          "type": 1
+        },
+        {
+          "tag": "Process mining",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-21T15:58:42Z",
+      "dateModified": "2024-07-21T15:58:42Z",
+      "uri": "http://zotero.org/users/14685114/items/M5JNG323",
+      "itemID": 14,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-21T15:58:44Z",
+          "dateModified": "2024-07-21T15:58:44Z",
+          "uri": "http://zotero.org/users/14685114/items/7ND8B25B",
+          "path": "/Users/felix-krueckel/Zotero/storage/7ND8B25B/Grüger et al. - 2022 - Verifying Guideline Compliance in Clinical Treatme.pdf",
+          "select": "zotero://select/library/items/7ND8B25B"
+        }
+      ],
+      "notes": [],
+      "citationKey": "grugerVerifyingGuidelineCompliance2022",
+      "itemKey": "M5JNG323",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/M5JNG323"
+    },
+    {
+      "key": "3SBS6Z6D",
+      "version": 217,
+      "itemType": "journalArticle",
+      "title": "Intergenerational transmission and continuity of stress and depression: depressed women and their offspring in 20 years of follow-up",
+      "abstractNote": "BackgroundChildren of depressed mothers not only have higher risk of depression, but also may experience both elevated and continuing exposure to stressful experiences. The study tested hypotheses of the intergenerational transmission of stress and depression and examined the role of early childhood adversity and maternal depression in the interplay between youth depression and stress over 20 years.MethodIn a longitudinal community study of 705 families selected for history or absence of maternal depression, mothers and youth were studied from pregnancy to age 5 years and at youth ages 15 and 20 years. Youth and maternal depression were assessed with diagnostic interviews, acute and chronic interview-based stress assessment in the youth and contemporaneous measures of childhood adversity obtained between pregnancy and youth age 5 years.ResultsRegression analyses indicated evidence of intergenerational transmission and continuity of depression over time, continuity of acute and chronic stress and reciprocal predictive associations between depression and stress. Maternal depression and exposure to adversities by child's age 5 years contributed to the youth's continuing experiences of depression and stress. An overall path model was consistent with stress continuity and intergenerational transmission and highlighted the mediating role of age 15 youth chronic interpersonal stress.ConclusionsYouth of depressed mothers are at risk not only for depression but also for continuing experiences of acute and chronic stress from childhood to age 20. The associations among depression and stress are bidirectional and portend continuing experiences of depression and further stress.",
+      "date": "2012/05",
+      "language": "en",
+      "shortTitle": "Intergenerational transmission and continuity of stress and depression",
+      "libraryCatalog": "Cambridge University Press",
+      "url": "https://www.cambridge.org/core/journals/psychological-medicine/article/intergenerational-transmission-and-continuity-of-stress-and-depression-depressed-women-and-their-offspring-in-20-years-of-followup/DE896303ACBB12102D5B5D39CA163EA2",
+      "accessDate": "2024-07-26T15:36:50Z",
+      "volume": "42",
+      "pages": "931-942",
+      "publicationTitle": "Psychological Medicine",
+      "DOI": "10.1017/S0033291711001978",
+      "issue": "5",
+      "ISSN": "1469-8978, 0033-2917",
+      "creators": [
+        {
+          "firstName": "C.",
+          "lastName": "Hammen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "N. A.",
+          "lastName": "Hazel",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "P. A.",
+          "lastName": "Brennan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "J.",
+          "lastName": "Najman",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "stress",
+          "type": 1
+        },
+        {
+          "tag": "Continuity of stress",
+          "type": 1
+        },
+        {
+          "tag": "depression",
+          "type": 1
+        },
+        {
+          "tag": "intergenerational transmission of depression",
+          "type": 1
+        },
+        {
+          "tag": "stress generation",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-26T15:36:50Z",
+      "dateModified": "2024-07-26T15:36:50Z",
+      "uri": "http://zotero.org/users/14685114/items/3SBS6Z6D",
+      "itemID": 57,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T15:36:53Z",
+          "dateModified": "2024-07-26T15:36:53Z",
+          "uri": "http://zotero.org/users/14685114/items/472Q7ENB",
+          "path": "/Users/felix-krueckel/Zotero/storage/472Q7ENB/Hammen et al. - 2012 - Intergenerational transmission and continuity of s.pdf",
+          "select": "zotero://select/library/items/472Q7ENB"
+        }
+      ],
+      "notes": [],
+      "citationKey": "hammenIntergenerationalTransmissionContinuity2012",
+      "itemKey": "3SBS6Z6D",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/3SBS6Z6D"
+    },
+    {
+      "key": "TZDDKZ8P",
+      "version": 499,
+      "itemType": "preprint",
+      "title": "InstructME: An Instruction Guided Music Edit And Remix Framework with Latent Diffusion Models",
+      "abstractNote": "Music editing primarily entails the modification of instrument tracks or remixing in the whole, which offers a novel reinterpretation of the original piece through a series of operations. These music processing methods hold immense potential across various applications but demand substantial expertise. Prior methodologies, although effective for image and audio modifications, falter when directly applied to music. This is attributed to music's distinctive data nature, where such methods can inadvertently compromise the intrinsic harmony and coherence of music. In this paper, we develop InstructME, an Instruction guided Music Editing and remixing framework based on latent diffusion models. Our framework fortifies the U-Net with multi-scale aggregation in order to maintain consistency before and after editing. In addition, we introduce chord progression matrix as condition information and incorporate it in the semantic space to improve melodic harmony while editing. For accommodating extended musical pieces, InstructME employs a chunk transformer, enabling it to discern long-term temporal dependencies within music sequences. We tested InstructME in instrument-editing, remixing, and multi-round editing. Both subjective and objective evaluations indicate that our proposed method significantly surpasses preceding systems in music quality, text relevance and harmony. Demo samples are available at https://musicedit.github.io/",
+      "date": "2023-12-12",
+      "shortTitle": "InstructME",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2308.14360",
+      "accessDate": "2025-04-23T17:27:41Z",
+      "extra": "arXiv:2308.14360 [cs]",
+      "DOI": "10.48550/arXiv.2308.14360",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2308.14360",
+      "creators": [
+        {
+          "firstName": "Bing",
+          "lastName": "Han",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Junyu",
+          "lastName": "Dai",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Weituo",
+          "lastName": "Hao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xinyan",
+          "lastName": "He",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dong",
+          "lastName": "Guo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jitong",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuxuan",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yanmin",
+          "lastName": "Qian",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xuchen",
+          "lastName": "Song",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Sound",
+          "type": 1
+        },
+        {
+          "tag": "Electrical Engineering and Systems Science - Audio and Speech Processing",
+          "type": 1
+        }
+      ],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/5964733/items/XDY9BHEF"
+        ]
+      },
+      "dateAdded": "2025-04-23T17:27:41Z",
+      "dateModified": "2025-04-23T17:27:41Z",
+      "uri": "http://zotero.org/users/14685114/items/TZDDKZ8P",
+      "itemID": 128,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/7UHK3DNG"
+            ]
+          },
+          "dateAdded": "2025-04-23T17:27:41Z",
+          "dateModified": "2025-04-23T17:27:41Z",
+          "uri": "http://zotero.org/users/14685114/items/IWT5CJ7F",
+          "path": "/Users/felix-krueckel/Zotero/storage/IWT5CJ7F/Han et al. - 2023 - InstructME An Instruction Guided Music Edit And Remix Framework with Latent Diffusion Models.pdf",
+          "select": "zotero://select/library/items/IWT5CJ7F"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/DGY428WF"
+            ]
+          },
+          "dateAdded": "2025-04-23T17:27:45Z",
+          "dateModified": "2025-04-23T17:27:45Z",
+          "uri": "http://zotero.org/users/14685114/items/SSRXPXCJ",
+          "path": "/Users/felix-krueckel/Zotero/storage/SSRXPXCJ/2308.html",
+          "select": "zotero://select/library/items/SSRXPXCJ"
+        }
+      ],
+      "notes": [
+        {
+          "key": "J5SZ5LHW",
+          "version": 499,
+          "itemType": "note",
+          "parentItem": "TZDDKZ8P",
+          "note": "Comment: Demo samples are available at https://musicedit.github.io/",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/E4YVZHM6"
+            ]
+          },
+          "dateAdded": "2025-04-23T17:27:41Z",
+          "dateModified": "2025-04-23T17:27:41Z",
+          "uri": "http://zotero.org/users/14685114/items/J5SZ5LHW"
+        }
+      ],
+      "citationKey": "hanInstructMEInstructionGuided2023",
+      "itemKey": "TZDDKZ8P",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/TZDDKZ8P"
+    },
+    {
+      "key": "SVVBPJL3",
+      "version": 208,
+      "itemType": "journalArticle",
+      "title": "Chronic stress, behavioral tendencies, and determinants of health behaviors in nurses: a mixed-methods approach",
+      "abstractNote": "Nurses experience high, and often chronic, levels of occupational stress. As high-quality care requires a healthy workforce, individualized stress-alleviating interventions for nurses are needed. This study explored barriers and resources associated with health behaviors in nurses with different stress levels and work-related behavioral tendencies and identified health behavior determinants based on the Health Action Process Approach (HAPA) model.",
+      "date": "2022-03-30",
+      "language": "en",
+      "shortTitle": "Chronic stress, behavioral tendencies, and determinants of health behaviors in nurses",
+      "libraryCatalog": "Springer Link",
+      "url": "https://doi.org/10.1186/s12889-022-12993-5",
+      "accessDate": "2024-07-26T15:25:31Z",
+      "volume": "22",
+      "pages": "624",
+      "publicationTitle": "BMC Public Health",
+      "DOI": "10.1186/s12889-022-12993-5",
+      "issue": "1",
+      "journalAbbreviation": "BMC Public Health",
+      "ISSN": "1471-2458",
+      "creators": [
+        {
+          "firstName": "Luis",
+          "lastName": "Heuel",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Svea",
+          "lastName": "Lübstorf",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ann-Kathrin",
+          "lastName": "Otto",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bettina",
+          "lastName": "Wollesen",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Health behavior",
+          "type": 1
+        },
+        {
+          "tag": "Nurses",
+          "type": 1
+        },
+        {
+          "tag": "Occupational stress",
+          "type": 1
+        },
+        {
+          "tag": "Social determinants of health",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-26T15:25:31Z",
+      "dateModified": "2024-07-26T15:25:31Z",
+      "uri": "http://zotero.org/users/14685114/items/SVVBPJL3",
+      "itemID": 55,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T15:25:31Z",
+          "dateModified": "2024-07-26T15:25:31Z",
+          "uri": "http://zotero.org/users/14685114/items/MCAWWI7E",
+          "path": "/Users/felix-krueckel/Zotero/storage/MCAWWI7E/Heuel et al. - 2022 - Chronic stress, behavioral tendencies, and determi.pdf",
+          "select": "zotero://select/library/items/MCAWWI7E"
+        }
+      ],
+      "notes": [],
+      "citationKey": "heuelChronicStressBehavioral2022",
+      "itemKey": "SVVBPJL3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/SVVBPJL3"
+    },
+    {
+      "key": "QXVFA7N2",
+      "version": 498,
+      "itemType": "preprint",
+      "title": "Classifier-Free Diffusion Guidance",
+      "abstractNote": "Classifier guidance is a recently introduced method to trade off mode coverage and sample fidelity in conditional diffusion models post training, in the same spirit as low temperature sampling or truncation in other types of generative models. Classifier guidance combines the score estimate of a diffusion model with the gradient of an image classifier and thereby requires training an image classifier separate from the diffusion model. It also raises the question of whether guidance can be performed without a classifier. We show that guidance can be indeed performed by a pure generative model without such a classifier: in what we call classifier-free guidance, we jointly train a conditional and an unconditional diffusion model, and we combine the resulting conditional and unconditional score estimates to attain a trade-off between sample quality and diversity similar to that obtained using classifier guidance.",
+      "date": "2022-07-26",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2207.12598",
+      "accessDate": "2025-04-23T16:11:50Z",
+      "extra": "arXiv:2207.12598 [cs]",
+      "DOI": "10.48550/arXiv.2207.12598",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2207.12598",
+      "creators": [
+        {
+          "firstName": "Jonathan",
+          "lastName": "Ho",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tim",
+          "lastName": "Salimans",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/5964733/items/HBJXC344"
+        ]
+      },
+      "dateAdded": "2025-04-23T16:11:50Z",
+      "dateModified": "2025-04-23T16:11:50Z",
+      "uri": "http://zotero.org/users/14685114/items/QXVFA7N2",
+      "itemID": 121,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/DPHC48TL"
+            ]
+          },
+          "dateAdded": "2025-04-23T16:11:51Z",
+          "dateModified": "2025-04-23T16:11:51Z",
+          "uri": "http://zotero.org/users/14685114/items/6JLGHGFK",
+          "path": "/Users/felix-krueckel/Zotero/storage/6JLGHGFK/Ho and Salimans - 2022 - Classifier-Free Diffusion Guidance.pdf",
+          "select": "zotero://select/library/items/6JLGHGFK"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/PWELHJ47"
+            ]
+          },
+          "dateAdded": "2025-04-23T16:11:56Z",
+          "dateModified": "2025-04-23T16:11:56Z",
+          "uri": "http://zotero.org/users/14685114/items/C34TZ8J7",
+          "path": "/Users/felix-krueckel/Zotero/storage/C34TZ8J7/2207.html",
+          "select": "zotero://select/library/items/C34TZ8J7"
+        }
+      ],
+      "notes": [
+        {
+          "key": "B9FJ4T29",
+          "version": 499,
+          "itemType": "note",
+          "parentItem": "QXVFA7N2",
+          "note": "Comment: A short version of this paper appeared in the NeurIPS 2021 Workshop on Deep Generative Models and Downstream Applications: https://openreview.net/pdf?id=qw8AKxfYbI",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/3H95PVLU"
+            ]
+          },
+          "dateAdded": "2025-04-23T16:11:50Z",
+          "dateModified": "2025-04-23T16:11:50Z",
+          "uri": "http://zotero.org/users/14685114/items/B9FJ4T29"
+        }
+      ],
+      "citationKey": "hoClassifierFreeDiffusionGuidance2022",
+      "itemKey": "QXVFA7N2",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/QXVFA7N2"
+    },
+    {
+      "key": "I78UIWN3",
+      "version": 117,
+      "itemType": "conferencePaper",
+      "title": "Trace Alignment in Process Mining: Opportunities for Process Diagnostics",
+      "abstractNote": "Process mining techniques attempt to extract non-trivial knowledge and interesting insights from event logs. Process mining provides a welcome extension of the repertoire of business process analysis techniques and has been adopted in various commercial BPM systems (BPM∣one, Futura Reflect, ARIS PPM, Fujitsu, etc.). Unfortunately, traditional process discovery algorithms have problems dealing with less-structured processes. The resulting models are difficult to comprehend or even misleading. Therefore, we propose a new approach based on trace alignment. The goal is to align traces in a way that event logs can be explored easily. Trace alignment can be used in a preprocessing phase where the event log is investigated or filtered and in later phases where detailed questions need to be answered. Hence, it complements existing process mining techniques focusing on discovery and conformance checking.",
+      "date": "2010",
+      "language": "en",
+      "shortTitle": "Trace Alignment in Process Mining",
+      "libraryCatalog": "Springer Link",
+      "place": "Berlin, Heidelberg",
+      "publisher": "Springer",
+      "ISBN": "978-3-642-15618-2",
+      "pages": "227-242",
+      "proceedingsTitle": "Business Process Management",
+      "DOI": "10.1007/978-3-642-15618-2_17",
+      "creators": [
+        {
+          "firstName": "R. P.",
+          "lastName": "Jagadeesh Chandra Bose",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wil",
+          "lastName": "van der Aalst",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Richard",
+          "lastName": "Hull",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Jan",
+          "lastName": "Mendling",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Stefan",
+          "lastName": "Tai",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Agglomerative Hierarchical Cluster",
+          "type": 1
+        },
+        {
+          "tag": "Guide Tree",
+          "type": 1
+        },
+        {
+          "tag": "Information Score",
+          "type": 1
+        },
+        {
+          "tag": "Process Instance",
+          "type": 1
+        },
+        {
+          "tag": "Progressive Alignment",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-23T10:47:40Z",
+      "dateModified": "2024-07-23T10:47:40Z",
+      "uri": "http://zotero.org/users/14685114/items/I78UIWN3",
+      "itemID": 32,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-23T10:47:42Z",
+          "dateModified": "2024-07-23T10:47:42Z",
+          "uri": "http://zotero.org/users/14685114/items/KUMMCT8Y",
+          "path": "/Users/felix-krueckel/Zotero/storage/KUMMCT8Y/Jagadeesh Chandra Bose and van der Aalst - 2010 - Trace Alignment in Process Mining Opportunities f.pdf",
+          "select": "zotero://select/library/items/KUMMCT8Y"
+        }
+      ],
+      "notes": [],
+      "citationKey": "jagadeeshchandraboseTraceAlignmentProcess2010",
+      "itemKey": "I78UIWN3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/I78UIWN3"
+    },
+    {
+      "key": "VHK5Y5JE",
+      "version": 354,
+      "itemType": "preprint",
+      "title": "Mixtral of Experts",
+      "abstractNote": "We introduce Mixtral 8x7B, a Sparse Mixture of Experts (SMoE) language model. Mixtral has the same architecture as Mistral 7B, with the difference that each layer is composed of 8 feedforward blocks (i.e. experts). For every token, at each layer, a router network selects two experts to process the current state and combine their outputs. Even though each token only sees two experts, the selected experts can be different at each timestep. As a result, each token has access to 47B parameters, but only uses 13B active parameters during inference. Mixtral was trained with a context size of 32k tokens and it outperforms or matches Llama 2 70B and GPT-3.5 across all evaluated benchmarks. In particular, Mixtral vastly outperforms Llama 2 70B on mathematics, code generation, and multilingual benchmarks. We also provide a model fine-tuned to follow instructions, Mixtral 8x7B - Instruct, that surpasses GPT-3.5 Turbo, Claude-2.1, Gemini Pro, and Llama 2 70B - chat model on human benchmarks. Both the base and instruct models are released under the Apache 2.0 license.",
+      "date": "2024-01-08",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2401.04088",
+      "accessDate": "2024-08-18T14:24:29Z",
+      "extra": "arXiv:2401.04088 [cs]",
+      "DOI": "10.48550/arXiv.2401.04088",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2401.04088",
+      "creators": [
+        {
+          "firstName": "Albert Q.",
+          "lastName": "Jiang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alexandre",
+          "lastName": "Sablayrolles",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Antoine",
+          "lastName": "Roux",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Arthur",
+          "lastName": "Mensch",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Blanche",
+          "lastName": "Savary",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chris",
+          "lastName": "Bamford",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Devendra Singh",
+          "lastName": "Chaplot",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Diego de las",
+          "lastName": "Casas",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Emma Bou",
+          "lastName": "Hanna",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Florian",
+          "lastName": "Bressand",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gianna",
+          "lastName": "Lengyel",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Guillaume",
+          "lastName": "Bour",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Guillaume",
+          "lastName": "Lample",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lélio Renard",
+          "lastName": "Lavaud",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lucile",
+          "lastName": "Saulnier",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marie-Anne",
+          "lastName": "Lachaux",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pierre",
+          "lastName": "Stock",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sandeep",
+          "lastName": "Subramanian",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sophia",
+          "lastName": "Yang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Szymon",
+          "lastName": "Antoniak",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Teven Le",
+          "lastName": "Scao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Théophile",
+          "lastName": "Gervet",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Thibaut",
+          "lastName": "Lavril",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Thomas",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Timothée",
+          "lastName": "Lacroix",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "William El",
+          "lastName": "Sayed",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-08-18T14:24:29Z",
+      "dateModified": "2024-08-18T14:24:31Z",
+      "uri": "http://zotero.org/users/14685114/items/VHK5Y5JE",
+      "itemID": 74,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-18T14:24:34Z",
+          "dateModified": "2024-08-18T14:24:34Z",
+          "uri": "http://zotero.org/users/14685114/items/QRR8SBJH",
+          "path": "/Users/felix-krueckel/Zotero/storage/QRR8SBJH/Jiang et al. - 2024 - Mixtral of Experts.pdf",
+          "select": "zotero://select/library/items/QRR8SBJH"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-18T14:24:47Z",
+          "dateModified": "2024-08-18T14:24:47Z",
+          "uri": "http://zotero.org/users/14685114/items/P5UFKFRL",
+          "path": "/Users/felix-krueckel/Zotero/storage/P5UFKFRL/2401.html",
+          "select": "zotero://select/library/items/P5UFKFRL"
+        }
+      ],
+      "notes": [
+        {
+          "key": "TVUJNYUT",
+          "version": 354,
+          "itemType": "note",
+          "parentItem": "VHK5Y5JE",
+          "note": "Comment: See more details at https://mistral.ai/news/mixtral-of-experts/",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-18T14:24:29Z",
+          "dateModified": "2024-08-18T14:24:29Z",
+          "uri": "http://zotero.org/users/14685114/items/TVUJNYUT"
+        }
+      ],
+      "citationKey": "jiangMixtralExperts2024",
+      "itemKey": "VHK5Y5JE",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/VHK5Y5JE"
+    },
+    {
+      "key": "R7WZ58KG",
+      "version": 221,
+      "itemType": "journalArticle",
+      "title": "Relationship between chronic diseases and depression: the mediating effect of pain",
+      "abstractNote": "Chronic diseases have a high incidence in China and may cause pain and depression. However, the association of chronic diseases with pain and the incidence of depression has not been comprehensively investigated.",
+      "date": "2021-09-06",
+      "language": "en",
+      "shortTitle": "Relationship between chronic diseases and depression",
+      "libraryCatalog": "Springer Link",
+      "url": "https://doi.org/10.1186/s12888-021-03428-3",
+      "accessDate": "2024-07-26T15:43:50Z",
+      "volume": "21",
+      "pages": "436",
+      "publicationTitle": "BMC Psychiatry",
+      "DOI": "10.1186/s12888-021-03428-3",
+      "issue": "1",
+      "journalAbbreviation": "BMC Psychiatry",
+      "ISSN": "1471-244X",
+      "creators": [
+        {
+          "firstName": "Ying",
+          "lastName": "Ma",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Qin",
+          "lastName": "Xiang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chaoyang",
+          "lastName": "Yan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hui",
+          "lastName": "Liao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jing",
+          "lastName": "Wang",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Depression",
+          "type": 1
+        },
+        {
+          "tag": "Chronic disease",
+          "type": 1
+        },
+        {
+          "tag": "Pain relief",
+          "type": 1
+        },
+        {
+          "tag": "Pain severity",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-26T15:43:50Z",
+      "dateModified": "2024-07-26T15:43:50Z",
+      "uri": "http://zotero.org/users/14685114/items/R7WZ58KG",
+      "itemID": 59,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T15:43:51Z",
+          "dateModified": "2024-07-26T15:43:51Z",
+          "uri": "http://zotero.org/users/14685114/items/AFS49AJ6",
+          "path": "/Users/felix-krueckel/Zotero/storage/AFS49AJ6/Ma et al. - 2021 - Relationship between chronic diseases and depressi.pdf",
+          "select": "zotero://select/library/items/AFS49AJ6"
+        }
+      ],
+      "notes": [],
+      "citationKey": "maRelationshipChronicDiseases2021",
+      "itemKey": "R7WZ58KG",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/R7WZ58KG"
+    },
+    {
+      "key": "69YCR76V",
+      "version": 279,
+      "itemType": "journalArticle",
+      "title": "A general method applicable to the search for similarities in the amino acid sequence of two proteins",
+      "date": "1970",
+      "extra": "Publisher: Elsevier",
+      "volume": "48",
+      "pages": "443–453",
+      "publicationTitle": "Journal of molecular biology",
+      "issue": "3",
+      "creators": [
+        {
+          "firstName": "Saul B",
+          "lastName": "Needleman",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christian D",
+          "lastName": "Wunsch",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/users/14685114/items/UEWZFZJC"
+        ]
+      },
+      "dateAdded": "2024-07-21T14:51:24Z",
+      "dateModified": "2024-08-04T10:36:07Z",
+      "uri": "http://zotero.org/users/14685114/items/69YCR76V",
+      "itemID": 2,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "needlemanGeneralMethodApplicable1970",
+      "itemKey": "69YCR76V",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/69YCR76V"
+    },
+    {
+      "key": "KN3532JF",
+      "version": 16,
+      "itemType": "preprint",
+      "title": "Conformance Checking for a Medical Training Process Using Petri net Simulation and Sequence Alignment",
+      "abstractNote": "Process Mining has recently gained popularity in healthcare due to its potential to provide a transparent, objective and data-based view on processes. Conformance checking is a sub-discipline of process mining that has the potential to answer how the actual process executions deviate from existing guidelines. In this work, we analyze a medical training process for a surgical procedure. Ten students were trained to install a Central Venous Catheters (CVC) with ultrasound. Event log data was collected directly after instruction by the supervisors during a first test run and additionally after a subsequent individual training phase. In order to provide objective performance measures, we formulate an optimal, global sequence alignment problem inspired by approaches in bioinformatics. Therefore, we use the Petri net model representation of the medical process guideline to simulate a representative set of guideline conform sequences. Next, we calculate the optimal, global sequence alignment of the recorded and simulated event logs. Finally, the output measures and visualization of aligned sequences are provided for objective feedback.",
+      "date": "2020-10-21",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2010.11719",
+      "accessDate": "2024-07-21T15:56:55Z",
+      "extra": "arXiv:2010.11719 [cs]",
+      "DOI": "10.48550/arXiv.2010.11719",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2010.11719",
+      "creators": [
+        {
+          "firstName": "An",
+          "lastName": "Nguyen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wenyu",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Leo",
+          "lastName": "Schwinn",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bjoern",
+          "lastName": "Eskofier",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-21T15:56:55Z",
+      "dateModified": "2024-07-21T15:56:55Z",
+      "uri": "http://zotero.org/users/14685114/items/KN3532JF",
+      "itemID": 11,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-21T15:56:58Z",
+          "dateModified": "2024-07-21T15:56:58Z",
+          "uri": "http://zotero.org/users/14685114/items/NVCQLN43",
+          "path": "/Users/felix-krueckel/Zotero/storage/NVCQLN43/Nguyen et al. - 2020 - Conformance Checking for a Medical Training Proces.pdf",
+          "select": "zotero://select/library/items/NVCQLN43"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-21T15:57:06Z",
+          "dateModified": "2024-07-21T15:57:06Z",
+          "uri": "http://zotero.org/users/14685114/items/WHCZXB8Y",
+          "path": "/Users/felix-krueckel/Zotero/storage/WHCZXB8Y/2010.html",
+          "select": "zotero://select/library/items/WHCZXB8Y"
+        }
+      ],
+      "notes": [],
+      "citationKey": "nguyenConformanceCheckingMedical2020",
+      "itemKey": "KN3532JF",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KN3532JF"
+    },
+    {
+      "key": "SJXXUDBA",
+      "version": 5,
+      "itemType": "journalArticle",
+      "title": "A survey of episode mining",
+      "date": "2024",
+      "extra": "Publisher: Wiley Online Library",
+      "volume": "14",
+      "pages": "e1524",
+      "publicationTitle": "Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery",
+      "issue": "2",
+      "creators": [
+        {
+          "firstName": "Oualid",
+          "lastName": "Ouarem",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Farid",
+          "lastName": "Nouioua",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Philippe",
+          "lastName": "Fournier-Viger",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-21T14:51:24Z",
+      "dateModified": "2024-07-21T14:51:24Z",
+      "uri": "http://zotero.org/users/14685114/items/SJXXUDBA",
+      "itemID": 8,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "ouaremSurveyEpisodeMining2024",
+      "itemKey": "SJXXUDBA",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/SJXXUDBA"
+    },
+    {
+      "key": "AIYT62FC",
+      "version": 121,
+      "itemType": "journalArticle",
+      "title": "Profile-Based Cluster Evolution Analysis: Identification of Migration Patterns for Understanding Student Learning Behavior",
+      "abstractNote": "Educational process mining is one of the research domains that utilizes students’ learning behavior to match students’ actual courses taken and the designed curriculum. While most works attempt to deal with the case perspective (i.e., traces of the cases), the temporal case perspective has not been discussed. The temporal case perspective aims to understand the temporal patterns of cases (e.g., students’ learning behavior in a semester). This study proposes modified cluster evolution analysis, called profile-based cluster evolution analysis, for students’ learning behavior based on profiles. The results show three salient features: (1) cluster generation; (2) within-cluster generation; and (3) time-based between-cluster generation. The cluster evolution phase modifies the existing cluster evolution analysis with a dynamic profiler. The model was tested on actual educational data of the Information System Department in Indonesia. The results showed the learning behavior of students who graduated on time, the learning behavior of students who graduated late, and the learning behavior of students who dropped out. Students changed their learning behavior by observing the migration of students from cluster to cluster for each semester. Furthermore, there were distinct learning behavior migration patterns for each category of students based on their performance. The migration pattern can suggest to academic stakeholders to understand about students who are likely to drop out, graduate on time or graduate late. These results can be used as recommendations to academic stakeholders for curriculum assessment and development and dropout prevention.",
+      "date": "2021",
+      "shortTitle": "Profile-Based Cluster Evolution Analysis",
+      "libraryCatalog": "IEEE Xplore",
+      "url": "https://ieeexplore.ieee.org/document/9478853",
+      "accessDate": "2024-07-23T06:44:11Z",
+      "extra": "Conference Name: IEEE Access",
+      "volume": "9",
+      "pages": "101718-101728",
+      "publicationTitle": "IEEE Access",
+      "DOI": "10.1109/ACCESS.2021.3095958",
+      "ISSN": "2169-3536",
+      "creators": [
+        {
+          "firstName": "Satrio Adi",
+          "lastName": "Priyambada",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mahendrawathi",
+          "lastName": "Er",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bernardo Nugroho",
+          "lastName": "Yahya",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tsuyoshi",
+          "lastName": "Usagawa",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Analytical models",
+          "type": 1
+        },
+        {
+          "tag": "cluster evolution analysis",
+          "type": 1
+        },
+        {
+          "tag": "Data mining",
+          "type": 1
+        },
+        {
+          "tag": "Data models",
+          "type": 1
+        },
+        {
+          "tag": "Data preprocessing",
+          "type": 1
+        },
+        {
+          "tag": "Educational process mining",
+          "type": 1
+        },
+        {
+          "tag": "Guidelines",
+          "type": 1
+        },
+        {
+          "tag": "process discovery",
+          "type": 1
+        },
+        {
+          "tag": "Stakeholders",
+          "type": 1
+        },
+        {
+          "tag": "trace clustering",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-23T06:44:11Z",
+      "dateModified": "2024-07-23T06:44:11Z",
+      "uri": "http://zotero.org/users/14685114/items/AIYT62FC",
+      "itemID": 22,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "IEEE Xplore Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-23T06:44:17Z",
+          "dateModified": "2024-07-23T06:44:17Z",
+          "uri": "http://zotero.org/users/14685114/items/94CD6ZIT",
+          "path": "/Users/felix-krueckel/Zotero/storage/94CD6ZIT/Priyambada et al. - 2021 - Profile-Based Cluster Evolution Analysis Identifi.pdf",
+          "select": "zotero://select/library/items/94CD6ZIT"
+        }
+      ],
+      "notes": [],
+      "citationKey": "priyambadaProfileBasedClusterEvolution2021",
+      "itemKey": "AIYT62FC",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/AIYT62FC"
+    },
+    {
+      "key": "59A5HV8H",
+      "version": 498,
+      "itemType": "conferencePaper",
+      "title": "Audio Conditioning for Music Generation via Discrete Bottleneck Features",
+      "abstractNote": "While most music generation models use textual or parametric conditioning (e.g. tempo, harmony, musical genre), we propose to condition a language model based music generation system with audio input. Our exploration involves two distinct strategies. The first strategy, termed textual inversion, leverages a pre-trained text-to-music model to map audio input to corresponding \"pseudowords\" in the textual embedding space. For the second model we train a music language model from scratch jointly with a text conditioner and a quantized audio feature extractor. At inference time, we can mix textual and audio conditioning and balance them thanks to a novel double classifier free guidance method. We conduct automatic and human studies that validates our approach. We will release the code and we provide music samples on https://musicgenstyle.github.io in order to show the quality of our model.",
+      "date": "2024",
+      "libraryCatalog": "DOI.org (Datacite)",
+      "url": "https://doi.org/10.5281/zenodo.14876841",
+      "accessDate": "2025-04-22T13:45:58Z",
+      "rights": "arXiv.org perpetual, non-exclusive license",
+      "extra": "Version Number: 2",
+      "pages": "146-153",
+      "conferenceName": "Proceedings of the 25th International Society for Music Information Retrieval Conference (ISMIR)",
+      "DOI": "10.5281/zenodo.14876841",
+      "creators": [
+        {
+          "firstName": "Simon",
+          "lastName": "Rouard",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yossi",
+          "lastName": "Adi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jade",
+          "lastName": "Copet",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Axel",
+          "lastName": "Roebel",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alexandre",
+          "lastName": "Défossez",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Audio and Speech Processing (eess.AS)",
+          "type": 1
+        },
+        {
+          "tag": "FOS: Computer and information sciences",
+          "type": 1
+        },
+        {
+          "tag": "FOS: Electrical engineering, electronic engineering, information engineering",
+          "type": 1
+        },
+        {
+          "tag": "Sound (cs.SD)",
+          "type": 1
+        }
+      ],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/5964733/items/UV6PCFVI"
+        ]
+      },
+      "dateAdded": "2025-04-22T13:45:58Z",
+      "dateModified": "2025-04-22T13:50:28Z",
+      "uri": "http://zotero.org/users/14685114/items/59A5HV8H",
+      "itemID": 113,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/RWBSFGFF"
+            ]
+          },
+          "dateAdded": "2025-04-22T13:46:09Z",
+          "dateModified": "2025-04-22T13:46:09Z",
+          "uri": "http://zotero.org/users/14685114/items/X4KJ2569",
+          "path": "/Users/felix-krueckel/Zotero/storage/X4KJ2569/Rouard et al. - 2024 - Audio Conditioning for Music Generation via Discrete Bottleneck Features.pdf",
+          "select": "zotero://select/library/items/X4KJ2569"
+        }
+      ],
+      "notes": [
+        {
+          "key": "U4EQZ5B2",
+          "version": 498,
+          "itemType": "note",
+          "parentItem": "59A5HV8H",
+          "note": "<h2>Other</h2>\n6 pages, 2 figures, accepted at ISMIR 2024",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/XFGBQHVT"
+            ]
+          },
+          "dateAdded": "2025-04-22T13:45:58Z",
+          "dateModified": "2025-04-22T13:45:58Z",
+          "uri": "http://zotero.org/users/14685114/items/U4EQZ5B2"
+        }
+      ],
+      "citationKey": "rouardAudioConditioningMusic2024",
+      "itemKey": "59A5HV8H",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/59A5HV8H"
+    },
+    {
+      "key": "E6M7X3R2",
+      "version": 189,
+      "itemType": "journalArticle",
+      "title": "Prevalence of stress, anxiety, depression among the general population during the COVID-19 pandemic: a systematic review and meta-analysis",
+      "abstractNote": "The COVID-19 pandemic has had a significant impact on public mental health. Therefore, monitoring and oversight of the population mental health during crises such as a panedmic is an immediate priority. The aim of this study is to analyze the existing research works and findings in relation to the prevalence of stress, anxiety and depression in the general population during the COVID-19 pandemic.",
+      "date": "2020-07-06",
+      "shortTitle": "Prevalence of stress, anxiety, depression among the general population during the COVID-19 pandemic",
+      "libraryCatalog": "BioMed Central",
+      "url": "https://doi.org/10.1186/s12992-020-00589-w",
+      "accessDate": "2024-07-26T13:40:40Z",
+      "volume": "16",
+      "pages": "57",
+      "publicationTitle": "Globalization and Health",
+      "DOI": "10.1186/s12992-020-00589-w",
+      "issue": "1",
+      "journalAbbreviation": "Globalization and Health",
+      "ISSN": "1744-8603",
+      "creators": [
+        {
+          "firstName": "Nader",
+          "lastName": "Salari",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Amin",
+          "lastName": "Hosseinian-Far",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Rostam",
+          "lastName": "Jalali",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aliakbar",
+          "lastName": "Vaisi-Raygani",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shna",
+          "lastName": "Rasoulpoor",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Masoud",
+          "lastName": "Mohammadi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shabnam",
+          "lastName": "Rasoulpoor",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Behnam",
+          "lastName": "Khaledi-Paveh",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Anxiety",
+          "type": 1
+        },
+        {
+          "tag": "Coronavirus",
+          "type": 1
+        },
+        {
+          "tag": "COVID-19",
+          "type": 1
+        },
+        {
+          "tag": "Depression",
+          "type": 1
+        },
+        {
+          "tag": "General population",
+          "type": 1
+        },
+        {
+          "tag": "Meta-analysis",
+          "type": 1
+        },
+        {
+          "tag": "Prevalence",
+          "type": 1
+        },
+        {
+          "tag": "Stress",
+          "type": 1
+        },
+        {
+          "tag": "Systematic review",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-26T13:40:40Z",
+      "dateModified": "2024-07-26T13:40:50Z",
+      "uri": "http://zotero.org/users/14685114/items/E6M7X3R2",
+      "itemID": 41,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T13:40:44Z",
+          "dateModified": "2024-07-26T13:40:44Z",
+          "uri": "http://zotero.org/users/14685114/items/XYCABMGJ",
+          "path": "/Users/felix-krueckel/Zotero/storage/XYCABMGJ/Salari et al. - 2020 - Prevalence of stress, anxiety, depression among th.pdf",
+          "select": "zotero://select/library/items/XYCABMGJ"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T13:40:47Z",
+          "dateModified": "2024-07-26T13:40:47Z",
+          "uri": "http://zotero.org/users/14685114/items/J6F52JZF",
+          "path": "/Users/felix-krueckel/Zotero/storage/J6F52JZF/s12992-020-00589-w.html",
+          "select": "zotero://select/library/items/J6F52JZF"
+        }
+      ],
+      "notes": [],
+      "citationKey": "salariPrevalenceStressAnxiety2020",
+      "itemKey": "E6M7X3R2",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/E6M7X3R2"
+    },
+    {
+      "key": "7YHHLART",
+      "version": 293,
+      "itemType": "conferencePaper",
+      "title": "How Does Batch Normalization Help Optimization?",
+      "abstractNote": "Batch Normalization (BatchNorm) is a widely adopted technique that enables faster and more stable training of deep neural networks (DNNs).\nDespite its pervasiveness, the exact reasons for BatchNorm's effectiveness are still poorly understood.\nThe popular belief is that this effectiveness stems from controlling the change of the layers' input distributions during training to reduce the so-called \"internal covariate shift\".\nIn this work, we demonstrate that such distributional stability of layer inputs has little to do with the success of BatchNorm.\nInstead, we uncover a more fundamental impact of BatchNorm on the training process: it makes the optimization landscape significantly smoother.\nThis smoothness induces a more predictive and stable behavior of the gradients, allowing for faster training.",
+      "date": "2018",
+      "libraryCatalog": "Neural Information Processing Systems",
+      "url": "https://proceedings.neurips.cc/paper/2018/hash/905056c1ac1dad141560467e0a99e1cf-Abstract.html",
+      "accessDate": "2024-08-05T08:34:20Z",
+      "volume": "31",
+      "publisher": "Curran Associates, Inc.",
+      "proceedingsTitle": "Advances in Neural Information Processing Systems",
+      "creators": [
+        {
+          "firstName": "Shibani",
+          "lastName": "Santurkar",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dimitris",
+          "lastName": "Tsipras",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Andrew",
+          "lastName": "Ilyas",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aleksander",
+          "lastName": "Madry",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-08-05T08:34:20Z",
+      "dateModified": "2024-08-05T08:34:20Z",
+      "uri": "http://zotero.org/users/14685114/items/7YHHLART",
+      "itemID": 72,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-05T08:34:22Z",
+          "dateModified": "2024-08-05T08:34:22Z",
+          "uri": "http://zotero.org/users/14685114/items/DF236DV2",
+          "path": "/Users/felix-krueckel/Zotero/storage/DF236DV2/Santurkar et al. - 2018 - How Does Batch Normalization Help Optimization.pdf",
+          "select": "zotero://select/library/items/DF236DV2"
+        }
+      ],
+      "notes": [],
+      "citationKey": "santurkarHowDoesBatch2018",
+      "itemKey": "7YHHLART",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/7YHHLART"
+    },
+    {
+      "key": "W6NDRB6L",
+      "version": 224,
+      "itemType": "journalArticle",
+      "title": "Resilience in the Context of Chronic Stress and Health in Adults",
+      "abstractNote": "Over the past several decades, stress research has experienced a broadening of its pathologic focus to encompass the concept of resilience. There is a wealth of research on resilience but no general consensus regarding its conceptualization. Some define resilience as attaining eventual favorable outcomes following exposure to adversity. Others define it as specific relatively short-term responses characterized by a return to homeostasis after initial disruption due to a stressor, and still others refer to resilience as resources that enable the individual to withstand or recover from major stressors. Many of the existing conceptualizations of resilience are not applicable in the context of chronic stress which is particularly harmful to health. How do adults who experience chronic stress survive, manage, and thrive, and what resources enable them to do so? In this paper, we consider these questions by reviewing traditions of research and definitions of resilience in order to inform an understanding of resilience in general, and for the study of chronic stress in adults. Based on a review of the literature, we developed a taxonomy of resilience resources that can be applied broadly, and guide future research.",
+      "date": "2011",
+      "language": "en",
+      "libraryCatalog": "Wiley Online Library",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1751-9004.2011.00379.x",
+      "accessDate": "2024-07-26T15:56:36Z",
+      "rights": "© 2011 The Authors. Social and Personality Psychology Compass © 2011 Blackwell Publishing Ltd",
+      "extra": "_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1751-9004.2011.00379.x",
+      "volume": "5",
+      "pages": "634-652",
+      "publicationTitle": "Social and Personality Psychology Compass",
+      "DOI": "10.1111/j.1751-9004.2011.00379.x",
+      "issue": "9",
+      "ISSN": "1751-9004",
+      "creators": [
+        {
+          "firstName": "Christine Dunkel",
+          "lastName": "Schetter",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christyn",
+          "lastName": "Dolbier",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-26T15:56:36Z",
+      "dateModified": "2024-07-26T15:56:36Z",
+      "uri": "http://zotero.org/users/14685114/items/W6NDRB6L",
+      "itemID": 61,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T15:56:37Z",
+          "dateModified": "2024-07-26T15:56:37Z",
+          "uri": "http://zotero.org/users/14685114/items/3TP7GHW8",
+          "path": "/Users/felix-krueckel/Zotero/storage/3TP7GHW8/Schetter and Dolbier - 2011 - Resilience in the Context of Chronic Stress and He.pdf",
+          "select": "zotero://select/library/items/3TP7GHW8"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T15:57:12Z",
+          "dateModified": "2024-07-26T15:57:12Z",
+          "uri": "http://zotero.org/users/14685114/items/KJU8R9LA",
+          "path": "/Users/felix-krueckel/Zotero/storage/KJU8R9LA/j.1751-9004.2011.00379.html",
+          "select": "zotero://select/library/items/KJU8R9LA"
+        }
+      ],
+      "notes": [],
+      "citationKey": "schetterResilienceContextChronic2011",
+      "itemKey": "W6NDRB6L",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/W6NDRB6L"
+    },
+    {
+      "key": "RXDH2WFD",
+      "version": 278,
+      "itemType": "journalArticle",
+      "title": "Identification of common molecular subsequences",
+      "date": "1981",
+      "extra": "Publisher: Elsevier Science",
+      "volume": "147",
+      "pages": "195–197",
+      "publicationTitle": "Journal of molecular biology",
+      "issue": "1",
+      "creators": [
+        {
+          "firstName": "Temple F",
+          "lastName": "Smith",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Michael S",
+          "lastName": "Waterman",
+          "creatorType": "author"
+        },
+        {
+          "name": "others",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/users/14685114/items/7V53CGDG",
+          "http://zotero.org/users/14685114/items/9AZUGC84"
+        ]
+      },
+      "dateAdded": "2024-07-21T14:51:24Z",
+      "dateModified": "2024-08-04T10:36:02Z",
+      "uri": "http://zotero.org/users/14685114/items/RXDH2WFD",
+      "itemID": 3,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Smith and Waterman - 1981 - Identification of common molecular subsequences.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-04T10:35:12Z",
+          "dateModified": "2024-08-04T10:36:02Z",
+          "uri": "http://zotero.org/users/14685114/items/I2ZU9VYF",
+          "path": "/Users/felix-krueckel/Zotero/storage/I2ZU9VYF/Smith and Waterman - 1981 - Identification of common molecular subsequences.pdf",
+          "select": "zotero://select/library/items/I2ZU9VYF"
+        }
+      ],
+      "notes": [],
+      "citationKey": "smithIdentificationCommonMolecular1981",
+      "itemKey": "RXDH2WFD",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/RXDH2WFD"
+    },
+    {
+      "key": "QYQLABZ3",
+      "version": 254,
+      "itemType": "encyclopediaArticle",
+      "title": "Smith–Waterman algorithm",
+      "abstractNote": "The Smith–Waterman algorithm performs local sequence alignment; that is, for determining similar regions between two strings of nucleic acid sequences or protein sequences. Instead of looking at the entire sequence, the Smith–Waterman algorithm compares segments of all possible lengths and optimizes the similarity measure.\nThe algorithm was first proposed by Temple F. Smith and Michael S. Waterman in 1981. Like the Needleman–Wunsch algorithm, of which it is a variation, Smith–Waterman is a dynamic programming algorithm. As such, it has the desirable property that it is guaranteed to find the optimal local alignment with respect to the scoring system being used (which includes the substitution matrix and the gap-scoring scheme). The main difference to the Needleman–Wunsch algorithm is that negative scoring matrix cells are set to zero. Traceback procedure starts at the highest scoring matrix cell and proceeds until a cell with score zero is encountered, yielding the highest scoring local alignment. Because of its cubic time complexity, it often cannot be practically applied to large-scale problems and is replaced in favor of computationally more efficient alternatives such as (Gotoh, 1982), (Altschul and Erickson, 1986), and (Myers and Miller, 1988).",
+      "date": "2024-07-11T15:11:20Z",
+      "language": "en",
+      "libraryCatalog": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?title=Smith%E2%80%93Waterman_algorithm&oldid=1233909819",
+      "accessDate": "2024-07-30T15:25:34Z",
+      "rights": "Creative Commons Attribution-ShareAlike License",
+      "extra": "Page Version ID: 1233909819",
+      "encyclopediaTitle": "Wikipedia",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-30T15:25:34Z",
+      "dateModified": "2024-07-30T15:25:34Z",
+      "uri": "http://zotero.org/users/14685114/items/QYQLABZ3",
+      "itemID": 64,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-30T15:25:41Z",
+          "dateModified": "2024-07-30T15:25:41Z",
+          "uri": "http://zotero.org/users/14685114/items/WSXH3SST",
+          "path": "/Users/felix-krueckel/Zotero/storage/WSXH3SST/Smith–Waterman_algorithm.html",
+          "select": "zotero://select/library/items/WSXH3SST"
+        }
+      ],
+      "notes": [],
+      "citationKey": "SmithWatermanAlgorithm2024",
+      "itemKey": "QYQLABZ3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/QYQLABZ3"
+    },
+    {
+      "key": "U63KVE7H",
+      "version": 499,
+      "itemType": "preprint",
+      "title": "Joint Audio and Symbolic Conditioning for Temporally Controlled Text-to-Music Generation",
+      "abstractNote": "We present JASCO, a temporally controlled text-to-music generation model utilizing both symbolic and audio-based conditions. JASCO can generate high-quality music samples conditioned on global text descriptions along with fine-grained local controls. JASCO is based on the Flow Matching modeling paradigm together with a novel conditioning method. This allows music generation controlled both locally (e.g., chords) and globally (text description). Specifically, we apply information bottleneck layers in conjunction with temporal blurring to extract relevant information with respect to specific controls. This allows the incorporation of both symbolic and audio-based conditions in the same text-to-music model. We experiment with various symbolic control signals (e.g., chords, melody), as well as with audio representations (e.g., separated drum tracks, full-mix). We evaluate JASCO considering both generation quality and condition adherence, using both objective metrics and human studies. Results suggest that JASCO is comparable to the evaluated baselines considering generation quality while allowing significantly better and more versatile controls over the generated music. Samples are available on our demo page https://pages.cs.huji.ac.il/adiyoss-lab/JASCO.",
+      "date": "2024-06-16",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2406.10970",
+      "accessDate": "2025-04-23T17:26:02Z",
+      "extra": "arXiv:2406.10970 [cs]",
+      "DOI": "10.48550/arXiv.2406.10970",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2406.10970",
+      "creators": [
+        {
+          "firstName": "Or",
+          "lastName": "Tal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alon",
+          "lastName": "Ziv",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Itai",
+          "lastName": "Gat",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Felix",
+          "lastName": "Kreuk",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yossi",
+          "lastName": "Adi",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Sound",
+          "type": 1
+        },
+        {
+          "tag": "Electrical Engineering and Systems Science - Audio and Speech Processing",
+          "type": 1
+        }
+      ],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/5964733/items/ZEWWX8FB"
+        ]
+      },
+      "dateAdded": "2025-04-23T17:26:02Z",
+      "dateModified": "2025-04-23T17:26:02Z",
+      "uri": "http://zotero.org/users/14685114/items/U63KVE7H",
+      "itemID": 125,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/CU2YMGG4"
+            ]
+          },
+          "dateAdded": "2025-04-23T17:26:03Z",
+          "dateModified": "2025-04-23T17:26:03Z",
+          "uri": "http://zotero.org/users/14685114/items/BW22M38N",
+          "path": "/Users/felix-krueckel/Zotero/storage/BW22M38N/Tal et al. - 2024 - Joint Audio and Symbolic Conditioning for Temporally Controlled Text-to-Music Generation.pdf",
+          "select": "zotero://select/library/items/BW22M38N"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/5964733/items/28SS4W4N"
+            ]
+          },
+          "dateAdded": "2025-04-23T17:26:07Z",
+          "dateModified": "2025-04-23T17:26:07Z",
+          "uri": "http://zotero.org/users/14685114/items/2QU9N496",
+          "path": "/Users/felix-krueckel/Zotero/storage/2QU9N496/2406.html",
+          "select": "zotero://select/library/items/2QU9N496"
+        }
+      ],
+      "notes": [],
+      "citationKey": "talJointAudioSymbolic2024",
+      "itemKey": "U63KVE7H",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/U63KVE7H"
+    },
+    {
+      "key": "VIHAZIIY",
+      "version": 108,
+      "itemType": "journalArticle",
+      "title": "Substitution scoring matrices for proteins-An overview",
+      "date": "2020",
+      "extra": "Publisher: Wiley Online Library",
+      "volume": "29",
+      "pages": "2152–2153",
+      "publicationTitle": "Protein Science",
+      "issue": "11",
+      "creators": [
+        {
+          "firstName": "Rakesh",
+          "lastName": "Trivedi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hampapathalu Adimurthy",
+          "lastName": "Nagarajaram",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-21T14:51:24Z",
+      "dateModified": "2024-07-21T14:51:24Z",
+      "uri": "http://zotero.org/users/14685114/items/VIHAZIIY",
+      "itemID": 6,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "trivediSubstitutionScoringMatrices2020",
+      "itemKey": "VIHAZIIY",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/VIHAZIIY"
+    },
+    {
+      "key": "ZXD97KQK",
+      "version": 119,
+      "itemType": "conferencePaper",
+      "title": "May I Take Your Order?",
+      "abstractNote": "Process mining starts from event data. The ordering of events is vital for the discovery of process models. However, the timestamps of events may be unreliable or imprecise. To further complicate matters, also causally unrelated events may be ordered in time. The fact that one event is followed by another does not imply that the former causes the latter. This paper explores the relationship between time and order. Moreover, it describes an approach to preprocess event data having timestamp-related problems. This approach avoids using accidental or unreliable orders and timestamps, creates partial orders to capture uncertainty, and allows for exploiting domain knowledge to (re)order events. Optionally, the approach also generates interleavings to be able to use existing process mining techniques that cannot handle partially ordered event data. The approach has been implemented using ProM and can be applied to any event log.",
+      "date": "2022",
+      "language": "en",
+      "libraryCatalog": "Springer Link",
+      "place": "Cham",
+      "publisher": "Springer International Publishing",
+      "ISBN": "978-3-030-94343-1",
+      "pages": "99-110",
+      "proceedingsTitle": "Business Process Management Workshops",
+      "DOI": "10.1007/978-3-030-94343-1_8",
+      "creators": [
+        {
+          "firstName": "Wil M. P.",
+          "lastName": "van der Aalst",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luis",
+          "lastName": "Santos",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Andrea",
+          "lastName": "Marrella",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Barbara",
+          "lastName": "Weber",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Process mining",
+          "type": 1
+        },
+        {
+          "tag": "Event data",
+          "type": 1
+        },
+        {
+          "tag": "Partial orders",
+          "type": 1
+        },
+        {
+          "tag": "Uncertainty",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-21T16:10:34Z",
+      "dateModified": "2024-07-21T16:10:34Z",
+      "uri": "http://zotero.org/users/14685114/items/ZXD97KQK",
+      "itemID": 18,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-21T16:10:38Z",
+          "dateModified": "2024-07-21T16:10:38Z",
+          "uri": "http://zotero.org/users/14685114/items/G68MJ2N5",
+          "path": "/Users/felix-krueckel/Zotero/storage/G68MJ2N5/van der Aalst and Santos - 2022 - May I Take Your Order.pdf",
+          "select": "zotero://select/library/items/G68MJ2N5"
+        }
+      ],
+      "notes": [],
+      "citationKey": "vanderaalstMayTakeYour2022",
+      "itemKey": "ZXD97KQK",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ZXD97KQK"
+    },
+    {
+      "key": "VRL2GUB5",
+      "version": 117,
+      "itemType": "book",
+      "title": "Process Mining: Discovery, Conformance and Enhancement of Business Processes",
+      "date": "2011",
+      "language": "en",
+      "shortTitle": "Process Mining",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://link.springer.com/10.1007/978-3-642-19345-3",
+      "accessDate": "2024-07-23T10:31:33Z",
+      "rights": "https://www.springernature.com/gp/researchers/text-and-data-mining",
+      "extra": "DOI: 10.1007/978-3-642-19345-3",
+      "place": "Berlin, Heidelberg",
+      "publisher": "Springer",
+      "ISBN": "978-3-642-19344-6 978-3-642-19345-3",
+      "creators": [
+        {
+          "firstName": "Wil M. P.",
+          "lastName": "Van Der Aalst",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Business Information Systems",
+          "type": 1
+        },
+        {
+          "tag": "Business Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Business Process Management",
+          "type": 1
+        },
+        {
+          "tag": "Data Mining",
+          "type": 1
+        },
+        {
+          "tag": "Workflow Management",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-23T10:31:33Z",
+      "dateModified": "2024-07-23T10:31:33Z",
+      "uri": "http://zotero.org/users/14685114/items/VRL2GUB5",
+      "itemID": 26,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Submitted Version",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-23T10:31:35Z",
+          "dateModified": "2024-07-23T10:31:35Z",
+          "uri": "http://zotero.org/users/14685114/items/I2CU52QS",
+          "path": "/Users/felix-krueckel/Zotero/storage/I2CU52QS/Van Der Aalst - 2011 - Process Mining Discovery, Conformance and Enhance.pdf",
+          "select": "zotero://select/library/items/I2CU52QS"
+        }
+      ],
+      "notes": [],
+      "citationKey": "vanderaalstProcessMiningDiscovery2011",
+      "itemKey": "VRL2GUB5",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/VRL2GUB5"
+    },
+    {
+      "key": "V9KJ5TVH",
+      "version": 116,
+      "itemType": "book",
+      "title": "Process Mining Handbook",
+      "date": "2022",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://link.springer.com/10.1007/978-3-031-08848-3",
+      "accessDate": "2024-07-23T10:29:51Z",
+      "rights": "https://creativecommons.org/licenses/by/4.0",
+      "extra": "DOI: 10.1007/978-3-031-08848-3",
+      "volume": "448",
+      "place": "Cham",
+      "publisher": "Springer International Publishing",
+      "ISBN": "978-3-031-08847-6 978-3-031-08848-3",
+      "series": "Lecture Notes in Business Information Processing",
+      "creators": [
+        {
+          "firstName": "Wil M. P.",
+          "lastName": "Van Der Aalst",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Josep",
+          "lastName": "Carmona",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "process discovery",
+          "type": 1
+        },
+        {
+          "tag": "business process management",
+          "type": 1
+        },
+        {
+          "tag": "conformance checking",
+          "type": 1
+        },
+        {
+          "tag": "data mining",
+          "type": 1
+        },
+        {
+          "tag": "data science",
+          "type": 1
+        },
+        {
+          "tag": "knowledge graphs",
+          "type": 1
+        },
+        {
+          "tag": "Open Access",
+          "type": 1
+        },
+        {
+          "tag": "process mining",
+          "type": 1
+        },
+        {
+          "tag": "RPA - Robotic Process Automation",
+          "type": 1
+        },
+        {
+          "tag": "stream data management",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-23T10:29:51Z",
+      "dateModified": "2024-07-23T10:29:51Z",
+      "uri": "http://zotero.org/users/14685114/items/V9KJ5TVH",
+      "itemID": 24,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-23T10:29:59Z",
+          "dateModified": "2024-07-23T10:29:59Z",
+          "uri": "http://zotero.org/users/14685114/items/W4YVTVNE",
+          "path": "/Users/felix-krueckel/Zotero/storage/W4YVTVNE/Van Der Aalst and Carmona - 2022 - Process Mining Handbook.pdf",
+          "select": "zotero://select/library/items/W4YVTVNE"
+        }
+      ],
+      "notes": [],
+      "citationKey": "vanderaalstProcessMiningHandbook2022",
+      "itemKey": "V9KJ5TVH",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/V9KJ5TVH"
+    },
+    {
+      "key": "CB3T3RN6",
+      "version": 198,
+      "itemType": "journalArticle",
+      "title": "Long Working Hours and Coronary Heart Disease: A Systematic Review and Meta-Analysis",
+      "abstractNote": "The authors aggregated the results of observational studies examining the association between long working hours and coronary heart disease (CHD). Data sources used were MEDLINE (through January 19, 2011) and Web of Science (through March 14, 2011). Two investigators independently extracted results from eligible studies. Heterogeneity between the studies was assessed using the I2 statistic, and the possibility of publication bias was assessed using the funnel plot and Egger's test for small-study effects. Twelve studies were identified (7 case-control, 4 prospective, and 1 cross-sectional). For a total of 22,518 participants (2,313 CHD cases), the minimally adjusted relative risk of CHD for long working hours was 1.80 (95% confidence interval (CI): 1.42, 2.29), and in the maximally (multivariate-) adjusted analysis the relative risk was 1.59 (95% CI: 1.23, 2.07). The 4 prospective studies produced a relative risk of 1.39 (95% CI: 1.12, 1.72), while the corresponding relative risk in the 7 case-control studies was 2.43 (95% CI: 1.81, 3.26). Little evidence of publication bias but relatively large heterogeneity was observed. Studies varied in size, design, measurement of exposure and outcome, and adjustments. In conclusion, results from prospective observational studies suggest an approximately 40% excess risk of CHD in employees working long hours.",
+      "date": "2012-10-01",
+      "shortTitle": "Long Working Hours and Coronary Heart Disease",
+      "libraryCatalog": "Silverchair",
+      "url": "https://doi.org/10.1093/aje/kws139",
+      "accessDate": "2024-07-26T14:51:14Z",
+      "volume": "176",
+      "pages": "586-596",
+      "publicationTitle": "American Journal of Epidemiology",
+      "DOI": "10.1093/aje/kws139",
+      "issue": "7",
+      "journalAbbreviation": "American Journal of Epidemiology",
+      "ISSN": "0002-9262",
+      "creators": [
+        {
+          "firstName": "Marianna",
+          "lastName": "Virtanen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Katriina",
+          "lastName": "Heikkilä",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Markus",
+          "lastName": "Jokela",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jane E.",
+          "lastName": "Ferrie",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "G. David",
+          "lastName": "Batty",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jussi",
+          "lastName": "Vahtera",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mika",
+          "lastName": "Kivimäki",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-26T14:51:14Z",
+      "dateModified": "2024-07-26T14:51:14Z",
+      "uri": "http://zotero.org/users/14685114/items/CB3T3RN6",
+      "itemID": 49,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T14:51:19Z",
+          "dateModified": "2024-07-26T14:51:19Z",
+          "uri": "http://zotero.org/users/14685114/items/4MEUDN8J",
+          "path": "/Users/felix-krueckel/Zotero/storage/4MEUDN8J/Virtanen et al. - 2012 - Long Working Hours and Coronary Heart Disease A S.pdf",
+          "select": "zotero://select/library/items/4MEUDN8J"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T14:52:56Z",
+          "dateModified": "2024-07-26T14:52:56Z",
+          "uri": "http://zotero.org/users/14685114/items/KYS8PRBM",
+          "path": "/Users/felix-krueckel/Zotero/storage/KYS8PRBM/122221.html",
+          "select": "zotero://select/library/items/KYS8PRBM"
+        }
+      ],
+      "notes": [],
+      "citationKey": "virtanenLongWorkingHours2012",
+      "itemKey": "CB3T3RN6",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/CB3T3RN6"
+    },
+    {
+      "key": "B9KNC4HE",
+      "version": 119,
+      "itemType": "conferencePaper",
+      "title": "A Combined Approach of Process Mining and Rule-Based AI for Study Planning and Monitoring in Higher Education",
+      "abstractNote": "This paper presents an approach of using methods of process mining and rule-based artificial intelligence to analyze and understand study paths of students based on campus management system data and study program models. Process mining techniques are used to characterize successful study paths, as well as to detect and visualize deviations from expected plans. These insights are combined with recommendations and requirements of the corresponding study programs extracted from examination regulations. Here, event calculus and answer set programming are used to provide models of the study programs which support planning and conformance checking while providing feedback on possible study plan violations. In its combination, process mining and rule-based artificial intelligence are used to support study planning and monitoring by deriving rules and recommendations for guiding students to more suitable study paths with higher success rates. Two applications will be implemented, one for students and one for study program designers.",
+      "date": "2023",
+      "language": "en",
+      "libraryCatalog": "Springer Link",
+      "place": "Cham",
+      "publisher": "Springer Nature Switzerland",
+      "ISBN": "978-3-031-27815-0",
+      "pages": "513-525",
+      "proceedingsTitle": "Process Mining Workshops",
+      "DOI": "10.1007/978-3-031-27815-0_37",
+      "creators": [
+        {
+          "firstName": "Miriam",
+          "lastName": "Wagner",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hayyan",
+          "lastName": "Helal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Rene",
+          "lastName": "Roepke",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sven",
+          "lastName": "Judel",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jens",
+          "lastName": "Doveren",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sergej",
+          "lastName": "Goerzen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pouya",
+          "lastName": "Soudmand",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gerhard",
+          "lastName": "Lakemeyer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ulrik",
+          "lastName": "Schroeder",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wil M. P.",
+          "lastName": "van der Aalst",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marco",
+          "lastName": "Montali",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Arik",
+          "lastName": "Senderovich",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Matthias",
+          "lastName": "Weidlich",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Conformance checking",
+          "type": 1
+        },
+        {
+          "tag": "Educational Process Mining",
+          "type": 1
+        },
+        {
+          "tag": "Rule-based AI",
+          "type": 1
+        },
+        {
+          "tag": "Study monitoring",
+          "type": 1
+        },
+        {
+          "tag": "Study planning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-21T17:09:53Z",
+      "dateModified": "2024-07-21T17:09:53Z",
+      "uri": "http://zotero.org/users/14685114/items/B9KNC4HE",
+      "itemID": 20,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-21T17:09:57Z",
+          "dateModified": "2024-07-21T17:09:57Z",
+          "uri": "http://zotero.org/users/14685114/items/AW7FNZU5",
+          "path": "/Users/felix-krueckel/Zotero/storage/AW7FNZU5/Wagner et al. - 2023 - A Combined Approach of Process Mining and Rule-Bas.pdf",
+          "select": "zotero://select/library/items/AW7FNZU5"
+        }
+      ],
+      "notes": [],
+      "citationKey": "wagnerCombinedApproachProcess2023",
+      "itemKey": "B9KNC4HE",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/B9KNC4HE"
+    },
+    {
+      "key": "8LZPZUEB",
+      "version": 104,
+      "itemType": "journalArticle",
+      "title": "Some biological sequence metrics",
+      "date": "1976",
+      "extra": "Publisher: Elsevier",
+      "volume": "20",
+      "pages": "367–387",
+      "publicationTitle": "Advances in Mathematics",
+      "issue": "3",
+      "creators": [
+        {
+          "firstName": "Michael S",
+          "lastName": "Waterman",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Temple F",
+          "lastName": "Smith",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "William A",
+          "lastName": "Beyer",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-07-21T14:51:24Z",
+      "dateModified": "2024-07-21T14:51:24Z",
+      "uri": "http://zotero.org/users/14685114/items/8LZPZUEB",
+      "itemID": 5,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "watermanBiologicalSequenceMetrics1976",
+      "itemKey": "8LZPZUEB",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/8LZPZUEB"
+    },
+    {
+      "key": "PPDIJ4JL",
+      "version": 195,
+      "itemType": "journalArticle",
+      "title": "Psychological Stress, Inflammation, and Coronary Heart Disease",
+      "abstractNote": "In this review, we summarize evidence on the risk factor psychological stress in the context of coronary heart disease (CHD) in humans and explore the role of inflammation as a potential underlying mechanism.",
+      "date": "2017-09-20",
+      "language": "en",
+      "libraryCatalog": "Springer Link",
+      "url": "https://doi.org/10.1007/s11886-017-0919-x",
+      "accessDate": "2024-07-26T14:31:15Z",
+      "volume": "19",
+      "pages": "111",
+      "publicationTitle": "Current Cardiology Reports",
+      "DOI": "10.1007/s11886-017-0919-x",
+      "issue": "11",
+      "journalAbbreviation": "Curr Cardiol Rep",
+      "ISSN": "1534-3170",
+      "creators": [
+        {
+          "firstName": "Petra H.",
+          "lastName": "Wirtz",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Roland",
+          "lastName": "von Känel",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "C-reactive protein",
+          "type": 1
+        },
+        {
+          "tag": "Coronary heart disease",
+          "type": 1
+        },
+        {
+          "tag": "Cytokines",
+          "type": 1
+        },
+        {
+          "tag": "Exhaustion",
+          "type": 1
+        },
+        {
+          "tag": "Inflammation",
+          "type": 1
+        },
+        {
+          "tag": "Inflammatory stress response",
+          "type": 1
+        },
+        {
+          "tag": "Interleukin",
+          "type": 1
+        },
+        {
+          "tag": "Intervention",
+          "type": 1
+        },
+        {
+          "tag": "Job burnout",
+          "type": 1
+        },
+        {
+          "tag": "Psychosocial stress",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-26T14:31:15Z",
+      "dateModified": "2024-07-26T14:31:15Z",
+      "uri": "http://zotero.org/users/14685114/items/PPDIJ4JL",
+      "itemID": 47,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-26T14:31:17Z",
+          "dateModified": "2024-07-26T14:31:17Z",
+          "uri": "http://zotero.org/users/14685114/items/H3KMJ2VW",
+          "path": "/Users/felix-krueckel/Zotero/storage/H3KMJ2VW/Wirtz and von Känel - 2017 - Psychological Stress, Inflammation, and Coronary H.pdf",
+          "select": "zotero://select/library/items/H3KMJ2VW"
+        }
+      ],
+      "notes": [],
+      "citationKey": "wirtzPsychologicalStressInflammation2017",
+      "itemKey": "PPDIJ4JL",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/PPDIJ4JL"
+    },
+    {
+      "key": "4HBTXHIU",
+      "version": 255,
+      "itemType": "journalArticle",
+      "title": "SSW Library: An SIMD Smith-Waterman C/C++ Library for Use in Genomic Applications",
+      "abstractNote": "Background\nThe Smith-Waterman algorithm, which produces the optimal pairwise alignment between two sequences, is frequently used as a key component of fast heuristic read mapping and variation detection tools for next-generation sequencing data. Though various fast Smith-Waterman implementations are developed, they are either designed as monolithic protein database searching tools, which do not return detailed alignment, or are embedded into other tools. These issues make reusing these efficient Smith-Waterman implementations impractical.\n\nResults\nTo facilitate easy integration of the fast Single-Instruction-Multiple-Data Smith-Waterman algorithm into third-party software, we wrote a C/C++ library, which extends Farrar’s Striped Smith-Waterman (SSW) to return alignment information in addition to the optimal Smith-Waterman score. In this library we developed a new method to generate the full optimal alignment results and a suboptimal score in linear space at little cost of efficiency. This improvement makes the fast Single-Instruction-Multiple-Data Smith-Waterman become really useful in genomic applications. SSW is available both as a C/C++ software library, as well as a stand-alone alignment tool at: https://github.com/mengyao/Complete-Striped-Smith-Waterman-Library.\n\nConclusions\nThe SSW library has been used in the primary read mapping tool MOSAIK, the split-read mapping program SCISSORS, the MEI detector TANGRAM, and the read-overlap graph generation program RZMBLR. The speeds of the mentioned software are improved significantly by replacing their ordinary Smith-Waterman or banded Smith-Waterman module with the SSW Library.",
+      "date": "2013-12-4",
+      "shortTitle": "SSW Library",
+      "libraryCatalog": "PubMed Central",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3852983/",
+      "accessDate": "2024-08-03T15:05:37Z",
+      "extra": "PMID: 24324759\nPMCID: PMC3852983",
+      "volume": "8",
+      "pages": "e82138",
+      "publicationTitle": "PLoS ONE",
+      "DOI": "10.1371/journal.pone.0082138",
+      "issue": "12",
+      "journalAbbreviation": "PLoS One",
+      "ISSN": "1932-6203",
+      "creators": [
+        {
+          "firstName": "Mengyao",
+          "lastName": "Zhao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wan-Ping",
+          "lastName": "Lee",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Erik P.",
+          "lastName": "Garrison",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gabor T.",
+          "lastName": "Marth",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2024-08-03T15:05:37Z",
+      "dateModified": "2024-08-03T15:05:40Z",
+      "uri": "http://zotero.org/users/14685114/items/4HBTXHIU",
+      "itemID": 66,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PubMed Central Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-03T15:05:52Z",
+          "dateModified": "2024-08-03T15:05:52Z",
+          "uri": "http://zotero.org/users/14685114/items/RSXAS3I2",
+          "path": "/Users/felix-krueckel/Zotero/storage/RSXAS3I2/Zhao et al. - 2013 - SSW Library An SIMD Smith-Waterman CC++ Library .pdf",
+          "select": "zotero://select/library/items/RSXAS3I2"
+        },
+        {
+          "key": "H67CZFKK",
+          "version": 255,
+          "itemType": "attachment",
+          "title": "PubMed Central Link",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3852983/",
+          "accessDate": "2024-08-03T15:05:37Z",
+          "parentItem": "4HBTXHIU",
+          "linkMode": "linked_url",
+          "contentType": "text/html",
+          "charset": "",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-08-03T15:05:37Z",
+          "dateModified": "2024-08-03T15:05:37Z",
+          "uri": "http://zotero.org/users/14685114/items/H67CZFKK"
+        }
+      ],
+      "notes": [],
+      "citationKey": "zhaoSSWLibrarySIMD2013",
+      "itemKey": "4HBTXHIU",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/4HBTXHIU"
+    }
+  ]
+}
