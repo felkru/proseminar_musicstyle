@@ -182,20 +182,18 @@ The following section \ref{sec:discussion} and section \ref{sec:summary} present
 
 
 
-In this background section the technical terms necessary for understanding the following work are explained, as well as necessary context on underlying methods are given.
+In this background section the technical terms necessary for understanding the following work are explained and necessary context on underlying methods are given.
 
 \subsection{Conditioning Mechanisms}
 
-\subsubsection{Textual Inversion}\label{sec:textualInversion}
-
 \subsubsection{Pseudowords}\label{sec:pseudowords}
-\begin{aigen}
-    Pseudowords are artificial tokens created through textual inversion that represent specific concepts, styles, or characteristics not explicitly present in the original training vocabulary. In the context of music generation, pseudowords can encode particular musical styles, instruments, or compositional techniques that may not have been adequately represented in the original training data. These pseudowords function as learned representations that can be seamlessly integrated into text prompts to achieve more precise control over the generated music.
-\end{aigen}
+
+    Pseudowords are a linguistic description of non-text data, which can be fit into a text models embedding space and thus encode meaning. In the context of music generation, pseudowords can encode particular musical styles, instruments, or other information not easily expressed in language. These pseudowords do not resemble words used in language though, and can appear like random combinations of letters.
+
 \subsubsection{Embedding Space}\label{sec:embeddingSpace}
-\begin{aigen}
-    The embedding space refers to a high-dimensional vector space where textual and audio concepts are represented as numerical vectors. In music generation models, this space is designed so that semantically similar concepts (whether textual descriptions or audio features) are positioned close to each other, while dissimilar concepts are farther apart. The quality of the embedding space directly impacts the model's ability to understand and respond to conditioning inputs effectively.
-\end{aigen}
+
+    A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantically similar concepts are positioned near one another, while dissimilar concepts are further apart. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The quality of the embedding space directly impacts the model's ability to understand and respond to its inputs, thus affecting the output quality.
+
 \subsubsection{Double Classifier-Free Guidance}\label{sec:DCFG}
 
 Double classifier-free guidance is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting \cite{rouardAudioConditioningMusic2024}. Without this technique, the informationally less dense textual specification may be ignored. Classifier-free guidance itself is a method that can amplify the importance of the conditioning given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}.
@@ -203,17 +201,17 @@ Double classifier-free guidance is a technique that applies classifier-free guid
 \subsection{Audio Processing and Representation}
 
 \subsubsection{Audio Feature Extractor}\label{sec:audioFeatureExtractor}
-\begin{aigen}
-    An audio feature extractor is a component that processes raw audio waveforms to extract meaningful representations that can be used by machine learning models. In music generation systems, these extractors typically convert audio signals into features that capture important musical characteristics such as pitch, rhythm, timbre, and harmonic content. The extracted features serve as the foundation for understanding and manipulating musical content in the generation process.
-\end{aigen}
+
+    An audio feature extractor is a component that can obtain stylistic features from an audio snippet, which can then be used as input to a music generation model. Here, these extractors work on high level features, but can also extract lower level content such as melody and rythm \cite{rouardAudioConditioningMusic2024}.
+
 \subsubsection{EnCodec}\label{sec:encodec}
 
 EnCodec is a deep-learning based audio codec designed for high levels of compression with minimal quality loss \cite{defossezHighFidelityNeural2022}. In the context of this paper, EnCodec is used in the audio tokenizer as a transformer encoder \cite{rouardAudioConditioningMusic2024}.
 
 \subsubsection{Residual Vector Quantization}\label{sec:RVQ}
-\begin{aigen}
-    Residual Vector Quantization (RVQ) is a technique used to create efficient discrete representations of audio signals. RVQ employs a codebook containing a set of embeddings that serve as reference points for quantizing input features. The quantization process involves finding the closest codebook entries to the input features and representing the audio using indices into these codebooks. The residual nature of the quantization allows for hierarchical representation, where coarse features are captured in early quantization stages and fine details are preserved in subsequent stages.
-\end{aigen}
+
+    Residual Vector Quantization (RVQ) is a technique used to create discrete representations of data in an embedding space. RVQ employs a codebook containing a set of embeddings that serve as reference points for 'downsampling' input features. This process involves finding the closest codebook entries to the members of the embedding space and representing them in terms of the codebooks entries. %\comment{i am not quite happy with the explanation here, need to rewrite again}
+
 \subsubsection{Codebook}\label{sec:codebook}
 
 A codebook contains a set of embeddings used in RVQ as reference points for quantizing the input features. The length of the codebook can be used to control the information bottleneck, with fewer codebooks leading to higher loss of information.
@@ -222,38 +220,30 @@ A codebook contains a set of embeddings used in RVQ as reference points for quan
 
 A token is a discrete unit of information that can be interpreted and processed by a transformer language model. A tokenizer can be used to convert original data, in this paper audio and text, input into tokens.
 
-\subsubsection{Mel-Spectrogram}\label{sec:melSpectogram}
-\begin{aigen}
-    A mel-spectrogram is a visual representation of audio that shows how the spectral content of a signal varies over time, with frequency scaled according to the mel scale, which approximates human auditory perception. In music generation systems, mel-spectrograms serve as an intermediate representation that captures both temporal and frequency information in a format that is well-suited for processing by neural networks.
-\end{aigen}
+% \subsubsection{Mel-Spectrogram}\label{sec:melSpectogram}
+% \begin{aigen}
+%     A mel-spectrogram is a visual representation of audio that shows how the spectral content of a signal varies over time, with frequency scaled according to the mel scale, which approximates human auditory perception. In music generation systems, mel-spectrograms serve as an intermediate representation that captures both temporal and frequency information in a format that is well-suited for processing by neural networks.
+% \end{aigen}
+
 \subsection{Model Architecture and Training}
 
 \subsubsection{Transformer Encoder/Decoder}\label{sec:transformerEncoderDecoder}
 
-A transformer encoder compresses input data into a latent representation enriched with contextual information from the entire input. During this process, the transformer is able to weigh the importance of different parts of the input. A transformer decoder generates output from the latent representation created by the encoder, assessing the probability of each subsequent token occurring in the output sequence and using this information to build up the output step by step \cite{mengTransMLAMultiHeadLatent2025a}.
+A transformer encoder compresses input data into a intermediate representation enriched with contextual information from the entire input. During this process, the transformer is able to weigh the importance of different parts of the input. A transformer decoder generates output from the intermediate representation created by the encoder, assessing the probability of each subsequent token occurring in the output sequence and using this information to build up the output step by step \cite{mengTransMLAMultiHeadLatent2025a}.
 
 \subsubsection{MusicGen}\label{sec:musicGen}
-\begin{aigen}
-    MusicGen is a single-stage transformer language model that operates over several streams of compressed discrete music representation (tokens). Unlike previous approaches that required cascading multiple models hierarchically, MusicGen incorporates efficient token interleaving patterns, eliminating the complexity and computational overhead associated with multi-stage generation pipelines. The model demonstrates versatility in generating high-quality audio samples in both monophonic and stereophonic formats while being conditioned on textual descriptions or melodic features.
 
-    The model is trained autoregressively, predicting the likelyhood of observing the next token $y_t$ in regards of its preceding tokens $y_{<t}$ and the textual embedding $c$. Based on this, the probability of observing the tokens $y_1$ through $y_T$ is denoted as \\
-    \begin{equation}
-        p_\theta(y_{1:T}|c) = \prod_{t=1}^{T} p_\theta(y_t|y_{<t},c),
-        \label{eq:probdist}
-    \end{equation}
-\end{aigen}
-\subsubsection{MERT}\label{sec:MERT}
-\begin{aigen}
-    MERT (Music undERstanding model with large-scale self-supervised Training) is an acoustic music understanding model that incorporates teacher models to provide pseudo labels in masked language modeling (MLM) style acoustic pre-training. The model combines an acoustic teacher based on Residual Vector Quantization - Variational AutoEncoder (RVQ-VAE) and a musical teacher based on the Constant-Q Transform (CQT). MERT can scale from 95M to 330M parameters and achieves state-of-the-art performance on 14 music understanding tasks.
-\end{aigen}
-\subsubsection{MusicFM}\label{sec:MusicFM}
-\begin{aigen}
-    MusicFM is a foundation model tailored for music informatics, designed to address the scarcity of labeled data and generalization issues in the domain. The model is based on the BEST-RQ architecture with 12 conformer layers and is trained on musical data from both the Free Music Archive and internal datasets. MusicFM focuses on token-level and sequence-level classification tasks and demonstrates robust performance across diverse downstream tasks in music information retrieval.
-\end{aigen}
-\subsubsection{CLAP}\label{sec:CLAP}
-\begin{aigen}
-    CLAP (Contrastive Language-Audio Pretraining) is a model that learns to connect language and audio through two encoders and contrastive learning, bringing audio and text descriptions into a joint multimodal space. The model addresses limitations of traditional audio analytics models by enabling zero-shot capabilities that remove the need for training with class labels and allow flexible class prediction at inference time. CLAP's approach is particularly valuable for music generation applications where the diversity of musical styles makes it impractical to predefine all possible categories during training.
-\end{aigen}
+    MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by Meta for the audiocraft project. It serves as the baseline music generation model and is extended with the style conditioning methods proposed in the paper \cite{rouardAudioConditioningMusic2024}.
+
+% \subsubsection{MERT}\label{sec:MERT}
+% \begin{aigen}
+%     MERT (Music undERstanding model with large-scale self-supervised Training) is an acoustic music understanding model that incorporates teacher models to provide pseudo labels in masked language modeling (MLM) style acoustic pre-training. The model combines an acoustic teacher based on Residual Vector Quantization - Variational AutoEncoder (RVQ-VAE) and a musical teacher based on the Constant-Q Transform (CQT). MERT can scale from 95M to 330M parameters and achieves state-of-the-art performance on 14 music understanding tasks.
+% \end{aigen}
+% \subsubsection{MusicFM}\label{sec:MusicFM}
+% \begin{aigen}
+%     MusicFM is a foundation model tailored for music informatics, designed to address the scarcity of labeled data and generalization issues in the domain. The model is based on the BEST-RQ architecture with 12 conformer layers and is trained on musical data from both the Free Music Archive and internal datasets. MusicFM focuses on token-level and sequence-level classification tasks and demonstrates robust performance across diverse downstream tasks in music information retrieval.
+% \end{aigen}
+
 \subsubsection{Autoregressive vs Non-Autoregressive Models} \label{sec:Autoregression}
 \begin{aigen}
     Autoregressive models generate sequences by predicting one token at a time, using previously generated tokens as context for predicting the next token. This approach ensures coherent sequence generation but can be computationally expensive for long sequences. Non-autoregressive models, in contrast, generate all tokens in parallel, offering faster inference but potentially sacrificing some coherence in the generated sequences.
@@ -314,6 +304,10 @@ Inference time refers to the phase after training a language model when it is ac
 
 FAD is an objective metric used to evaluate the sound quality of generated audio. A lower FAD score indicates better quality \cite{kilgourFrechetAudioDistance2019a}.
 
+\subsubsection{CLAP}\label{sec:CLAP}
+
+The CLAP score is an objective metric used to compare the textual description given as input to the music generation model to its ouput, calculating their similarity. A higher score indicates good alignment between textual description and the generated audio, which is preferrable \cite{rouardAudioConditioningMusic2024}.
+
 \subsubsection{KNN\_overfit}\label{sec:KNNoverfit}
 
 KNN\_overfit is a newly introduced metric that assesses how similar the input and output audio of the model are. If the output audio has the least distance to the input audio in the embedding space, KNN\_overfit will have a value of 1, implying that the output audio is too close in sound to the input audio. This metric serves as a counterargument to KNN\_common, helping to identify when a model is simply copying the input.
@@ -330,16 +324,16 @@ SIM is a human evaluation metric used to assess the overall similarity in style 
 
 VAR is a human evaluation metric used to assess the likelihood that input and output samples are perceived as coming from the same song. A lower score indicates it is less likely that the samples are taken from the same song (which is the preferable result), while a higher score indicates it is more likely. VAR scores correlate well with KNN\_overfit metrics \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{Cosine Similarity}\label{sec:cosineSimilarity}
-\begin{aigen}
-    Cosine similarity is a metric used to measure the similarity between two vectors by calculating the cosine of the angle between them. In music generation contexts, cosine similarity is often used to compare embeddings of different audio samples or to measure the alignment between textual and audio representations in the embedding space.
-\end{aigen}
-\subsection{Technical Concepts}
+% \subsubsection{Cosine Similarity}\label{sec:cosineSimilarity}
+% \begin{aigen}
+%     Cosine similarity is a metric used to measure the similarity between two vectors by calculating the cosine of the angle between them. In music generation contexts, cosine similarity is often used to compare embeddings of different audio samples or to measure the alignment between textual and audio representations in the embedding space.
+% \end{aigen}
+% \subsection{Technical Concepts}
 
-\subsubsection{Latent Space and Latent Representation}\label{sec:latentSpace}
-\begin{aigen}
-    Latent space refers to a lower-dimensional representation space where complex data (such as audio) is encoded in a more compact and meaningful form. Latent representations are the specific encodings of data points within this space. In music generation, latent representations capture essential musical characteristics while reducing the dimensionality of the original audio signal, enabling more efficient processing and manipulation.
-\end{aigen}
+% \subsubsection{Latent Space and Latent Representation}\label{sec:latentSpace}
+% \begin{aigen}
+%     Latent space refers to a lower-dimensional representation space where complex data (such as audio) is encoded in a more compact and meaningful form. Latent representations are the specific encodings of data points within this space. In music generation, latent representations capture essential musical characteristics while reducing the dimensionality of the original audio signal, enabling more efficient processing and manipulation.
+% \end{aigen}
 \subsubsection{Contrastive (Text-Music) Model}\label{sec:contrastiveModel}
 \begin{aigen}
     A contrastive text-music model learns joint representations of text and music by encouraging similar text-music pairs to have similar embeddings while pushing dissimilar pairs apart in the embedding space. This approach enables the model to understand relationships between textual descriptions and musical content, facilitating more effective text-to-music generation and music understanding tasks.
@@ -348,14 +342,14 @@ VAR is a human evaluation metric used to assess the likelihood that input and ou
 \begin{aigen}
     Logits are the raw, unnormalized output values from a neural network before applying a softmax function. In music generation models, logits represent the model's confidence in different possible next tokens or classes. These values are typically converted to probabilities through softmax normalization for making final predictions.
 \end{aigen}
-\subsubsection{MIDI}\label{sec:MIDI}
-\begin{aigen}
-    MIDI (Musical Instrument Digital Interface) is a technical standard that describes a communications protocol, digital interface, and electrical connectors that connect a wide variety of electronic musical instruments, computers, and related audio equipment. In music generation contexts, MIDI provides a structured representation of musical information including notes, timing, velocity, and instrument specifications.
-\end{aigen}
-\subsubsection{Music Stems}\label{sec:musicStems}
-\begin{aigen}
-    Music stems refer to individual audio tracks or groups of instruments that make up a complete musical composition. For example, a song might be separated into vocal stems, drum stems, bass stems, and melodic instrument stems. In music generation, working with stems allows for more precise control over different aspects of the musical arrangement.
-\end{aigen}
+% \subsubsection{MIDI}\label{sec:MIDI}
+% \begin{aigen}
+%     MIDI (Musical Instrument Digital Interface) is a technical standard that describes a communications protocol, digital interface, and electrical connectors that connect a wide variety of electronic musical instruments, computers, and related audio equipment. In music generation contexts, MIDI provides a structured representation of musical information including notes, timing, velocity, and instrument specifications.
+% \end{aigen}
+% \subsubsection{Music Stems}\label{sec:musicStems}
+% \begin{aigen}
+%     Music stems refer to individual audio tracks or groups of instruments that make up a complete musical composition. For example, a song might be separated into vocal stems, drum stems, bass stems, and melodic instrument stems. In music generation, working with stems allows for more precise control over different aspects of the musical arrangement.
+% \end{aigen}
 \subsection{Specialized Methods}
 
 \subsubsection{Continuation Method}\label{sec:continuationMethod}
