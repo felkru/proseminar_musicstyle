@@ -188,11 +188,11 @@ In this background section the technical terms necessary for understanding the f
 
 \subsubsection{Pseudowords}\label{sec:pseudowords}
 
-    Pseudowords are a linguistic description of non-text data, which can be fit into a text models embedding space and thus encode meaning. In the context of music generation, pseudowords can encode particular musical styles, instruments, or other information not easily expressed in language. These pseudowords do not resemble words used in language though, and can appear like random combinations of letters.
+Pseudowords are a linguistic description of non-text data, which can be fit into a text models embedding space and thus encode meaning. In the context of music generation, pseudowords can encode particular musical styles, instruments, or other information not easily expressed in language. These pseudowords do not resemble words used in language though, and can appear like random combinations of letters.
 
 \subsubsection{Embedding Space}\label{sec:embeddingSpace}
 
-    A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantically similar concepts are positioned near one another, while dissimilar concepts are further apart. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The quality of the embedding space directly impacts the model's ability to understand and respond to its inputs, thus affecting the output quality.
+A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantically similar concepts are positioned near one another, while dissimilar concepts are further apart. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The quality of the embedding space directly impacts the model's ability to understand and respond to its inputs, thus affecting the output quality.
 
 \subsubsection{Double Classifier-Free Guidance}\label{sec:DCFG}
 
@@ -202,7 +202,7 @@ Double classifier-free guidance is a technique that applies classifier-free guid
 
 \subsubsection{Audio Feature Extractor}\label{sec:audioFeatureExtractor}
 
-    An audio feature extractor is a component that can obtain stylistic features from an audio snippet, which can then be used as input to a music generation model. Here, these extractors work on high level features, but can also extract lower level content such as melody and rythm \cite{rouardAudioConditioningMusic2024}.
+An audio feature extractor is a component that can obtain stylistic features from an audio snippet, which can then be used as input to a music generation model. Here, these extractors work on high level features, but can also extract lower level content such as melody and rythm \cite{rouardAudioConditioningMusic2024}.
 
 \subsubsection{EnCodec}\label{sec:encodec}
 
@@ -210,7 +210,7 @@ EnCodec is a deep-learning based audio codec designed for high levels of compres
 
 \subsubsection{Residual Vector Quantization}\label{sec:RVQ}
 
-    Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ employs a codebook containing a set of embeddings that serve as reference points for 'downsampling' input features. This process involves finding the closest codebook entries to the members of the embedding space and representing them in terms of the codebooks entries. %\comment{i am not quite happy with the explanation here, need to rewrite again}
+Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ employs a codebook containing a set of embeddings that serve as reference points for 'downsampling' input features. This process involves finding the closest codebook entries to the members of the embedding space and representing them in terms of the codebooks entries. %\comment{i am not quite happy with the explanation here, need to rewrite again}
 
 \subsubsection{Codebook}\label{sec:codebook}
 
@@ -233,7 +233,7 @@ A transformer encoder compresses input data into a intermediate representation e
 
 \subsubsection{MusicGen}\label{sec:musicGen}
 
-    MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by Meta for the audiocraft project. It serves as the baseline music generation model and is extended with the style conditioning methods proposed in the paper \cite{rouardAudioConditioningMusic2024}.
+MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by Meta for the audiocraft project. It serves as the baseline music generation model and is extended with the style conditioning methods proposed in the paper \cite{rouardAudioConditioningMusic2024}.
 
 % \subsubsection{MERT}\label{sec:MERT}
 % \begin{aigen}
@@ -246,17 +246,17 @@ A transformer encoder compresses input data into a intermediate representation e
 
 \subsubsection{Autoregressive Models} \label{sec:Autoregression}
 
-    Autoregressive models generate their output by predicting one token at a time, using the previously generated tokens as context. Non-autoregressive models generate all tokens at once, offering faster inference but potentially sacrificing some coherence in the output.
+Autoregressive models generate their output by predicting one token at a time, using the previously generated tokens as context. Non-autoregressive models generate all tokens at once, offering faster inference but potentially sacrificing some coherence in the output.
 
 \subsubsection{Frozen Model}\label{sec:frozenModel}
 
-    A frozen model refers to a preexisting model whose parameters are not changed during training of a larger system.
+A frozen model refers to a preexisting model whose parameters are not changed during training of a larger system.
 
 \subsection{Training and Optimization}
 
 \subsubsection{Cross-Entropy Loss}\label{sec:crossEntropyLoss}
 
-    Cross-entropy loss is a function used in training Large Language Models, measuring the difference between the tokens generated by the models and the expected tokens. When training a model, its parameters are tweaked in order to reduce this loss, making the models output as close to the original data as possible.
+Cross-entropy loss is a function used in training Large Language Models, measuring the difference between the tokens generated by the models and the expected tokens. When training a model, its parameters are tweaked in order to reduce this loss, making the models output as close to the original data as possible.
 
 % \subsubsection{Backpropagation}\label{sec:backpropagation}
 % \begin{aigen}
@@ -264,7 +264,7 @@ A transformer encoder compresses input data into a intermediate representation e
 % \end{aigen}
 \subsubsection{Gradient Descent Step}\label{sec:gradientDescent}
 
-    A gradient descent step refers to the updating of model parameters based on the gradient of the models Loss function, aiming to find its global minimum.
+A gradient descent step refers to the updating of model parameters based on the gradient of the models Loss function, aiming to find its global minimum.
 
 % \subsubsection{Vanilla Adam Optimizer}\label{sec:adamOptimizer}
 % \begin{aigen}
@@ -272,7 +272,7 @@ A transformer encoder compresses input data into a intermediate representation e
 % \end{aigen}
 \subsubsection{Hyperparameters}\label{sec:Hyperparameters}
 
-    Hyperparameters are configuration settings that affect the training process of a language model. Hyperparameters include learning rate, batch size, model dimensions and number of layers.
+Hyperparameters are configuration settings that affect the training process of a language model. Hyperparameters include learning rate, batch size, model dimensions and number of layers.
 
 \subsection{Conditioning and Control Mechanisms}
 
@@ -286,7 +286,7 @@ Inference time refers to the phase after training a language model when it is ac
 
 \subsubsection{Dropout}\label{sec:dropout}
 
-    Dropout refers to the act of randomly leaving out certain conditioning inputs during training. This improves model's ability to generate high quality outputs even when some conditioning information is missing.
+Dropout refers to the act of randomly leaving out certain conditioning inputs during training. This improves model's ability to generate high quality outputs even when some conditioning information is missing.
 
 \subsection{Audio Processing Techniques}
 
@@ -340,7 +340,7 @@ VAR is a human evaluation metric used to assess the likelihood that input and ou
 % \end{aigen}
 \subsubsection{Logits}\label{sec:Logit}
 
-    Logits represent a language model's confidence in what the different possible next tokens will be. These values can be converted to probabilities for which token will be generated next by the model.
+Logits represent a language model's confidence in what the different possible next tokens will be. These values can be converted to probabilities for which token will be generated next by the model.
 
 % \subsubsection{MIDI}\label{sec:MIDI}
 % \begin{aigen}
@@ -354,12 +354,11 @@ VAR is a human evaluation metric used to assess the likelihood that input and ou
 
 \subsubsection{Continuation Method}\label{sec:continuationMethod}
 
-    The continuation method involves asking a model to continue a given sample of a song rather than creating a new audio snippet from scratch. The continuation mode of the MusicGen model is used in the paper as a point of comparison \cite{rouardAudioConditioningMusic2024}.
+The continuation method involves asking a model to continue a given sample of a song rather than creating a new audio snippet from scratch. The continuation mode of the MusicGen model is used in the paper as a point of comparison \cite{rouardAudioConditioningMusic2024}.
 
 \subsubsection{Masking}\label{sec:masking}
 
-    A set of information can be masked from the input of a language model, which means that it will be ignored by the language model during training.
-
+A set of information can be masked from the input of a language model, which means that it will be ignored by the language model during training.
 
 
 
@@ -448,7 +447,7 @@ The authors first propose a quick proof of concept experiment, which uses textua
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.9\textwidth]{textual_inversion.png}
-    \caption{Architecture Overview, Musicgen with textual inversion encoder}
+    \caption{Architecture Overview, showing the similarity between the two methods at inference time}
     \label{fig:text_inv_overview}
 \end{figure}
 
@@ -460,7 +459,7 @@ A useful analogy is to imagine a non-native translator trying to express a sayin
 These pseudowords are created using gradient descent to optimize their self similarity when doing a forward-pass using the existing model. \\
 The process is visualized in the paper's figure 1 \ref{fig:orig_paper_f1}. The audio is encoded into a number of \textit{Audio tokens} $y_t$ before computing the loss. The paper doesn't specify the exact encoding procedure, but it likely relies on Encodec \ref{sec:encodec}, since Musicgen \ref{sec:musicGen} does so. The next output token \ref{sec:Token} is computed by giving musicgen the generated output tokens and the pseudowords as input. The loss incentivizes the maximising the likelihood $p_\theta(y_{t+1})$ of predicting the correct next token \ref{sec:Logit}. \\
 \begin{equation}\label{eq:crossEntropyLoss}
-    LCE(\theta, y_{1:T}, c) = - \sum_{t=1}^{T} \log p_{\theta}(y_t|y_{<t}, c)
+    L_{CE}(\theta, y_{1:T}, c) = - \sum_{t=1}^{T} \log p_{\theta}(y_t|y_{<t}, c)
 \end{equation}
 
 Since gradient descent is an iterative process, a starting point for the pseudowords is needed. The method laid out in the paper uses an arbitray, general starting point like "music" to initialize the algorithm and then proceeds to train "a few hundred iterations" \cite{rouardAudioConditioningMusic2024}. \\\\
@@ -476,8 +475,9 @@ This process will be performed for each music piece seperately resulting in a di
 
 \subsection{Style Encoder/Conditioner}\label{sec:style_enc}
 
-The second method proposed in the paper is based on a seperate style encoder/conditioner, which we'll refer to as \textit{style encoder}. It works by randomly randomly choosing an excerpt from the input audio to extract stylistic features during training \cite{rouardAudioConditioningMusic2024}. \\
-The style conditioner consists of a frozen audio feature extractor, a transformer encoder, a RVQ and a linear conversion layer. In the RVQ and downsampling layers, bottlenecks are implemented to prevent the model from copying its input and to focus the encoded meaning on the style conditioning \cite{rouardAudioConditioningMusic2024}. \\
+The second method proposed in the paper is based on a seperate end to end trained style encoder/conditioner, which we'll refer to as \textit{style encoder}. It works by randomly  choosing an excerpt from the input audio to extract stylistic features during training \cite{rouardAudioConditioningMusic2024}.\\
+
+The style encoder consists of a frozen audio feature extractor, a transformer encoder, a RVQ and a linear conversion layer. In the RVQ and downsampling layers, bottlenecks are implemented to prevent the model from copying its input and to focus the encoded meaning on the style conditioning \cite{rouardAudioConditioningMusic2024}. \\
 
 Firstly, in the frozen audio feature extractor \cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023,wonFoundationModelMusic2024}, the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transfomer encoder \cite{rouardAudioConditioningMusic2024}. \\
 
