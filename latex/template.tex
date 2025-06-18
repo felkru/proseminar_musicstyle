@@ -82,6 +82,7 @@
 \usepackage{algpseudocode}
 \usepackage{outlines}
 \usepackage{tcolorbox}
+\usepackage{booktabs}
 %\usepackage{commenting}
 
 \captionsetup{farskip=10pt,topadjust=0pt,captionskip=10pt,nearskip=0pt,margin=10pt}
@@ -186,177 +187,177 @@ In this background section the technical terms necessary for understanding the f
 
 \subsection{Conditioning Mechanisms}
 
-\subsubsection{Pseudowords}\label{sec:pseudowords}
+\subsubsection*{Pseudowords}\label{sec:pseudowords}
 
 Pseudowords are a linguistic description of non-text data, which can be fit into a text models embedding space and thus encode meaning. In the context of music generation, pseudowords can encode particular musical styles, instruments, or other information not easily expressed in language. These pseudowords do not resemble words used in language though, and can appear like random combinations of letters.
 
-\subsubsection{Embedding Space}\label{sec:embeddingSpace}
+\subsubsection*{Embedding Space}\label{sec:embeddingSpace}
 
 A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantically similar concepts are positioned near one another, while dissimilar concepts are further apart. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The quality of the embedding space directly impacts the model's ability to understand and respond to its inputs, thus affecting the output quality.
 
-\subsubsection{Double Classifier-Free Guidance}\label{sec:DCFG}
+\subsubsection*{Double Classifier-Free Guidance}\label{sec:DCFG}
 
 Double classifier-free guidance (DCFG) is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting \cite{rouardAudioConditioningMusic2024}. Without this technique, the informationally less dense textual specification may be ignored. Classifier-free guidance (CFG) itself is a method that can amplify the importance of the conditioning given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}.
 
 \subsection{Audio Processing and Representation}
 
-\subsubsection{Audio Feature Extractor}\label{sec:audioFeatureExtractor}
+\subsubsection*{Audio Feature Extractor}\label{sec:audioFeatureExtractor}
 
 An audio feature extractor is a component that can obtain stylistic features from an audio snippet, which can then be used as input to a music generation model. Here, these extractors work on high level features, but can also extract lower level content such as melody and rythm \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{EnCodec}\label{sec:encodec}
+\subsubsection*{EnCodec}\label{sec:encodec}
 
 EnCodec is a deep-learning based audio codec designed for high levels of compression with minimal quality loss \cite{defossezHighFidelityNeural2022}. In the context of this paper, EnCodec is used in the audio tokenizer as a transformer encoder \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{Residual Vector Quantization}\label{sec:RVQ}
+\subsubsection*{Residual Vector Quantization}\label{sec:RVQ}
 
 Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ employs a codebook containing a set of embeddings that serve as reference points for 'downsampling' input features. This process involves finding the closest codebook entries to the members of the embedding space and representing them in terms of the codebooks entries. %\comment{i am not quite happy with the explanation here, need to rewrite again}
 
-\subsubsection{Codebook}\label{sec:codebook}
+\subsubsection*{Codebook}\label{sec:codebook}
 
 A codebook contains a set of embeddings used in RVQ as reference points for quantizing the input features. The length of the codebook can be used to control the information bottleneck, with fewer codebooks leading to higher loss of information.
 
-\subsubsection{Token/Tokenizer}\label{sec:Token}
+\subsubsection*{Token/Tokenizer}\label{sec:Token}
 
 A token is a discrete unit of information that can be interpreted and processed by a transformer language model. A tokenizer can be used to convert original data, in this paper audio and text, input into tokens.
 
-% \subsubsection{Mel-Spectrogram}\label{sec:melSpectogram}
+% \subsubsection*{Mel-Spectrogram}\label{sec:melSpectogram}
 % \begin{aigen}
 %     A mel-spectrogram is a visual representation of audio that shows how the spectral content of a signal varies over time, with frequency scaled according to the mel scale, which approximates human auditory perception. In music generation systems, mel-spectrograms serve as an intermediate representation that captures both temporal and frequency information in a format that is well-suited for processing by neural networks.
 % \end{aigen}
 
 \subsection{Model Architecture and Training}
 
-\subsubsection{Transformer Encoder/Decoder}\label{sec:transformerEncoderDecoder}
+\subsubsection*{Transformer Encoder/Decoder}\label{sec:transformerEncoderDecoder}
 
 A transformer encoder compresses input data into a intermediate representation enriched with contextual information from the entire input. During this process, the transformer is able to weigh the importance of different parts of the input. A transformer decoder generates output from the intermediate representation created by the encoder, assessing the probability of each subsequent token occurring in the output sequence and using this information to build up the output step by step \cite{mengTransMLAMultiHeadLatent2025a}.
 
-\subsubsection{MusicGen}\label{sec:MusicGen}
+\subsubsection*{MusicGen}\label{sec:MusicGen}
 
 MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by Meta for the audiocraft project. It serves as the baseline music generation model and is extended with the style conditioning methods proposed in the paper \cite{rouardAudioConditioningMusic2024}.
 
-% \subsubsection{MERT}\label{sec:MERT}
+% \subsubsection*{MERT}\label{sec:MERT}
 % \begin{aigen}
 %     MERT (Music undERstanding model with large-scale self-supervised Training) is an acoustic music understanding model that incorporates teacher models to provide pseudo labels in masked language modeling (MLM) style acoustic pre-training. The model combines an acoustic teacher based on Residual Vector Quantization - Variational AutoEncoder (RVQ-VAE) and a musical teacher based on the Constant-Q Transform (CQT). MERT can scale from 95M to 330M parameters and achieves state-of-the-art performance on 14 music understanding tasks.
 % \end{aigen}
-% \subsubsection{MusicFM}\label{sec:MusicFM}
+% \subsubsection*{MusicFM}\label{sec:MusicFM}
 % \begin{aigen}
 %     MusicFM is a foundation model tailored for music informatics, designed to address the scarcity of labeled data and generalization issues in the domain. The model is based on the BEST-RQ architecture with 12 conformer layers and is trained on musical data from both the Free Music Archive and internal datasets. MusicFM focuses on token-level and sequence-level classification tasks and demonstrates robust performance across diverse downstream tasks in music information retrieval.
 % \end{aigen}
 
-\subsubsection{Autoregressive Models} \label{sec:Autoregression}
+\subsubsection*{Autoregressive Models} \label{sec:Autoregression}
 
 Autoregressive models generate their output by predicting one token at a time, using the previously generated tokens as context. Non-autoregressive models generate all tokens at once, offering faster inference but potentially sacrificing some coherence in the output.
 
-\subsubsection{Frozen Model}\label{sec:frozenModel}
+\subsubsection*{Frozen Model}\label{sec:frozenModel}
 
 A frozen model refers to a preexisting model whose parameters are not changed during training of a larger system.
 
 \subsection{Training and Optimization}
 
-\subsubsection{Cross-Entropy Loss}\label{sec:crossEntropyLoss}
+\subsubsection*{Cross-Entropy Loss}\label{sec:crossEntropyLoss}
 
 Cross-entropy loss is a function used in training Large Language Models, measuring the difference between the tokens generated by the models and the expected tokens. When training a model, its parameters are tweaked in order to reduce this loss, making the models output as close to the original data as possible.
 
-% \subsubsection{Backpropagation}\label{sec:backpropagation}
+% \subsubsection*{Backpropagation}\label{sec:backpropagation}
 % \begin{aigen}
 %     Backpropagation is the algorithm used to compute gradients of the loss function with respect to model parameters. In music generation models, backpropagation enables the model to learn from training data by adjusting parameters to minimize the difference between generated and target outputs.
 % \end{aigen}
-\subsubsection{Gradient Descent Step}\label{sec:gradientDescent}
+\subsubsection*{Gradient Descent Step}\label{sec:gradientDescent}
 
 A gradient descent step refers to the updating of model parameters based on the gradient of the models Loss function, aiming to find its global minimum.
 
-% \subsubsection{Vanilla Adam Optimizer}\label{sec:adamOptimizer}
+% \subsubsection*{Vanilla Adam Optimizer}\label{sec:adamOptimizer}
 % \begin{aigen}
 %     The vanilla Adam optimizer is a popular optimization algorithm that combines the benefits of adaptive learning rates with momentum. It maintains separate learning rates for each parameter and adapts them based on the first and second moments of the gradients, making it particularly effective for training large neural networks like those used in music generation.
 % \end{aigen}
-\subsubsection{Hyperparameters}\label{sec:Hyperparameters}
+\subsubsection*{Hyperparameters}\label{sec:Hyperparameters}
 
 Hyperparameters are configuration settings that affect the training process of a language model. Hyperparameters include learning rate, batch size, model dimensions and number of layers.
 
 \subsection{Conditioning and Control Mechanisms}
 
-\subsubsection{Bottleneck}\label{sec:Bottleneck}
+\subsubsection*{Bottleneck}\label{sec:Bottleneck}
 
 Bottlenecks are used in this paper to limit the amount of information the model receives from  its input samples. In this case, bottlenecks prevent the model from simply copying the input audio \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{Inference Time}\label{sec:inferenceTime}
+\subsubsection*{Inference Time}\label{sec:inferenceTime}
 
 Inference time refers to the phase after training a language model when it is actively used to perform its intended task on new data. In this case, this involves creating music based on input text and audio data.
 
-\subsubsection{Dropout}\label{sec:dropout}
+\subsubsection*{Dropout}\label{sec:dropout}
 
 Dropout refers to the act of randomly leaving out certain conditioning inputs during training. This improves model's ability to generate high quality outputs even when some conditioning information is missing.
 
 \subsection{Audio Processing Techniques}
 
-\subsubsection{Temporal Downsampling}\label{sec:temporalDownsampling}
+\subsubsection*{Temporal Downsampling}\label{sec:temporalDownsampling}
 \begin{aigen}
     Temporal downsampling involves reducing the resolution of audio representations on the time axis while preserving essential musical information. This technique typically involves reducing the frame rate of the audio representations. The choice of downsampling strategy significantly impacts both computational efficiency and the quality of generated music.
 \end{aigen}
-% \subsubsection{Downsampling}\label{sec:Downsampling}
+% \subsubsection*{Downsampling}\label{sec:Downsampling}
 % \begin{aigen}
 %     Downsampling is a general signal processing technique that reduces the sampling rate or resolution of a signal. In music generation, downsampling can be applied to various representations (audio waveforms, spectrograms, feature sequences) to manage computational requirements while retaining the most important information for the generation task.
 % \end{aigen}
 \subsection{Evaluation Metrics}
 
-\subsubsection{Fréchet Audio Distance (FAD)}\label{sec:FAD}
+\subsubsection*{Fréchet Audio Distance (FAD)}\label{sec:FAD}
 
 FAD is an objective metric used to evaluate the sound quality of generated audio. A lower FAD score indicates better quality \cite{kilgourFrechetAudioDistance2019a}.
 
-\subsubsection{CLAP}\label{sec:CLAP}
+\subsubsection*{CLAP}\label{sec:CLAP}
 
 The CLAP score is an objective metric used to compare the textual description given as input to the music generation model to its ouput, calculating their similarity. A higher score indicates good alignment between textual description and the generated audio, which is preferrable \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{KNN\_overfit}\label{sec:KNNoverfit}
+\subsubsection*{KNN\_overfit}\label{sec:KNNoverfit}
 
 KNN\_overfit is a newly introduced metric that assesses how similar the input and output audio of the model are. If the output audio has the least distance to the input audio in the embedding space, KNN\_overfit will have a value of 1, implying that the output audio is too close in sound to the input audio. This metric serves as a counterargument to KNN\_common, helping to identify when a model is simply copying the input.
 
-\subsubsection{Overall Quality (OVL)}\label{sec:OVL}
+\subsubsection*{Overall Quality (OVL)}\label{sec:OVL}
 
 OVL is a human evaluation metric used to assess the overall sound quality of generated audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. Research has shown that OVL scores correlate with objective FAD metrics \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{Similarity (SIM)}\label{sec:SIM}
+\subsubsection*{Similarity (SIM)}\label{sec:SIM}
 
 SIM is a human evaluation metric used to assess the overall similarity in style between input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. SIM scores have been found to correlate well with KNN\_common metrics \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{Variability (VAR)}\label{sec:VAR}
+\subsubsection*{Variability (VAR)}\label{sec:VAR}
 
 VAR is a human evaluation metric used to assess the likelihood that input and output samples are perceived as coming from the same song. A lower score indicates it is less likely that the samples are taken from the same song (which is the preferable result), while a higher score indicates it is more likely. VAR scores correlate well with KNN\_overfit metrics \cite{rouardAudioConditioningMusic2024}.
 
-% \subsubsection{Cosine Similarity}\label{sec:cosineSimilarity}
+% \subsubsection*{Cosine Similarity}\label{sec:cosineSimilarity}
 % \begin{aigen}
 %     Cosine similarity is a metric used to measure the similarity between two vectors by calculating the cosine of the angle between them. In music generation contexts, cosine similarity is often used to compare embeddings of different audio samples or to measure the alignment between textual and audio representations in the embedding space.
 % \end{aigen}
 % \subsection{Technical Concepts}
 
-% \subsubsection{Latent Space and Latent Representation}\label{sec:latentSpace}
+% \subsubsection*{Latent Space and Latent Representation}\label{sec:latentSpace}
 % \begin{aigen}
 %     Latent space refers to a lower-dimensional representation space where complex data (such as audio) is encoded in a more compact and meaningful form. Latent representations are the specific encodings of data points within this space. In music generation, latent representations capture essential musical characteristics while reducing the dimensionality of the original audio signal, enabling more efficient processing and manipulation.
 % \end{aigen}
-% \subsubsection{Contrastive (Text-Music) Model}\label{sec:contrastiveModel}
+% \subsubsection*{Contrastive (Text-Music) Model}\label{sec:contrastiveModel}
 % \begin{aigen}
 %     A contrastive text-music model learns joint representations of text and music by encouraging similar text-music pairs to have similar embeddings while pushing dissimilar pairs apart in the embedding space. This approach enables the model to understand relationships between textual descriptions and musical content, facilitating more effective text-to-music generation and music understanding tasks.
 % \end{aigen}
-\subsubsection{Logits}\label{sec:Logit}
+\subsubsection*{Logits}\label{sec:Logit}
 
 Logits represent a language model's confidence in what the different possible next tokens will be. These values can be converted to probabilities for which token will be generated next by the model.
 
-% \subsubsection{MIDI}\label{sec:MIDI}
+% \subsubsection*{MIDI}\label{sec:MIDI}
 % \begin{aigen}
 %     MIDI (Musical Instrument Digital Interface) is a technical standard that describes a communications protocol, digital interface, and electrical connectors that connect a wide variety of electronic musical instruments, computers, and related audio equipment. In music generation contexts, MIDI provides a structured representation of musical information including notes, timing, velocity, and instrument specifications.
 % \end{aigen}
-% \subsubsection{Music Stems}\label{sec:musicStems}
+% \subsubsection*{Music Stems}\label{sec:musicStems}
 % \begin{aigen}
 %     Music stems refer to individual audio tracks or groups of instruments that make up a complete musical composition. For example, a song might be separated into vocal stems, drum stems, bass stems, and melodic instrument stems. In music generation, working with stems allows for more precise control over different aspects of the musical arrangement.
 % \end{aigen}
 \subsection{Specialized Methods}
 
-\subsubsection{Continuation Method}\label{sec:continuationMethod}
+\subsubsection*{Continuation Method}\label{sec:continuationMethod}
 
 The continuation method involves asking a model to continue a given sample of a song rather than creating a new audio snippet from scratch. The continuation mode of the MusicGen model is used in the paper as a point of comparison \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{Masking}\label{sec:masking}
+\subsubsection*{Masking}\label{sec:masking}
 
 A set of information can be masked from the input of a language model, which means that it will be ignored by the language model during training.
 
@@ -530,6 +531,34 @@ The new Logits after applying DCFG can be calculated using the following formula
 
 where $l_{\emptyset}$ denotes a logit without any conditioning, $l_{style}$ denotes a logit with only style conditioning applied and $l_{text,style}$ denotes a logit with bouth style and text conditioning. The coefficients $\alpha$ and $\beta$ are used to determine the importance of the overall conditioning and the text conditioning respectively. It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG \cite{rouardAudioConditioningMusic2024}.
 
+\section{Paper's Results}\label{sec:paperResults}
+
+In the experimental section of the paper, the performance of the proposed models are compared to the \textit{Continuation mode} of \textit{MusicGen} and \textit{MusicGen} with the \textit{audio Clap} add on for allowing audio input. In \ref{tab:comparison_baselines}, the experimental results from the paper are shown, with the best result all metrics being portrayed in bold.
+
+\begin{table*}[!h]%TODO: Double check the data is correct
+    \caption{Experimental results from the Paper}
+\centering
+\label{tab:comparison_baselines}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccccc}
+\toprule
+Model & FAD$_{vgg} \downarrow$ & KL $\downarrow$ & CLAP $\uparrow$ & KNN$_{\text{common}} \uparrow$ & KNN$_{\text{overfit}} \downarrow$ & OVL $\uparrow$ & SIM $\uparrow$ & VAR $\downarrow$ \\
+\midrule
+Textual Inversion                & 6.07          & 0.55          & 0.20          & 0.20                   & 0.14          & 78.11 $\pm$ 0.93 & 61.78 $\pm$ 1.06 & 69.53 $\pm$ 1.44 \\
+MusicGen Continuation            & 1.22          & 0.51          & 0.30          & \textbf{0.26}          & 0.17          & 83.95 $\pm$ 0.83 & \textbf{73.38 $\pm$ 0.97} & 77.24 $\pm$ 1.29 \\
+MusicGen w. audio CLAP           & 0.96          & \textbf{0.43} & \textbf{0.31} & 0.09                   & \textbf{0.02} & \textbf{84.76 $\pm$ 0.93} & 62.37 $\pm$ 1.04 & \textbf{68.58 $\pm$ 1.42} \\
+\midrule
+Our Model w. EnCodec, 2 RVQ      & \textbf{0.85} & 0.49          & 0.29          & 0.23          & 0.12                   & 83.41 $\pm$ 1.04 & 72.16 $\pm$ 0.93 & 72.39 $\pm$ 1.33 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+It can be observed that the \textit{Textual Inversion} Model consistently performs worst in all Metrics but KNN$_{common}$, KNN$_{overfit}$, in which it has the second to worst score and VAR, in which has the second best score. It is also noticable that in the FAD$_{vgg}$, CLAP and OVL metrics its performance is significantly worse compared to all other models. The high FAD$_{vgg}$ score indicates low audio quality, which was described as ``far from music'' \cite{rouardAudioConditioningMusic2024}. \\
+
+The \textit{Style Conditioning} model performs better in comparison, having the best score in the FAD$_{vgg}$ metric and having the second best score in all other metrics except for CLAP, OVL and VAR, in all of which it has the second to worst score. Stil, its score is better than the one of the \textit{Textual Inversion} model in all objective metrics. It is noticeable that the model performs worse in the human metrics compared to the objective ones, especially in the ones assessing general sound quality.
+
+
 \section{Experiments}\label{sec:experiments}
 
 Experiments here
@@ -633,16 +662,6 @@ In the generation without any textual prompt, the subsample length \ref{sec:subs
 When generating audio with opposing textual and stylistic descriptions, it was observed that the model did not always incorporate both styles into another, but rather split the generated audio into two sections, with one matching the style conditioning and the other matching the textual description. \\
 
 For generated audio with the same input sample and the same text input, increasing the $\beta$-parameter of the DCFG made the sound of the generated audio more similar to the textual prompt, thus working as expected. \\
-
-\subsection{Train compute + model scaling}
-The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.4bn parameters. Is far from SOTA in terms of trainable parameters in transformer architectures. Most of the issue's present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented here {Citation?}.
-
-\subsection{User reactions}
-When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals, and commenting on a lack of stylistic understanding. Genre-specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio. \\
-
-\subsection{Testing}
-
-In: 30s highlife
 
 \subsection{Train compute + model scaling}
 The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.4bn parameters. Is far from SOTA in terms of trainable parameters in transformer architectures. Most of the issue's present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented here {Citation?}.

@@ -45,7 +45,10 @@ General note:
     -   Elaborate on "Train compute, dataset size + quality + model scaling" (referencing presentation notes about 1.4bn params vs. SOTA). **Action:** If you're citing a general "proof of concept" for scaling, ensure you have a specific, peer-reviewed citation.
 -   [x] **Add labels for the Backgrounds section**
 -   [x] **Fix possibly renamed citations**
--   [x] **add "No style definition" to discussion**
+-   [ ] **add "No style definition" to discussion**
+-   [ ] **work on paper results section**
+-   [ ] **start with re reading and stylistic stuff**
+
 **Felix's Tasks (Estimated Total Time: ~5.5-6.5 hours)**
 
 -   [ ] **Fast Re-Reading of Rouard et al. Paper (2 hours):** (Individual review) Perform a focused re-read to catch anything missed and ensure a deep understanding before synthesizing.
