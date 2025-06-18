@@ -436,10 +436,22 @@ The continuation method involves asking a model to continue a given sample of a 
 %     \1 Masked model
 % \end{outline}
 
-\section{Textual Inversion}\label{sec:method_1}
+\section{Methods}\label{sec:methods}
+
+Existing methods already implement textual and parametric conditioning, which refers to the process of guiding music generation models using natural language descriptions or desired musical characteristics as input. This allows the user to generate music based on inputs such as "upbeat jazz with saxophone", tempo, key signature, or instrumentation specifications. Additionally the so-called \textit{continuation mode} exists in MusicGen, allowing model users to e.g. finish unfinished music compositions based on probabilistic relations in existing music.\\
+
+The papers novel addition \textit{style conditioning} enables the transfer of a certain musical style to a music piece with additional properties specified using a text prompt, combining the power of audio and text as inputs, to guide the output music.
+
+Specifically two methods are introduced:
+\begin{outline}
+    \1 Textual Inversion
+    \1 End to end training of a new model with a style encoder
+\end{outline}
 
 
-The authors first propose a quick proof of concept experiment, which uses textual inversion to provide evidence for the feasibility of the experimental approach. Textual inversion is well-suited for such a proof-of concept experiment since it leverages existing models embedding spaces for faster concept learning, enabling fast iteration times and low experiment cost \cite{galImageWorthOne2022}.
+\subsection{Textual Inversion}\label{sec:text_inv}
+
+The authors first propose a quick proof of concept experiment, which uses textual inversion to provide evidence for the feasibility of the experimental approach. Textual inversion is well-suited for such a proof-of concept experiment since it leverages existing models embedding spaces for faster concept learning, enabling fast iteration times and low experiment cost \cite{galImageWorthOne2022}. It also provides a cheap baseline, highlighting the low quality of performing the task using existing models, justifying additional training compute to find a better solution.
 
 % TODO: Change arrows and some text to black
 \begin{figure}[!h]
@@ -449,13 +461,20 @@ The authors first propose a quick proof of concept experiment, which uses textua
     \label{fig:text_inv_overview}
 \end{figure}
 
-As seen in \ref{fig:text_inv_overview} textual inversion works by expressing the meaning of an additonal input modality in an existing embedding space. The authors specifically leverage MusicGen's \cite{copetSimpleControllableMusic2024}, a text to music model, to generate so called \textit{pseudowords} \ref{sec:pseudowords} which generate the meaning of the inputs of the new modality within the existing \ref{sec:embedding_space}.\\\\
+As seen in \ref{fig:text_inv_overview} textual inversion works by expressing the meaning of an additonal input modality in an existing embedding space. The authors specifically leverage MusicGen's \cite{copetSimpleControllableMusic2024}, a text to music model, to generate so called \textit{pseudowords} \ref{sec:pseudowords} which generate the meaning of the inputs of the new modality within the existing \ref{sec:embedding_space}.\\ \\
 
 A useful analogy is to imagine a non-native translator trying to express a saying from their native-language, using the words of another language. It's likely the translator can't express the full of meaning or needs to use a much larger number of words to express the full meaning in their translation then were used in the original saying, but some sort of translation is possible, because different languages share various concepts, which one can build upon to introduce the new concepts necessary to explain the saying.
 
 % TODO: double check if this is actually true
 These pseudowords are created using gradient descent to optimize their self similarity when doing a forward-pass using the existing model. \\
-The process is visualized in the paper's figure 1 \ref{fig:orig_paper_f1}. Gradient steps with regards to the pseudowords are taken on the cross entropy loss which itself computes a difference between model outputs and input audio. The model output is computed using the generated output tokens and the pseudowords input. Since gradient descent is an iterative process a starting point for the pseudowords is needed.
+The process is visualized in the paper's figure 1 \ref{fig:orig_paper_f1}. The audio is encoded into a number of \textit{Audio tokens} $y_t$ before computing the loss. The paper doesn't specify the exact encoding procedure, but it likely relies on Encodec \ref{sec:encodec}, since Musicgen \ref{sec:musicGen} does so. The next output token \ref{sec:Token} is computed by giving musicgen the generated output tokens and the pseudowords as input. The loss incentivizes the maximising the likelihood $p_\theta(y_{t+1})$ of predicting the correct next token \ref{sec:Logit}. \\
+\begin{equation}\label{eq:crossEntropyLoss}
+    LCE(\theta, y_{1:T}, c) = - \sum_{t=1}^{T} \log p_{\theta}(y_t|y_{<t}, c)
+\end{equation}
+
+Since gradient descent is an iterative process, a starting point for the pseudowords is needed. The method laid out in the paper uses an arbitray, general starting point like "music" to initialize the algorithm and then proceeds to train "a few hundred iterations" \cite{rouardAudioConditioningMusic2024}. \\\\
+
+This process will be performed for each music piece seperately resulting in a different pseudoword for all input audios. The required 100 forward passes lead to a relatively high inference time \ref{sec:inferenceTime}, highlighting the tradeoff between training and inference compute.
 
 \begin{figure}[!h]
     \centering
@@ -464,25 +483,10 @@ The process is visualized in the paper's figure 1 \ref{fig:orig_paper_f1}. Gradi
     \label{fig:orig_paper_f1}
 \end{figure}
 
-which can be understood as the product of the chance of observing each token $y_1$ through $y_T$ individually.
+\subsection{Style Encoder/Conditioner}\label{sec:style_enc}
 
-\section{Method 2}\label{sec:method_2}
-
-\subsubsection{Textual/Parametric Conditioning}
-\begin{aigen}
-    Textual conditioning refers to the process of guiding music generation models using natural language descriptions as input. This approach allows users to specify desired musical characteristics through text prompts such as "upbeat jazz with saxophone" or "melancholic piano ballad." Parametric conditioning extends this concept to include other structured parameters that can control various aspects of the generation process, such as tempo, key signature, or instrumentation specifications.
-\end{aigen}
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{1.png}
-    \caption{Papers Figure 2}
-    \label{fig:orig_paper_f1}
-\end{figure}
-
-
-The second method proposed in the paper is based on a style conditioning aproach, where a style conditioner randomly chooses an excerpt from the input audio to extract stylistic features from \cite{rouardAudioConditioningMusic2024}. \\
-The style conditioner consists of a frozen audio feature extractor, a transformer encoder, a RVQ and a linear conversion layer. In the RVQ and downsampling layers, bottlenecks are implemented to prevent the model from copying its input \cite{rouardAudioConditioningMusic2024}. \\
+The second method proposed in the paper is based on a seperate style encoder/conditioner, which we'll refer to as \textit{style encoder}. It works by randomly randomly choosing an excerpt from the input audio to extract stylistic features during training \cite{rouardAudioConditioningMusic2024}. \\
+The style conditioner consists of a frozen audio feature extractor, a transformer encoder, a RVQ and a linear conversion layer. In the RVQ and downsampling layers, bottlenecks are implemented to prevent the model from copying its input and to focus the encoded meaning on the style conditioning \cite{rouardAudioConditioningMusic2024}. \\
 
 Firstly, in the frozen audio feature extractor \cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023,wonFoundationModelMusic2024}, the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transfomer encoder \cite{rouardAudioConditioningMusic2024}. \\
 
@@ -490,6 +494,13 @@ The embeddings in this embedding space are then quantized, compressing the inclu
 In this same step, the data is also temporally downsampled, only allowing conditioning with a 5Hz framerate \cite{rouardAudioConditioningMusic2024}. \\ %\comment{Is this understandable? More context needed on frame rate?}
 
 Lastly, the high-dimensional data is projected onto a linear layer, allowing it to be used as an input to MusicGen \cite{rouardAudioConditioningMusic2024}. \\
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{1.png}
+    \caption{Papers Figure 2}
+    \label{fig:orig_paper_f1}
+\end{figure}
 
 \subsection{Double Classifier Free Guidance}
 
