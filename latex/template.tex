@@ -170,7 +170,7 @@ and a novel method enabling fast inference for new audio samples, through lossy 
 
 Additionally, the authors propose a method to balance the importance of informationally rich audio data and less dense text data at inference time, as well as three automated metrics for assessing the quality of the style conditioning \cite{rouardAudioConditioningMusic2024}.  \\
 
-Because ``music is hard to describe textually'' \cite{rouardAudioConditioningMusic2024}, there is an interest in using an audio waveform in addition to text as an input to a music generation model when attempting to create music in the style of an existing musical excerpt. This also allows users to create a more specific output without needing to find a correct textual descripton of their expected result.\cite{rouardAudioConditioningMusic2024}. \\
+Because ``music is hard to describe textually'' \cite{rouardAudioConditioningMusic2024}, there is an interest in using an audio waveform in addition to text as an input to a music generation model when attempting to create music in the style of an existing musical excerpt. This also allows users to create a more specific output without needing to find a correct textual descripton of their expected result \cite{rouardAudioConditioningMusic2024}. \\
 
 However, as will be shown in \ref{sec:discussion} the models described in the paper still are still lacking in their ability to accurately capture the stylistic details of the musical input, as well as their ability to merge multiple styles in the output. %\comment{No quotation needed here, because our own findings?}
 Assuming a perfect result, future models could be used to transcribe existing music in a variety of different styles and genres while keeping its original artistic integrity. \\ %\comment{We probably need to cite this statement}
@@ -449,7 +449,7 @@ The authors first propose a quick proof of concept experiment, which uses textua
     \label{fig:text_inv_overview}
 \end{figure}
 
-As seen in \ref{fig:text_inv_overview} textual inversion works by expressing the meaning of an additonal input modality in an existing embedding space. The authors specifically leverage MusicGen's \cite{copetSimpleControllableMusic2024}, a text to music model, to generate so called \textit{pseudowords} \ref{sec:pseudowords} which generate the meaning of the inputs of the new modality within the existing \ref{sec:embedding_space}.\\ \\
+As seen in \ref{fig:text_inv_overview} textual inversion works by expressing the meaning of an additional input modality in an existing embedding space. The authors specifically leverage MusicGen \cite{copetSimpleControllableMusic2024}, a text to music model, to generate so called \textit{pseudowords} \ref{sec:pseudowords} which generate the meaning of the inputs of the new modality within the existing \ref{sec:embedding_space}.\\ \\
 
 A useful analogy is to imagine a non-native translator trying to express a saying from their native-language, using the words of another language. It's likely the translator can't express the full of meaning or needs to use a much larger number of words to express the full meaning in their translation then were used in the original saying, but some sort of translation is possible, because different languages share various concepts, which one can build upon to introduce the new concepts necessary to explain the saying.
 
