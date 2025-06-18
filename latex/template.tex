@@ -196,7 +196,7 @@ A models embedding space refers to a high-dimensional vector space in which conc
 
 \subsubsection{Double Classifier-Free Guidance}\label{sec:DCFG}
 
-Double classifier-free guidance is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting \cite{rouardAudioConditioningMusic2024}. Without this technique, the informationally less dense textual specification may be ignored. Classifier-free guidance itself is a method that can amplify the importance of the conditioning given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}.
+Double classifier-free guidance (DCFG) is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting \cite{rouardAudioConditioningMusic2024}. Without this technique, the informationally less dense textual specification may be ignored. Classifier-free guidance (CFG) itself is a method that can amplify the importance of the conditioning given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}.
 
 \subsection{Audio Processing and Representation}
 
@@ -526,7 +526,7 @@ The new Logits after applying DCFG can be calculated using the following formula
 \begin{equation}
     l_{double \; CFG} = l_\emptyset + \alpha[l_{style}+\beta(l_{text,style}-l_{style})-l_{\emptyset}]
     \label{eq:doublecfg}
-\end{equation},
+\end{equation}
 
 where $l_{\emptyset}$ denotes a logit without any conditioning, $l_{style}$ denotes a logit with only style conditioning applied and $l_{text,style}$ denotes a logit with bouth style and text conditioning. The coefficients $\alpha$ and $\beta$ are used to determine the importance of the overall conditioning and the text conditioning respectively. It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG \cite{rouardAudioConditioningMusic2024}.
 
@@ -580,7 +580,7 @@ During inference, the style conditioning model only uses style and text conditio
 
 This allows the model to be trained on the available data, using the tokens resulting from the encoding of the original excerpt as reference for the newly generated tokens. Based on the difference between the original input and output, the models parameters are tweaked to make the output as similar to the input as possible \cite{rouardAudioConditioningMusic2024}.
 
-\subsubsection{Why only 1.5-4.5s of subsample for style conditioning?}
+\subsubsection{Why only 1.5-4.5s of subsample for style conditioning?} \label{sec:subsampleLength}
 
 Of the up to 30 seconds of audio that can be input to the model, only a random excerpt of 1.5 to 4.5 seconds in length is chosen for the style conditioning \cite{rouardAudioConditioningMusic2024}.
 
@@ -617,14 +617,28 @@ Lastly, there are an additional 10000 songs in an undisclosed internal dataset, 
 \subsection{Music generation speed}
 The model generates roughly realtime (~0.8x) audio snippets and can even generate 3 audio snippets at a similar speed in parallel. Test have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference.
 
-\subsection{Out of Training Distribution Generalization}
-Music of Africa test.
-Pfeifen
-
 \subsection{Safety}
 We believe AI development should follow a human centric approach and should be developed with rigorous . The authors did not perform safety
 
-\href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MusicGen_STYLE_MODEL_CARD.md}{Model Card}
+\href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}{Model Card}
+
+\subsection{Model performance on out of distribution data}
+\subsubsection{Generation of silence}
+When prompting the model to output silence, the output seems to contain no stylistic features extracted from the input audio, yet it also is not silent, containing some rhythmic elements resembling drums as well as noise. This also holds true when the style conditioning is performed on silence, indicating that the model tends to hallucinate when performing on insufficient data. \\
+
+\subsubsection{Generation without textual prompt}
+In the generation without any textual prompt, the subsample length \ref{sec:subsampleLength} deficiency becomes eminent, with the generated audio being very close to a specific section of the audio while not matching stylistically different sections. This is specifically noticable when generating multiple snippets from the same audio input, where the output can differ in style. \\
+
+\subsubsection{Generation with both conditioning methods}
+When generating audio with opposing textual and stylistic descriptions, it was observed that the model did not always incorporate both styles into another, but rather split the generated audio into two sections, with one matching the style conditioning and the other matching the textual description. \\
+
+For generated audio with the same input sample and the same text input, increasing the $\beta$-parameter of the DCFG made the sound of the generated audio more similar to the textual prompt, thus working as expected. \\
+
+\subsection{Train compute + model scaling}
+The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.4bn parameters. Is far from SOTA in terms of trainable parameters in transformer architectures. Most of the issue's present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented here {Citation?}.
+
+\subsection{User reactions}
+When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals, and commenting on a lack of stylistic understanding. Genre-specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio. \\
 
 \subsection{Testing}
 
@@ -634,7 +648,13 @@ In: 30s highlife
 The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.4bn parameters. Is far from SOTA in terms of trainable parameters in transformer architectures. Most of the issue's present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented here {Citation?}.
 
 \subsection{User reactions}
-$See inout_pairs > generation > fiddle_1u2.txt$
+When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals, and commenting on a lack of stylistic understanding. Genre-specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio. \\
+
+\subsection{Safety}
+We believe AI development should follow a human centric approach and should be developed with rigorous . The authors did not perform safety
+
+\href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MusicGen_STYLE_MODEL_CARD.md}{Model Card}
+
 
 \section{Summary}\label{sec:summary}
 
