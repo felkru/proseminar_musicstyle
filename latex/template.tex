@@ -441,7 +441,6 @@ Specifically two methods are introduced:
 
 The authors first propose a quick proof of concept experiment, which uses textual inversion to provide evidence for the feasibility of the experimental approach. Textual inversion is well-suited for such a proof-of concept experiment since it leverages existing models embedding spaces for faster concept learning, enabling fast iteration times and low experiment cost \cite{galImageWorthOne2022}. It also provides a cheap baseline, highlighting the low quality of performing the task using existing models, justifying additional training compute to find a better solution.
 
-% TODO: Change arrows and some text to black
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.6\textwidth]{textual_inversion.png}
@@ -489,16 +488,29 @@ This process will be performed for each music piece seperately resulting in a di
 
 \subsection{Style Encoder/Conditioner}\label{sec:style_enc}
 
-The second method proposed in the paper is based on a seperate end to end trained style encoder/conditioner, which we'll refer to as \textit{style encoder}. The method follows an almost identical inference architecture as textual inversion method, but adds a style encoder that is jointly trained with a newly initialized MusicGen model.\\
-Joint training on both music and text data incentivizes the formation of concepts of certain sounds at the embedding level. An adapted \ref{eq:translator_text_inv} translator function formalization might look like this:\\
+The second method proposed in the paper is based on a seperate end to end trained style encoder/conditioner, which we'll refer to as \textit{style encoder}. The method follows an almost identical inference architecture as the textual inversion (\ref{sec:text_inv}) method, but adds a style encoder that is jointly trained with a newly initialized MusicGen model.\\
+
+Joint multimodal-training on both music and text data incentivizes the formation of concepts of certain sounds at the embedding level, so concepts that are present in both tend to be represented in similar areas of the space \cite{xuMultimodalRepresentationAlignment2025}. An adapted \ref{eq:translator_text_inv} translator function formalization might look like this:\\
 
 \begin{equation}\label{eq:translator_style_encoder}
     f_{translate}: \text{music}_{sound} \rightarrow \text{music}_{text+sound\_concepts}
 \end{equation}\\
 
-Because both modalities share the same concept space
+\subsubsection{Training}
 
-It works by randomly choosing an excerpt from the input audio to extract stylistic features during training, c.p. left side of \ref{fig:orig_paper_f2}.\\
+For training the transformer language model \textit{MusicGen} get encoded text and style as prefix and is then asked to predict the next token of the audio based on the prefix information and previous audio tokens. This is done in parrallel using masked attention (\ref{sec:masking}) and positional encoding \cite{vaswaniAttentionAllYou2017} to allow the model to do parrallel autoregressive prediction (\ref{sec:Autoregression}). The training process is depicted on the left side of Figure \ref{fig:orig_paper_f2}.
+
+\subsubsection{Bottleneck}
+Because the sounds and text share a concept space \cite{gardenforsConceptualSpacesGeometry2000} and joint training incentivizes as much information transmission as possible, to ensure the best possible next token prediction, having the consequence that information loss is natuarlly very low in this architecture leading to exact replication of the input audio snippet \cite{rouardAudioConditioningMusic2024}.\\
+
+For this reason several unspecific (\ref{sec:style-def}) information bottlenecks are introduced, focusing the condititoning tokens on the most relevant information for next token prediction and preventing exact replication:
+\begin{outline}
+    \1 Conditioning only on parts of the piece
+    \1 Residual Vector Quantization
+    \1 Downsampling
+\end{outline}
+
+Only a 30s part of the conditioning audio is actually analysed for audio . The audio snippet's interval is randomly selected from an excerpt of conditioning audio.
 
 The style encoders architecture is illustrated to the right side of Figure \ref{fig:orig_paper_f2} consists of a frozen audio feature extractor, a transformer encoder, a RVQ and a linear conversion layer. In the RVQ and downsampling layers, bottlenecks are implemented to prevent the model from copying its input and to focus the encoded meaning on the style conditioning \cite{rouardAudioConditioningMusic2024}. \\
 
@@ -517,6 +529,8 @@ Lastly, the high-dimensional data is projected onto a linear layer, allowing it 
     \label{fig:orig_paper_f2}
 \end{figure}
 
+The training paradigm is visualized in Figure \ref{fig:orig_paper_f2}.\\
+
 \subsection{Double Classifier Free Guidance}
 
 Due to a difference in information density, it was observed that the style conditioning model did not factor in the textual description for generating new audio when it contradicted the style conditioning data \cite{rouardAudioConditioningMusic2024}. \\
@@ -534,31 +548,6 @@ where $l_{\emptyset}$ denotes a logit without any conditioning, $l_{style}$ deno
 
 Experiments here
 
-
-\begin{table}[!h]
-
-
-    \caption{Comparison of methods}
-
-
-    \label{tab:tab1}
-
-
-    \centering
-
-
-    \begin{tabular}{|p{2cm}|l|r|}
-        \hline
-        Algorithm              & Dataset & Accuracy \\
-        \hline
-        Naive Bayes            & DS10    & 22.14    \\
-        Naive Bayes            & DS100   & 9.17     \\
-        Random \newline Forest & DS10    & 80.56    \\
-        Random \newline Forest & DS100   & 40.31    \\
-        \hline
-    \end{tabular}
-\end{table}
-
 \section{Discussion}\label{sec:discussion}
 
 \begin{outline} %\comment{we should probably rename these, is outline necessary with subsubsections?}
@@ -570,7 +559,6 @@ Experiments here
 \subsection{Timeline of experiments+likely reasons for decisions}
 The original authors start by adapting an existing technique, which is cheap to train, to generate a first proof of concept.
 This served to show the feasibility before running larger, more expensive, experiments. It's likely that the douuble classifier free guidance was added to
-
 
 \subsection{Style encoding}
 
@@ -592,6 +580,8 @@ Additionally, musical segments are often much longer than five seconds, limiting
 
 Lastly, it can be assumed that shortening the excerpt used for style conditioning reduces the computational cost of the style extraction, potentially making it cheaper or quicker. \\ %\comment{wording?}
 
+\subsubsection{No formal and specific definition for style}\label{sec:style-def}
+\dots
 
 \subsubsection{Why 5hz downsampling after codebook instead of before?}
 
