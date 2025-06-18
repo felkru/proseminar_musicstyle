@@ -439,7 +439,7 @@ Specifically two methods are introduced:
 
 \subsection{Textual Inversion}\label{sec:text_inv}
 
-The authors first propose a quick proof of concept experiment, which uses textual inversion to provide evidence for the feasibility of the experimental approach. Textual inversion is well-suited for such a proof-of concept experiment since it leverages existing models embedding spaces for faster concept learning, enabling fast iteration times and low experiment cost \cite{galImageWorthOne2022}. It also provides a cheap baseline, highlighting the low quality of performing the task using existing models, justifying additional training compute to find a better solution.
+The authors first propose a quick proof of concept experiment, which uses textual inversion to provide evidence for the feasibility of the experimental approach. Textual inversion is well-suited for such a proof-of concept experiment since it leverages existing models embedding spaces for faster concept learning, enabling fast iteration times and low experiment cost \mbox{\cite{galImageWorthOne2022}}. It also provides a cheap baseline, highlighting the low quality of performing the task using existing models, justifying additional training compute to find a better solution.
 
 % TODO: Change arrows and some text to black
 \begin{figure}[!h]
@@ -611,7 +611,11 @@ The paper seems to be well executed, but it's obvious that this is not a commerc
 When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals, and commenting on a lack of stylistic understanding. Genre-specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio. \\
 
 \subsection{Safety}
-We believe AI development should follow a human centric approach and should be developed with rigorous . The authors did not perform safety
+We believe AI development should follow a human centric approach and should be developed with rigorous . The authors did not perform extensive safety measurements, stating in their ethical statement that implementing bottlenecks improves controllability, while also ensuring that the model does not copy its input. This, however, does not ensure that the model is not abused by malicious actors. \\
+
+While the risk of the model being abused for propaganda is greatly reduced by the fact that it cannot generate cohesive lyrics, it greatly simplifies intellectual property theft, allowing users to easily create potentially copyright infringing material by using another person's work as audio input to the model. It might also possible to use the underlying \textit{MusicGen} model in continuation mode to remove watermarks from copyrighted songs, enabling users to steal from providers of stock music. \\
+
+Models like these also allow users to generate many songs comparatively easily and quickly, potentially leading to an oversaturation of AI-generated music and making music made by human artists less discoverable. \\
 
 \href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}{Model Card}
 
