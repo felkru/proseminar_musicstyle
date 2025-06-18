@@ -360,8 +360,6 @@ The continuation method involves asking a model to continue a given sample of a 
 
 A set of information can be masked from the input of a language model, which means that it will be ignored by the language model during training.
 
-
-
 % \begin{outline}
 %     \1 Textual / parametric conditioning
 %     \1 Textual inversion
@@ -383,13 +381,13 @@ A set of information can be masked from the input of a language model, which mea
 %     \1 Style conditioning
 %     \2 Style conditioning describes the method of letting the music generation model adapt its output to the stylistic features of an input audio segment \cite{rouardAudioConditioningMusic2024}.
 %     \1 Bottleneck
-%     \2 Bottlenecks are used in the paper to limit the amount of information the model receives from the input sample, in order to prevent it from simply copying the input audio and extracting its most essential features \cite{rouardAudioConditioningMusic2024}.
+%       \2 Bottlenecks are used in the paper to limit the amount of information the model receives from the input sample, in order to prevent it from simply copying the input audio and extracting its most essential features \cite{rouardAudioConditioningMusic2024}.
 %     \1 Encodec (explain features)
-%     \2 Is used in the audio tokenizer as a transformer encoder. Generally, it is a deep-learning audio codec made for high levels of compression with little to no loss in quality \cite{defossezHighFidelityNeural2022}.
+%       \2 Is used in the audio tokenizer as a transformer encoder. Generally, it is a deep-learning audio codec made for high levels of compression with little to no loss in quality \cite{defossezHighFidelityNeural2022}.
 %     \1 MERT (explain features)
 %     \1 MusicFM (explain features)
 %     \1 Transformer encoder / decoder
-%     \2 A transformer encoder compresses input data into a latent representation, which is enriched with context from the entire input. During this process, the transfomer can weigh the importance of different parts of the input (self-attention). A transformer decoder generates an output from the latent-representation of data created by the encoder. This is done in multiple steps, in which the decoder assesses the propability of each next token occuring in the output sequence and using this information to construct the output step by step \cite{mengTransMLAMultiHeadLatent2025}.
+%       \2 A transformer encoder compresses input data into a latent representation, which is enriched with context from the entire input. During this process, the transfomer can weigh the importance of different parts of the input (self-attention). A transformer decoder generates an output from the latent-representation of data created by the encoder. This is done in multiple steps, in which the decoder assesses the propability of each next token occuring in the output sequence and using this information to construct the output step by step \cite{mengTransMLAMultiHeadLatent2025}.
 %     \1 Residual vector Quanzizer %\comment{introduce RVQ abbreviation, will also be needed}
 %     \1 Temporal downsampling
 %     \1 CLAP
@@ -398,31 +396,31 @@ A set of information can be masked from the input of a language model, which mea
 %     \1 Contrastive (text-music) model
 %     \1 (mel-)Spectogram
 %     \1 token / tokenizer
-%     \2 A token is a discrete unit of information, which can be interpreted and output by an transformer language model. A tokenizer converts the original audio and text input to tokens.
+%       \2 A token is a discrete unit of information, which can be interpreted and output by an transformer language model. A tokenizer converts the original audio and text input to tokens.
 %     \1 Transfomer decoder neural network
 %     \1 Gradient descend step
 %     \1 Latent representation
 %     \1 Downsampling
 %     \1 Codebook (not sure if this is precise enough or even correct)
-%     \2 A codebook contains a set of embeddings used in RVQ as a comparison point to the input. The length of the codebook can be used to tune the bottleneck as having fewer codebooks leads to more information loss. %\comment{can likely be removed}
+%       \2 A codebook contains a set of embeddings used in RVQ as a comparison point to the input. The length of the codebook can be used to tune the bottleneck as having fewer codebooks leads to more information loss. %\comment{can likely be removed}
 %     \1 Dropout (context: conditioning)
 %     \1 Logits %\comment{will be mentioned later}
 %     \1 Hyperparameters
 %     \1 Cosine similarity
 %     \1 \{all the metrics used in the Experimental section\}
 %     \1 KNN\textsubscript{overfit}
-%     \2 Is a newly introduced method by the authors to assess how similar the input and output audio of the model are. If the output audio has the least distance to the input audio when added to the embedding space, KNN\textsubscript{overfit} will have a value of 1, implying that the output audio is too close in sound to the input audio. Is used in praxis as an counterargument to KNN\textsubscript{common}.
+%       \2 Is a newly introduced method by the authors to assess how similar the input and output audio of the model are. If the output audio has the least distance to the input audio when added to the embedding space, KNN\textsubscript{overfit} will have a value of 1, implying that the output audio is too close in sound to the input audio. Is used in praxis as an counterargument to KNN\textsubscript{common}.
 %     \1 FAD (Frechét Audio Distance)
-%     \2 Is an objective metric introduced in \cite{kilgourFrechetAudioDistance2019}, used to evaluate the quality of the generated audio. A low score suggests good quality, while a high score suggests bad quality.
+%       \2 Is an objective metric introduced in \cite{kilgourFrechetAudioDistance2019}, used to evaluate the quality of the generated audio. A low score suggests good quality, while a high score suggests bad quality.
 %     \1 OVL (Overall?)
-%     \2 Is a human metric used in the experimental section, is used to assess the overall (sound) quality of the audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. It was found that the OVL score correlates with the objective FAD-metric \cite{rouardAudioConditioningMusic2024}.
+%       \2 Is a human metric used in the experimental section, is used to assess the overall (sound) quality of the audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. It was found that the OVL score correlates with the objective FAD-metric \cite{rouardAudioConditioningMusic2024}.
 %     \1 SIM (Similarity?)
-%     \2 Is a human metric used in the experimental section, is used to assess the overall similarity in style between the input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. It was found that the SIM score correlates well with the KNN\textsubscript{common}-metric \cite{rouardAudioConditioningMusic2024}.
+%       \2 Is a human metric used in the experimental section, is used to assess the overall similarity in style between the input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. It was found that the SIM score correlates well with the KNN\textsubscript{common}-metric \cite{rouardAudioConditioningMusic2024}.
 %     \1 VAR
-%     \2 is a human metric used in the experimental section, is used to assess the likelyhood of input and output being taken from the same song. A lower score indicates it is less likely that the samples are taken from the same song (preferrable result), while a high score indicates it is more likely. It was found that the VAR score correlates well with the KNN\textsubscript{overfit}-metric\cite{rouardAudioConditioningMusic2024}.
+%       \2 is a human metric used in the experimental section, is used to assess the likelyhood of input and output being taken from the same song. A lower score indicates it is less likely that the samples are taken from the same song (preferrable result), while a high score indicates it is more likely. It was found that the VAR score correlates well with the KNN\textsubscript{overfit}-metric\cite{rouardAudioConditioningMusic2024}.
 %     \1 Vanilla Adam optimizer
 %     \1 Continuation method
-%     \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison. \cite{rouardAudioConditioningMusic2024}
+%       \2 Instead of creating a new audio snippet 'from scratch', a model (MusicGen in this case) is asked to continue a given sample of a song. Is used here as a baseline for comparison. \cite{rouardAudioConditioningMusic2024}
 %     \1 Masked model
 % \end{outline}
 
