@@ -610,7 +610,12 @@ Additionally, musical segments are often much longer than five seconds, limiting
 Lastly, it can be assumed that shortening the excerpt used for style conditioning reduces the computational cost of the style extraction, potentially making it cheaper or quicker. \\ %\comment{wording?}
 
 \subsubsection{No formal and specific definition for style}\label{sec:style-def}
-\dots
+
+In their paper, the authors never formally define style, only stating that features of the audio are to be extracted, but never what specific features to  extract. \\
+
+This makes an external review of the quality of the style conditioning difficult, since it is impossible to know for certain what the scope of the conditioning was supposed to be. Additionally, the human metric SIM is defined over the style of the generated excerpt, potentially impacting the results of the human studies by not providing a precise definition for style. \\
+
+It also creates ambiguity in the contributions of the paper, not precisely stating what additional information can be input to the music generation model, making using the paper as a baseline for further scientific work and using the model more difficult. \\
 
 \subsubsection{Why 5hz downsampling after codebook instead of before?}
 
@@ -636,11 +641,6 @@ Lastly, there are an additional 10000 songs in an undisclosed internal dataset, 
 \subsection{Music generation speed}
 The model generates roughly realtime (~0.8x) audio snippets and can even generate 3 audio snippets at a similar speed in parallel. Test have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference.
 
-\subsection{Safety}
-We believe AI development should follow a human centric approach and should be developed with rigorous . The authors did not perform safety
-
-\href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}{Model Card}
-
 \subsection{Model performance on out of distribution data}
 \subsubsection{Generation of silence}
 When prompting the model to output silence, the output seems to contain no stylistic features extracted from the input audio, yet it also is not silent, containing some rhythmic elements resembling drums as well as noise. This also holds true when the style conditioning is performed on silence, indicating that the model tends to hallucinate when performing on insufficient data. \\
@@ -656,22 +656,43 @@ For generated audio with the same input sample and the same text input, increasi
 \subsection{Train compute + model scaling}
 The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.4bn parameters. Is far from SOTA in terms of trainable parameters in transformer architectures. Most of the issue's present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented here {Citation?}.
 
+
 \subsection{User reactions}
 When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals, and commenting on a lack of stylistic understanding. Genre-specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio. \\
 
 \subsection{Safety}
-We believe AI development should follow a human centric approach and should be developed with rigorous . The authors did not perform extensive safety measurements, stating in their ethical statement that implementing bottlenecks improves controllability, while also ensuring that the model does not copy its input. This, however, does not ensure that the model is not abused by malicious actors. \\
+We believe AI development should follow a human centric approach and should be developed with safety in mind. The authors did not perform extensive safety measures, only stating in their ethical statement that implementing bottlenecks improves controllability, while also ensuring that the model does not copy its input. This, however, does not ensure that the model is not abused by malicious actors. \\
 
-While the risk of the model being abused for propaganda is greatly reduced by the fact that it cannot generate cohesive lyrics, it greatly simplifies intellectual property theft, allowing users to easily create potentially copyright infringing material by using another person's work as audio input to the model. It might also possible to use the underlying \textit{MusicGen} model in continuation mode to remove watermarks from copyrighted songs, enabling users to steal from providers of stock music. \\
+While the risk of the model being abused for propaganda is greatly reduced by the fact that it cannot generate cohesive lyrics, it still allows a users a relatively simple way of intellectual property theft, allowing users to easily create potentially copyright infringing material by using another person's work as audio input to the model. It might also possible to use the underlying \textit{MusicGen} model in continuation mode to remove watermarks from copyrighted songs, enabling users to steal from providers of stock music. \\
 
 Models like these also allow users to generate many songs comparatively easily and quickly, potentially leading to an oversaturation of AI-generated music and making music made by human artists less discoverable. \\
+
+
+Future models might have the capability to create realistic lyrics, making propaganda uses more likely, and could also be used to create more addictive social media posts by underlining them with user-specific background music, actively matching it to the user's style preferences and attempting to maximise their watchtime. \\
 
 %\href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MusicGen_STYLE_MODEL_CARD.md}{Model Card}
 
 
 \section{Summary}\label{sec:summary}
 
-Summary.
+\textbf{Understandable without reading the whole work}
+
+\textbf{Short repetition of the main results:} \\
+
+Two methods for adding audio input to existing audio generation model, one proof of concept (Textual Inversion), one more advanced (style conditioner) which extracts stylistic features from the audio input and uses it to generate new audio \\
+
+\textbf{Short (repetitive) discussion of advantages and drawbacks}
+
+advantages: \\
+    quick \\
+    allows style input -> good for specific use case\\
+    built on existing model    
+disadvantages: 
+    low audio quality \\
+    bad 'understanding' of style \\
+    overgeneralizes genres \\
+    cannot actually 'mix' text and style conditioning consistently \\
+
 
 %------------------------------------------------
 % Literaturverzeichnis

@@ -45,7 +45,7 @@ General note:
     -   Elaborate on "Train compute, dataset size + quality + model scaling" (referencing presentation notes about 1.4bn params vs. SOTA). **Action:** If you're citing a general "proof of concept" for scaling, ensure you have a specific, peer-reviewed citation.
 -   [x] **Add labels for the Backgrounds section**
 -   [x] **Fix possibly renamed citations**
--   [ ] **add "No style definition" to discussion**
+-   [x] **add "No style definition" to discussion**
 -   [ ] **work on paper results section**
 -   [ ] **start with re reading and stylistic stuff**
 
