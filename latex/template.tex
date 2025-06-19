@@ -605,6 +605,7 @@ To be able to gain confidence in the papers results and gain a practical underst
 \subsection{Inference Setup}
 Tests have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference. The model generates roughly real-time (0.8x speed) audio snippets and can even generate 3 audio snippets at a similar speed in parallel.\\
 
+Testing was performed using multiple 30s input snippets, unless otherwise noted with a CFG $\beta$ of 5. Tests executed were providing only audio input without any textual description, providing contradictory audio and text inputs, generating multiple samples with the same text- and audio prompt but changing the CFG $\beta$ to values of 1 and 2, as well as prompting the model to generate silence using both music and silence as audio input. \\
 
 % TODO: @Max please add the parameters documented in the files here. If you have questions about it please just go ahead and give me a quick call. This is true in general, but most crucially tomorrow, since your productivity being potentially lower for hours if you don't call me for 5 min. is a bad trade-off.
 
@@ -715,7 +716,7 @@ Lastly, there's an additional 10.000 songs in an undisclosed internal dataset, w
 When prompting the model to output silence, the output seems to contain no stylistic features extracted from the input audio, yet it also is not silent, containing some rhythmic elements resembling drums as well as noise. This also holds true when the \textit{style conditioning} is performed on silence, indicating that the model tends to hallucinate when performing on insufficient data. \\
 
 \subsubsection{Generation without textual prompt}
-In the generation without any textual prompt, the subsample length \ref{sec:subsampleLength} deficiency becomes eminent, with the generated audio being very close to a specific section of the audio while not matching stylistically different sections. This is specifically noticable when generating multiple snippets from the same audio input, where the output can differ in style. \\
+In the generation without any textual prompt, the subsample length deficiency (\ref{sec:subsampleLength}) becomes eminent, with the generated audio being very close to a specific section of the audio while not matching stylistically different sections. This is specifically noticable when generating multiple snippets from the same audio input, where the output can differ in style. \\
 
 \subsubsection{Generation with both conditioning methods}
 When generating audio with opposing textual and stylistic descriptions, it was observed that the model did not always incorporate both styles into another, but rather split the generated audio into two sections, with one matching the style conditioning and the other matching the textual description. \\
