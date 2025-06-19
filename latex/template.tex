@@ -452,10 +452,10 @@ Existing methods already implement textual and parametric conditioning, which re
 The papers novel addition \textit{style conditioning} enables the transfer of a certain musical style to a music piece with additional properties specified using a text prompt, combining the power of audio and text as inputs, to guide the output music. \\
 
 Specifically two methods are introduced:
+
 \begin{outline}
     \1 Textual Inversion
     \1 Joint training of a new model with a style encoder
-    
 \end{outline}
 
 \subsection{Textual Inversion}\label{sec:text_inv}
@@ -605,7 +605,7 @@ The \textit{Style Conditioning} model performs better in comparison, having the 
 To be able to gain confidence in the papers results and gain a practical understanding for the validity of their measurements and potential limitations we decided to run inference ourselves and use generated audio snippets to run a small qualitative survey.
 
 \subsection{Inference Setup}
-Tests have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference. The model generates roughly realtime (0.8x speed) audio snippets and can even generate 3 audio snippets at a similar speed in parallel.\\
+Tests have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference. The model generates roughly real-time (0.8x speed) audio snippets and can even generate 3 audio snippets at a similar speed in parallel.\\
 
 % TODO: @Max please add the parameters documented in the files here. If you have questions about it please just go ahead and give me a quick call. This is true in general, but most crucially tomorrow, since your productivity being potentially lower for hours if you don't call me for 5 min. is a bad trade-off.
 
@@ -665,7 +665,7 @@ Our qualitative results point to a mismatch in reported audio quality, especiall
 
 \subsection{Timeline of experiments and likely reasons for decisions}
 The original authors start by adapting an existing technique, which is cheap to train, to generate a first proof of concept.
-This served to show the feasibility before running larger, more expensive, experiments. It's likely that the double classifier free guidance was added to \\
+This served to show the feasibility before running larger, more expensive, experiments. It's likely that the double classifier free guidance was added to the style encoder only after the issue of the model ignoring the textual description became apparent.\\
 
 %\comment{commented this section out because it is too short and incomple}
 
@@ -740,29 +740,34 @@ In addition larger future models might enable social media apps to boost screen 
 
 To compare our safety considerations with their statements please visit the respective \href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}{Model Card}.
 
-\begin{aigen}
+
     \section{Summary}\label{sec:summary}
 
-    This paper presents and evaluates two methods for audio-style conditioning in music generation, enabling a model to create music in the style of a reference audio track instead of relying only on text. \\
+    The paper by \cite{rouardAudioConditioningMusic2024} presents and evaluates two methods for allowing a music generation model to accept audio as an input, enabling the creation of music in the style of a reference audio track instead of relying only on text. \\
 
-    The first method, \textbf{Textual Inversion}, is a proof-of-concept that adapts a pre-trained model by learning "pseudowords" to represent an audio's style. While it avoids costly retraining, it is slow and yields low-quality results. The main contribution is a \textbf{Style Conditioner} model, trained from scratch with a dedicated style encoder. This encoder uses information bottlenecks (RVQ, downsampling) to capture style without simply copying the input. It is fast at inference and uses a novel \textbf{Double Classifier-Free Guidance (DCFG)} method to balance audio and text prompts. Evaluations show this model produces high-quality audio that successfully balances stylistic similarity with creative variation, outperforming baselines.
+    The first method, called Textual Inversion, is a proof-of-concept that adapts a pre-trained model by representing the stylistic features of the audio as text. While it avoids costly retraining, its output is of low quality both in terms of audio and in terms of its style extraction. \\
+    The main contribution is a model using a Style Conditioning method, trained from scratch with a dedicated style encoder. This style encoder uses a music compresson algorithm to extract stylistic features, and effectively limits the amount of information passed through to the model in order to capture style without simply copying the input audio. It is fast at inference and uses a novel Double Classifier-Free Guidance (DCFG) method to balance the importance of audio and text prompts. \\
 
     \subsection*{Advantages and Drawbacks}
 
-    \subsubsection*{Advantages}
-    \begin{itemize}
-        \item \textbf{Fast Inference:} The main style conditioner model is efficient, in contrast to the slow, optimization-based textual inversion method.
-        \item \textbf{Intuitive Style Control:} Conditioning on an audio reference allows for more specific and direct control over the generated music's style than text prompts.
-        \item \textbf{Works with Existing Models:} The textual inversion approach offers a path to audio conditioning without the need to train a new large-scale model.
-    \end{itemize}
+    The style conditioning model performs well in the testing performed by the authors, outperforming or matching the baseline models in most of the metrics they were tested on. Its inference is also relatively quick, allowing music generation almost in real-time. Additionally, the inclusion of an audio input as conditioning enables the model to be applicable to more situations, simplifying generation of audio in a specific style. \\
+    
+    Yet we have noticed in our testing, that the performance of the models performance falls short in practice, delivering worse audio quality than expected, with several issues regarding the style conditioning. It was noticed that the model failed to capture stylistic nuances, generating music that mostly sounded generic and overgeneralized. Additionally, the model failed to combine two styles in its output, instead generating sections associated with each style on its own, but none incorporating both.
 
-    \subsubsection*{Disadvantages}
-    \begin{itemize}
-        \item \textbf{Low Audio Quality:} The textual inversion method is unstable and results in poor-quality audio outputs with glitches.
-        \item \textbf{Overgeneralization of Style:} The model can fail to capture genre-specific nuances, leading to a more generic sound that loses the detail of the reference track.
-        \item \textbf{Difficulty Mixing Conditions:} The model struggles to consistently fuse conflicting audio and text prompts, often prioritizing one over the other, even with the specialized DCFG technique.
-    \end{itemize}
-\end{aigen}
+
+    % \subsubsection*{Advantages}
+    % \begin{itemize}
+    %     \item \textbf{Fast Inference:} The main style conditioner model is efficient, in contrast to the slow, optimization-based textual inversion method.
+    %     \item \textbf{Intuitive Style Control:} Conditioning on an audio reference allows for more specific and direct control over the generated music's style than text prompts.
+    %     \item \textbf{Works with Existing Models:} The textual inversion approach offers a path to audio conditioning without the need to train a new large-scale model.
+    % \end{itemize}
+
+    % \subsubsection*{Disadvantages}
+    % \begin{itemize}
+    %     \item \textbf{Low Audio Quality:} The textual inversion method is unstable and results in poor-quality audio outputs with glitches.
+    %     \item \textbf{Overgeneralization of Style:} The model can fail to capture genre-specific nuances, leading to a more generic sound that loses the detail of the reference track.
+    %     \item \textbf{Difficulty Mixing Conditions:} The model struggles to consistently fuse conflicting audio and text prompts, often prioritizing one over the other, even with the specialized DCFG technique.
+    % \end{itemize}
 
 %------------------------------------------------
 % Literaturverzeichnis
