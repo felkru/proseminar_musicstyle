@@ -573,7 +573,9 @@ The \textit{Style Conditioning} model performs better in comparison, having the 
 To be able to gain confidence in the papers results and gain a practical understanding for the validity of their measurements and potential limitations we decided to run inference ourselves and use generated audio snippets to run a small qualitative survey.
 
 \subsection{Inference Setup}
-Tests have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference. The model generates roughly realtime (~0.8x) audio snippets and can even generate 3 audio snippets at a similar speed in parallel.
+Tests have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference. The model generates roughly realtime (~0.8x) audio snippets and can even generate 3 audio snippets at a similar speed in parallel.\\
+
+% TODO: @Max please add the parameters documented in the files here. If you have questions about it please just go ahead and give me a quick call. This is true in general, but most crucially tomorrow, since your productivity being potentially lower for hours if you don't call me for 5 min. is a bad trade-off.
 
 Since the demos on \href{https://huggingface.co/facebook/musicgen-style}{Hugging Face} and in the \href{https://github.com/facebookresearch/audiocraft/tree/main/demos}{Audiocraft Github Repository} consistently failed to generate audios with dependency errors. Not only didn't the provided setup script work, but the requirements file was also not up to date. After roughly 3-4 hours of troubleshooting dependency issues and adapting code to API breaking changes we were able to run the model locally. Other users have experienced \href{https://github.com/facebookresearch/audiocraft/issues/547}{similar issues} and seem to not have recieved any support from the maintainers as of yet.\\
 
@@ -593,7 +595,7 @@ Our studies have not conformed to rigorously validated procedures, but are of a 
 Whilst these limitations are present we think that the attention to detail people pay to the nuances of their favorite songs is a promising direction for detailed, qualitative human evaluation studies, which might enable further increases in the quality of generated music.\\
 
 \begin{table*}[!h]
-    \caption{Participant Quotes Highlighting Common Answers}
+    \caption{Participant Quotes - Common Answers}
     \centering
     \label{tab:common_quotes}
     \resizebox{\textwidth}{!}{
@@ -649,7 +651,12 @@ Additionally, musical segments are often much longer than five seconds, limiting
 Lastly, it can be assumed that shortening the excerpt used for style conditioning reduces the computational cost of the style extraction, potentially making it cheaper or quicker. \\ %\comment{wording?}
 
 \subsubsection{No formal and specific definition for style}\label{sec:style-def}
-\dots
+
+In their paper, the authors never formally define style, only stating that features of the audio are to be extracted, but never what specific features to  extract. \\
+
+This makes an external review of the quality of the style conditioning difficult, since it is impossible to know for certain what the scope of the conditioning was supposed to be. Additionally, the human metric SIM is defined over the style of the generated excerpt, potentially impacting the results of the human studies by not providing a precise definition for style. \\
+
+It also creates ambiguity in the contributions of the paper, not precisely stating what additional information can be input to the music generation model, making using the paper as a baseline for further scientific work and using the model more difficult. \\
 
 \subsubsection{Why 5hz downsampling after codebook instead of before?}
 
@@ -666,12 +673,7 @@ Additionally, the Public Dataset's quality-control is lacking, containing not on
 
 Due to the nature of the public Datasets, many of the contained songs are not intended for casual enjoyment but for commercial use (cf. \href{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}{Shutterstock website}, \href{https://contributor.pond5.com/getting-started/about-pond5/}{Pond5 website}), negatively impacting the audio quality of the models outputs for creating pop music. \\ %\comment{pop music not a good term?}
 
-Lastly, there's an additional 10.000 songs in an undisclosed internal dataset, with no additional information on their nature given \cite{rouardAudioConditioningMusic2024}
-
-\subsection{Safety}
-We believe AI development should follow a human centric approach and should be developed with rigorous . The authors did not perform safety
-
-\href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}{Model Card}
+Lastly, there's an additional 10.000 songs in an undisclosed internal dataset, with no additional information on their nature given \cite{rouardAudioConditioningMusic2024}.
 
 \subsection{Model performance on out of distribution data}
 \subsubsection{Generation of silence}
@@ -702,9 +704,29 @@ In addition larger future models might enable social media apps to boost screen 
 
 To compare our safety considerations with their statements please visit the respective \href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}{Model Card}.
 
-\section{Summary}\label{sec:summary}
+\begin{aigen}
+    \section{Summary}\label{sec:summary}
 
-Summary.
+    This paper presents and evaluates two methods for audio-style conditioning in music generation, enabling a model to create music in the style of a reference audio track instead of relying only on text. \\
+
+    The first method, \textbf{Textual Inversion}, is a proof-of-concept that adapts a pre-trained model by learning "pseudowords" to represent an audio's style. While it avoids costly retraining, it is slow and yields low-quality results. The main contribution is a \textbf{Style Conditioner} model, trained from scratch with a dedicated style encoder. This encoder uses information bottlenecks (RVQ, downsampling) to capture style without simply copying the input. It is fast at inference and uses a novel \textbf{Double Classifier-Free Guidance (DCFG)} method to balance audio and text prompts. Evaluations show this model produces high-quality audio that successfully balances stylistic similarity with creative variation, outperforming baselines.
+
+    \subsection*{Advantages and Drawbacks}
+
+    \subsubsection*{Advantages}
+    \begin{itemize}
+        \item \textbf{Fast Inference:} The main style conditioner model is efficient, in contrast to the slow, optimization-based textual inversion method.
+        \item \textbf{Intuitive Style Control:} Conditioning on an audio reference allows for more specific and direct control over the generated music's style than text prompts.
+        \item \textbf{Works with Existing Models:} The textual inversion approach offers a path to audio conditioning without the need to train a new large-scale model.
+    \end{itemize}
+
+    \subsubsection*{Disadvantages}
+    \begin{itemize}
+        \item \textbf{Low Audio Quality:} The textual inversion method is unstable and results in poor-quality audio outputs with glitches.
+        \item \textbf{Overgeneralization of Style:} The model can fail to capture genre-specific nuances, leading to a more generic sound that loses the detail of the reference track.
+        \item \textbf{Difficulty Mixing Conditions:} The model struggles to consistently fuse conflicting audio and text prompts, often prioritizing one over the other, even with the specialized DCFG technique.
+    \end{itemize}
+\end{aigen}
 
 %------------------------------------------------
 % Literaturverzeichnis
