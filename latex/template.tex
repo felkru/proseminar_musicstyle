@@ -198,7 +198,7 @@ Pseudowords are a linguistic description of non-text data, which can be fit into
 
 A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantic differences between concepts are represented by their distance in the vector space. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The model trained in our paper has a dimensionality of 512, whilst SOTA language models can have embedding spaces as large as many tens of thousands of dimsensions.
 %The quality of the embedding space directly impacts the model's ability to understand and respond to its inputs, thus affecting the output quality.
-Because of that most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training \cite{lecunDeepLearning2015}.
+Because of that most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training (\cite{lecunDeepLearning2015}).
 
 \subsubsection*{Double Classifier-Free Guidance}\label{sec:DCFG}
 
@@ -252,7 +252,7 @@ MusicGen is a state-of-the-art transformer language model used for generating mu
 
 \subsubsection*{Autoregressive Models} \label{sec:Autoregression}
 
-Autoregressive models generate their output by predicting one token at a time, using the previously generated tokens as context. Non-autoregressive models might capture dependencies which are harder to learn for autoregressive models, but incur serious efficiency compromises on current architectures. %\comment{it seems to me that autoregressive models do work on tokens, see https://arxiv.org/html/2502.06901v1#:~:text=AR%20models%2C%20such%20as%20GPT%20%28Achiam%20et%20al.%2C,“seeing”%20future%20tokens%2C%20enables%20efficient%20training%20and%20inference. for example}
+Autoregressive models generate their output by predicting one token at a time, using the previously generated tokens as context. Non-autoregressive models generate all tokens at once, offering faster inference but potentially sacrificing some coherence in the output. %\comment{it seems to me that autoregressive models do work on tokens, see https://arxiv.org/html/2502.06901v1#:~:text=AR%20models%2C%20such%20as%20GPT%20%28Achiam%20et%20al.%2C,“seeing”%20future%20tokens%2C%20enables%20efficient%20training%20and%20inference. for example}
 
 \subsubsection*{Frozen Model}\label{sec:frozenModel}
 
@@ -320,11 +320,11 @@ Dropout describes the act of randomly leaving out certain conditioning inputs du
 
 \subsubsection*{Fréchet Audio Distance (FAD)}\label{sec:FAD}
 
-FAD is an objective metric used to evaluate the sound quality of generated audio. A lower FAD score indicates better quality \cite{kilgourFrechetAudioDistance2019a}.
+FAD is an objective metric used to evaluate the sound quality of generated audio. A lower FAD score indicates better quality (\cite{kilgourFrechetAudioDistance2019a}).
 
 \subsubsection*{CLAP}\label{sec:CLAP}
 
-The CLAP score is an objective metric used to compare the textual description given as input to the music generation model to its ouput, calculating their similarity. A higher score indicates good alignment between textual description and the generated audio, which is preferrable \cite{rouardAudioConditioningMusic2024}.
+The CLAP score is an objective metric used to compare the textual description given as input to the music generation model to its ouput, calculating their similarity. A higher score indicates good alignment between textual description and the generated audio, which is preferrable (\cite{rouardAudioConditioningMusic2024}).
 
 \subsubsection*{KNN\textsubscript{common}}\label{sec:KNNcommon}
 
@@ -336,15 +336,15 @@ KNN\textsubscript{overfit} is a newly introduced metric that assesses how simila
 
 \subsubsection*{Overall Quality (OVL)}\label{sec:OVL}
 
-OVL is a human evaluation metric used to assess the overall sound quality of generated audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. Research has shown that OVL scores correlate with objective FAD metrics \cite{rouardAudioConditioningMusic2024}.
+OVL is a human evaluation metric used to assess the overall sound quality of generated audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. Research has shown that OVL scores correlate with objective FAD metrics (\cite{rouardAudioConditioningMusic2024}).
 
 \subsubsection*{Similarity (SIM)}\label{sec:SIM}
 
-SIM is a human evaluation metric used to assess the overall similarity in style between input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. SIM scores have been found to correlate well with KNN\textsubscript{common} metrics \cite{rouardAudioConditioningMusic2024}.
+SIM is a human evaluation metric used to assess the overall similarity in style between input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. SIM scores have been found to correlate well with KNN\textsubscript{common} metrics (\cite{rouardAudioConditioningMusic2024}).
 
 \subsubsection*{Variability (VAR)}\label{sec:VAR}
 
-VAR is a human evaluation metric used to assess the likelihood that input and output samples are perceived as coming from the same song. A lower score indicates it is less likely that the samples are taken from the same song (which is the preferable result), while a higher score indicates it is more likely. VAR scores correlate well with KNN\textsubscript{overfit} metrics \cite{rouardAudioConditioningMusic2024}.
+VAR is a human evaluation metric used to assess the likelihood that input and output samples are perceived as coming from the same song. A lower score indicates it is less likely that the samples are taken from the same song (which is the preferable result), while a higher score indicates it is more likely. VAR scores correlate well with KNN\textsubscript{overfit} metrics (\cite{rouardAudioConditioningMusic2024}).
 
 % \subsubsection*{Cosine Similarity}\label{sec:cosineSimilarity}
 % \begin{aigen}
@@ -457,7 +457,7 @@ Specifically two methods are introduced:
 
 \subsection{Textual Inversion}\label{sec:text_inv}
 
-The authors first propose a quick proof of concept experiment, which uses \textit{textual inversion} to provide evidence for the feasibility of the experimental approach. \textit{Textual inversion} is well-suited for such a proof-of concept experiments since it leverages existing models embedding spaces for faster concept learning, enabling fast iteration times and low experiment cost \mbox{\cite{galImageWorthOne2022}}. It also provides a cheap baseline, highlighting the low quality of performing the task using existing models and justifying additional training compute to find a better solution.
+The authors first propose a quick proof of concept experiment, which uses \textit{textual inversion} to provide evidence for the feasibility of the experimental approach. \textit{Textual inversion} is well-suited for such a proof-of concept experiments since it leverages existing models embedding spaces for faster concept learning, enabling fast iteration times and low experiment cost (\mbox{\cite{galImageWorthOne2022}}). It also provides a cheap baseline, highlighting the low quality of performing the task using existing models and justifying additional training compute to find a better solution.
 
 \begin{figure}[!h]
     \centering
@@ -466,7 +466,7 @@ The authors first propose a quick proof of concept experiment, which uses \texti
     \label{fig:inference_comparison}
 \end{figure}
 
-As seen in Figure \ref{fig:inference_comparison}, \textit{textual inversion} works by expressing the meaning of an additional input modality in an existing embedding space. The authors specifically leverage MusicGen \cite{copetSimpleControllableMusic2024}, a text to music model, to generate so called pseudowords (\ref{sec:pseudowords}) which generate the meaning of the inputs of the new modality within the existing embedding space(\ref{sec:embeddingSpace}).\\
+As seen in Figure \ref{fig:inference_comparison}, \textit{textual inversion} works by expressing the meaning of an additional input modality in an existing embedding space. The authors specifically leverage MusicGen (\cite{copetSimpleControllableMusic2024}), a text to music model, to generate so called pseudowords (\ref{sec:pseudowords}) which generate the meaning of the inputs of the new modality within the existing embedding space(\ref{sec:embeddingSpace}).\\
 
 
 \subsubsection{Modelling style extraction as a translator}\label{sec:translator_analogy}
@@ -495,7 +495,7 @@ Where:
     \1 $c$ is the conditioning information.
 \end{outline}
 
-Since gradient descent is an iterative process, a starting point for the pseudowords is needed. The method laid out in the paper uses an arbitrary, general starting point like "music" to initialize the algorithm and then proceeds to train "a few hundred iterations" \cite{rouardAudioConditioningMusic2024}. The process is visualized in Figure \ref{fig:orig_paper_f1}.\\\\
+Since gradient descent is an iterative process, a starting point for the pseudowords is needed. The method laid out in the paper uses an arbitrary, general starting point like "music" to initialize the algorithm and then proceeds to train "a few hundred iterations" (\cite{rouardAudioConditioningMusic2024}). The process is visualized in Figure \ref{fig:orig_paper_f1}.\\
 
 This process will be performed for each music piece seperately resulting in a different pseudoword for all input audios. The chosen 100 forward passes lead to a relatively high inference time (\ref{sec:inferenceTime}), highlighting the tradeoff between training and inference compute.
 
@@ -510,7 +510,7 @@ This process will be performed for each music piece seperately resulting in a di
 
 The second method proposed in the paper is based on a jointly trained style encoder. The method follows an almost identical inference architecture as the \textit{textual inversion} (\ref{sec:text_inv}) method, but adds a style encoder that is jointly trained with a newly initialized MusicGen model.\\
 
-Joint multimodal-training on both music and text data incentivizes the formation of concepts of certain sounds at the embedding level, so concepts that are present in both tend to be represented in similar areas of the space \cite{xuMultimodalRepresentationAlignment2025}.
+Joint multimodal-training on both music and text data incentivizes the formation of concepts of certain sounds at the embedding level, so concepts that are present in both tend to be represented in similar areas of the space \cite{xuMultimodalRepresentationAlignment2025}. 
 
 \begin{equation}\label{eq:translator_style_encoder}
     f_{translate,adapted}: \text{music}_{sound} \rightarrow \text{music}_{text+sound\_concepts}
@@ -562,14 +562,14 @@ The new Logits after applying DCFG can be calculated using the following formula
 Where:
 
 \begin{outline}
-    \1 $l_{\emptyset}$ denotes a logit without any conditioning
-    \1 $l_{style}$ denotes a logit with only style conditioning applied
-    \1 $l_{text,style}$ denotes a logit with both style and text conditioning
-    \1 $\alpha$ is used to determine the importance of the overall conditioning
-    \1 $\beta$ is used to determine the importance of the text conditioning.
+ \1 $l_{\emptyset}$ denotes a logit without any conditioning
+ \1 $l_{style}$ denotes a logit with only style conditioning applied
+ \1 $l_{text,style}$ denotes a logit with both style and text conditioning
+ \1 $\alpha$ is used to determine the importance of the overall conditioning
+ \1 $\beta$ is used to determine the importance of the text conditioning.
 \end{outline}
 
-It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG \cite{rouardAudioConditioningMusic2024}.
+ It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG \cite{rouardAudioConditioningMusic2024}.
 \section{Results from the Paper}\label{sec:paperResults}
 
 In the experimental section of the paper, the performance of the proposed models are compared to the Continuation mode of MusicGen and MusicGen w. CLAP add on for allowing audio input. In Table \ref{tab:comparison_baselines} the best result is being portrayed in bold.
@@ -616,13 +616,13 @@ Examples of prompts for feedback, after generating music in the style of a song 
 
 \begin{outline}
     % \1 ``Can I show you something? I'll need to know your favorite song.'' <Generating stylistically similar song>, followed up by:''
-    \1 ``How does it compare to the original song?''
+    \1 ``How does it compare to the original song?'' 
     \1 ``What's this songs genre?''
     \1 ``Can you think of a similar song?''
-
+    
 \end{outline}
 
-Questions during the time period of the survey were answered by saying: ``I'll answer you right after we are done with the questions.'' \\
+    Questions during the time period of the survey were answered by saying: ``I'll answer you right after we are done with the questions.'' \\
 
 Our studies have not conformed to a rigorously validated methodology, but are of a rather exploratory manner. Whilst we tried to provide opportunity for unbiased feedback, the findings should only be interpreted as useful in guiding further experimentation without allowing any significant conclusions as of yet. Participants attitudes to AI, the selected sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations have been generated using \href{https://gemini.google.com}{gemini.google.com}.\\
 
@@ -740,33 +740,33 @@ In addition larger future models might enable social media apps to boost screen 
 To compare our safety considerations with their statements please visit the respective \href{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}{Model Card}.
 
 
-\section{Summary}\label{sec:summary}
+    \section{Summary}\label{sec:summary}
 
-The paper by \cite{rouardAudioConditioningMusic2024} presents and evaluates two methods for allowing a music generation model to accept audio as an input, enabling the creation of music in the style of a reference audio track instead of relying only on text. \\
+    The paper by \cite{rouardAudioConditioningMusic2024} presents and evaluates two methods for allowing a music generation model to accept audio as an input, enabling the creation of music in the style of a reference audio track instead of relying only on text. \\
 
-The first method, called \textit{textual inversion}, is a proof-of-concept that adapts a pre-trained model by representing the stylistic features of the audio as text. While it avoids costly retraining, its output is of low quality both in terms of audio and in terms of its style extraction. \\
-The main contribution is a model using a \textit{style conditioning} method, trained from scratch with a dedicated style encoder. This style encoder uses a music compresson algorithm to extract stylistic features, and effectively limits the amount of information passed through to the model in order to capture style without simply copying the input audio. It is fast at inference and uses a novel Double Classifier-Free Guidance (DCFG) method to balance the importance of audio and text prompts. \\
+    The first method, called \textit{textual inversion}, is a proof-of-concept that adapts a pre-trained model by representing the stylistic features of the audio as text. While it avoids costly retraining, its output is of low quality both in terms of audio and in terms of its style extraction. \\
+    The main contribution is a model using a \textit{style conditioning} method, trained from scratch with a dedicated style encoder. This style encoder uses a music compresson algorithm to extract stylistic features, and effectively limits the amount of information passed through to the model in order to capture style without simply copying the input audio. It is fast at inference and uses a novel Double Classifier-Free Guidance (DCFG) method to balance the importance of audio and text prompts. \\
 
-\subsection*{Advantages and Drawbacks}
+    \subsection*{Advantages and Drawbacks}
 
-The \textit{style conditioning} model performs well in the testing performed by the authors, outperforming or matching the baseline models in most of the metrics they were tested on. Its inference is also relatively quick, allowing music generation almost in real-time. Additionally, the inclusion of an audio input as conditioning enables the model to be applicable to more situations, simplifying generation of audio in a specific style. \\
+    The \textit{style conditioning} model performs well in the testing performed by the authors, outperforming or matching the baseline models in most of the metrics they were tested on. Its inference is also relatively quick, allowing music generation almost in real-time. Additionally, the inclusion of an audio input as conditioning enables the model to be applicable to more situations, simplifying generation of audio in a specific style. \\
+    
+    Yet we have noticed in our testing, that the performance of the models performance falls short in practice, delivering worse audio quality than expected, with several issues regarding the \textit{style conditioning}. It was noticed that the model failed to capture stylistic nuances, generating music that mostly sounded generic and overgeneralized. Additionally, the model failed to combine two styles in its output, instead generating sections associated with each style on its own, but none incorporating both.
 
-Yet we have noticed in our testing, that the performance of the models performance falls short in practice, delivering worse audio quality than expected, with several issues regarding the \textit{style conditioning}. It was noticed that the model failed to capture stylistic nuances, generating music that mostly sounded generic and overgeneralized. Additionally, the model failed to combine two styles in its output, instead generating sections associated with each style on its own, but none incorporating both.
 
+    % \subsubsection*{Advantages}
+    % \begin{itemize}
+    %     \item \textbf{Fast Inference:} The main style conditioner model is efficient, in contrast to the slow, optimization-based textual inversion method.
+    %     \item \textbf{Intuitive Style Control:} Conditioning on an audio reference allows for more specific and direct control over the generated music's style than text prompts.
+    %     \item \textbf{Works with Existing Models:} The textual inversion approach offers a path to audio conditioning without the need to train a new large-scale model.
+    % \end{itemize}
 
-% \subsubsection*{Advantages}
-% \begin{itemize}
-%     \item \textbf{Fast Inference:} The main style conditioner model is efficient, in contrast to the slow, optimization-based textual inversion method.
-%     \item \textbf{Intuitive Style Control:} Conditioning on an audio reference allows for more specific and direct control over the generated music's style than text prompts.
-%     \item \textbf{Works with Existing Models:} The textual inversion approach offers a path to audio conditioning without the need to train a new large-scale model.
-% \end{itemize}
-
-% \subsubsection*{Disadvantages}
-% \begin{itemize}
-%     \item \textbf{Low Audio Quality:} The textual inversion method is unstable and results in poor-quality audio outputs with glitches.
-%     \item \textbf{Overgeneralization of Style:} The model can fail to capture genre-specific nuances, leading to a more generic sound that loses the detail of the reference track.
-%     \item \textbf{Difficulty Mixing Conditions:} The model struggles to consistently fuse conflicting audio and text prompts, often prioritizing one over the other, even with the specialized DCFG technique.
-% \end{itemize}
+    % \subsubsection*{Disadvantages}
+    % \begin{itemize}
+    %     \item \textbf{Low Audio Quality:} The textual inversion method is unstable and results in poor-quality audio outputs with glitches.
+    %     \item \textbf{Overgeneralization of Style:} The model can fail to capture genre-specific nuances, leading to a more generic sound that loses the detail of the reference track.
+    %     \item \textbf{Difficulty Mixing Conditions:} The model struggles to consistently fuse conflicting audio and text prompts, often prioritizing one over the other, even with the specialized DCFG technique.
+    % \end{itemize}
 
 %------------------------------------------------
 % Literaturverzeichnis
