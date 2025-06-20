@@ -469,7 +469,7 @@ As seen in Figure \ref{fig:inference_comparison}, \textit{textual inversion} wor
 
 
 \subsubsection{Modelling style extraction as a translator}\label{sec:translator_analogy}
-A useful model is to imagine a non-native translator trying to express a saying from their native-language, using the words of another language. It's likely the translator can't express the full of meaning or needs to use a much larger number of words to express the full meaning in their translation then were used in the original saying, but some sort of translation is possible, because different languages share various concepts, which one can build upon to introduce the new concepts necessary to explain the saying. \\
+A useful model is to imagine a non-native translator trying to express a saying from their native-language, using the words of another language. It's possible that the translator can't express the full of meaning or needs to use a much larger number of words to express the full meaning in their translation then were used in the original saying, but some sort of translation is possible, because different languages share various concepts, which one can build upon to introduce the new concepts necessary to explain the saying. \\
 
 Since the "native language" of music is sound, but MusicGen natively takes text as an input, \textit{textual inversion} can be modeled as translating from sound to textual concepts. This frame naturally presents you with a simplified, but useful mathematical formalization that one can use to gain clarity on the functional difference to other methods:
 
@@ -692,6 +692,9 @@ In their paper, the authors never formally define style, only stating that featu
 This makes an external review of the quality of the \textit{style conditioning} difficult, since it is impossible to know for certain what the scope of the conditioning was supposed to be. Additionally, the human metric SIM is defined over the style of the generated excerpt, potentially impacting the results of the human studies by not providing a precise definition for style. \\
 
 It also creates ambiguity in the contributions of the paper, not precisely stating what additional information can be input to the music generation model, making using the paper as a baseline for further scientific work and using the model more difficult. \\
+
+
+We think that, depending on definition of style, many if not all properties of music could be included in the \textit{style conditioning}, which is why it would be preferable to give the user a choice on which aspects of style to include in the conditioning. These could include genre, choice of instruments, atmosphere, speed, loudness, rhythms and musical form. This could be achieved by allowing a secondary text input for configuring the style conditioner.
 
 \subsubsection{Why 5hz downsampling after codebook instead of before?}
 
