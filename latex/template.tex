@@ -171,15 +171,15 @@ Literature reviews and critically thinking about past work are integral parts of
 Thus this work aims to reflect on the scientific value and methodological quality of \textbf{Audio conditioning for music generation via discrete bottleneck features}  by  \cite{rouardAudioConditioningMusic2024}.\\
 
 The authors present two novel contributions aiming to allow high quality music generation based on a context containing both audio and text inputs. They specifically present an adaptation of an existing method, creating ``pseudowords'', based on existing work in the computer vision domain by \cite{galImageWorthOne2022}
-and a novel method enabling fast inference for new audio samples, through lossy encoding of style features and an attention mechanism. \\%\comment{Is attention the correct framing here? I'd guess this might create confusion.}
+and a novel method enabling fast inference for new audio samples through lossy encoding of style features and an attention mechanism. \\%\comment{Is attention the correct framing here? I'd guess this might create confusion.}
 
 Additionally, the authors propose a method to balance the importance of informationally rich audio data and less dense text data at inference time, as well as three automated metrics for assessing the quality of the style conditioning. \\
 
-Because ``music is hard to describe textually'' \cite{rouardAudioConditioningMusic2024}, there is an interest in using an audio waveform and text inputs to generate music in the style of an existing musical excerpt. This also allows users to create a more specific output without needing to find a correct textual descripton of their expected result \cite{rouardAudioConditioningMusic2024}. \\
+Because ``music is hard to describe textually'' \cite{rouardAudioConditioningMusic2024}, there is an interest in using an audio waveform and text as inputs to generate music in the style of an existing musical excerpt. This also allows users to create a more specific output without needing to find a correct textual descripton of their expected result \cite{rouardAudioConditioningMusic2024}. \\
 
 However, as will be shown in section \ref{sec:discussion}, the models described in the paper still are still lacking in their ability to accurately capture the stylistic details of the musical input, as well as their ability to merge multiple styles in the output. %\comment{No quotation needed here, because our own findings?}
 
-Section \ref{sec:backgrounds} starts by describing backgrounds relevant for the experiments in section \ref{sec:methods}.
+Section \ref{sec:backgrounds} starts by describing backgrounds relevant for the methods explained in section \ref{sec:methods}.
 The following section \ref{sec:paperResults} and section \ref{sec:discussion} present and discuss the paper's main results, while our own experiments are detailed in section \ref{sec:experiments}.
 
 \section{Backgrounds}\label{sec:backgrounds}
@@ -192,23 +192,23 @@ The following section \ref{sec:paperResults} and section \ref{sec:discussion} pr
 
 \subsubsection*{Pseudowords}\label{sec:pseudowords}
 
-Pseudowords are a linguistic description of non-text data, which can be fit into a text models embedding space and thus encode meaning. In the context of music generation, pseudowords can lossily encode particular musical styles or instruments. These pseudowords do not resemble words used in language though, and can appear like random combinations of letters.
+Pseudowords are a linguistic description of non-text data, which can be fit into a text models embedding space and thus encode meaning. In the context of music generation, pseudowords can lossily encode particular musical styles or instruments. These pseudowords do not resemble words used in language and can appear like random combinations of letters.
 
 \subsubsection*{Embedding Space}\label{sec:embeddingSpace}
 
 A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantic differences between concepts are represented by their distance in the vector space. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. 
 %The quality of the embedding space directly impacts the model's ability to understand and respond to its inputs, thus affecting the output quality.
-Most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training \cite{lecunDeepLearning2015a}. %TODO:citation?
+Most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training \cite{lecunDeepLearning2015}.
 
 \subsubsection*{Double Classifier-Free Guidance}\label{sec:DCFG}
 
-Double classifier-free guidance (DCFG) is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting \cite{rouardAudioConditioningMusic2024}. Without this technique, the informationally less dense textual specification may be ignored. Classifier-free guidance (CFG) itself is a method that can amplify the importance of the conditioning given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}.
+Double classifier-free guidance (DCFG) is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting. Without this technique, the less informationally dense textual specification may be ignored \cite{rouardAudioConditioningMusic2024}. Classifier-free guidance (CFG) itself is a method that can amplify the importance of the conditioning given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}.
 
 \subsection{Audio Processing and Representation}
 
 \subsubsection*{Audio Feature Extractor}\label{sec:audioFeatureExtractor}
 
-An audio feature extractor is a component that can obtain stylistic features from an audio snippet, which can then be used as input to a music generation model. Here, these extractors work on high level features, but can also extract lower level content such as melody and rythm \cite{rouardAudioConditioningMusic2024}.
+An audio feature extractor is a component that can obtain stylistic features from an audio snippet, which can then be used as input to a music generation model. Here, these extractors work on high level features, but can also extract lower level content such as melody and rhythm \cite{rouardAudioConditioningMusic2024}.
 
 \subsubsection*{EnCodec}\label{sec:encodec}
 
@@ -216,7 +216,7 @@ EnCodec is a deep-learning based audio codec designed for high levels of compres
 
 \subsubsection*{Residual Vector Quantization}\label{sec:RVQ}
 
-Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ uses a set of  reference points contained in codebooks for downsampling the original data by expressing each vector as its closest neighbor in the codebook. Additinoal codebooks can be used to express the lost resolution in the same way, allowing a closer approximation to the original data.   \cite{zeghidourSoundStreamEndtoEndNeural2022}.
+Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ uses a set of  reference points contained in codebooks for downsampling the original data by expressing each vector as its closest neighbor from the codebook. Additinoal codebooks can be used to express the lost resolution in the same way, allowing a closer approximation of the original data.   \cite{zeghidourSoundStreamEndtoEndNeural2022}.
 
 % \subsubsection*{Codebook}\label{sec:codebook}
 
@@ -575,7 +575,7 @@ Where:
 
 In the experimental section of the paper, the performance of the proposed models are compared to the Continuation mode of MusicGen and MusicGen w. CLAP add on for allowing audio input. In Table \ref{tab:comparison_baselines} the best result is being portrayed in bold.
 
-\begin{table*}[!h]%TODO: Double check the data is correct
+\begin{table*}[!h]
     \caption{Experimental results from the Paper \cite{rouardAudioConditioningMusic2024}}
     \centering
     \label{tab:comparison_baselines}
@@ -605,7 +605,7 @@ To be able to gain confidence in the papers results and gain a practical underst
 \subsection{Inference Setup}
 Tests have been performed on an A4000 GPU with 32-bit quantization. Utilization reached up to 99\% during batched inference. The model generates roughly real-time (0.8x speed) audio snippets and can even generate 3 audio snippets at a similar speed in parallel.\\
 
-Testing was performed using multiple 30s input snippets, unless otherwise noted with a CFG $\beta$ of 5. Tests executed were providing only audio input without any textual description, providing contradictory audio and text inputs, generating multiple samples with the same text- and audio prompt but changing the CFG $\beta$ to values of 1 and 2, as well as prompting the model to generate silence using both music and silence as audio input. \\
+Testing was performed using multiple 30s input snippets, unless otherwise noted with a DCFG $\beta$ of 5. Tests executed were providing only audio input without any textual description, providing contradictory audio and text inputs, generating multiple samples with the same text- and audio prompt but changing the CFG $\beta$ to values of 1 and 2, as well as prompting the model to generate silence using both music and silence as audio input. \\
 
 % TODO: @Max please add the parameters documented in the files here. If you have questions about it please just go ahead and give me a quick call. This is true in general, but most crucially tomorrow, since your productivity being potentially lower for hours if you don't call me for 5 min. is a bad trade-off.
 
