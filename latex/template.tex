@@ -175,7 +175,7 @@ and a novel method enabling fast inference for new audio samples through lossy e
 
 Additionally, the authors propose a method to balance the importance of informationally rich audio data and less dense text data at inference time, as well as three automated metrics for assessing the quality of the style conditioning. \\
 
-Because ``music is hard to describe textually'' \cite{rouardAudioConditioningMusic2024}, there is an interest in using an audio waveform and text as inputs to generate music in the style of an existing musical excerpt. This also allows users to create a more specific output without needing to find a correct textual descripton of their expected result \cite{rouardAudioConditioningMusic2024}. \\
+Because ``music is hard to describe textually'' (\cite{rouardAudioConditioningMusic2024}), there is an interest in using an audio waveform and text as inputs to generate music in the style of an existing musical excerpt. This also allows users to create a more specific output without needing to find a correct textual descripton of their expected result (\cite{rouardAudioConditioningMusic2024}). \\
 
 However, as will be shown in section \ref{sec:discussion}, the models described in the paper still are still lacking in their ability to accurately capture the stylistic details of the musical input, as well as their ability to merge multiple styles in the output. %\comment{No quotation needed here, because our own findings?}
 
@@ -202,21 +202,21 @@ Most embedding spaces in deep learning are learnt, meaning that feature extracti
 
 \subsubsection*{Double Classifier-Free Guidance}\label{sec:DCFG}
 
-Double classifier-free guidance (DCFG) is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting. Without this technique, the less informationally dense textual specification may be ignored \cite{rouardAudioConditioningMusic2024}. Classifier-free guidance (CFG) itself is a method that can amplify the importance of the conditioning given to the model for creating their output \cite{hoClassifierFreeDiffusionGuidance2022}.
+Double classifier-free guidance (DCFG) is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting. Without this technique, the less informationally dense textual specification may be ignored (\cite{rouardAudioConditioningMusic2024}). Classifier-free guidance (CFG) itself is a method that can amplify the importance of the conditioning given to the model for creating their output (\cite{hoClassifierFreeDiffusionGuidance2022}).
 
 \subsection{Audio Processing and Representation}
 
 \subsubsection*{Audio Feature Extractor}\label{sec:audioFeatureExtractor}
 
-An audio feature extractor is a component that can obtain stylistic features from an audio snippet, which can then be used as input to a music generation model. Here, these extractors work on high level features, but can also extract lower level content such as melody and rhythm \cite{rouardAudioConditioningMusic2024}.
+An audio feature extractor is a component that can obtain stylistic features from an audio snippet, which can then be used as input to a music generation model. Here, these extractors work on high level features, but can also extract lower level content such as melody and rhythm (\cite{rouardAudioConditioningMusic2024}).
 
 \subsubsection*{EnCodec}\label{sec:encodec}
 
-EnCodec is a deep-learning based audio codec designed for high levels of compression with minimal quality loss \cite{defossezHighFidelityNeural2022}. In the context of this paper, EnCodec is used in the audio tokenizer as a transformer encoder \cite{rouardAudioConditioningMusic2024}.
+EnCodec is a deep-learning based audio codec designed for high levels of compression with minimal quality loss \cite{defossezHighFidelityNeural2022}. In the context of this paper, EnCodec is used in the audio tokenizer as a transformer encoder (\cite{rouardAudioConditioningMusic2024}).
 
 \subsubsection*{Residual Vector Quantization}\label{sec:RVQ}
 
-Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ uses a set of  reference points contained in codebooks for downsampling the original data by expressing each vector as its closest neighbor from the codebook. Additinoal codebooks can be used to express the lost resolution in the same way, allowing a closer approximation of the original data.   \cite{zeghidourSoundStreamEndtoEndNeural2022}.
+Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ uses a set of  reference points contained in codebooks for downsampling the original data by expressing each vector as its closest neighbor from the codebook. Additinoal codebooks can be used to express the lost resolution in the same way, allowing a closer approximation of the original data (\cite{zeghidourSoundStreamEndtoEndNeural2022}).
 
 % \subsubsection*{Codebook}\label{sec:codebook}
 
@@ -235,11 +235,11 @@ A token is a discrete unit of information that can be interpreted and processed 
 
 \subsubsection*{Transformer Encoder/Decoder}\label{sec:transformerEncoderDecoder}
 
-A transformer encoder compresses input data into a intermediate representation enriched with contextual information from the entire input. During this process, the transformer is able to weigh the importance of different parts of the input. A transformer decoder generates output from the intermediate representation created by the encoder, assessing the probability of each subsequent token occurring in the output sequence and using this information to repeatedly decide which token to output next \cite{mengTransMLAMultiHeadLatent2025a}.
+A transformer encoder compresses input data into a intermediate representation enriched with contextual information from the entire input. During this process, the transformer is able to weigh the importance of different parts of the input. A transformer decoder generates output from the intermediate representation created by the encoder, assessing the probability of each subsequent token occurring in the output sequence and using this information to repeatedly decide which token to output next (\cite{mengTransMLAMultiHeadLatent2025a}).
 
 \subsubsection*{MusicGen}\label{sec:MusicGen}
 
-MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by META for the Audiocraft project. It serves as the baseline music generation model and is extended with the \textit{style conditioning} methods proposed in the paper \cite{rouardAudioConditioningMusic2024}.
+MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by META for the Audiocraft project. It serves as the baseline music generation model and is extended with the \textit{style conditioning} methods proposed in the paper by \cite{rouardAudioConditioningMusic2024}.
 
 % \subsubsection*{MERT}\label{sec:MERT}
 % \begin{aigen}
@@ -307,10 +307,9 @@ Dropout describes the act of randomly leaving out certain conditioning inputs du
 \subsection{Audio Processing Techniques}
 
 \subsubsection*{Temporal Downsampling}\label{sec:temporalDownsampling}
-\begin{aigen}
-    Temporal downsampling involves reducing the resolution of audio representations on the time axis while preserving essential musical information. This technique typically involves reducing the rate at which the audio representation is stored.
-\end{aigen}
-%TODO: after slightly modifying, should this still be marked as AI?
+
+    When temporally downsampling the conditioning data, the resolution of audio representations on the time axis is reduced while essential musical information is preserved. This technique typically involves reducing the rate at which the audio representation is stored.
+
 
 
 % \subsubsection*{Downsampling}\label{sec:Downsampling}
