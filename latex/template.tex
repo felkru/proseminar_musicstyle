@@ -663,10 +663,6 @@ Whilst these limitations are present we think that the attention to detail peopl
 
 Our qualitative results point to a mismatch in reported audio quality, especially when compared to audio snippets on their \href{musicgenstyle.github.io}{website}, and actual performance in real-world scenarios. This finding seems to be further supported by failures to replicate findings in a Github issue by a researcher from Beihang University \cite{liuLargeDiscrepancyCLAP2025}. Our generated audio snippets have been uploaded to \href{https://shorturl.at/fpXSb}{Google Drive}(https://shorturl.at/fpXSb), allowing readers to verify the authenticity of our claims about a potential mismatch to the quality presented on the project's webpage themselves.
 
-\subsection{Timeline of experiments and likely reasons for decisions}
-The original authors start by adapting an existing technique, which is cheap to train, to generate a first proof of concept.
-This served to show the feasibility before running larger, more expensive, experiments. It's likely that the double classifier free guidance was added to the \textit{style conditioning} model only after the issue of the model ignoring the textual description became apparent.\\
-
 %\comment{commented this section out because it is too short and incomple}
 
 \subsection{Style conditioner}
@@ -685,7 +681,7 @@ Yet limiting the extraction of features by shortening the input sample length ca
 
 Additionally, musical segments are often much longer than five seconds, limiting the stylistic information that can be extracted to high level information (\cite{rouardAudioConditioningMusic2024}). \\
 
-Lastly, it can be assumed that shortening the excerpt used for style conditioning reduces the computational cost of the style extraction, potentially making it cheaper or quicker. \\ %\comment{wording?}
+Lastly, shortening the excerpt used for style conditioning reduced the computational cost of the style decoder training compared to training on higher resolution audio. \\ %\comment{wording?}
 
 \subsubsection{No formal and specific definition for style}\label{sec:style-def}
 
@@ -702,7 +698,7 @@ We think that, depending on definition of style, many if not all properties of m
 
 The authors give no explicit reasoning in their paper. \\
 
-It can be assumed that the authors aim to prioritize the quality of the \textit{style conditioning} over its temporal resolution. If the temporal downsampling happened before the quantization, the information available to be compressed would be reduced while the entire uncompressed data would be available for the temporal downsampling (\cite{tishbyInformationBottleneckMethod2000}). \\
+One possible reason for this ordering is to prioritize the informational richness of the signal for quantization before reducing its temporal resolution. If the temporal downsampling happened before the quantization, the information available to be compressed would be reduced while the entire uncompressed data would be available for the temporal downsampling (\cite{tishbyInformationBottleneckMethod2000}). \\
 
 \subsection{Dataset quality}
 The Authors disclose two public Datasets used for the training of their models, the Shutterstock and Pond5 libraries of instrumental stock music. \\
@@ -727,7 +723,7 @@ When generating audio with opposing textual and stylistic descriptions, it was o
 For generated audio with the same input sample and the same text input, increasing the $\beta$-parameter of the DCFG made the sound of the generated audio more similar to the textual prompt, thus working as expected.
 
 \subsection{Train compute and model scaling}
-The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.5bn parameters is far from SOTA in terms of trainable parameters in transformer architectures. Many of the issues present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented in the paper by \cite{kaplanScalingLawsNeural}.
+The model's 1.5bn parameter size, while substantial, is not on the scale of some other state-of-the-art models. This might suggest that the project is not a commerical priority within META. Many of the issues present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented in the paper by \cite{kaplanScalingLawsNeural}.
 
 \subsection{User reactions}
 When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals and commenting on a lack of stylistic understanding. Genre-specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio.
