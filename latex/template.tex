@@ -263,8 +263,7 @@ A frozen model refers to a preexisting model whose parameters are not changed du
 
 \subsubsection*{Logits}\label{sec:Logit}
 
-Logits represent a language model's confidence in what the different possible next tokens will be. These values can be converted to probabilities for which token will be generated next by the model.
-
+Logits represent a language model's confidence in what the different possible next tokens will be. These values can be converted to probabilities about which next token is optimal for the model.
 
 \subsubsection*{Cross-Entropy Loss}\label{sec:crossEntropyLoss}
 
@@ -625,7 +624,7 @@ Examples of prompts for feedback, after generating music in the style of a song 
 
 Questions during the time period of the survey were answered by saying: ``I'll answer you right after we are done with the questions.'' \\
 
-Our studies have not conformed to a rigorously validated methodology, but are of a rather exploratory manner. Whilst we tried to provide opportunity for unbiased feedback, the findings should only be interpreted as useful in guiding further experimentation without allowing any significant conclusions as of yet. Participants attitudes to AI, the selected sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations have been generated using \href{https://gemini.google.com}{gemini.google.com}.\\
+Our studies aimed to gain qualitative real-world feedback to give the authors to generate helpful research directions. They had the additional benefit of hinting at potential decrepencies in the papers communication of model capabilities and actual generation result. Whilst we tried to provide study participants an opportunity to give us unbiased feedback, the evidence shouldn't be interpreted as leading to any confident conclusions. Participants attitudes to AI, an unrepresentative sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations on the right side of table \ref{tab:common_quotes} have been generated using \href{https://gemini.google.com}{gemini.google.com}.\\
 
 Whilst these limitations are present we think that the attention to detail people pay to the nuances of their favorite songs is a promising direction for detailed, qualitative human evaluation studies, which might enable further increases in the quality of generated music.\\
 
@@ -637,7 +636,7 @@ Whilst these limitations are present we think that the attention to detail peopl
         \def\arraystretch{1.5}
         \begin{tabular}{llp{7cm}} % Widened the last column
             \toprule
-            Quote (German)                                               & Translation (English)                                            & Common Answer / Theme   \\
+            Quote (German)                                               & Translation (English)                                            & Theme                   \\
             \midrule
             “Der Gesang fehlt doch.”                                     & “The vocals are missing.”                                        & Lack of \textbf{vocals} \\
             “Genre passt [$\dots$] halt nur ganz grob.”                  & “The genre only fits [$\dots$] very roughly.”                    & Broad genre fit         \\
