@@ -121,7 +121,7 @@
     \large
     \begin{center}
         {\Large Seminar work} \\[1ex]
-        {\LARGE\textbf{A critical review of "AUDIO CJNDITIONING FOR MUSIC GENERATION VIA DISCRETE BOTTLENECK FEATURES"}}\\[3ex]
+        {\LARGE\textbf{A critical review of MusicGen-Style}}\\[3ex]
         Max Kinsperger, 467539 - Felix Krückel, 454343 \\[1ex]
         \today\\[7ex]
         as part of seminar\\[1ex]
@@ -171,7 +171,7 @@ Literature reviews and critically thinking about past work are integral parts of
 Thus this work aims to reflect on the scientific value and methodological quality of \textbf{Audio conditioning for music generation via discrete bottleneck features}  by  \cite{rouardAudioConditioningMusic2024}.\\
 
 The authors present two novel contributions aiming to allow high quality music generation based on a context containing both audio and text inputs. They specifically present an adaptation of an existing method, creating ``pseudowords'', based on existing work in the computer vision domain by \cite{galImageWorthOne2022}
-and a novel method enabling fast inference of new audio samples through lossy encoding of style features and an attention mechanism. \\%\comment{Is attention the correct framing here? I'd guess this might create confusion.}
+and a novel jointly trained style encoder, enabling fast inference of new audio samples through lossy encoding of style features. The resulting model was published under the name \textit{MusicGen-Style}.  \\%\comment{Is attention the correct framing here? I'd guess this might create confusion.}
 
 Additionally, the authors propose a method to balance the importance of informationally rich audio data and less dense text data at inference time, as well as three automated metrics for assessing the quality of the style conditioning. \\
 
@@ -196,7 +196,7 @@ Pseudowords are a linguistic description of non-text data, which can be fit into
 
 \subsubsection*{Embedding Space}\label{sec:embeddingSpace}
 
-A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantic differences between concepts are represented by their distance in the vector space. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The model trained in our paper has a dimensionality of 512, whilst SOTA language models can have embedding spaces as large as many tens of thousands of dimsensions. \\
+A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantic differences between concepts are represented by their distance in the vector space. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The model trained in our paper has a dimensionality of 512, whilst SOTA language models can have embedding spaces as large as many tens of thousands of dimensions. \\
 
 Because of that most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training (\cite{lecunDeepLearning2015}). A visualization can be found at \href{https://felix-krueckel.com/musical\_concepts.html}{felix-krueckel.com/musical\_concepts.html}.
 
@@ -216,7 +216,7 @@ EnCodec is a deep-learning based audio codec designed for high levels of compres
 
 \subsubsection*{Residual Vector Quantization}\label{sec:RVQ}
 
-Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ uses a set of  reference points contained in codebooks for downsampling the original data by expressing each vector as its closest neighbor from the codebook. Additinoal codebooks can be used to express the lost resolution in the same way, allowing a closer approximation of the original data (\cite{zeghidourSoundStreamEndtoEndNeural2022}).
+Residual Vector Quantization (RVQ) is a procedure used to create discrete representations of information in an embedding space. RVQ uses a set of  reference points contained in codebooks for downsampling the original data by expressing each vector as its closest neighbor from the codebook. Additional codebooks can be used to express the lost resolution in the same way, allowing a closer approximation of the original data (\cite{zeghidourSoundStreamEndtoEndNeural2022}).
 
 % \subsubsection*{Codebook}\label{sec:codebook}
 
@@ -323,11 +323,11 @@ FAD is an objective metric used to evaluate the sound quality of generated audio
 
 \subsubsection*{CLAP}\label{sec:CLAP}
 
-The CLAP score is an objective metric used to compare the textual description given as input to the music generation model to its ouput, calculating their similarity. A higher score indicates good alignment between textual description and the generated audio, which is preferrable (\cite{rouardAudioConditioningMusic2024}).
+The CLAP score is an objective metric used to compare the textual description given as input to the music generation model to its output, calculating their similarity. A higher score indicates good alignment between textual description and the generated audio, which is preferrable (\cite{rouardAudioConditioningMusic2024}).
 
 \subsubsection*{KNN\textsubscript{common}}\label{sec:KNNcommon}
 
-KNN\textsubscript{common} is a newly introduced metric that assesses how stylistically similar the input and ouput of the model are. The more neighbors input and output audio share in the embedding space, the higher the KNN\textsubscript{common} value will be, implying that the style conditioning performed well.
+KNN\textsubscript{common} is a newly introduced metric that assesses how stylistically similar the input and output of the model are. The more neighbors input and output audio share in the embedding space, the higher the KNN\textsubscript{common} value will be, implying that the style conditioning performed well.
 
 \subsubsection*{KNN\textsubscript{overfit}}\label{sec:KNNoverfit}
 
@@ -461,11 +461,11 @@ The authors first propose a quick proof of concept experiment, which uses \texti
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.6\textwidth]{textual_inversion.png}
-    \caption{Inference comparison, black box contains novel contributions, after \cite{rouardAudioConditioningMusic2024}}
+    \caption{Inference comparison, black box contains novel contributions}
     \label{fig:inference_comparison}
 \end{figure}
 
-As seen in Figure \ref{fig:inference_comparison}, \textit{textual inversion} works by expressing the meaning of an additional input modality in an existing embedding space. The authors specifically leverage MusicGen (\cite{copetSimpleControllableMusic2024}), a text to music model, to generate so called pseudowords (\ref{sec:pseudowords}) which generate the meaning of the inputs of the new modality within the existing embedding space(\ref{sec:embeddingSpace}).\\
+As seen in Figure \ref{fig:inference_comparison}, \textit{textual inversion} works by expressing the meaning of an additional input modality in an existing embedding space. The authors specifically leverage MusicGen (\cite{copetSimpleControllableMusic2024}), a text to music model, to generate so called pseudowords (\ref{sec:pseudowords}) which generate the meaning of the inputs of the new modality within the existing embedding space(\ref{sec:embeddingSpace}).
 
 
 \subsubsection{Modelling style extraction as a translator}\label{sec:translator_analogy}
@@ -496,7 +496,7 @@ Where:
 
 Since gradient descent is an iterative process, a starting point for the pseudowords is needed. The method laid out in the paper uses an arbitrary, general starting point like "music" to initialize the algorithm and then proceeds to train "a few hundred iterations" (\cite{rouardAudioConditioningMusic2024}). The process is visualized in Figure \ref{fig:orig_paper_f1}.\\
 
-This process will be performed for each music piece seperately resulting in a different pseudoword for all input audios. The chosen 100 forward passes lead to a relatively high inference time (\ref{sec:inferenceTime}), highlighting the tradeoff between training and inference compute.
+This process will be performed for each music piece separately resulting in a different pseudoword for all input audios. The chosen 100 forward passes lead to a relatively high inference time (\ref{sec:inferenceTime}), highlighting the tradeoff between training and inference compute.
 
 \begin{figure}[!h]
     \centering
@@ -512,21 +512,21 @@ The second method proposed in the paper is based on a jointly trained style enco
 Joint multimodal-training on both music and text data incentivizes the formation of concepts of certain sounds at the embedding level, so concepts that are present in both tend to be represented in similar areas of the space (\cite{xuMultimodalRepresentationAlignment2025}). 
 
 \begin{equation}\label{eq:translator_style_encoder}
-    f_{translate,adapted}: \text{music}_{sound} \rightarrow \text{music}_{text+sound\_concepts}
+    f_{style\_enc}: \text{music}_{sound} \rightarrow \text{music}_{text+sound\_concepts}
 \end{equation}\\
 
 Equation \ref{eq:translator_text_inv} is what an adapted translator function formalization might look like.\\
 
-The style encoders architecture, illustrated to the right side of Figure \ref{fig:orig_paper_f2}, consists of a frozen (\ref{sec:frozenModel}) audio feature extractor, a transformer encoder, residual vector quantization (RVQ, \ref{sec:RVQ}) and a linear layer. In the RVQ and downsampling steps, bottlenecks are implemented to prevent the model from copying its input and to focus the encoded meaning on the style conditioning (\cite{rouardAudioConditioningMusic2024}). The MusicGen model has a 1.5bn parameter count, whilst the \textit{style conditioner} relies on up to 6 trainable codebooks to discretely encode information. The music encoder called Encodec (\ref{sec:encodec}) has 60M parameters.\\
+The style encoders architecture, illustrated to the right side of Figure \ref{fig:orig_paper_f2}, consists of a frozen (\ref{sec:frozenModel}) audio feature extractor, a transformer encoder, residual vector quantization (RVQ, \ref{sec:RVQ}) and a linear layer. In the RVQ and downsampling steps, bottlenecks are implemented to prevent the model from copying its input and to focus the encoded meaning on the style conditioning (\cite{rouardAudioConditioningMusic2024}). The MusicGen model has a 1.5bn parameter count, whilst the \textit{style conditioner} relies on up to 6 trainable codebooks to discretely encode information. The music encoder called Encodec (\ref{sec:encodec}) has 60M parameters.
 
 \subsubsection{Training}
 
-For training the transformer language model MusicGen gets encoded text and style as a prefix and is then asked to predict the next token of the audio based on the prefix information and previous audio tokens. This is done in parrallel using masked attention (\ref{sec:masking}) and positional encoding (\cite{vaswaniAttentionAllYou2017}) to allow the model to do parrallel autoregressive prediction (\ref{sec:Autoregression}). Dropout (\ref{sec:dropout})is used for training to ensure the model is adaptable to various hyperparameters during inference. The training process is depicted on the left side of \mbox{Figure \ref{fig:orig_paper_f2}}. This kind of training paradigm would be classified as self-supervised and the transformer architecture in particular has the benefit of providing  many strong gradient signals per song over long ranges, enabling faster convergence and training.
+For training the transformer language model MusicGen gets encoded text and style as a prefix and is then asked to predict the next token of the audio based on the prefix information and previous audio tokens. This is done in parallel using masked attention (\ref{sec:masking}) and positional encoding (\cite{vaswaniAttentionAllYou2017}) to allow the model to do parallel autoregressive prediction (\ref{sec:Autoregression}). Dropout (\ref{sec:dropout})is used for training to ensure the model is adaptable to various hyperparameters during inference. The training process is depicted on the left side of \mbox{Figure \ref{fig:orig_paper_f2}}. This kind of training paradigm would be classified as self-supervised and the transformer architecture in particular has the benefit of providing  many strong gradient signals per song over long ranges, enabling faster convergence and training.
 
 \subsubsection{Bottlenecks}
-Because the sounds and text share a concept space (\cite{gardenforsConceptualSpacesGeometry2000}) and joint training incentivizes as much information transmission as possible, to ensure the best possible next token prediction, having the consequence that information loss is natuarlly very low in this architecture leading to exact replication of the input audio snippet (\cite{rouardAudioConditioningMusic2024}).\\
+Because the sounds and text share a concept space (\cite{gardenforsConceptualSpacesGeometry2000}) and joint training incentivizes as much information transmission as possible, to ensure the best possible next token prediction, having the consequence that information loss is naturally very low in this architecture leading to exact replication of the input audio snippet (\cite{rouardAudioConditioningMusic2024}).\\
 
-For this reason several unspecific (\ref{sec:style-def}) information bottlenecks are introduced, focusing the condititoning tokens on the most relevant information for next token prediction and preventing exact replication:
+For this reason several unspecific (\ref{sec:style-def}) information bottlenecks are introduced, focusing the conditioning tokens on the most relevant information for next token prediction and preventing exact replication:
 
 \begin{outline}
     \1 Conditioning only on parts of the piece
@@ -536,14 +536,14 @@ For this reason several unspecific (\ref{sec:style-def}) information bottlenecks
 
 Only a 30s part of the conditioning audio is actually analysed for audio. The audio snippet's interval is randomly selected from an excerpt of conditioning audio.\\
 
-Firstly, in the frozen audio feature extractor (\cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023,wonFoundationModelMusic2024}), the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transfomer encoder (\cite{rouardAudioConditioningMusic2024}).
+Firstly, in the frozen audio feature extractor (\cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023,wonFoundationModelMusic2024}), the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transformer encoder (\cite{rouardAudioConditioningMusic2024}).
 The embeddings in this embedding space are then quantized, compressing the included information into a discrete set of data described in up to 6 codebooks. The strength of this bottleneck can be controlled by the number of codebooks supplied (\cite{rouardAudioConditioningMusic2024}). In this same step, the data is also downsampled (\ref{sec:temporalDownsampling}) to a 5Hz framerate (\cite{rouardAudioConditioningMusic2024}). %\comment{Is this understandable? More context needed on frame rate?}
 Lastly, the high-dimensional data is projected with a linear layer, matching MusicGen's embedding dimension (\cite{rouardAudioConditioningMusic2024}).\\
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.9\textwidth]{figure_2.png}
-    \caption{Joint training of MusicGen with style encoder, taken from \cite{rouardAudioConditioningMusic2024}}
+    \caption{Joint training of MusicGen with style encoder (\cite{rouardAudioConditioningMusic2024})}
     \label{fig:orig_paper_f2}
 \end{figure}
 
@@ -571,12 +571,12 @@ Where:
  It is noted, that a $\beta$ value of $1$ is equivalent to using regular CFG (\cite{rouardAudioConditioningMusic2024}).
 \section{Results from the paper}\label{sec:paperResults}
 
-In the experimental section of the paper, the performance of the proposed models are compared to the Continuation mode of MusicGen and MusicGen w. CLAP add on for allowing audio input. In Table \ref{tab:comparison_baselines} the best result is being portrayed in bold.
+In the experimental section of the paper, the performance of the proposed models are compared to the Continuation mode of MusicGen and MusicGen w. CLAP add on for allowing audio input. In table \ref{tab:comparison_baselines} the best result is being portrayed in bold.
 
 \begin{table*}[!h]
-    \caption{Experimental results from the Paper by \cite{rouardAudioConditioningMusic2024}}
-    \centering
+    \caption{Original experimental results regarding audio and conditioning quality as well as prompt following (\cite{rouardAudioConditioningMusic2024})}
     \label{tab:comparison_baselines}
+    \centering
     \resizebox{\textwidth}{!}{
         \begin{tabular}{lcccccccc}
             \toprule
@@ -607,9 +607,9 @@ Testing was performed using multiple 30s input snippets, unless otherwise noted 
 
 % TODO: @Max please add the parameters documented in the files here. If you have questions about it please just go ahead and give me a quick call. This is true in general, but most crucially tomorrow, since your productivity being potentially lower for hours if you don't call me for 5 min. is a bad trade-off.
 
-Since the demos on \href{https://huggingface.co/facebook/musicgen-style}{Hugging Face} and in the \href{https://github.com/facebookresearch/audiocraft/tree/main/demos}{Audiocraft Github Repository} consistently failed to generate audios, throwing dependency errors, we decided to run inference manually using the open source code base. Not only didn't the provided setup script work, but the requirements file was also not up to date. After roughly 3-4 hours of troubleshooting dependency issues and adapting code to API breaking changes, we were able to run the model locally. Other users have experienced \href{https://github.com/facebookresearch/audiocraft/issues/547}{similar issues} and seem to not have recieved any support from the maintainers as of yet.\\
+Since the demos on \href{https://huggingface.co/facebook/musicgen-style}{Hugging Face} and in the \href{https://github.com/facebookresearch/audiocraft/tree/main/demos}{Audiocraft Github Repository} consistently failed to generate audios, throwing dependency errors, we decided to run inference manually using the open source code base. Not only didn't the provided setup script work, but the requirements file was also not up to date. After roughly 3-4 hours of troubleshooting dependency issues and adapting code to API breaking changes, we were able to run the model locally. Other users have experienced \href{https://github.com/facebookresearch/audiocraft/issues/547}{similar issues} and seem to not have received any support from the maintainers as of yet.\\
 
-In addition, we performed exploratory, qualitative studies to get a sense of human perception and recieved unimpressed, critical feedback across the board. Table \ref{tab:common_quotes} highlights some representative answers.\\
+In addition, we performed exploratory, qualitative studies to get a sense of human perception and received unimpressed, critical feedback across the board. Table \ref{tab:common_quotes} highlights some representative answers.\\
 
 Examples of prompts for feedback, after generating music in the style of a song chosen by the participants included:
 
@@ -623,12 +623,12 @@ Examples of prompts for feedback, after generating music in the style of a song 
 
     Questions during the time period of the survey were answered by saying: ``I'll answer you right after we are done with the questions.'' \\
 
-Our studies aimed to gain qualitative real-world feedback to give the authors to generate helpful research directions. They had the additional benefit of hinting at potential decrepencies in the papers communication of model capabilities and actual generation result. Whilst we tried to provide study participants an opportunity to give us unbiased feedback, the evidence shouldn't be interpreted as leading to any confident conclusions. Participants attitudes to AI, an unrepresentative sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations on the right side of table \ref{tab:common_quotes} have been generated using \href{https://gemini.google.com}{gemini.google.com}.\\
+Our studies aimed to gain qualitative real-world feedback to give the authors to generate helpful research directions. They had the additional benefit of hinting at potential decrepancies in the papers communication of model capabilities and actual generation result. Whilst we tried to provide study participants an opportunity to give us unbiased feedback, the evidence shouldn't be interpreted as leading to any confident conclusions. Participants attitudes to AI, an unrepresentative sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations on the right side of table \ref{tab:common_quotes} have been generated using \href{https://gemini.google.com}{gemini.google.com}.\\
 
 Whilst these limitations are present we think that the attention to detail people pay to the nuances of their favorite songs is a promising direction for detailed, qualitative human evaluation studies, which might enable further increases in the quality of generated music.\\
 
 \begin{table*}[!h]
-    \caption{Participant Quotes - Common Answers}
+    \caption{Representative responses when evaluating generated audio}
     \centering
     \label{tab:common_quotes}
     \resizebox{\textwidth}{!}{
@@ -657,7 +657,7 @@ Whilst these limitations are present we think that the attention to detail peopl
 %     % \1 Why 5hz downsampling after codebook instead of before?
 % \end{outline}
 
-\subsection{Mismatch in objective and human evualuations}
+\subsection{Mismatch in objective and human evaluations}
 
 Our qualitative results point to a mismatch in reported audio quality, especially when compared to audio snippets on their \href{musicgenstyle.github.io}{website}, and actual performance in real-world scenarios. This finding seems to be further supported by \href{https://github.com/facebookresearch/audiocraft/issues/512}{failures to replicate findings}.
 
@@ -714,21 +714,21 @@ Lastly, there's an additional 10.000 songs in an undisclosed internal dataset, w
 
 \subsection{Model performance on out of distribution data}
 \subsubsection{Generation of silence}
-When prompting the model to output silence, the output seems to contain no stylistic features extracted from the input audio, yet it also is not silent, containing some rhythmic elements resembling drums as well as noise. This also holds true when the \textit{style conditioning} is performed on silence, indicating that the model tends to hallucinate when performing on insufficient data. \\
+When prompting the model to output silence, the output seems to contain no stylistic features extracted from the input audio, yet it also is not silent, containing some rhythmic elements resembling drums as well as noise. This also holds true when the \textit{style conditioning} is performed on silence, indicating that the model tends to hallucinate when performing on insufficient data. 
 
 \subsubsection{Generation without textual prompt}
-In the generation without any textual prompt, the subsample length deficiency (\ref{sec:subsampleLength}) becomes eminent, with the generated audio being very close to a specific section of the audio while not matching stylistically different sections. This is specifically noticable when generating multiple snippets from the same audio input, where the output can differ in style. \\
+In the generation without any textual prompt, the subsample length deficiency (\ref{sec:subsampleLength}) becomes apparent, with the generated audio being very close to a specific section of the audio while not matching stylistically different sections. This is specifically noticable when generating multiple snippets from the same audio input, where the output can differ in style. 
 
 \subsubsection{Generation with both conditioning methods}
-When generating audio with opposing textual and stylistic descriptions, it was observed that the model did not always incorporate both styles into another, but rather split the generated audio into two sections, with one matching the style conditioning and the other matching the textual description. \\
+When generating audio with opposing textual and stylistic descriptions, it was observed that the model did not always incorporate both styles into another, but rather split the generated audio into two sections, with one matching the style conditioning and the other matching the textual description. 
 
-For generated audio with the same input sample and the same text input, increasing the $\beta$-parameter of the DCFG made the sound of the generated audio more similar to the textual prompt, thus working as expected. \\
+For generated audio with the same input sample and the same text input, increasing the $\beta$-parameter of the DCFG made the sound of the generated audio more similar to the textual prompt, thus working as expected.
 
 \subsection{Train compute and model scaling}
-The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.5bn parameters is far from SOTA in terms of trainable parameters in transformer architectures. Most of the issues present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented in the paper by \cite{kaplanScalingLawsNeural}. \\
+The paper seems to be well executed, but it's obvious that this is not a commercial priority inside Facebook as the model size of 1.5bn parameters is far from SOTA in terms of trainable parameters in transformer architectures. Many of the issues present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented in the paper by \cite{kaplanScalingLawsNeural}. 
 
 \subsection{User reactions}
-When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals and commenting on a lack of stylistic understanding. Genre-specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio. \\
+When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals and commenting on a lack of stylistic understanding. Genre-specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio. 
 
 \subsection{Safety}
 We believe AI development should follow a human centric approach, where AI should only be developed in combination with rigorous safety testing and brainstorming phases to prevent the release of models that might cause unnecessary harms. The authors did not perform any safety measurements, stating in their ethical statement that implementing bottlenecks improves controllability, while also ensuring that the model does not copy its input. This, however, does not ensure that the model is not abused by malicious actors.\\
@@ -747,13 +747,19 @@ To compare our safety considerations with their statements please visit the resp
     The paper by \cite{rouardAudioConditioningMusic2024} presents and evaluates two methods for allowing a music generation model to accept audio as an input, enabling the creation of music in the style of a reference audio track instead of relying only on text. \\
 
     The first method, called \textit{textual inversion}, is a proof-of-concept that adapts a pre-trained model by representing the stylistic features of the audio as text. While it avoids costly retraining, its output is of low quality both in terms of audio and in terms of its style extraction. \\
-    The main contribution is a model using a \textit{style conditioning} method, trained from scratch with a dedicated style encoder. This style encoder uses a music compresson algorithm to extract stylistic features, and effectively limits the amount of information passed through to the model in order to capture style without simply copying the input audio. It is fast at inference and uses a novel Double Classifier-Free Guidance (DCFG) method to balance the importance of audio and text prompts. \\
+
+    The main contribution is a model using a \textit{style conditioning} method, trained from scratch with a dedicated style encoder. This style encoder uses a music compression algorithm to extract stylistic features, and effectively limits the amount of information passed through to the model in order to capture style without simply copying the input audio. It is fast at inference and uses a novel Double Classifier-Free Guidance (DCFG) method to balance the importance of audio and text prompts.
 
     \subsection*{Advantages and Drawbacks}
 
-    The \textit{style conditioning} model performs well in the testing performed by the authors, outperforming or matching the baseline models in most of the metrics they were tested on. Its inference is also relatively quick, allowing music generation almost in real-time. Additionally, the inclusion of an audio input as conditioning enables the model to be applicable to more situations, simplifying generation of audio in a specific style. \\
+    The \textit{style conditioning} model performs well in the testing performed by the authors, outperforming or matching the baseline models in most of the metrics they were tested on (\ref{tab:comparison_baselines}). Its inference is also relatively quick, allowing music generation almost in real-time. Additionally, the inclusion of an audio input as conditioning enables the model to be applicable to more situations, simplifying generation of audio in a specific style. \\
     
+
     Yet we have noticed in our testing, that the performance of the models performance falls short in practice, delivering worse audio quality than expected, with several issues regarding the \textit{style conditioning}. It was noticed that the model failed to capture stylistic nuances, generating music that mostly sounded generic and overgeneralized. Additionally, the model failed to combine two styles in its output, instead generating sections associated with each style on its own, but none incorporating both.
+
+    \subsection*{Outlook}
+
+    Future work might allow the generation of music with vocals, improve the quality of the conditioning, give the user choices on which stylistic devices they want to extract and introduce safeguards to reduce the risk of the model being misused. \\
 
 
     % \subsubsection*{Advantages}
