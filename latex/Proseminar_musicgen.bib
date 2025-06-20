@@ -1,3 +1,17 @@
+@misc{atmetaFacebookMusicgenstyleHugging2025,
+  type = {Model {{Repository}}},
+  title = {Facebook/Musicgen-Style {$\cdot$} {{Hugging Face}}},
+  author = {{at META}, {\relax AI}},
+  year = {2025},
+  month = jun,
+  journal = {Hugging Face},
+  urldate = {2025-06-20},
+  abstract = {We're on a journey to advance and democratize artificial intelligence through open source and open science.},
+  howpublished = {https://huggingface.co/facebook/musicgen-style},
+  langid = {english},
+  file = {/Users/felix-krueckel/Zotero/storage/8JPEEJM5/musicgen-style.html}
+}
+
 @article{copetSimpleControllableMusic2024,
   title = {Simple and {{Controllable Music Generation}}},
   author = {Copet, Jade and Kreuk, Felix and Gat, Itai and Remez, Tal and Kant, David and Synnaeve, Gabriel and Adi, Yossi and D{\'e}fossez, Alexandre},
@@ -33,16 +47,16 @@
   file = {/Users/felix-krueckel/Zotero/storage/ZS4XBIBD/Défossez et al. - 2022 - High Fidelity Neural Audio Compression.pdf;/Users/felix-krueckel/Zotero/storage/V386BKSJ/2210.html}
 }
 
-@misc{elizaldeCLAPLearningAudio2022,
+@article{elizaldeCLAPLearningAudio2022,
   title = {{{CLAP}}: {{Learning Audio Concepts From Natural Language Supervision}}},
   shorttitle = {{{CLAP}}},
   author = {Elizalde, Benjamin and Deshmukh, Soham and Ismail, Mahmoud Al and Wang, Huaming},
   year = {2022},
   month = jun,
-  number = {arXiv:2206.04769},
+  journal = {ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   eprint = {2206.04769},
   primaryclass = {cs},
-  publisher = {arXiv},
+  pages = {1--5},
   doi = {10.48550/arXiv.2206.04769},
   urldate = {2025-05-03},
   abstract = {Mainstream Audio Analytics models are trained to learn under the paradigm of one class label to many recordings focusing on one task. Learning under such restricted supervision limits the flexibility of models because they require labeled audio for training and can only predict the predefined categories. Instead, we propose to learn audio concepts from natural language supervision. We call our approach Contrastive Language-Audio Pretraining (CLAP), which learns to connect language and audio by using two encoders and a contrastive learning to bring audio and text descriptions into a joint multimodal space. We trained CLAP with 128k audio and text pairs and evaluated it on 16 downstream tasks across 8 domains, such as Sound Event Classification, Music tasks, and Speech-related tasks. Although CLAP was trained with significantly less pairs than similar computer vision models, it establishes SoTA for Zero-Shot performance. Additionally, we evaluated CLAP in a supervised learning setup and achieve SoTA in 5 tasks. Hence, CLAP's Zero-Shot capability removes the need of training with class labels, enables flexible class prediction at inference time, and generalizes to multiple downstream tasks.},
@@ -217,6 +231,21 @@
   abstract = {Self-supervised learning (SSL) has recently emerged as a promising paradigm for training generalisable models on large-scale data in the fields of vision, text, and speech. Although SSL has been proven effective in speech and audio, its application to music audio has yet to be thoroughly explored. This is partially due to the distinctive challenges associated with modelling musical knowledge, particularly tonal and pitched characteristics of music. To address this research gap, we propose an acoustic Music undERstanding model with large-scale self-supervised Training (MERT), which incorporates teacher models to provide pseudo labels in the masked language modelling (MLM) style acoustic pre-training. In our exploration, we identified an effective combination of teacher models, which outperforms conventional speech and audio approaches in terms of performance. This combination includes an acoustic teacher based on Residual Vector Quantisation - Variational AutoEncoder (RVQ-VAE) and a musical teacher based on the Constant-Q Transform (CQT). Furthermore, we explore a wide range of settings to overcome the instability in acoustic language model pre-training, which allows our designed paradigm to scale from 95M to 330M parameters. Experimental results indicate that our model can generalise and perform well on 14 music understanding tasks and attain state-of-the-art (SOTA) overall scores.},
   copyright = {Creative Commons Attribution Share Alike 4.0 International},
   keywords = {Artificial Intelligence (cs.AI),Audio and Speech Processing (eess.AS),Computation and Language (cs.CL),FOS: Computer and information sciences,FOS: Electrical engineering electronic engineering information engineering,Machine Learning (cs.LG),Sound (cs.SD)}
+}
+
+@misc{liuLargeDiscrepancyCLAP2025,
+  type = {Source {{Code Repository}}},
+  title = {Large {{Discrepancy}} in {{CLAP Score When Evaluating Musicgen}} with {{Different CLAP Checkpoints}} {$\cdot$} {{Issue}} \#512 {$\cdot$} Facebookresearch/Audiocraft},
+  author = {Liu, Zihan},
+  year = {2025},
+  month = jun,
+  journal = {GitHub},
+  urldate = {2025-06-20},
+  abstract = {I observed a significant discrepancy in the CLAP scores when using different pretrained CLAP models to evaluate Musicgen. Specifically, I used two distinct pretrained CLAP checkpoints to assess Mus...},
+  howpublished = {https://github.com/facebookresearch/audiocraft/issues/512},
+  langid = {english},
+  annotation = {authors Google Scholar verified an email at Beihang University, China},
+  file = {/Users/felix-krueckel/Zotero/storage/NED467VL/512.html}
 }
 
 @article{mathurNavigatingSocialWorld2016,
