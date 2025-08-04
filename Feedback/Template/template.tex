@@ -1,0 +1,127 @@
+%------------------------------------------------
+% Latex-Grundgerüst für Seminarausarbeitungen
+%
+% zu Erzeugen mit
+%   pdflatex template.tex
+%
+% von Carsten Gutwenger
+% angepasst von Igor Vatolkin
+%------------------------------------------------
+
+\documentclass[a4paper,12pt,twoside]{article}
+\usepackage[a4paper,left=3.5cm,right=2.5cm,bottom=3.5cm,top=3cm]{geometry}
+
+% Encoding der .tex-Datei
+% muss je nach Editor-Einstellungen eventuell angepasst werden!
+%   latin1    Unix/Windows
+%   ansinew   Alternative für Windows
+%   applemac  Apple
+%   utf8      Alternative für Unix/Windows/Apple
+\usepackage[latin1]{inputenc}
+
+%\usepackage[ngerman]{babel}                                 % deutsche Sprache
+\usepackage[T1]{fontenc}                                    % Unterstützung für Umlaute mit Fonts
+\usepackage[pdftex]{graphicx,color}                         % Einbetten von Grafiken, Farbe
+\usepackage[format=plain,small,bf,indention=7.5mm]{caption} % verbesserte Beschriftung von Abbildungen
+\usepackage{subfig}                                         % subfigures
+\usepackage{url}                                            % \url{}-Kommando
+\usepackage{fancyhdr,float}                                 % Kopf-/Fußzeilen
+\usepackage[pdftex,pdfpagelabels]{hyperref}                 % Hyperlinks im PDF
+\usepackage{natbib,doi}                                     % Literaturverzeichnis, DOIs
+\usepackage[section,boxed]{algorithm}                       % Floating-Umgebung für Algorithmen
+\usepackage{algpseudocode}                                  % Pseudocode für Algorithmen
+
+\captionsetup{farskip=10pt,topadjust=0pt,captionskip=10pt,nearskip=0pt,margin=10pt}
+
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\nouppercase{\slshape \leftmark}}
+\fancyhead[LO]{\nouppercase{\slshape \rightmark}}
+\fancyfoot[C]{}
+
+
+\begin{document}
+
+%------------------------------------------------
+% Titelseite
+%------------------------------------------------
+
+\begin{titlepage}
+\vspace*{-2cm}
+\newlength{\links}
+\setlength{\links}{-1.5cm} \sf \LARGE
+
+\hspace*{\links}
+\begin{minipage}{12.5cm}
+\includegraphics[width=8cm]{RWTH_Logo_3.svg}
+\end{minipage}
+
+\vspace*{4cm}
+
+\large
+\begin{center}
+{\Large Seminar work} \\[1ex]
+{\LARGE\textbf{[Title]}}\\[3ex]
+[Names]\\[1ex]
+\today\\[7ex]
+as part of seminar\\[1ex]
+{\Large\textbf{Artificial Intelligence in Music Data Analysis}}\\[1ex]
+organised by Dr.~Igor Vatolkin\\[1ex]
+Summer term 2025
+\end{center}
+
+\vspace*{5cm}
+\hspace*{\links}
+\begin{minipage}[b]{15cm}
+\normalsize \raggedright
+
+\textbf{Based on:}\\
+Authors, title of the paper, conference
+\end{minipage}
+
+\vfill
+\hspace*{\links}
+\begin{minipage}[b]{8cm}
+\normalsize \raggedright
+RWTH Aachen\\
+Computer Science 14\\
+Artificial Intelligence Methodology\\
+\url{https://www.aim.rwth-aachen.de/}
+\end{minipage}
+
+\end{titlepage}
+
+%------------------------------------------------
+% Inhaltsverzeichnis
+%------------------------------------------------
+
+\tableofcontents
+\clearpage
+
+
+%------------------------------------------------
+% Einführung
+%------------------------------------------------
+
+\section{Introduction}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+sit amet.
+
+Example for a reference: \cite{HanKno06} (journal article) and \cite{TarekEtAl07} (conference paper).
+
+
+%------------------------------------------------
+% Literaturverzeichnis
+%------------------------------------------------
+\newpage
+\bibliographystyle{plain}
+\bibliography{literatur}
+\addcontentsline{toc}{section}{\bibname}
+
+
+\end{document}

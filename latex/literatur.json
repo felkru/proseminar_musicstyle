@@ -97,19 +97,31 @@
       "Preferences": true,
       "biblatexAPA": false,
       "biblatexChicago": false,
-      "exportDir": "/Users/felix-krueckel/Documents/rwth/cs/Proseminar Music Data Analysis/latex",
       "exportFileData": false,
       "exportNotes": true,
-      "exportPath": "/Users/felix-krueckel/Documents/rwth/cs/Proseminar Music Data Analysis/latex/literatur.json",
       "keepUpdated": false,
-      "worker": true
+      "worker": true,
+      "exportDir": "/Users/felix-krueckel/Documents/rwth/cs/Proseminar Music Data Analysis/latex",
+      "exportPath": "/Users/felix-krueckel/Documents/rwth/cs/Proseminar Music Data Analysis/latex/literatur.json"
     }
   },
   "version": {
-    "zotero": "7.0.15",
-    "bbt": "7.0.34"
+    "zotero": "7.0.16",
+    "bbt": "7.0.36"
   },
   "collections": {
+    "9LSYCFWN": {
+      "key": "9LSYCFWN",
+      "parent": "",
+      "name": "Copyright Axel Voss",
+      "collections": [],
+      "items": [
+        279,
+        281,
+        283,
+        285
+      ]
+    },
     "WMTX9XE9": {
       "key": "WMTX9XE9",
       "parent": "",
@@ -311,23 +323,15 @@
       "itemID": 84,
       "attachments": [
         {
-          "key": "46IV6VBR",
-          "version": 379,
           "itemType": "attachment",
           "title": "Snapshot",
           "url": "https://research.com/university/computer-science/university-of-oxford",
-          "accessDate": "2024-09-10T07:30:26Z",
-          "parentItem": "S6SD67CA",
-          "linkMode": "imported_url",
-          "contentType": "",
-          "charset": "",
-          "filename": "",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-09-10T07:30:26Z",
           "dateModified": "2024-09-10T07:30:26Z",
           "uri": "http://zotero.org/users/14685114/items/46IV6VBR",
-          "localPath": false
+          "select": "zotero://select/library/items/46IV6VBR"
         }
       ],
       "notes": [],
@@ -355,23 +359,15 @@
       "itemID": 85,
       "attachments": [
         {
-          "key": "6VN3MPMJ",
-          "version": 377,
           "itemType": "attachment",
           "title": "Snapshot",
           "url": "https://research.com/university/computer-science/eth-zurich",
-          "accessDate": "2024-09-10T07:30:18Z",
-          "parentItem": "UCJ55BJY",
-          "linkMode": "imported_url",
-          "contentType": "",
-          "charset": "",
-          "filename": "",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-09-10T07:30:18Z",
           "dateModified": "2024-09-10T07:30:18Z",
           "uri": "http://zotero.org/users/14685114/items/6VN3MPMJ",
-          "localPath": false
+          "select": "zotero://select/library/items/6VN3MPMJ"
         }
       ],
       "notes": [],
@@ -399,23 +395,15 @@
       "itemID": 86,
       "attachments": [
         {
-          "key": "QQS7DTRX",
-          "version": 375,
           "itemType": "attachment",
           "title": "Snapshot",
           "url": "https://research.com/university/computer-science/mit",
-          "accessDate": "2024-09-10T07:30:11Z",
-          "parentItem": "FY9UCDTK",
-          "linkMode": "imported_url",
-          "contentType": "",
-          "charset": "",
-          "filename": "",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-09-10T07:30:11Z",
           "dateModified": "2024-09-10T07:30:11Z",
           "uri": "http://zotero.org/users/14685114/items/QQS7DTRX",
-          "localPath": false
+          "select": "zotero://select/library/items/QQS7DTRX"
         }
       ],
       "notes": [],
@@ -443,23 +431,15 @@
       "itemID": 87,
       "attachments": [
         {
-          "key": "UE7XZB5M",
-          "version": 373,
           "itemType": "attachment",
           "title": "Snapshot",
           "url": "https://research.com/university-rankings/computer-science",
-          "accessDate": "2024-09-10T07:29:58Z",
-          "parentItem": "KUZX54RP",
-          "linkMode": "imported_url",
-          "contentType": "",
-          "charset": "",
-          "filename": "",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-09-10T07:29:58Z",
           "dateModified": "2024-09-10T07:29:58Z",
           "uri": "http://zotero.org/users/14685114/items/UE7XZB5M",
-          "localPath": false
+          "select": "zotero://select/library/items/UE7XZB5M"
         }
       ],
       "notes": [],
@@ -487,23 +467,15 @@
       "itemID": 88,
       "attachments": [
         {
-          "key": "KI2WRSNC",
-          "version": 371,
           "itemType": "attachment",
           "title": "Snapshot",
           "url": "https://research.com/university/computer-science/rwth-aachen-university",
-          "accessDate": "2024-09-10T07:29:46Z",
-          "parentItem": "JM8AS5YG",
-          "linkMode": "imported_url",
-          "contentType": "",
-          "charset": "",
-          "filename": "",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-09-10T07:29:46Z",
           "dateModified": "2024-09-10T07:29:46Z",
           "uri": "http://zotero.org/users/14685114/items/KI2WRSNC",
-          "localPath": false
+          "select": "zotero://select/library/items/KI2WRSNC"
         }
       ],
       "notes": [],
@@ -573,6 +545,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1440-1746.2004.03508.x",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T14:06:32Z",
@@ -584,6 +557,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1440-1746.2004.03508.x",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T14:06:37Z",
@@ -661,6 +635,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-319-69904-2_24.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-23T11:07:30Z",
@@ -738,6 +713,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-319-69904-2_24.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2025-04-22T10:26:09Z",
@@ -840,6 +816,7 @@
         {
           "itemType": "attachment",
           "title": "Preprint PDF",
+          "url": "http://arxiv.org/pdf/2306.05284v3",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -855,6 +832,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "http://arxiv.org/abs/2306.05284",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -978,6 +956,7 @@
         {
           "itemType": "attachment",
           "title": "arXiv Fulltext PDF",
+          "url": "https://arxiv.org/pdf/2205.14135.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-18T15:40:55Z",
@@ -989,6 +968,7 @@
         {
           "itemType": "attachment",
           "title": "arXiv.org Snapshot",
+          "url": "https://arxiv.org/abs/2205.14135",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-18T15:41:03Z",
@@ -1060,6 +1040,7 @@
         {
           "itemType": "attachment",
           "title": "De Leoni and Van Der Aalst - 2013 - Aligning Event Logs and Process Models for Multi-p.pdf",
+          "url": "https://www.math.unipd.it/~deleoni/documenti/dL_vdA@BPM13.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-23T10:33:30Z",
@@ -1128,6 +1109,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-642-40176-3_10.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-23T10:33:42Z",
@@ -1189,6 +1171,7 @@
         {
           "itemType": "attachment",
           "title": "arXiv Fulltext PDF",
+          "url": "https://arxiv.org/pdf/1312.4314.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-18T14:30:05Z",
@@ -1200,6 +1183,7 @@
         {
           "itemType": "attachment",
           "title": "arXiv.org Snapshot",
+          "url": "https://arxiv.org/abs/1312.4314",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-18T14:30:12Z",
@@ -1284,6 +1268,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-319-42887-1_15.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-23T11:07:49Z",
@@ -1383,6 +1368,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-540-75183-0_26.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-21T15:41:52Z",
@@ -1480,6 +1466,7 @@
         {
           "itemType": "attachment",
           "title": "Preprint PDF",
+          "url": "http://arxiv.org/pdf/2208.01618v1",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -1495,6 +1482,7 @@
         {
           "itemType": "attachment",
           "title": "Preprint PDF",
+          "url": "http://arxiv.org/pdf/2208.01618v1",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -1510,6 +1498,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "http://arxiv.org/abs/2208.01618",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -1545,6 +1534,47 @@
       "itemKey": "9WN93EZH",
       "libraryID": 1,
       "select": "zotero://select/library/items/9WN93EZH"
+    },
+    {
+      "key": "3JLPXVR7",
+      "version": 618,
+      "itemType": "encyclopediaArticle",
+      "title": "Genius (company)",
+      "abstractNote": "Genius is an American digital media company founded on August 27, 2009, by Tom Lehman, Ilan Zechory, and Mahbod Moghadam. The company is known for its eponymous website that serves as a database for song lyrics, news stories, sources, poetry, and documents, in which users can provide annotations and interpretations for.\nOriginally launched as Rap Genius, with a focus on hip-hop music, the company attracted the attention and support of celebrities, and venture capital enabling further growth. The site expanded in 2014 to cover other forms of media, such as pop, literature, and R&B, and added an annotation-embedded platform. That same year, an iPhone app was released. To reflect these new goals, the site relaunched as Genius in July 2014. An Android version was released in August 2015, and in 2016 and 2017, the company began producing music-focused original video content and hosting live events and concerts.",
+      "date": "2025-03-28T23:11:30Z",
+      "language": "en",
+      "libraryCatalog": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?title=Genius_(company)&oldid=1282841571",
+      "accessDate": "2025-07-02T23:10:54Z",
+      "rights": "Creative Commons Attribution-ShareAlike License",
+      "extra": "Page Version ID: 1282841571",
+      "encyclopediaTitle": "Wikipedia",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-07-02T23:10:54Z",
+      "dateModified": "2025-07-02T23:10:54Z",
+      "uri": "http://zotero.org/users/14685114/items/3JLPXVR7",
+      "itemID": 281,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://en.wikipedia.org/w/index.php?title=Genius_(company)&oldid=1282841571",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-07-02T23:10:59Z",
+          "dateModified": "2025-07-02T23:10:59Z",
+          "uri": "http://zotero.org/users/14685114/items/4P2VLZWM",
+          "path": "/Users/felix-krueckel/Zotero/storage/4P2VLZWM/index.html",
+          "select": "zotero://select/library/items/4P2VLZWM"
+        }
+      ],
+      "notes": [],
+      "citationKey": "GeniusCompany2025",
+      "itemKey": "3JLPXVR7",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/3JLPXVR7"
     },
     {
       "key": "W243UFDV",
@@ -1600,6 +1630,7 @@
         {
           "itemType": "attachment",
           "title": "PubMed Central Full Text PDF",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10746495/pdf/nihms-1949976.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T14:59:14Z",
@@ -1609,21 +1640,15 @@
           "select": "zotero://select/library/items/58F99U7H"
         },
         {
-          "key": "SHR9JHRE",
-          "version": 205,
           "itemType": "attachment",
           "title": "PubMed Central Link",
           "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10746495/",
-          "accessDate": "2024-07-26T14:59:12Z",
-          "parentItem": "W243UFDV",
-          "linkMode": "linked_url",
-          "contentType": "text/html",
-          "charset": "",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T14:59:12Z",
           "dateModified": "2024-07-26T14:59:12Z",
-          "uri": "http://zotero.org/users/14685114/items/SHR9JHRE"
+          "uri": "http://zotero.org/users/14685114/items/SHR9JHRE",
+          "select": "zotero://select/library/items/SHR9JHRE"
         }
       ],
       "notes": [],
@@ -1631,6 +1656,43 @@
       "itemKey": "W243UFDV",
       "libraryID": 1,
       "select": "zotero://select/library/items/W243UFDV"
+    },
+    {
+      "key": "DHNQXEFS",
+      "version": 614,
+      "itemType": "webpage",
+      "title": "‎Google Gemini",
+      "abstractNote": "Gemini is your personal, proactive, and powerful AI assistant from Google. Try it for free to help with work, school, and at home for whatever inspires you.",
+      "language": "en",
+      "url": "https://gemini.google.com",
+      "accessDate": "2025-07-02T23:07:40Z",
+      "websiteTitle": "Gemini",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-07-02T23:07:40Z",
+      "dateModified": "2025-07-02T23:07:40Z",
+      "uri": "http://zotero.org/users/14685114/items/DHNQXEFS",
+      "itemID": 279,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://gemini.google.com",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-07-02T23:07:42Z",
+          "dateModified": "2025-07-02T23:07:42Z",
+          "uri": "http://zotero.org/users/14685114/items/G8NW5K2T",
+          "path": "/Users/felix-krueckel/Zotero/storage/G8NW5K2T/gemini.google.com.html",
+          "select": "zotero://select/library/items/G8NW5K2T"
+        }
+      ],
+      "notes": [],
+      "citationKey": "GoogleGemini",
+      "itemKey": "DHNQXEFS",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/DHNQXEFS"
     },
     {
       "key": "M5JNG323",
@@ -1712,6 +1774,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-030-98581-3_22.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-21T15:58:44Z",
@@ -1798,6 +1861,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DE896303ACBB12102D5B5D39CA163EA2/S0033291711001978a.pdf/div-class-title-intergenerational-transmission-and-continuity-of-stress-and-depression-depressed-women-and-their-offspring-in-20-years-of-follow-up-div.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T15:36:53Z",
@@ -1902,6 +1966,7 @@
         {
           "itemType": "attachment",
           "title": "Preprint PDF",
+          "url": "http://arxiv.org/pdf/2308.14360v3",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -1917,6 +1982,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "http://arxiv.org/abs/2308.14360",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -2021,6 +2087,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1186%2Fs12889-022-12993-5.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T15:25:31Z",
@@ -2085,6 +2152,7 @@
         {
           "itemType": "attachment",
           "title": "Preprint PDF",
+          "url": "http://arxiv.org/pdf/2207.12598v1",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -2100,6 +2168,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "http://arxiv.org/abs/2207.12598",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -2210,6 +2279,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-642-15618-2_17.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-23T10:47:42Z",
@@ -2390,6 +2460,7 @@
         {
           "itemType": "attachment",
           "title": "arXiv Fulltext PDF",
+          "url": "https://arxiv.org/pdf/2401.04088.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-18T14:24:34Z",
@@ -2401,6 +2472,7 @@
         {
           "itemType": "attachment",
           "title": "arXiv.org Snapshot",
+          "url": "http://arxiv.org/abs/2401.04088",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-18T14:24:47Z",
@@ -2502,6 +2574,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1186%2Fs12888-021-03428-3.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T15:43:51Z",
@@ -2608,6 +2681,7 @@
         {
           "itemType": "attachment",
           "title": "arXiv Fulltext PDF",
+          "url": "https://arxiv.org/pdf/2010.11719.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-21T15:56:58Z",
@@ -2619,6 +2693,7 @@
         {
           "itemType": "attachment",
           "title": "arXiv.org Snapshot",
+          "url": "http://arxiv.org/abs/2010.11719",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-21T15:57:06Z",
@@ -2765,6 +2840,7 @@
         {
           "itemType": "attachment",
           "title": "IEEE Xplore Full Text PDF",
+          "url": "https://ieeexplore.ieee.org/ielx7/6287639/9312710/09478853.pdf?tp=&arnumber=9478853&isnumber=9312710&ref=",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-23T06:44:17Z",
@@ -2779,6 +2855,42 @@
       "itemKey": "AIYT62FC",
       "libraryID": 1,
       "select": "zotero://select/library/items/AIYT62FC"
+    },
+    {
+      "key": "H9W4QWFD",
+      "version": 626,
+      "itemType": "webpage",
+      "title": "Prompts Playground - OpenAI API",
+      "abstractNote": "Explore resources, tutorials, API docs, and dynamic examples to get the most out of OpenAI's developer platform.",
+      "language": "en-US",
+      "url": "https://platform.openai.com",
+      "accessDate": "2025-07-02T23:59:03Z",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-07-02T23:59:03Z",
+      "dateModified": "2025-07-02T23:59:03Z",
+      "uri": "http://zotero.org/users/14685114/items/H9W4QWFD",
+      "itemID": 285,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://platform.openai.com",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-07-02T23:59:04Z",
+          "dateModified": "2025-07-02T23:59:04Z",
+          "uri": "http://zotero.org/users/14685114/items/5FVYA5TM",
+          "path": "/Users/felix-krueckel/Zotero/storage/5FVYA5TM/platform.openai.com.html",
+          "select": "zotero://select/library/items/5FVYA5TM"
+        }
+      ],
+      "notes": [],
+      "citationKey": "PromptsPlaygroundOpenAI",
+      "itemKey": "H9W4QWFD",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/H9W4QWFD"
     },
     {
       "key": "59A5HV8H",
@@ -2853,6 +2965,7 @@
         {
           "itemType": "attachment",
           "title": "Preprint PDF",
+          "url": "http://arxiv.org/pdf/2407.12563v2",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -2996,6 +3109,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://globalizationandhealth.biomedcentral.com/counter/pdf/10.1186/s12992-020-00589-w",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T13:40:44Z",
@@ -3007,6 +3121,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "https://globalizationandhealth.biomedcentral.com/articles/10.1186/s12992-020-00589-w",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T13:40:47Z",
@@ -3067,6 +3182,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2018/file/905056c1ac1dad141560467e0a99e1cf-Paper.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-05T08:34:22Z",
@@ -3123,6 +3239,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1751-9004.2011.00379.x",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T15:56:37Z",
@@ -3134,6 +3251,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "https://compass.onlinelibrary.wiley.com/doi/full/10.1111/j.1751-9004.2011.00379.x",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T15:57:12Z",
@@ -3148,6 +3266,70 @@
       "itemKey": "W6NDRB6L",
       "libraryID": 1,
       "select": "zotero://select/library/items/W6NDRB6L"
+    },
+    {
+      "key": "KNYRHQP5",
+      "version": 622,
+      "itemType": "newspaperArticle",
+      "title": "Rap Genius Website Agrees to License With Music Publishers",
+      "abstractNote": "The popular site, which compiles annotations of song lyrics, had been criticized by publishers for using lyrics without permission.",
+      "date": "2014-05-06",
+      "language": "en-US",
+      "libraryCatalog": "NYTimes.com",
+      "url": "https://www.nytimes.com/2014/05/07/business/media/rap-genius-website-agrees-to-license-with-music-publishers.html",
+      "accessDate": "2025-07-02T23:11:17Z",
+      "section": "Business",
+      "publicationTitle": "The New York Times",
+      "ISSN": "0362-4331",
+      "creators": [
+        {
+          "firstName": "Ben",
+          "lastName": "Sisario",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Copyrights and Copyright Violations",
+          "type": 1
+        },
+        {
+          "tag": "National Music Publishers' Assn",
+          "type": 1
+        },
+        {
+          "tag": "RapGenius.com",
+          "type": 1
+        },
+        {
+          "tag": "Royalties",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-07-02T23:11:17Z",
+      "dateModified": "2025-07-02T23:11:17Z",
+      "uri": "http://zotero.org/users/14685114/items/KNYRHQP5",
+      "itemID": 283,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "url": "https://www.nytimes.com/2014/05/07/business/media/rap-genius-website-agrees-to-license-with-music-publishers.html",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-07-02T23:11:22Z",
+          "dateModified": "2025-07-02T23:11:22Z",
+          "uri": "http://zotero.org/users/14685114/items/AMCB4I68",
+          "path": "/Users/felix-krueckel/Zotero/storage/AMCB4I68/rap-genius-website-agrees-to-license-with-music-publishers.html",
+          "select": "zotero://select/library/items/AMCB4I68"
+        }
+      ],
+      "notes": [],
+      "citationKey": "sisarioRapGeniusWebsite2014",
+      "itemKey": "KNYRHQP5",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KNYRHQP5"
     },
     {
       "key": "RXDH2WFD",
@@ -3191,6 +3373,7 @@
         {
           "itemType": "attachment",
           "title": "Smith and Waterman - 1981 - Identification of common molecular subsequences.pdf",
+          "url": "https://icbi.i-med.ac.at/courses/bioinformatics_ex_2021/7265238.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-04T10:35:12Z",
@@ -3231,6 +3414,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "https://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-30T15:25:41Z",
@@ -3310,6 +3494,7 @@
         {
           "itemType": "attachment",
           "title": "Preprint PDF",
+          "url": "http://arxiv.org/pdf/2406.10970v1",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -3325,6 +3510,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "http://arxiv.org/abs/2406.10970",
           "tags": [],
           "relations": {
             "owl:sameAs": [
@@ -3444,6 +3630,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-030-94343-1_8.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-21T16:10:38Z",
@@ -3513,6 +3700,7 @@
         {
           "itemType": "attachment",
           "title": "Submitted Version",
+          "url": "https://link.springer.com/content/pdf/bfm:978-3-642-19345-3/1?pdf=chapter%20toc",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-23T10:31:35Z",
@@ -3608,6 +3796,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-031-08848-3.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-23T10:29:59Z",
@@ -3688,6 +3877,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://academic.oup.com/aje/article-pdf/176/7/586/283428/kws139.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T14:51:19Z",
@@ -3699,6 +3889,7 @@
         {
           "itemType": "attachment",
           "title": "Snapshot",
+          "url": "https://academic.oup.com/aje/article/176/7/586/122221#935348",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T14:52:56Z",
@@ -3827,6 +4018,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2F978-3-031-27815-0_37.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-21T17:09:57Z",
@@ -3964,6 +4156,7 @@
         {
           "itemType": "attachment",
           "title": "Full Text PDF",
+          "url": "https://link.springer.com/content/pdf/10.1007%2Fs11886-017-0919-x.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-07-26T14:31:17Z",
@@ -4030,6 +4223,7 @@
         {
           "itemType": "attachment",
           "title": "PubMed Central Full Text PDF",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3852983/pdf/pone.0082138.pdf",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-03T15:05:52Z",
@@ -4039,21 +4233,15 @@
           "select": "zotero://select/library/items/RSXAS3I2"
         },
         {
-          "key": "H67CZFKK",
-          "version": 255,
           "itemType": "attachment",
           "title": "PubMed Central Link",
           "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3852983/",
-          "accessDate": "2024-08-03T15:05:37Z",
-          "parentItem": "4HBTXHIU",
-          "linkMode": "linked_url",
-          "contentType": "text/html",
-          "charset": "",
           "tags": [],
           "relations": {},
           "dateAdded": "2024-08-03T15:05:37Z",
           "dateModified": "2024-08-03T15:05:37Z",
-          "uri": "http://zotero.org/users/14685114/items/H67CZFKK"
+          "uri": "http://zotero.org/users/14685114/items/H67CZFKK",
+          "select": "zotero://select/library/items/H67CZFKK"
         }
       ],
       "notes": [],
