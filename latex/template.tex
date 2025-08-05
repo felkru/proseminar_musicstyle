@@ -181,7 +181,7 @@ Because ``music is hard to describe textually'' (\cite{rouardAudioConditioningMu
 
 However, as will be shown in section \ref{sec:discussion}, the models described in the paper are still lacking in their ability to accurately capture the stylistic details of the musical input, as well as their ability to merge multiple styles in the output. \\ \
 
-section \ref{sec:backgrounds} starts by describing backgrounds relevant for the methods explained in section \ref{sec:methods}.
+Section \ref{sec:backgrounds} starts by describing backgrounds relevant for the methods explained in section \ref{sec:methods}.
 The following section \ref{sec:paperResults} and section \ref{sec:discussion} present and discuss the paper's main results, while our own experiments are detailed in section \ref{sec:experiments}.
 
 \section{Backgrounds}\label{sec:backgrounds}
@@ -198,11 +198,11 @@ Pseudowords are a linguistic description of non-text data, which can be fitted i
 
 A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantic differences between concepts are represented by their distance in the vector space. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The model trained in our paper has a dimensionality of 512, whilst SOTA language models can have embedding spaces as large as many tens of thousands of dimensions. \\
 
-Because of that, most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training (\cite{lecunDeepLearning2015}). A visualization can be found at \href{https://felix-krueckel.com/musical\_concepts.html}{felix-krueckel.com/musical\_concepts.html}.
+Because of that, most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training (\cite{lecunDeepLearning2015}). A visualization can be found at felix-krueckel.com\footnote{\url{https://felix-krueckel.com/musical\_concepts.html}, last access: 2025-08-05}.
 
 \subsubsection*{Double Classifier-Free Guidance}\label{sec:DCFG}
 
-Double Classifier-Free Guidance (DCFG) is a technique that applies classifier-free guidance twice to balance the influence of textual and style information when the two types of conditioning are conflicting. Without this technique, the less information-ally dense textual specification may be ignored (Rouard et al. [2024]). Classifier-free guidance (CFG) itself is a method that can amplify the importance of the condi- tioning given to the model for creating their output (Ho and Salimans [2022]). It works by training a model on both conditioned and unconditioned data, and then at inference time, extrapolating the output away from the unconditioned generation, thereby strengthening the effect of the conditioning.
+Double Classifier-Free Guidance (DCFG) is a technique that applies Classifier-Free Guidance (CFG) twice to balance the influence of textual and style information when the two types of conditioning are conflicting. Without this technique, the less informationally dense textual specification may be ignored (\cite{rouardAudioConditioningMusic2024}). CFG itself is a method that can amplify the importance of the conditioning given to the model for creating its output (\cite{hoClassifierFreeDiffusionGuidance2022}). It works by training a model on both conditioned and unconditioned data, and then at inference time, extrapolating the output away from the unconditioned generation, thereby strengthening the effect of the conditioning.
 
 \subsection{Audio Processing and Representation}
 
@@ -212,7 +212,7 @@ An audio feature extractor is a component that can obtain stylistic features fro
 
 \subsubsection*{EnCodec}\label{sec:encodec}
 
-EnCodec is a deep-learning based audio codec designed for high levels of compression with minimal quality loss \cite{defossezHighFidelityNeural2022}. It uses a convolutional encoder-decoder architecture with a residual vector quantizer to create a compressed, discrete representation of the audio. In the context of this paper, EnCodec is used in the audio tokenizer as a transformer encoder (see Section \ref{sec:transformerEncoderDecoder}) (\cite{rouardAudioConditioningMusic2024}). It is a single-pass, real-time capable model that can handle a wide range of audio types.
+EnCodec is a deep-learning based audio codec designed for high levels of compression with minimal quality loss. It uses a convolutional encoder-decoder architecture with a residual vector quantizer to create a compressed, discrete representation of the audio. In the context of this paper, EnCodec is used in the audio tokenizer as a transformer encoder (section \ref{sec:transformerEncoderDecoder}) (\cite{rouardAudioConditioningMusic2024}). It is a real-time capable model that can handle a wide range of audio types including non-music sounds (\cite{defossezHighFidelityNeural2022}).
 
 \subsubsection*{Residual Vector Quantization}\label{sec:RVQ}
 
@@ -275,7 +275,7 @@ Cross-entropy loss is a function used in training large language models, measuri
 % \end{aigen}
 \subsubsection*{Gradient Descent Step}\label{sec:gradientDescent}
 
-A gradient descent step refers to the updating of model parameters based on the gradient of the model's loss function, aiming to find its global minimum. A visualization can be found at \href{https://felix-krueckel.com/optimizers.html}{felix-krueckel.com/optimizers.html}.
+A gradient descent step refers to the updating of model parameters based on the gradient of the model's loss function, aiming to find its global minimum. A visualization can be found at felix-krueckel.com\footnote{\url{https://felix-krueckel.com/optimizers.html}, last access: 2025-08-05}.
 
 % \subsubsection*{Vanilla Adam Optimizer}\label{sec:adamOptimizer}
 % \begin{aigen}
