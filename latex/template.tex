@@ -298,15 +298,15 @@ KNN\textsubscript{common} is a metric introduced in the paper to measure how sty
 
 KNN\textsubscript{overfit} is a metric designed to detect if the model is simply copying the input audio instead of creatively transferring its style. It checks if the input audio is the absolute closest neighbor to the output audio in the embedding space. A high score (close to 1) indicates overfitting or copying.\\ \
 
-\subsubsection*{OVL (Overall Quality)}\label{sec:OVL}
+\subsubsection*{Overall Quality}\label{sec:OVL}
 
 Overall Quality (OVL) is a subjective metric based on human listeners rating the general sound quality of the generated audio. A higher score indicates that human evaluators perceived the audio to be of higher quality. It has been shown to correlate with the objective FAD metric \cite{rouardAudioConditioningMusic2024}.\\ \
 
-\subsubsection*{SIM (Similarity)}\label{sec:SIM}
+\subsubsection*{Similarity}\label{sec:SIM}
 
 Similarity (SIM) is a human-based metric that assesses how similar the *style* of the output is to the input audio, regardless of the overall audio quality. A higher score means listeners perceived a strong stylistic connection. It correlates well with the objective KNN\textsubscript{common} metric \cite{rouardAudioConditioningMusic2024}.\\ \
 
-\subsubsection*{VAR (Variability)}\label{sec:VAR}
+\subsubsection*{Variability}\label{sec:VAR}
 
 Variability (VAR) is a human evaluation metric that asks listeners how likely it is that the input and output samples are just different parts of the exact same song. A lower score is better, as it indicates the model generated a new piece in a similar style, rather than just continuing the original track. It correlates well with the KNN\textsubscript{overfit} metric \cite{rouardAudioConditioningMusic2024}.\\ \
 
