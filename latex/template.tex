@@ -237,7 +237,7 @@ A token is a discrete unit of information that can be interpreted and processed 
 
 \subsubsection*{Transformer Encoder/Decoder}\label{sec:transformerEncoderDecoder}
 
-A transformer encoder compresses input data into a intermediate representation enriched with contextual information from the entire input. During this process, the transformer is able to weigh the importance of different parts of the input. A transformer decoder generates output from the intermediate representation created by the encoder, assessing the probability of each subsequent token occurring in the output sequence and using this information to repeatedly decide which token to output next (\cite{vaswaniAttentionAllYou2017}).
+A transformer encoder compresses input data into an intermediate representation enriched with contextual information from the entire input. During this process, the transformer is able to weigh the importance of different parts of the input. A transformer decoder generates output from the intermediate representation created by the encoder, assessing the probability of each subsequent token occurring in the output sequence and using this information to repeatedly decide which token to output next (\cite{vaswaniAttentionAllYou2017}).
 
 \subsubsection*{MusicGen}\label{sec:MusicGen}
 
@@ -321,7 +321,7 @@ When temporally downsampling the conditioning data, the resolution of audio repr
 
 \subsubsection*{Fréchet audio distance}\label{sec:FAD}
 
-The Fréchet audio distance (FAD) is an objective metric used to evaluate the sound quality of generated audio. It measures the distance between the distributions of embeddings from a pre-trained audio model for both a set of real and generated audio clips. A lower FAD score indicates that the generated audio is more similar to real audio, and thus of better quality (\cite{kilgourFrechetAudioDistance2019a}).
+The Fréchet audio distance (FAD) is an objective metric used to evaluate the sound quality of generated audio. It measures the distance between the distributions of embeddings from a pre-trained audio model for both a set of noisy and clean clips. A lower FAD score indicates that the generated audio does not contain many distortions like noise, frequency filters, speed irregularities or reverberations (\cite{kilgourFrechetAudioDistance2019a}).
 
 \subsubsection*{CLAP}\label{sec:CLAP}
 
@@ -351,7 +351,7 @@ Variability (VAR) is a human evaluation metric used to assess the likelihood tha
 
 This section introduces the two main contributions of the paper, \textit{textual inversion} and a jointly trained \textit{style encoder}. Both methods aim to enable style conditioning from an audio input.\\ \
 
-Existing methods already implement textual and parametric conditioning, which refers to the process of guiding music generation models using natural language descriptions or desired musical characteristics as input. This allows the user to generate music based on inputs such as ``upbeat jazz saxophone'', tempo, key signature, or instrumentation specifications. Additionally the so-called continuation mode exists in MusicGen, allowing model users to e.g. finish unfinished music compositions based on probabilistic relations in existing music.\\ \
+Existing methods already implement textual and parametric conditioning, which refers to the process of guiding music generation models using natural language descriptions or desired musical characteristics as input. This allows the user to generate music based on inputs such as ``upbeat jazz saxophone'', tempo, key signature, or instrumentation specifications. Additionally, the so-called continuation mode exists in MusicGen, allowing model users to e.g. finish unfinished music compositions based on probabilistic relations in existing music.\\ \
 
 The paper's novel addition, \textit{style conditioning}, enables the transfer of a certain musical style to a music piece with additional properties specified using a text prompt, combining the power of audio and text as inputs, to guide the output music. \\ \
 
