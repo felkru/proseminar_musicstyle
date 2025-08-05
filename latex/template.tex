@@ -318,7 +318,7 @@ When temporally downsampling the conditioning data, the resolution of audio repr
 
 \subsubsection*{Fréchet Audio Distance}\label{sec:FAD}
 
-The Fréchet Audio Distance (FAD) is an objective metric used to evaluate the sound quality of generated audio. It measures the distance between the distributions of embeddings from a pre-trained audio model for both a set of real and generated audio clips. A lower FAD score indicates that the generated audio is more similar to real audio, and thus of better quality (\cite{kilgourFrechetAudioDistance2019a}). The embeddings are typically taken from an intermediate layer of a model pre-trained on a large audio dataset.
+The Fréchet Audio Distance (FAD) is an objective metric used to evaluate the sound quality of generated audio. It measures the distance between the distributions of embeddings from a pre-trained audio model for both a set of real and generated audio clips. A lower FAD score indicates that the generated audio is more similar to real audio, and thus of better quality (\cite{kilgourFrechetAudioDistance2019a}).
 
 \subsubsection*{CLAP}\label{sec:CLAP}
 
@@ -348,12 +348,11 @@ Variability (VAR) is a human evaluation metric used to assess the likelihood tha
 
 This section introduces the two main contributions of the paper, \textit{textual inversion} and a jointly trained \textit{style encoder}. Both methods aim to enable style conditioning from an audio input.\\ \
 
-Existing methods already implement textual and parametric conditioning, which refers to the process of guiding music generation models using natural language descriptions or desired musical characteristics as input. This allows the user to generate music based on inputs such as "upbeat jazz with saxophone", tempo, key signature, or instrumentation specifications. Additionally the so-called continuation mode exists in MusicGen, allowing model users to e.g. finish unfinished music compositions based on probabilistic relations in existing music.\\ \
+Existing methods already implement textual and parametric conditioning, which refers to the process of guiding music generation models using natural language descriptions or desired musical characteristics as input. This allows the user to generate music based on inputs such as ``upbeat jazz with saxophone'', tempo, key signature, or instrumentation specifications. Additionally the so-called continuation mode exists in MusicGen, allowing model users to e.g. finish unfinished music compositions based on probabilistic relations in existing music.\\ \
 
 The paper's novel addition, \textit{style conditioning}, enables the transfer of a certain musical style to a music piece with additional properties specified using a text prompt, combining the power of audio and text as inputs, to guide the output music. \\ \
 
-Specifically two methods are introduced:
-
+Specifically, two methods are introduced:
 \begin{outline}
     \1 \textit{Textual inversion}
     \1 Joint training of a new model with a style encoder
@@ -366,17 +365,17 @@ The authors first propose a quick proof of concept experiment, which uses \texti
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.6\textwidth]{textual_inversion.png}
-    \caption{Inference comparison, the black box contains our novel contributions. This figure is self-created.}
+    \caption{Inference comparison, the black box contains our novel contributions. (Self-created)}
     \label{fig:inference_comparison}
 \end{figure}
 
-As seen in Figure \ref{fig:inference_comparison}, \textit{textual inversion} works by expressing the meaning of an additional input modality in an existing embedding space. The authors specifically leverage MusicGen (\cite{copetSimpleControllableMusic2023}), a text to music model, to generate so called pseudowords (section \ref{sec:pseudowords}) which generate the meaning of the inputs of the new modality within the existing embedding space (section \ref{sec:embeddingSpace}).
+As seen in figure \ref{fig:inference_comparison}, \textit{textual inversion} works by expressing the meaning of an additional input modality in an existing embedding space. The authors specifically leverage MusicGen (\cite{copetSimpleControllableMusic2023}), a text to music model, to generate so called pseudowords (section \ref{sec:pseudowords}) which generate the meaning of the inputs of the new modality within the existing embedding space (section \ref{sec:embeddingSpace}).
 
 
 \subsubsection{Modelling Style Extraction as a Translator}\label{sec:translator_analogy}
-A useful model is to imagine a non-native translator trying to express a saying from their native-language, using the words of another language. It's possible that the translator can't express the full of meaning or needs to use a much larger number of words to express the full meaning in their translation then were used in the original saying, but some sort of translation is possible, because different languages share various concepts, which one can build upon to introduce the new concepts necessary to explain the saying. \\ \
+A useful model is to imagine a non-native translator trying to express a saying from their native language, using the words of another language. It's possible that the translator can't express the full of meaning or needs to use a much larger number of words to express the full meaning in their translation than were used in the original saying, but some sort of translation is possible, because different languages share various concepts, which one can build upon to introduce the new concepts necessary to explain the saying. \\ \
 
-Since the "native language" of music is sound, but MusicGen natively takes text as an input, \textit{textual inversion} can be modeled as translating from sound to textual concepts. This frame naturally presents you with a simplified, but useful mathematical formalization that one can use to gain clarity on the functional difference to other methods:
+Since the ``native language'' of music is sound, but MusicGen natively takes text as an input, \textit{textual inversion} can be modeled as translating from sound to textual concepts. This frame naturally presents you with a simplified, but useful mathematical formalization that one can use to gain clarity on the functional difference to other methods:
 
 \begin{equation}\label{eq:translator_text_inv}
     f_{translate}: \text{music}_{sound} \xrightarrow{\text{lost info}} \text{music}_{text\_concepts/pseudowords}
@@ -385,10 +384,11 @@ Since the "native language" of music is sound, but MusicGen natively takes text 
 \subsubsection{Training of pseudowords}
 Pseudowords are created using gradient descent to optimize their self similarity when doing a forward-pass using the existing model.\\ \
 
-The audio is encoded into a number of audio tokens $y_t$ before computing the loss. The paper doesn't specify the exact encoding procedure, but it likely relies on Encodec (section \ref{sec:encodec}), since MusicGen (section \ref{sec:MusicGen}) does so.\\ \
-\indent Output tokens (section \ref{sec:Token}) are computed by giving MusicGen the generated output tokens and the pseudowords as input. The loss incentivizes maximising the likelihood $p_\theta(y_{t+1})$ of predicting the correct next token (section \ref{sec:Logit}).
+The audio is encoded into a number of audio tokens $y_t$ before computing the loss. The paper doesn't specify the exact encoding procedure, but it likely relies on Encodec (section \ref{sec:encodec}), since MusicGen (section \ref{sec:MusicGen}) does so.\\
+
+Output tokens (section \ref{sec:Token}) are computed by giving MusicGen the generated output tokens and the pseudowords as input. The loss incentivizes maximising the likelihood $p_\theta(y_{t+1})$ of predicting the correct next token (section \ref{sec:Logit}).
 \begin{equation}\label{eq:crossEntropyLoss}
-    L_{CE}(\theta, y_{1:T}, c) = - \sum_{t=1}^{T} \log p_{\theta}(y_t|y_{<t}, c)
+    \mathcal{L}_{CE}(\theta, y_{1:T}, c) = - \sum_{t=1}^{T} \log p_{\theta}(y_t|y_{<t}, c)
 \end{equation}
 Where:
 
@@ -399,13 +399,13 @@ Where:
     \1 $c$ is the conditioning information.
 \end{outline}
 
-Since gradient descent is an iterative process, a starting point for the pseudowords is needed. The method laid out in the paper uses an arbitrary, general starting point like "music" to initialize the algorithm and then proceeds to train "a few hundred iterations" (\cite{rouardAudioConditioningMusic2024}). The process is visualized in Figure \ref{fig:orig_paper_f1}.\\ \
+Since gradient descent is an iterative process, a starting point for the pseudowords is needed. The method laid out in the paper uses an arbitrary, general starting point like "music" to initialize the algorithm and then proceeds to train ``a few hundred iterations'' (\cite{rouardAudioConditioningMusic2024}). The process is visualized in Figure \ref{fig:orig_paper_f1}.\\ \
 
 This process will be performed for each music piece separately resulting in a different pseudoword for all input audios. The chosen 100 forward passes lead to a relatively high inference time (section \ref{sec:inferenceTime}), highlighting the tradeoff between training and inference compute.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{textuaIInversion.png}
+    \includegraphics[width=0.7\textwidth]{textuaIInversion.png}
     \caption{Training process to create pseudowords, as in \cite{rouardAudioConditioningMusic2024}}
     \label{fig:orig_paper_f1}
 \end{figure}
@@ -416,12 +416,20 @@ The second method proposed in the paper is based on a jointly trained style enco
 
 Joint multimodal-training on both music and text data incentivizes the formation of concepts of certain sounds at the embedding level, so concepts that are present in both tend to be represented in similar areas of the space (\cite{xuMultimodalRepresentationAlignment2024}).\\ \
 
-An adapted translator function formalization might look like Equation \ref{eq:translator_style_encoder}.
+An adapted translator function formalization might look like equation \ref{eq:translator_style_encoder}.
 \begin{equation}\label{eq:translator_style_encoder}
     f_{style\_enc}: \text{music}_{sound} \rightarrow \text{music}_{text+sound\_concepts}
 \end{equation}
 
-The style encoders architecture, illustrated to the right side of Figure \ref{fig:orig_paper_f2}, consists of a frozen (section \ref{sec:frozenModel}) audio feature extractor, a transformer encoder (section \ref{sec:transformerEncoderDecoder}), residual vector quantization (RVQ, section \ref{sec:RVQ}) and a linear layer. In the RVQ and downsampling steps, bottlenecks are implemented to prevent the model from copying its input and to focus the encoded meaning on the style conditioning (\cite{rouardAudioConditioningMusic2024}). The MusicGen model has a 1.5bn parameter count, whilst the \textit{style conditioner} relies on up to 6 trainable codebooks to discretely encode information. The music encoder called Encodec (section \ref{sec:encodec}) has 60M parameters.
+The style encoders architecture, illustrated to the right side of figure \ref{fig:orig_paper_f2}, consists of a frozen (section \ref{sec:frozenModel}) audio feature extractor, a transformer encoder (section \ref{sec:transformerEncoderDecoder}), residual vector quantization (RVQ, section \ref{sec:RVQ}) and a linear layer. In the RVQ and downsampling steps, bottlenecks are implemented to prevent the model from copying its input and to focus the encoded meaning on the style conditioning (\cite{rouardAudioConditioningMusic2024}). The MusicGen model has a 1.5bn parameter count, whilst the \textit{style conditioner} relies on up to 6 trainable codebooks to discretely encode information. The music encoder called Encodec (section \ref{sec:encodec}) has 60M parameters.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figure_2.png}
+    \caption{Joint training of MusicGen with style encoder (\cite{rouardAudioConditioningMusic2024})}
+    \label{fig:orig_paper_f2}
+\end{figure}
+
 
 \subsubsection{Training}
 
@@ -443,13 +451,6 @@ Only a 1.5 to 4.5 seconds long part of the conditioning audio is actually analys
 Firstly, in the frozen audio feature extractor (\cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023,wonFoundationModelMusic2024}), the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transformer encoder (\cite{rouardAudioConditioningMusic2024}).
 The embeddings in this embedding space are then quantized, compressing the included information into a discrete set of data described in up to 6 codebooks. The strength of this bottleneck can be controlled by the number of codebooks supplied (\cite{rouardAudioConditioningMusic2024}). In this same step, the data is also downsampled (section \ref{sec:temporalDownsampling}) to a 5Hz framerate (\cite{rouardAudioConditioningMusic2024}).
 Lastly, the high-dimensional data is projected with a linear layer, matching MusicGen's embedding dimension (\cite{rouardAudioConditioningMusic2024}).\\ \
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figure_2.png}
-    \caption{Joint training of MusicGen with style encoder (\cite{rouardAudioConditioningMusic2024})}
-    \label{fig:orig_paper_f2}
-\end{figure}
 
 \subsection{Double Classifier Free Guidance}
 
