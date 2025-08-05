@@ -332,15 +332,15 @@ KNN\textsubscript{common} is a newly introduced metric that assesses how stylist
 
 KNN\textsubscript{overfit} is a newly introduced metric that assesses how similar the input and output audio of the model are. If the output audio has the smallest distance from the input audio in the embedding space, KNN\textsubscript{overfit} will have a value of 1, implying that the output audio is too close in sound to the input audio. This metric serves as a counterargument to KNN\textsubscript{common}, helping to identify when a model is simply copying the input.
 
-\subsubsection*{OVL (Overall Quality)}\label{sec:OVL}
+\subsubsection*{Overall Quality}\label{sec:OVL}
 
 Overall Quality (OVL) is a human evaluation metric used to assess the overall sound quality of generated audio. A higher value indicates better perceived quality, while a lower score indicates worse perceived quality. Research has shown that OVL scores correlate with objective FAD metrics (\cite{rouardAudioConditioningMusic2024}).
 
-\subsubsection*{SIM (Similarity)}\label{sec:SIM}
+\subsubsection*{Similarity}\label{sec:SIM}
 
 Similarity (SIM) is a human evaluation metric used to assess the overall similarity in style between input and output samples without considering audio quality. A higher score indicates higher perceived similarity, while a lower score indicates lower perceived similarity. SIM scores have been found to correlate well with KNN\textsubscript{common} metrics (\cite{rouardAudioConditioningMusic2024}).
 
-\subsubsection*{VAR (Variability)}\label{sec:VAR}
+\subsubsection*{Variability}\label{sec:VAR}
 
 Variability (VAR) is a human evaluation metric used to assess the likelihood that input and output samples are perceived as coming from the same song. A lower score indicates it is less likely that the samples are taken from the same song (which is the preferable result), while a higher score indicates it is more likely. VAR scores correlate well with KNN\textsubscript{overfit} metrics (\cite{rouardAudioConditioningMusic2024}).
 
