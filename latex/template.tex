@@ -180,7 +180,7 @@ Because ``music is hard to describe textually'' (\cite{rouardAudioConditioningMu
 
 However, as will be shown in section \ref{sec:discussion}, the models described in the paper are still lacking in their ability to accurately capture the stylistic details of the musical input, as well as their ability to merge multiple styles in the output. \\ \
 
-section \ref{sec:backgrounds} starts by describing backgrounds relevant for the methods explained in section \ref{sec:methods}.
+Section \ref{sec:backgrounds} starts by describing backgrounds relevant for the methods explained in section \ref{sec:methods}.
 The following section \ref{sec:paperResults} and section \ref{sec:discussion} present and discuss the paper's main results, while our own experiments are detailed in section \ref{sec:experiments}.
 
 \section{Backgrounds}\label{sec:backgrounds}
@@ -191,7 +191,7 @@ In this section, the technical terms necessary for understanding the following w
 
 \subsubsection*{Pseudowords}\label{sec:pseudowords}
 
-Pseudowords are special tokens that represent non-textual information, like the style of a piece of music, as if it were text. This allows a language model, which normally only understands text, to process other types of data. These pseudowords don't look like normal words and can appear as random character combinations, but they hold a specific meaning for the model.\\ \
+ Pseudowords are a linguistic description of non-text data, which can be fitted into a text models embedding space and thus encode meaning. In the context of music generation, pseudowords can lossily encode particular musical styles or instruments. These pseudowords do not resemble words used in language and can appear like random combinations of letters.
 
 \subsubsection*{Embedding Space}\label{sec:embeddingSpace}
 
