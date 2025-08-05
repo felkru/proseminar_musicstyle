@@ -85,6 +85,7 @@
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage[table]{xcolor}
 %\usepackage{commenting}
 
 
@@ -238,7 +239,7 @@ A transformer encoder compresses input data into a intermediate representation e
 
 \subsubsection*{MusicGen}\label{sec:MusicGen}
 
-MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by Meta for the Audiocraft project\footnote{\url{https://github.com/facebookresearch/audiocraft}, last access: 2024-08-05}. It serves as the baseline music generation model and is extended with the \textit{style conditioning} methods proposed in the paper by \cite{rouardAudioConditioningMusic2024}.
+MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by Meta for the Audiocraft project\footnote{\url{https://github.com/facebookresearch/audiocraft}, last access: 2025-08-05}. It serves as the baseline music generation model and is extended with the \textit{style conditioning} methods proposed in the paper by \cite{rouardAudioConditioningMusic2024}.
 
 % \subsubsection*{MERT}\label{sec:MERT}
 % \begin{aigen}
@@ -348,7 +349,7 @@ Variability (VAR) is a human evaluation metric used to assess the likelihood tha
 
 This section introduces the two main contributions of the paper, \textit{textual inversion} and a jointly trained \textit{style encoder}. Both methods aim to enable style conditioning from an audio input.\\ \
 
-Existing methods already implement textual and parametric conditioning, which refers to the process of guiding music generation models using natural language descriptions or desired musical characteristics as input. This allows the user to generate music based on inputs such as "upbeat jazz with saxophone", tempo, key signature, or instrumentation specifications. Additionally the so-called continuation mode exists in MusicGen, allowing model users to e.g. finish unfinished music compositions based on probabilistic relations in existing music.\\ \
+Existing methods already implement textual and parametric conditioning, which refers to the process of guiding music generation models using natural language descriptions or desired musical characteristics as input. This allows the user to generate music based on inputs such as ``upbeat jazz saxophone'', tempo, key signature, or instrumentation specifications. Additionally the so-called continuation mode exists in MusicGen, allowing model users to e.g. finish unfinished music compositions based on probabilistic relations in existing music.\\ \
 
 The paper's novel addition, \textit{style conditioning}, enables the transfer of a certain musical style to a music piece with additional properties specified using a text prompt, combining the power of audio and text as inputs, to guide the output music. \\ \
 
@@ -508,7 +509,7 @@ Tests have been performed on an A4000 GPU with 32-bit quantization. Utilization 
 
 Testing was performed using multiple 30s input snippets, unless otherwise noted with a DCFG $\beta$ of 5. Tests were executed providing only audio input without any textual description, providing contradictory audio and text inputs, generating multiple samples with the same text- and audio prompt but changing the DCFG $\beta$ to values of 1 and 2, as well as prompting the model to generate silence using both music and silence as audio input. \\ \
 
-Since the demos on Hugging Face\footnote{\url{https://huggingface.co/facebook/musicgen-style}, last access: 2024-08-05} and in the Audiocraft Github Repository\footnote{\url{https://github.com/facebookresearch/audiocraft/tree/main/demos}, last access: 2024-08-05} consistently failed to generate audios, throwing dependency errors, we decided to run inference manually using the open source code base. Not only didn't the provided setup script work, but the requirements file was also not up to date. After roughly 3-4 hours of troubleshooting dependency issues and adapting code to API breaking changes, we were able to run the model locally. Other users have experienced similar issues\footnote{\url{https://github.com/facebookresearch/audiocraft/issues/547}, last access: 2024-08-05} and seem to not have received any support from the maintainers as of yet.\\ \
+Since the demos on Hugging Face\footnote{\url{https://huggingface.co/facebook/musicgen-style}, last access: 2025-08-05} and in the Audiocraft Github Repository\footnote{\url{https://github.com/facebookresearch/audiocraft/tree/main/demos}, last access: 2025-08-05} consistently failed to generate audios, throwing dependency errors, we decided to run inference manually using the open source code base. Not only didn't the provided setup script work, but the requirements file was also not up to date. After roughly 3-4 hours of troubleshooting dependency issues and adapting code to API breaking changes, we were able to run the model locally. Other users have experienced similar issues\footnote{\url{https://github.com/facebookresearch/audiocraft/issues/547}, last access: 2025-08-05} and seem to not have received any support from the maintainers as of yet.\\ \
 
 In addition, we performed exploratory, qualitative studies to get a sense of human perception and received unimpressed, critical feedback across the board. Table \ref{tab:common_quotes} highlights some representative answers.\\ \
 
@@ -525,7 +526,7 @@ In addition, we performed exploratory, qualitative studies to get a sense of hum
     \1 ``I'll answer you right after we are done with the questions.'' \\ \
 \end{outline}
 
-Our studies aimed to gain qualitative real-world feedback to give the authors to generate helpful research directions. They had the additional benefit of hinting at potential decrepancies in the papers communication of model capabilities and actual generation result. Whilst we tried to provide study participants an opportunity to give us unbiased feedback, the evidence shouldn't be interpreted as leading to any confident conclusions. Participants attitudes to AI, an unrepresentative sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations on the right side of Table \ref{tab:common_quotes} have been generated using a popular online translation service.\footnote{\url{https://gemini.google.com}, last access: 2024-08-05}\\ \
+Our studies aimed to gain qualitative real-world feedback to give the authors to generate helpful research directions. They had the additional benefit of hinting at potential decrepancies in the papers communication of model capabilities and actual generation result. Whilst we tried to provide study participants an opportunity to give us unbiased feedback, the evidence shouldn't be interpreted as leading to any confident conclusions. Participants attitudes to AI, an unrepresentative sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations on the right side of Table \ref{tab:common_quotes} have been generated using a popular online translation service.\footnote{\url{https://gemini.google.com}, last access: 2025-08-05}\\ \
 
 Whilst these limitations are present we think that the attention to detail people pay to the nuances of their favorite songs is a promising direction for detailed, qualitative human evaluation studies, which might enable further improvements in the quality of generated music.\\ \
 
@@ -535,15 +536,19 @@ Whilst these limitations are present we think that the attention to detail peopl
     \label{tab:common_quotes}
     \resizebox{\textwidth}{!}{
         \def\arraystretch{1.5}
-        \begin{tabular}{llp{7cm}} % Widened the last column
-            \toprule
-            Quote (German)                                               & Translation (English)                                            & Theme                   \\
-            \midrule
-            “Der Gesang fehlt doch.”                                     & “The vocals are missing.”                                        & Lack of \textbf{vocals} \\
-            “Genre passt [$\dots$] halt nur ganz grob.”                  & “The genre only fits [$\dots$] very roughly.”                    & Broad genre fit         \\
-            “Folk ist akustischer. [Instrumente] fehlen hier irgendwie.” & “Folk is more acoustic. [Instruments] are somehow missing here.” & Genre deviation         \\
-            “Das ist zu sehr Rock”                                       & “This is too much like rock”                                     & Genre deviation         \\
-            \bottomrule
+        \begin{tabular}{p{7cm} p{7cm} p{3cm}}
+            \hline
+            \rowcolor{gray!25}
+            \textbf{Quote (German)}                                      & \textbf{Translation (English)}                                   & \textbf{Theme}  \\
+            \hline
+            “Der Gesang fehlt doch.”                                     & “The vocals are missing.”                                        & Lack of vocals  \\
+            \hline
+            “Genre passt [$\dots$] halt nur ganz grob.”                  & “The genre only fits [$\dots$] very roughly.”                    & Broad genre fit \\
+            \hline
+            “Folk ist akustischer. [Instrumente] fehlen hier irgendwie.” & “Folk is more acoustic. [Instruments] are somehow missing here.” & Genre deviation \\
+            \hline
+            “Das ist zu sehr Rock”                                       & “This is too much like rock”                                     & Genre deviation \\
+            \hline
         \end{tabular}
     }
 \end{table*}
@@ -554,7 +559,7 @@ In this section, we discuss several aspects of the paper, including the mismatch
 
 \subsection{Mismatch in objective and human evaluations}
 
-Our qualitative results point to a mismatch in reported audio quality, especially when compared to audio snippets on their project website\footnote{\url{https://musicgenstyle.github.io}, last access: 2024-08-05}, and actual performance in real-world scenarios. This finding seems to be further supported by failures to replicate findings in a Github issue by a researcher from Beihang University \cite{liuLargeDiscrepancyCLAP2024}. Our generated audio snippets have been uploaded to a cloud storage service\footnote{\url{https://shorturl.at/fpXSb}, last access: 2024-08-05}, allowing readers to verify the authenticity of our claims about a potential mismatch to the quality presented on the project's webpage themselves.
+Our qualitative results point to a mismatch in reported audio quality, especially when compared to audio snippets on their project website\footnote{\url{https://musicgenstyle.github.io}, last access: 2025-08-05}, and actual performance in real-world scenarios. This finding seems to be further supported by failures to replicate findings in a Github issue by a researcher from Beihang University \cite{liuLargeDiscrepancyCLAP2024}. Our generated audio snippets have been uploaded to a cloud storage service\footnote{\url{https://shorturl.at/fpXSb}, last access: 2025-08-05}, allowing readers to verify the authenticity of our claims about a potential mismatch to the quality presented on the project's webpage themselves.
 
 \subsection{Style conditioner}
 
@@ -595,9 +600,9 @@ One possible reason for this ordering is to prioritize the informational richnes
 The authors disclose two public datasets used for the training of their models, the Shutterstock and Pond5 libraries of instrumental stock music. \\ \
 
 
-The public dataset's quality-control is lacking, containing not only professionally produced music, but allowing any person to upload audio to  datasets after an initial review for the Shutterstock dataset\footnote{\url{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}, last access: 2024-08-05} and without any review for the Pond5 dataset\footnote{\url{https://contributor.pond5.com/getting-started/become-a-pond5-artist/}, last access: 2024-08-05}. While this improves the size of the datasets, it might negatively impact their quality. \\ \
+The public dataset's quality-control is lacking, containing not only professionally produced music, but allowing any person to upload audio to  datasets after an initial review for the Shutterstock dataset\footnote{\url{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}, last access: 2025-08-05} and without any review for the Pond5 dataset\footnote{\url{https://contributor.pond5.com/getting-started/become-a-pond5-artist/}, last access: 2025-08-05}. While this improves the size of the datasets, it might negatively impact their quality. \\ \
 
-Due to the nature of the public datasets, many of the contained songs are not intended for casual enjoyment but for commercial use (cf. Shutterstock website\footnote{\url{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}, last access: 2024-08-05}, Pond5 website\footnote{\url{https://contributor.pond5.com/getting-started/about-pond5/}, last access: 2024-08-05}), negatively impacting the audio quality of the model's outputs for creating pop music. \\ \
+Due to the nature of the public datasets, many of the contained songs are not intended for casual enjoyment but for commercial use (cf. Shutterstock website\footnote{\url{https://support.submit.shutterstock.com/s/article/How-do-I-sign-up-to-become-a-Shutterstock-contributor?language=en_US}, last access: 2025-08-05}, Pond5 website\footnote{\url{https://contributor.pond5.com/getting-started/about-pond5/}, last access: 2025-08-05}), negatively impacting the audio quality of the model's outputs for creating pop music. \\ \
 
 Lastly, there's an additional 10.000 songs in an undisclosed internal dataset, with no additional information on their nature given, making proper replication of the paper impossible (\cite{rouardAudioConditioningMusic2024}).
 
@@ -622,13 +627,13 @@ When presented with generated audio snippets, independent human evaluators were 
 \subsection{Safety}
 We believe AI development should follow a human centric approach, where AI should only be developed in combination with rigorous safety testing and brainstorming phases to prevent the release of models that might cause unnecessary harms. The authors did not include any safety measurements in their paper \cite{rouardAudioConditioningMusic2024}, stating in their ethical statement that implementing bottlenecks improves controllability, while also ensuring that the model does not copy its input, addressing one relevant threat model. They additionaly provide some documentation regarding the safe usage of their models on their Hugging Face page (\cite{rouardFacebookMusicgenstyleHugging2024}), stating that model outputs may be offensive, harmful or biased and that "[I]t should not be used for downstream applications without further investigation and mitigation of risks." \cite{rouardAudioConditioningMusic2024} This however does not ensure that the model is not abused by malicious actors.\\ \
 
-While the risk of the model being abused for propaganda is greatly reduced by the fact that it cannot generate cohesive lyrics and displays low understanding of musical form\footnote{\url{https://en.wikipedia.org/wiki/Musical_form}, last access: 2024-08-05} in our testing, it greatly simplifies intellectual property theft, to allow users to easily create potentially copyright infringing material by using copyrighted work as conditioning audio to the model and using all codebooks. After fixing the bugs we faced in the open source code\footnote{\url{https://github.com/facebookresearch/audiocraft/blob/main/demos/musicgen_demo.ipynb}, last access: 2024-08-05} it's also likely possible to use the underlying MusicGen model in continuation mode to remove watermarks from copyrighted songs, enabling users to steal from providers of stock music.\\ \
+While the risk of the model being abused for propaganda is greatly reduced by the fact that it cannot generate cohesive lyrics and displays low understanding of musical form\footnote{\url{https://en.wikipedia.org/wiki/Musical_form}, last access: 2025-08-05} in our testing, it greatly simplifies intellectual property theft, to allow users to easily create potentially copyright infringing material by using copyrighted work as conditioning audio to the model and using all codebooks. After fixing the bugs we faced in the open source code\footnote{\url{https://github.com/facebookresearch/audiocraft/blob/main/demos/musicgen_demo.ipynb}, last access: 2025-08-05} it's also likely possible to use the underlying MusicGen model in continuation mode to remove watermarks from copyrighted songs, enabling users to steal from providers of stock music.\\ \
 
 Models like these also allow users to generate many songs comparatively easily and quickly, potentially leading to an oversaturation of AI-generated music and making music made by human artists less discoverable. \\ \
 
 In addition larger future models might enable social media apps to boost screen time, leading to unwanted side effects like gradual disempowerment (\cite{kulveitGradualDisempowermentSystemic2024}).\\ \
 
-To compare our safety considerations with their statements please visit the respective Model Card\footnote{\url{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}, last access: 2024-08-05}.
+To compare our safety considerations with their statements please visit the respective Model Card\footnote{\url{https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_STYLE_MODEL_CARD.md}, last access: 2025-08-05}.
 
 
 \section{Summary}\label{sec:summary}
