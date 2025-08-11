@@ -200,7 +200,7 @@ Pseudowords are a linguistic description of non-text data, which can be fitted i
 
 A models embedding space refers to a high-dimensional vector space in which concepts are represented as vectors. This space is often designed so that semantic differences between concepts are represented by their distance in the vector space. Because of this, large and high-dimensional embedding spaces can encode some meaning of its embeddings. The model trained in our paper has a dimensionality of 512, whilst state-of-the-art language models can have embedding spaces as large as many tens of thousands of dimensions. \\
 
-Because of that, most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training (\cite{lecunDeepLearning2015}). A visualization can be found at felix-krueckel.com\footnote{\url{https://felix-krueckel.com/musical\_concepts.html}, last access: 2025-08-05}.
+Because manually designing algorithms that transfer human readable notations into these embedding spaces is harder for higher-dimensional spaces, most embedding spaces in deep learning are learnt, meaning that feature extraction isn't done manually anymore and the embedding space can change as the model comes close to finishing training (\cite{lecunDeepLearning2015}). A visualization of an embedding space of an actual transformer language model  (section \ref{sec:transformerEncoderDecoder}) can be found at felix-krueckel.com\footnote{\url{https://felix-krueckel.com/musical\_concepts.html}, last access: 2025-08-05}.
 
 \subsubsection*{Double classifier-free guidance}\label{sec:DCFG}
 
@@ -241,7 +241,7 @@ A transformer encoder compresses input data into an intermediate representation 
 
 \subsubsection*{MusicGen}\label{sec:MusicGen}
 
-MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was also developed by Meta for the Audiocraft project\footnote{\url{https://github.com/facebookresearch/audiocraft}, last access: 2025-08-05}. It serves as the baseline music generation model and is extended with the \textit{style conditioning} methods proposed in the paper by \cite{rouardAudioConditioningMusic2024}.
+MusicGen is a state-of-the-art transformer language model used for generating music using a textual input, and was developed by Meta for the Audiocraft project\footnote{\url{https://github.com/facebookresearch/audiocraft}, last access: 2025-08-05}. It serves as the baseline music generation model and is extended with the \textit{style conditioning} methods proposed in the paper by \cite{rouardAudioConditioningMusic2024}. The adapted model discussed in this review was also published as part of Meta's Audiocraft project under the name \textit{MusicGen-Style}.
 
 % \subsubsection*{MERT}\label{sec:MERT}
 % \begin{aigen}
@@ -289,7 +289,7 @@ Hyperparameters are configuration settings that affect the training process of a
 
 \subsubsection*{Masking}\label{sec:masking}
 
-A set of information can be masked from the input of a language model, which means that it will be ignored by the language model during training.
+A set of information can be masked from the input of a language model, which means that certain tokens are being hidden during processing. If you e.g. mask certain tokens in the loss they will not be used to calculate the gradient update, but can still will still used as conditioning to generate outputs.
 
 \subsection{Conditioning and control mechanisms}
 
@@ -304,8 +304,6 @@ Inference refers to the phase after training a language model when it is activel
 \subsubsection*{Dropout}\label{sec:dropout}
 
 Dropout describes the act of randomly leaving out certain conditioning inputs during training. This improves the models ability to generate high quality outputs even under imperfect conditions, for example missing conditioning information or hyperparameters.
-
-\subsection{Audio processing techniques}
 
 \subsubsection*{Temporal downsampling}\label{sec:temporalDownsampling}
 
@@ -358,7 +356,7 @@ The paper's novel addition, \textit{style conditioning}, enables the transfer of
 Specifically, two methods are introduced:
 \begin{outline}
     \1 \textit{Textual inversion}
-    \1 Joint training of a new model with a style encoder
+    \1 Joint training of a new model with a \textit{style encoder}
 \end{outline}
 
 \subsection{Textual inversion}\label{sec:text_inv}
@@ -439,7 +437,7 @@ The style encoders architecture, illustrated to the right side of figure \ref{fi
 For training the transformer language model MusicGen gets encoded text and style as a prefix and is then asked to predict the next token of the audio based on the prefix information and previous audio tokens. This is done in parallel using masked attention (section \ref{sec:masking}) and positional encoding (\cite{vaswaniAttentionAllYou2017}) to allow the model to do parallel autoregressive prediction (section \ref{sec:Autoregression}). Dropout (section \ref{sec:dropout}) is used for training to ensure the model is adaptable to various hyperparameters during inference. The training process is depicted on the left side of Figure \ref{fig:orig_paper_f2}. This kind of training paradigm would be classified as self-supervised and the transformer architecture in particular has the benefit of providing  many strong gradient signals per song over long ranges, enabling faster convergence and training.
 
 \subsubsection{Bottlenecks}
-Because sound and text share a concept space (\cite[p.~40]{gardenforsConceptualSpacesGeometry2000}) and joint training incentivizes as much information transmission as possible as exact replication of the input audio snippet is the optimal strategy for low loss (\cite{rouardAudioConditioningMusic2024}).\\ \
+Because sound and text share a concept space (\cite[p.~40]{gardenforsConceptualSpacesGeometry2000}) and joint training incentivizes as much information transmission as possible, exact replication of the input audio snippet would be the optimal strategy for achieving low loss (\cite{rouardAudioConditioningMusic2024}).\\ \
 
 For this reason several unspecific (section \ref{sec:style-def}) information bottlenecks are introduced, focusing the conditioning tokens on the most relevant information for next token prediction and preventing exact replication:
 
@@ -452,12 +450,12 @@ For this reason several unspecific (section \ref{sec:style-def}) information bot
 Only a 1.5 to 4.5 seconds long part of the conditioning audio is actually analysed for audio. The audio snippet's interval is randomly selected from an excerpt of conditioning audio.\\ \
 
 Firstly, in the frozen audio feature extractor (\cite{defossezHighFidelityNeural2022,liMERTAcousticMusic2023,wonFoundationModelMusic2024}), the music's stylistic features are derived from the audio sample and then placed into an embedding space by the transformer encoder.
-The embeddings in this embedding space are then quantized, compressing the included information into a discrete set of data described in up to 6 codebooks. The strength of this bottleneck can be controlled by the number of codebooks supplied. In this same step, the data is also downsampled (section \ref{sec:temporalDownsampling}) to a 5Hz framerate (\cite{rouardAudioConditioningMusic2024}).
+The embeddings in this embedding space are then quantized, compressing the included information into a discrete set of data described in up to 6 codebooks (section \ref{sec:RVQ}). The strength of this bottleneck can be controlled by the number of codebooks supplied. In this same step, the data is also downsampled (section \ref{sec:temporalDownsampling}) to a 5Hz framerate (\cite{rouardAudioConditioningMusic2024}).
 Lastly, the high-dimensional data is projected with a linear layer, matching MusicGen's embedding dimension (\cite{rouardAudioConditioningMusic2024}).\\ \
 
 \subsection{Double classifier-free guidance}
 
-Due to a difference in information density, it was observed that the \textit{style conditioning} model did not factor in the textual description for generating new audio when it contradicted the \textit{style-conditioned} data (\cite{rouardAudioConditioningMusic2024}).\\ \
+Due to a difference in information density, it was observed that the \textit{style conditioned} model did not factor in the textual description for generating new audio when it contradicted the \textit{style-conditioned} data (\cite{rouardAudioConditioningMusic2024}). This is why a balance in information density needs to be achieved to allow both text and style conditioning audio to influence the outcome. To make this configurable $\alpha$ and $\beta$ are introduced as variables that can be configured at run-time, allowing users to dynamically adjust the importance of each.\\ \
 
 The new logits after applying DCFG can be calculated using the following formula:
 
@@ -477,9 +475,9 @@ Where:
 \end{outline}
 
 It is noted that a $\beta$ value of $1$ is equivalent to using regular CFG (\cite{rouardAudioConditioningMusic2024}).
-\section{Results from the paper}\label{sec:paperResults}
+\section{Results from the paper}\label{sec:paperResults} If $\beta \neq 1$ it's crucial to use dropout during training to achieve proper model adaptation to different $\alpha$ and $\beta$ values.
 
-In the experimental section of the paper, the performance of the proposed models are compared to the continuation mode of MusicGen and MusicGen w. CLAP add on for allowing audio input. In table \ref{tab:comparison_baselines} the best result is being portrayed in bold.
+In the experimental section of the paper, the performance of the proposed models are compared to the continuation mode of MusicGen and MusicGen w. CLAP add on for allowing audio input. In table \ref{tab:comparison_baselines} the best result is highlighted in a bold font.
 
 \begin{table*}[!h]
     \caption{Original experimental results regarding audio and conditioning quality as well as prompt following (\cite{rouardAudioConditioningMusic2024})}
@@ -529,7 +527,7 @@ In addition, we performed exploratory, qualitative studies to get a sense of hum
     \1 ``I'll answer you right after we are done with the questions.'' \\ \
 \end{outline}
 
-Our studies aimed to gain qualitative real-world feedback to give the authors to generate helpful research directions. They had the additional benefit of hinting at potential decrepancies in the papers communication of model capabilities and actual generation result. Whilst we tried to provide study participants an opportunity to give us unbiased feedback, the evidence shouldn't be interpreted as leading to any confident conclusions. Participants attitudes to AI, an unrepresentative sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations on the right side of Table \ref{tab:common_quotes} have been generated using a large language model\footnote{\url{https://gemini.google.com}, last access: 2025-08-05}.\\
+Our studies aimed to gain qualitative real-world feedback to generate high-quality ideas for research directions, that could improve current limitations of the proposed style conditioning architecture. They had the additional benefit of hinting at potential decrepancies in the papers communication of model capabilities and actual generation result. Whilst we tried to provide study participants an opportunity to give us unbiased feedback, the evidence shouldn't be interpreted as leading to any confident conclusions. Participants attitudes to AI, an unrepresentative sample, the low sample size, errors during note-taking and personal relations between the authors and study participants might have all biased the data in ways that are hard to account for. The translations in the second row of Table \ref{tab:common_quotes} have been generated using a large language model\footnote{\url{https://gemini.google.com}, last access: 2025-08-05}.\\
 
 Whilst these limitations are present we think that the attention to detail people pay to the nuances of their favorite songs is a promising direction for detailed, qualitative human evaluation studies, which might enable further improvements in the quality of generated music.\\ \
 
@@ -580,7 +578,7 @@ Yet limiting the extraction of features by shortening the input sample length ca
 
 Additionally, musical segments are often much longer than five seconds, limiting the stylistic information that can be extracted to high level information (\cite{rouardAudioConditioningMusic2024}). \\ \
 
-Lastly, shortening the excerpt used for style conditioning reduced the computational cost of the style decoder training compared to training on higher resolution audio. \\ \
+Lastly, shortening and downsampling the excerpt used for style conditioning might have reduced the computational cost of the style decoder training compared to training on higher resolution audio, which might be a potential benefit, because it reduces the benefit of . \\ \
 
 \subsubsection{No formal and specific definition for style}\label{sec:style-def}
 
@@ -622,7 +620,7 @@ When generating audio with opposing textual and stylistic descriptions, it was o
 For generated audio with the same input sample and the same text input, increasing the $\beta$-parameter of the DCFG made the sound of the generated audio more similar to the textual prompt, thus working as expected.
 
 \subsection{Train compute and model scaling}
-The model's 1.5bn parameter size, while substantial, is not on the scale of some other state-of-the-art models. This might suggest that the project is not a commerical priority within Meta. Many of the issues present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented in the paper by \cite{kaplanScalingLawsNeural2020}.
+The model's 1.5bn parameter size, while substantial, is not on the scale of some other state-of-the-art models. This might suggest that the project is not a commercial priority within Meta. Many of the issues present in the paper seem to be resolvable by improving data quality and scaling the architecture. Proof of concept is presented in the paper by \cite{kaplanScalingLawsNeural2020}.
 
 \subsection{User reactions}
 When presented with generated audio snippets, independent human evaluators were mostly critical, noticing the lack of coherent vocals and commenting on a lack of stylistic understanding genre specific details were described to be missing and subgenres appeared to have been boiled down to a more generic sound, missing instruments or other stylistic features found in the conditioning audio.
