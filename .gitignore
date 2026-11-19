@@ -1,19 +1,59 @@
+# Existing project ignores
 out/
-
 Literature/
+digest.txt
 
-.env
-
+# LaTeX build artifacts
 *.aux
 *.bbl
+*.bcf
+*.blg
+*.dvi
 *.fdb_latexmk
 *.fls
 *.log
+*.lof
+*.lot
+*.nav
 *.out
+*.run.xml
+*.snm
 *.synctex.gz
 *.toc
-*.blg
+*.vrb
+*.xdv
 */template.pdf
 
-digest.txt
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# OS files
+.DS_Store
+._*
+
+# Editor and IDE folders
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Dependencies, build, and cache folders
+node_modules/
+build/
+dist/
+target/
+.cache/
 
